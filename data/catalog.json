@@ -1,0 +1,6395 @@
+{
+  "meta": {
+    "brand": "iamtoxico",
+    "alterEgo": "captain adventure",
+    "aesthetic": "liberates laughing",
+    "tagline": "deviant but proper",
+    "description": "The sporting life \u2014 morally casual, tastefully bold"
+  },
+  "activities": [
+    {
+      "id": "golf",
+      "name": "Golf",
+      "emoji": "\u26f3",
+      "vibes": [
+        "leisure",
+        "networking",
+        "daydrink",
+        "country-club"
+      ]
+    },
+    {
+      "id": "tennis",
+      "name": "Tennis",
+      "emoji": "\ud83c\udfbe",
+      "vibes": [
+        "active",
+        "social",
+        "daydrink",
+        "country-club"
+      ]
+    },
+    {
+      "id": "hot-tub",
+      "name": "Hot Tub",
+      "emoji": "\u2668\ufe0f",
+      "vibes": [
+        "relaxation",
+        "romantic",
+        "party",
+        "night"
+      ]
+    },
+    {
+      "id": "pool",
+      "name": "Pool",
+      "emoji": "\ud83c\udfca",
+      "vibes": [
+        "leisure",
+        "party",
+        "daydrink",
+        "summer"
+      ]
+    },
+    {
+      "id": "yacht",
+      "name": "Yachting",
+      "emoji": "\ud83d\udee5\ufe0f",
+      "vibes": [
+        "luxury",
+        "party",
+        "daydrink",
+        "networking"
+      ]
+    },
+    {
+      "id": "ski",
+      "name": "Skiing",
+      "emoji": "\u26f7\ufe0f",
+      "vibes": [
+        "adventure",
+        "luxury",
+        "apres-ski",
+        "winter"
+      ]
+    },
+    {
+      "id": "spa",
+      "name": "Spa Day",
+      "emoji": "\ud83d\udc86",
+      "vibes": [
+        "wellness",
+        "relaxation",
+        "self-care",
+        "luxury"
+      ]
+    },
+    {
+      "id": "sauna",
+      "name": "Sauna",
+      "emoji": "\ud83e\uddd6",
+      "vibes": [
+        "wellness",
+        "relaxation",
+        "detox",
+        "social"
+      ]
+    },
+    {
+      "id": "nightclub",
+      "name": "Nightclub",
+      "emoji": "\ud83c\udf19",
+      "vibes": [
+        "party",
+        "night",
+        "bold",
+        "social"
+      ]
+    },
+    {
+      "id": "stripclub",
+      "name": "Gentleman's Club",
+      "emoji": "\ud83d\udc8b",
+      "vibes": [
+        "night",
+        "indulgent",
+        "bold",
+        "social"
+      ]
+    },
+    {
+      "id": "rooftop",
+      "name": "Rooftop Bar",
+      "emoji": "\ud83c\udf06",
+      "vibes": [
+        "sunset",
+        "social",
+        "urban",
+        "drinks"
+      ]
+    },
+    {
+      "id": "brunch",
+      "name": "Boozy Brunch",
+      "emoji": "\ud83e\udd42",
+      "vibes": [
+        "daydrink",
+        "social",
+        "leisure",
+        "recovery"
+      ]
+    },
+    {
+      "id": "poker",
+      "name": "Poker Night",
+      "emoji": "\ud83c\udccf",
+      "vibes": [
+        "night",
+        "social",
+        "competitive",
+        "indulgent"
+      ]
+    },
+    {
+      "id": "beach",
+      "name": "Beach Day",
+      "emoji": "\ud83c\udfd6\ufe0f",
+      "vibes": [
+        "leisure",
+        "summer",
+        "relaxation",
+        "party"
+      ]
+    },
+    {
+      "id": "camping",
+      "name": "Glamping",
+      "emoji": "\u26fa",
+      "vibes": [
+        "adventure",
+        "romantic",
+        "nature",
+        "luxury"
+      ]
+    },
+    {
+      "id": "roadtrip",
+      "name": "Road Trip",
+      "emoji": "\ud83d\ude97",
+      "vibes": [
+        "adventure",
+        "freedom",
+        "spontaneous",
+        "music"
+      ]
+    },
+    {
+      "id": "concert",
+      "name": "Live Music",
+      "emoji": "\ud83c\udfa4",
+      "vibes": [
+        "night",
+        "social",
+        "music",
+        "energy"
+      ]
+    },
+    {
+      "id": "gym",
+      "name": "Gym",
+      "emoji": "\ud83d\udcaa",
+      "vibes": [
+        "active",
+        "self-care",
+        "discipline",
+        "morning"
+      ]
+    },
+    {
+      "id": "yoga",
+      "name": "Yoga",
+      "emoji": "\ud83e\uddd8",
+      "vibes": [
+        "wellness",
+        "morning",
+        "mindful",
+        "flexibility"
+      ]
+    },
+    {
+      "id": "meditation",
+      "name": "Meditation",
+      "emoji": "\ud83e\uddd8\u200d\u2642\ufe0f",
+      "vibes": [
+        "wellness",
+        "mindful",
+        "morning",
+        "calm"
+      ]
+    },
+    {
+      "id": "captain-adventure",
+      "name": "Captain Adventure",
+      "emoji": "\ud83e\udded",
+      "vibes": [
+        "adventure",
+        "bold",
+        "spontaneous",
+        "freedom"
+      ]
+    }
+  ],
+  "vibes": [
+    {
+      "id": "leisure",
+      "name": "Leisure",
+      "color": "#4ECDC4"
+    },
+    {
+      "id": "party",
+      "name": "Party",
+      "color": "#FF6B6B"
+    },
+    {
+      "id": "romantic",
+      "name": "Romantic",
+      "color": "#C44569"
+    },
+    {
+      "id": "luxury",
+      "name": "Luxury",
+      "color": "#D4AF37"
+    },
+    {
+      "id": "wellness",
+      "name": "Wellness",
+      "color": "#95E1D3"
+    },
+    {
+      "id": "adventure",
+      "name": "Adventure",
+      "color": "#F38181"
+    },
+    {
+      "id": "night",
+      "name": "Night Out",
+      "color": "#2C3E50"
+    },
+    {
+      "id": "daydrink",
+      "name": "Day Drinking",
+      "color": "#F9CA24"
+    },
+    {
+      "id": "social",
+      "name": "Social",
+      "color": "#6C5CE7"
+    },
+    {
+      "id": "relaxation",
+      "name": "Relaxation",
+      "color": "#81ECEC"
+    },
+    {
+      "id": "bold",
+      "name": "Bold",
+      "color": "#39FF14"
+    },
+    {
+      "id": "indulgent",
+      "name": "Indulgent",
+      "color": "#E84393"
+    },
+    {
+      "id": "self-care",
+      "name": "Self Care",
+      "color": "#00CEC9"
+    },
+    {
+      "id": "active",
+      "name": "Active",
+      "color": "#00B894"
+    },
+    {
+      "id": "mindful",
+      "name": "Mindful",
+      "color": "#A29BFE"
+    },
+    {
+      "id": "captain-adventure",
+      "name": "Captain Adventure",
+      "color": "#FF9F43"
+    }
+  ],
+  "categories": [
+    {
+      "id": "underwear",
+      "name": "Underwear",
+      "icon": "fa-fire"
+    },
+    {
+      "id": "loungewear",
+      "name": "Loungewear",
+      "icon": "fa-couch"
+    },
+    {
+      "id": "robes",
+      "name": "Robes",
+      "icon": "fa-spa"
+    },
+    {
+      "id": "swimwear",
+      "name": "Swimwear",
+      "icon": "fa-water"
+    },
+    {
+      "id": "outerwear",
+      "name": "Outerwear",
+      "icon": "fa-snowflake"
+    },
+    {
+      "id": "footwear",
+      "name": "Footwear",
+      "icon": "fa-shoe-prints"
+    },
+    {
+      "id": "accessories",
+      "name": "Accessories",
+      "icon": "fa-gem"
+    },
+    {
+      "id": "wellness",
+      "name": "Wellness / Intimate",
+      "icon": "fa-heart"
+    },
+    {
+      "id": "grooming",
+      "name": "Grooming",
+      "icon": "fa-cut"
+    },
+    {
+      "id": "travel",
+      "name": "Travel Gear",
+      "icon": "fa-suitcase"
+    },
+    {
+      "id": "outdoor",
+      "name": "Outdoor / Leisure",
+      "icon": "fa-sun"
+    },
+    {
+      "id": "home",
+      "name": "Home / Lifestyle",
+      "icon": "fa-home"
+    },
+    {
+      "id": "eyewear",
+      "name": "Eyewear",
+      "icon": "fa-glasses"
+    },
+    {
+      "id": "fragrance",
+      "name": "Fragrance",
+      "icon": "fa-spray-can"
+    }
+  ],
+  "products": [
+    {
+      "id": "aug-thong-pink",
+      "sku": "TOX-UW-001",
+      "name": "august thong",
+      "subtitle": "neon pink + white",
+      "category": "underwear",
+      "price": 28,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/august-thong",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "beach",
+        "pool"
+      ],
+      "vibes": [
+        "bold",
+        "party",
+        "night"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "boxer-lime",
+      "sku": "TOX-UW-002",
+      "name": "boxer shorts",
+      "subtitle": "lime green",
+      "category": "underwear",
+      "price": 32,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/boxer-shorts",
+      "image": null,
+      "activities": [
+        "gym",
+        "beach"
+      ],
+      "vibes": [
+        "active",
+        "bold",
+        "leisure"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "boxer-seaisland-black",
+      "sku": "TOX-BX-001",
+      "name": "sea island cotton boxer",
+      "subtitle": "midnight black \u00b7 hand-finished",
+      "category": "underwear",
+      "price": 85,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/sea-island-boxer-black",
+      "image": null,
+      "activities": [
+        "golf",
+        "tennis",
+        "brunch",
+        "romantic"
+      ],
+      "vibes": [
+        "luxury",
+        "leisure",
+        "indulgent"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "Sea Island cotton \u2014 world's finest. Implicit value positioning.",
+      "active": true
+    },
+    {
+      "id": "boxer-seaisland-white",
+      "sku": "TOX-BX-002",
+      "name": "sea island cotton boxer",
+      "subtitle": "cloud white \u00b7 hand-finished",
+      "category": "underwear",
+      "price": 85,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/sea-island-boxer-white",
+      "image": null,
+      "activities": [
+        "golf",
+        "tennis",
+        "spa",
+        "romantic"
+      ],
+      "vibes": [
+        "luxury",
+        "leisure",
+        "wellness"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "Sea Island cotton \u2014 the gentleman's choice",
+      "active": true
+    },
+    {
+      "id": "boxer-silk-charcoal",
+      "sku": "TOX-BX-003",
+      "name": "mulberry silk boxer",
+      "subtitle": "charcoal \u00b7 22 momme",
+      "category": "underwear",
+      "price": 95,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/silk-boxer-charcoal",
+      "image": null,
+      "activities": [
+        "romantic",
+        "spa",
+        "hot-tub"
+      ],
+      "vibes": [
+        "luxury",
+        "romantic",
+        "indulgent",
+        "night"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "22 momme mulberry silk \u2014 ultimate luxury hand feel",
+      "active": true
+    },
+    {
+      "id": "boxer-silk-navy",
+      "sku": "TOX-BX-004",
+      "name": "mulberry silk boxer",
+      "subtitle": "midnight navy \u00b7 22 momme",
+      "category": "underwear",
+      "price": 95,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/silk-boxer-navy",
+      "image": null,
+      "activities": [
+        "romantic",
+        "spa",
+        "yacht"
+      ],
+      "vibes": [
+        "luxury",
+        "romantic",
+        "indulgent"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "boxer-pima-green",
+      "sku": "TOX-BX-005",
+      "name": "pima cotton boxer",
+      "subtitle": "toxic green \u00b7 peruvian pima",
+      "category": "underwear",
+      "price": 68,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/pima-boxer-green",
+      "image": null,
+      "activities": [
+        "golf",
+        "tennis",
+        "brunch",
+        "pool"
+      ],
+      "vibes": [
+        "bold",
+        "leisure",
+        "luxury"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "Peruvian Pima cotton \u2014 signature toxic green",
+      "active": true
+    },
+    {
+      "id": "boxer-pima-stripe",
+      "sku": "TOX-BX-006",
+      "name": "pima cotton boxer",
+      "subtitle": "navy pinstripe \u00b7 peruvian pima",
+      "category": "underwear",
+      "price": 68,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/pima-boxer-stripe",
+      "image": null,
+      "activities": [
+        "golf",
+        "tennis",
+        "brunch",
+        "poker"
+      ],
+      "vibes": [
+        "leisure",
+        "social",
+        "luxury"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "Classic country club aesthetic",
+      "active": true
+    },
+    {
+      "id": "boxer-cellular-white",
+      "sku": "TOX-BX-007",
+      "name": "cellular cotton boxer",
+      "subtitle": "white \u00b7 breathable weave",
+      "category": "underwear",
+      "price": 72,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/cellular-boxer-white",
+      "image": null,
+      "activities": [
+        "tennis",
+        "golf",
+        "gym",
+        "beach"
+      ],
+      "vibes": [
+        "active",
+        "leisure",
+        "wellness"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "Cellular weave \u2014 maximum breathability, old-money aesthetic",
+      "active": true
+    },
+    {
+      "id": "aff-zimmerli-seaisland",
+      "sku": "AFF-BX-001",
+      "name": "zimmerli sea island boxer",
+      "subtitle": "swiss \u00b7 sea island cotton",
+      "category": "underwear",
+      "price": 185,
+      "currency": "USD",
+      "url": "https://www.zimmerli.com/en/men/underwear",
+      "image": null,
+      "activities": [
+        "romantic",
+        "spa"
+      ],
+      "vibes": [
+        "luxury",
+        "indulgent"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "zimmerli",
+        "commission": "10%"
+      },
+      "notes": "Swiss-made since 1871 \u2014 ultimate luxury reference",
+      "active": true
+    },
+    {
+      "id": "aff-sunspel-boxer",
+      "sku": "AFF-BX-002",
+      "name": "sunspel classic boxer",
+      "subtitle": "english \u00b7 superfine cotton",
+      "category": "underwear",
+      "price": 58,
+      "currency": "USD",
+      "url": "https://www.sunspel.com/collections/mens-underwear-boxer-shorts",
+      "image": null,
+      "activities": [
+        "golf",
+        "tennis",
+        "brunch"
+      ],
+      "vibes": [
+        "leisure",
+        "luxury"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "cj",
+        "program": "sunspel",
+        "commission": "8%"
+      },
+      "notes": "British heritage since 1860 \u2014 James Bond's choice",
+      "active": true
+    },
+    {
+      "id": "aff-sunspel-liberty",
+      "sku": "AFF-BX-003",
+      "name": "sunspel liberty boxer",
+      "subtitle": "liberty print \u00b7 limited",
+      "category": "underwear",
+      "price": 95,
+      "currency": "USD",
+      "url": "https://www.sunspel.com/products/mens-classic-boxer-shorts-in-liberty-fabric-in-hillside-green-mbox4701l-gnir",
+      "image": null,
+      "activities": [
+        "brunch",
+        "poker",
+        "romantic"
+      ],
+      "vibes": [
+        "luxury",
+        "indulgent",
+        "social"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "cj",
+        "program": "sunspel",
+        "commission": "8%"
+      },
+      "notes": "Liberty London fabric collaboration",
+      "active": true
+    },
+    {
+      "id": "aff-hanro-boxer",
+      "sku": "AFF-BX-004",
+      "name": "hanro cotton sporty boxer",
+      "subtitle": "swiss \u00b7 mercerised cotton",
+      "category": "underwear",
+      "price": 72,
+      "currency": "USD",
+      "url": "https://hanro.com/en-us/men/underwear/boxer-shorts",
+      "image": null,
+      "activities": [
+        "golf",
+        "tennis",
+        "spa"
+      ],
+      "vibes": [
+        "leisure",
+        "luxury",
+        "active"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "hanro",
+        "commission": "10%"
+      },
+      "notes": "Swiss luxury \u2014 mercerised cotton finish",
+      "active": true
+    },
+    {
+      "id": "aff-sunspel-boxer-brief-black",
+      "sku": "AFF-BX-005",
+      "name": "superfine two-button boxer brief",
+      "subtitle": "sunspel \u00b7 black \u00b7 superfine cotton",
+      "category": "underwear",
+      "price": 50,
+      "currency": "USD",
+      "url": "https://us.sunspel.com/products/mens-superfine-cotton-two-button-boxer-briefs-in-black-mshr4415-bkaa",
+      "image": "https://us.sunspel.com/cdn/shop/files/mshr4415-bkaa-1.jpg?v=1752837270&width=900",
+      "activities": [
+        "gym",
+        "romantic",
+        "daily"
+      ],
+      "vibes": [
+        "luxury",
+        "classic",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "shareasale",
+        "program": "sunspel",
+        "commission": "10%"
+      },
+      "notes": "The classic British boxer brief.",
+      "active": true
+    },
+    {
+      "id": "brief-black",
+      "sku": "TOX-UW-003",
+      "name": "toxic brief",
+      "subtitle": "midnight black",
+      "category": "underwear",
+      "price": 26,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/toxic-brief",
+      "image": null,
+      "activities": [
+        "nightclub"
+      ],
+      "vibes": [
+        "night",
+        "bold",
+        "indulgent"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "thong-electric",
+      "sku": "TOX-UW-004",
+      "name": "electric thong",
+      "subtitle": "electric blue",
+      "category": "underwear",
+      "price": 28,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/electric-thong",
+      "image": null,
+      "activities": [
+        "beach",
+        "pool",
+        "nightclub"
+      ],
+      "vibes": [
+        "bold",
+        "party",
+        "indulgent"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "hooded-robe-charcoal",
+      "sku": "TOX-RB-001",
+      "name": "heavyweight hooded robe",
+      "subtitle": "charcoal \u00b7 turkish cotton",
+      "category": "robes",
+      "price": 145,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/hooded-robe",
+      "image": null,
+      "activities": [
+        "hot-tub",
+        "spa",
+        "sauna",
+        "pool"
+      ],
+      "vibes": [
+        "luxury",
+        "relaxation",
+        "indulgent",
+        "leisure"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "Heavy hooded bath robe \u2014 the 'liberates laughing' essential",
+      "active": true
+    },
+    {
+      "id": "hooded-robe-white",
+      "sku": "TOX-RB-002",
+      "name": "heavyweight hooded robe",
+      "subtitle": "cloud white \u00b7 turkish cotton",
+      "category": "robes",
+      "price": 145,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/hooded-robe-white",
+      "image": null,
+      "activities": [
+        "hot-tub",
+        "spa",
+        "sauna"
+      ],
+      "vibes": [
+        "luxury",
+        "relaxation",
+        "wellness",
+        "self-care"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "silk-robe-emerald",
+      "sku": "TOX-RB-003",
+      "name": "silk robe",
+      "subtitle": "emerald green",
+      "category": "robes",
+      "price": 120,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/silk-robe",
+      "image": null,
+      "activities": [
+        "spa",
+        "romantic"
+      ],
+      "vibes": [
+        "luxury",
+        "romantic",
+        "indulgent"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "lounge-set-grey",
+      "sku": "TOX-LW-001",
+      "name": "toxic lounge set",
+      "subtitle": "grey + green trim",
+      "category": "loungewear",
+      "price": 68,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/lounge-set",
+      "image": null,
+      "activities": [
+        "brunch",
+        "poker"
+      ],
+      "vibes": [
+        "leisure",
+        "relaxation",
+        "social"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "sleep-shorts-bamboo",
+      "sku": "TOX-LW-002",
+      "name": "sleep shorts",
+      "subtitle": "soft bamboo",
+      "category": "loungewear",
+      "price": 38,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/sleep-shorts",
+      "image": null,
+      "activities": [],
+      "vibes": [
+        "relaxation",
+        "wellness",
+        "self-care"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "mesh-tank-black",
+      "sku": "TOX-LW-003",
+      "name": "mesh tank",
+      "subtitle": "see-through black",
+      "category": "loungewear",
+      "price": 42,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/mesh-tank",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "concert"
+      ],
+      "vibes": [
+        "party",
+        "night",
+        "bold",
+        "indulgent"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "toxic-band-black",
+      "sku": "TOX-AC-001",
+      "name": "toxic band",
+      "subtitle": "matte black silicone",
+      "category": "accessories",
+      "price": 12,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/toxic-band",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "party",
+        "gym"
+      ],
+      "vibes": [
+        "bold",
+        "party",
+        "indulgent"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "notes": "The bracelet play \ud83d\udc8d\u2192\u2b55",
+      "active": true
+    },
+    {
+      "id": "toxic-band-green",
+      "sku": "TOX-AC-002",
+      "name": "toxic band",
+      "subtitle": "toxic green silicone",
+      "category": "accessories",
+      "price": 12,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/toxic-band-green",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "party"
+      ],
+      "vibes": [
+        "bold",
+        "party"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "uberlube-travel",
+      "sku": "AFF-WL-001",
+      "name": "\u00fcberlube travel",
+      "subtitle": "silicone \u00b7 TSA-ready",
+      "category": "wellness",
+      "price": 18,
+      "currency": "USD",
+      "url": "https://uberlube.com/products/good-to-go",
+      "image": null,
+      "activities": [
+        "romantic",
+        "roadtrip"
+      ],
+      "vibes": [
+        "romantic",
+        "luxury",
+        "indulgent"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "uberlube",
+        "commission": "15%"
+      },
+      "active": true
+    },
+    {
+      "id": "maude-essentials",
+      "sku": "AFF-WL-002",
+      "name": "the essentials kit",
+      "subtitle": "vibe \u00b7 oil \u00b7 rubber",
+      "category": "wellness",
+      "price": 65,
+      "currency": "USD",
+      "url": "https://getmaude.com/products/essentials",
+      "image": null,
+      "activities": [
+        "romantic"
+      ],
+      "vibes": [
+        "romantic",
+        "luxury",
+        "self-care"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "shareasale",
+        "program": "maude",
+        "commission": "10%"
+      },
+      "active": true
+    },
+    {
+      "id": "maude-vibe",
+      "sku": "AFF-WL-003",
+      "name": "vibe",
+      "subtitle": "personal massager \u00b7 grey",
+      "category": "wellness",
+      "price": 45,
+      "currency": "USD",
+      "url": "https://getmaude.com/products/vibe",
+      "image": null,
+      "activities": [
+        "romantic",
+        "spa"
+      ],
+      "vibes": [
+        "romantic",
+        "self-care",
+        "wellness"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "shareasale",
+        "program": "maude",
+        "commission": "10%"
+      },
+      "active": true
+    },
+    {
+      "id": "one-condoms-variety",
+      "sku": "AFF-WL-004",
+      "name": "ONE variety pack",
+      "subtitle": "24ct \u00b7 artist designs",
+      "category": "wellness",
+      "price": 22,
+      "currency": "USD",
+      "url": "https://www.onecondoms.com/products/variety-pack",
+      "image": null,
+      "activities": [
+        "party",
+        "romantic",
+        "nightclub"
+      ],
+      "vibes": [
+        "bold",
+        "party",
+        "indulgent"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "one-condoms",
+        "commission": "12%"
+      },
+      "active": true
+    },
+    {
+      "id": "herschel-classic",
+      "sku": "AFF-TR-001",
+      "name": "classic backpack",
+      "subtitle": "herschel \u00b7 26L",
+      "category": "travel",
+      "price": 65,
+      "currency": "USD",
+      "url": "https://herschel.com/shop/backpacks/herschel-classic-backpack",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "concert",
+        "gym"
+      ],
+      "vibes": [
+        "active",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "rakuten",
+        "program": "herschel",
+        "commission": "8%"
+      },
+      "active": true
+    },
+    {
+      "id": "aer-travel-pack",
+      "sku": "AFF-TR-002",
+      "name": "travel pack 3",
+      "subtitle": "aer \u00b7 35L \u00b7 black",
+      "category": "travel",
+      "price": 250,
+      "currency": "USD",
+      "url": "https://aersf.com/products/travel-pack-3",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "ski"
+      ],
+      "vibes": [
+        "adventure",
+        "luxury"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "aer",
+        "commission": "10%"
+      },
+      "active": true
+    },
+    {
+      "id": "bellroy-venture",
+      "sku": "AFF-TR-003",
+      "name": "venture backpack",
+      "subtitle": "bellroy \u00b7 22L",
+      "category": "travel",
+      "price": 199,
+      "currency": "USD",
+      "url": "https://bellroy.com/products/venture-backpack",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "golf"
+      ],
+      "vibes": [
+        "luxury",
+        "leisure",
+        "social"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "impact",
+        "program": "bellroy",
+        "commission": "8%"
+      },
+      "active": true
+    },
+    {
+      "id": "hot-tub-inflatable",
+      "sku": "AFF-HM-001",
+      "name": "inflatable hot tub",
+      "subtitle": "intex purespa \u00b7 4-person",
+      "category": "home",
+      "price": 599,
+      "currency": "USD",
+      "url": "https://amazon.com/dp/B07MWCQ9XM",
+      "image": null,
+      "activities": [
+        "hot-tub",
+        "party"
+      ],
+      "vibes": [
+        "leisure",
+        "party",
+        "relaxation"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "amazon",
+        "program": "associates",
+        "commission": "3%"
+      },
+      "notes": "Entry level \u2014 $500-800 range",
+      "active": true
+    },
+    {
+      "id": "hot-tub-mid",
+      "sku": "AFF-HM-002",
+      "name": "lifesmart hot tub",
+      "subtitle": "5-person \u00b7 plug & play",
+      "category": "home",
+      "price": 4499,
+      "currency": "USD",
+      "url": "https://www.costco.com/hot-tubs.html",
+      "image": null,
+      "activities": [
+        "hot-tub",
+        "party"
+      ],
+      "vibes": [
+        "luxury",
+        "party",
+        "relaxation",
+        "social"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "costco",
+        "commission": "referral"
+      },
+      "notes": "Mid-range \u2014 $3,500-5,000",
+      "active": true
+    },
+    {
+      "id": "hot-tub-premium",
+      "sku": "AFF-HM-003",
+      "name": "hot spring highlife",
+      "subtitle": "6-person \u00b7 premium jets",
+      "category": "home",
+      "price": 12999,
+      "currency": "USD",
+      "url": "https://www.hotspring.com/hot-tubs/highlife-collection",
+      "image": null,
+      "activities": [
+        "hot-tub",
+        "party",
+        "romantic"
+      ],
+      "vibes": [
+        "luxury",
+        "indulgent",
+        "relaxation"
+      ],
+      "source": "referral",
+      "affiliate": {
+        "network": "direct",
+        "program": "hotspring-dealer",
+        "commission": "referral-fee"
+      },
+      "notes": "Premium \u2014 $7,000-15,000. Dealer referral model.",
+      "active": true
+    },
+    {
+      "id": "titleist-golf-balls",
+      "sku": "AFF-OD-001",
+      "name": "pro v1 golf balls",
+      "subtitle": "titleist \u00b7 dozen",
+      "category": "outdoor",
+      "price": 55,
+      "currency": "USD",
+      "url": "https://www.titleist.com/golf-balls/pro-v1",
+      "image": null,
+      "activities": [
+        "golf"
+      ],
+      "vibes": [
+        "leisure",
+        "social",
+        "daydrink"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "cj",
+        "program": "titleist",
+        "commission": "5%"
+      },
+      "active": true
+    },
+    {
+      "id": "yeti-tumbler",
+      "sku": "AFF-OD-002",
+      "name": "rambler tumbler",
+      "subtitle": "yeti \u00b7 30oz \u00b7 olive",
+      "category": "outdoor",
+      "price": 38,
+      "currency": "USD",
+      "url": "https://www.yeti.com/drinkware/tumblers",
+      "image": null,
+      "activities": [
+        "golf",
+        "beach",
+        "pool",
+        "roadtrip"
+      ],
+      "vibes": [
+        "leisure",
+        "daydrink",
+        "active"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "avantlink",
+        "program": "yeti",
+        "commission": "6%"
+      },
+      "active": true
+    },
+    {
+      "id": "wilson-tennis-racket",
+      "sku": "AFF-OD-003",
+      "name": "blade 98 racket",
+      "subtitle": "wilson \u00b7 v8",
+      "category": "outdoor",
+      "price": 269,
+      "currency": "USD",
+      "url": "https://www.wilson.com/en-us/tennis/rackets/blade",
+      "image": null,
+      "activities": [
+        "tennis"
+      ],
+      "vibes": [
+        "active",
+        "social",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "cj",
+        "program": "wilson",
+        "commission": "7%"
+      },
+      "active": true
+    },
+    {
+      "id": "manscaped-lawnmower",
+      "sku": "AFF-GR-001",
+      "name": "the lawnmower 5.0",
+      "subtitle": "manscaped \u00b7 body trimmer",
+      "category": "grooming",
+      "price": 90,
+      "currency": "USD",
+      "url": "https://www.manscaped.com/products/the-lawn-mower-5-0",
+      "image": null,
+      "activities": [
+        "gym",
+        "beach",
+        "pool"
+      ],
+      "vibes": [
+        "self-care",
+        "bold",
+        "active"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "impact",
+        "program": "manscaped",
+        "commission": "20%"
+      },
+      "active": true
+    },
+    {
+      "id": "meridian-trimmer",
+      "sku": "AFF-GR-002",
+      "name": "the trimmer plus",
+      "subtitle": "meridian \u00b7 sage",
+      "category": "grooming",
+      "price": 75,
+      "currency": "USD",
+      "url": "https://meridiangrooming.com/products/the-trimmer-plus",
+      "image": null,
+      "activities": [
+        "gym"
+      ],
+      "vibes": [
+        "self-care",
+        "wellness"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "shareasale",
+        "program": "meridian",
+        "commission": "15%"
+      },
+      "active": true
+    },
+    {
+      "id": "krewe-sunglasses",
+      "sku": "AFF-EY-001",
+      "name": "st. louis sunglasses",
+      "subtitle": "krewe \u00b7 tortoise",
+      "category": "eyewear",
+      "price": 295,
+      "currency": "USD",
+      "url": "https://krewe.com/collections/st-louis",
+      "image": null,
+      "activities": [
+        "beach",
+        "brunch",
+        "rooftop",
+        "yacht"
+      ],
+      "vibes": [
+        "luxury",
+        "social",
+        "daydrink"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "shareasale",
+        "program": "krewe",
+        "commission": "10%"
+      },
+      "active": true
+    },
+    {
+      "id": "le-labo-santal",
+      "sku": "AFF-FR-001",
+      "name": "santal 33",
+      "subtitle": "le labo \u00b7 50ml",
+      "category": "fragrance",
+      "price": 215,
+      "currency": "USD",
+      "url": "https://www.lelabofragrances.com/santal-33.html",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "rooftop",
+        "romantic"
+      ],
+      "vibes": [
+        "luxury",
+        "night",
+        "romantic",
+        "indulgent"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "rakuten",
+        "program": "le-labo",
+        "commission": "5%"
+      },
+      "active": true
+    },
+    {
+      "id": "boy-smells-candle",
+      "sku": "AFF-FR-002",
+      "name": "kush candle",
+      "subtitle": "boy smells \u00b7 8.5oz",
+      "category": "fragrance",
+      "price": 39,
+      "currency": "USD",
+      "url": "https://boysmells.com/products/kush",
+      "image": null,
+      "activities": [
+        "hot-tub",
+        "romantic",
+        "poker"
+      ],
+      "vibes": [
+        "indulgent",
+        "relaxation",
+        "night"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "shareasale",
+        "program": "boy-smells",
+        "commission": "12%"
+      },
+      "active": true
+    },
+    {
+      "id": "aff-millar-hoodie",
+      "sku": "AFF-LW-001",
+      "name": "peter millar lava wash hoodie",
+      "subtitle": "charcoal \u00b7 garment dyed",
+      "category": "loungewear",
+      "price": 175,
+      "currency": "USD",
+      "url": "https://www.petermillar.com/hoodies",
+      "image": null,
+      "activities": [
+        "golf",
+        "brunch",
+        "poker",
+        "ski"
+      ],
+      "vibes": [
+        "luxury",
+        "leisure",
+        "social"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "cj",
+        "program": "peter-millar",
+        "commission": "8%"
+      },
+      "notes": "Country club aesthetic \u2014 clean, no obvious branding. Placeholder for internal line.",
+      "active": true
+    },
+    {
+      "id": "aff-vuori-hoodie",
+      "sku": "AFF-LW-002",
+      "name": "vuori ponto hoodie",
+      "subtitle": "charcoal heather \u00b7 dreamknit",
+      "category": "loungewear",
+      "price": 118,
+      "currency": "USD",
+      "url": "https://vuoriclothing.com/products/ponto-performance-hoodie",
+      "image": null,
+      "activities": [
+        "gym",
+        "yoga",
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "active",
+        "wellness",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "impact",
+        "program": "vuori",
+        "commission": "10%"
+      },
+      "notes": "Performance meets lifestyle. Minimal branding.",
+      "active": true
+    },
+    {
+      "id": "aff-reigning-hoodie",
+      "sku": "AFF-LW-003",
+      "name": "reigning champ midweight hoodie",
+      "subtitle": "charcoal \u00b7 heavyweight terry",
+      "category": "loungewear",
+      "price": 165,
+      "currency": "USD",
+      "url": "https://reigningchamp.com/collections/hoodies",
+      "image": null,
+      "activities": [
+        "gym",
+        "ski",
+        "roadtrip"
+      ],
+      "vibes": [
+        "active",
+        "luxury",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "avantlink",
+        "program": "reigning-champ",
+        "commission": "8%"
+      },
+      "notes": "Canadian made. Minimal branding. Quality benchmark.",
+      "active": true
+    },
+    {
+      "id": "aff-cuts-hoodie",
+      "sku": "AFF-LW-004",
+      "name": "cuts hyperloop hoodie",
+      "subtitle": "charcoal \u00b7 wrinkle-free",
+      "category": "loungewear",
+      "price": 128,
+      "currency": "USD",
+      "url": "https://cutsclothing.com/collections/hoodies",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "brunch",
+        "poker"
+      ],
+      "vibes": [
+        "leisure",
+        "social"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "shareasale",
+        "program": "cuts",
+        "commission": "10%"
+      },
+      "notes": "No logo. Elevated basics. Good POD comparison.",
+      "active": true
+    },
+    {
+      "id": "aff-vuori-jogger",
+      "sku": "AFF-LW-005",
+      "name": "vuori ponto jogger",
+      "subtitle": "charcoal heather \u00b7 dreamknit",
+      "category": "loungewear",
+      "price": 98,
+      "currency": "USD",
+      "url": "https://vuoriclothing.com/products/ponto-performance-jogger",
+      "image": null,
+      "activities": [
+        "gym",
+        "yoga",
+        "roadtrip",
+        "brunch"
+      ],
+      "vibes": [
+        "active",
+        "wellness",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "impact",
+        "program": "vuori",
+        "commission": "10%"
+      },
+      "notes": "Match with Vuori hoodie. Jogger reference.",
+      "active": true
+    },
+    {
+      "id": "aff-reigning-jogger",
+      "sku": "AFF-LW-006",
+      "name": "reigning champ midweight sweatpant",
+      "subtitle": "charcoal \u00b7 terry",
+      "category": "loungewear",
+      "price": 145,
+      "currency": "USD",
+      "url": "https://reigningchamp.com/collections/sweatpants",
+      "image": null,
+      "activities": [
+        "gym",
+        "ski",
+        "roadtrip"
+      ],
+      "vibes": [
+        "active",
+        "luxury",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "avantlink",
+        "program": "reigning-champ",
+        "commission": "8%"
+      },
+      "notes": "Match with RC hoodie. Premium jogger reference.",
+      "active": true
+    },
+    {
+      "id": "tox-hoodie-charcoal",
+      "sku": "TOX-LW-010",
+      "name": "heavyweight hoodie",
+      "subtitle": "charcoal \u00b7 450gsm french terry",
+      "category": "loungewear",
+      "price": 110,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/heavyweight-hoodie-charcoal",
+      "image": null,
+      "activities": [
+        "golf",
+        "brunch",
+        "poker",
+        "ski",
+        "roadtrip"
+      ],
+      "vibes": [
+        "luxury",
+        "leisure",
+        "social"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "sourcing": {
+        "status": "planned",
+        "strategy": "white-label",
+        "supplier": "Independent Trading Co. or AS Colour",
+        "cost_target": "$25-35",
+        "margin_target": "65-75%"
+      },
+      "notes": "No visible branding. Tone-on-tone if any. Peter Millar quality at Cuts price.",
+      "active": false
+    },
+    {
+      "id": "tox-hoodie-navy",
+      "sku": "TOX-LW-011",
+      "name": "heavyweight hoodie",
+      "subtitle": "navy \u00b7 450gsm french terry",
+      "category": "loungewear",
+      "price": 110,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/heavyweight-hoodie-navy",
+      "image": null,
+      "activities": [
+        "golf",
+        "brunch",
+        "yacht",
+        "poker"
+      ],
+      "vibes": [
+        "luxury",
+        "leisure",
+        "social"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "sourcing": {
+        "status": "planned",
+        "strategy": "white-label",
+        "supplier": "Independent Trading Co. or AS Colour",
+        "cost_target": "$25-35",
+        "margin_target": "65-75%"
+      },
+      "active": false
+    },
+    {
+      "id": "tox-jogger-charcoal",
+      "sku": "TOX-LW-012",
+      "name": "heavyweight jogger",
+      "subtitle": "charcoal \u00b7 tapered \u00b7 400gsm",
+      "category": "loungewear",
+      "price": 95,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/heavyweight-jogger-charcoal",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "yoga",
+        "gym"
+      ],
+      "vibes": [
+        "leisure",
+        "active",
+        "wellness"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "sourcing": {
+        "status": "planned",
+        "strategy": "white-label",
+        "supplier": "Match hoodie supplier",
+        "cost_target": "$20-30",
+        "margin_target": "65-75%"
+      },
+      "active": false
+    },
+    {
+      "id": "tox-jogger-navy",
+      "sku": "TOX-LW-013",
+      "name": "heavyweight jogger",
+      "subtitle": "navy \u00b7 tapered \u00b7 400gsm",
+      "category": "loungewear",
+      "price": 95,
+      "currency": "USD",
+      "url": "https://iamtoxico.com/products/heavyweight-jogger-navy",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "yacht"
+      ],
+      "vibes": [
+        "leisure",
+        "luxury",
+        "social"
+      ],
+      "source": "internal",
+      "affiliate": null,
+      "sourcing": {
+        "status": "planned",
+        "strategy": "white-label",
+        "supplier": "Match hoodie supplier",
+        "cost_target": "$20-30",
+        "margin_target": "65-75%"
+      },
+      "active": false
+    },
+    {
+      "id": "cuddl-thermal-set-mens",
+      "sku": "AFF-CD-001",
+      "name": "cuddl duds thermal set",
+      "subtitle": "mens heavyweight fleece lined",
+      "category": "loungewear",
+      "price": 45,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CCZZ9RL2",
+      "image": null,
+      "activities": [
+        "ski",
+        "camping",
+        "roadtrip"
+      ],
+      "vibes": [
+        "comfort",
+        "winter",
+        "adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "cuddl-lounge-pants-mens",
+      "sku": "AFF-CD-002",
+      "name": "cuddl duds lounge pants",
+      "subtitle": "soft stretch underscrubs",
+      "category": "loungewear",
+      "price": 28,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CCZZ9RL2",
+      "image": null,
+      "activities": [
+        "yoga",
+        "meditation",
+        "spa"
+      ],
+      "vibes": [
+        "comfort",
+        "wellness",
+        "relaxation"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "cuddl-cabin-fleece-set",
+      "sku": "AFF-CD-003",
+      "name": "cabin fleece pj set",
+      "subtitle": "v-neck top + pant",
+      "category": "loungewear",
+      "price": 42,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CJZNBFDZ",
+      "image": null,
+      "activities": [
+        "camping",
+        "ski",
+        "poker"
+      ],
+      "vibes": [
+        "comfort",
+        "cozy",
+        "winter"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "cuddl-scrubs-jogger",
+      "sku": "AFF-CD-004",
+      "name": "tapered scrub jogger",
+      "subtitle": "lightweight medical fit",
+      "category": "loungewear",
+      "price": 32,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CCZP5SN8",
+      "image": null,
+      "activities": [
+        "gym",
+        "yoga",
+        "brunch"
+      ],
+      "vibes": [
+        "comfort",
+        "active",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "eileen-west-nightgown-cotton",
+      "sku": "AFF-EW-001",
+      "name": "eileen west cotton gown",
+      "subtitle": "100% cotton lawn \u00b7 long sleeve",
+      "category": "loungewear",
+      "price": 68,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0FWRXLNZ3",
+      "image": null,
+      "activities": [
+        "spa",
+        "meditation"
+      ],
+      "vibes": [
+        "luxury",
+        "romantic",
+        "feminine"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "eileen-west-flannel-nightgown",
+      "sku": "AFF-EW-002",
+      "name": "brushed flannel nightgown",
+      "subtitle": "heritage cotton \u00b7 waltz length",
+      "category": "loungewear",
+      "price": 72,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CF5948RM",
+      "image": null,
+      "activities": [
+        "spa",
+        "meditation",
+        "yoga"
+      ],
+      "vibes": [
+        "comfort",
+        "cozy",
+        "feminine"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "eileen-west-pj-set",
+      "sku": "AFF-EW-003",
+      "name": "dream sweater knit pj set",
+      "subtitle": "longsleeve cozy set",
+      "category": "loungewear",
+      "price": 78,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0F33X1TGZ",
+      "image": null,
+      "activities": [
+        "spa",
+        "brunch"
+      ],
+      "vibes": [
+        "luxury",
+        "comfort",
+        "romantic"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "away-everywhere-backpack",
+      "sku": "AFF-AW-001",
+      "name": "away everywhere backpack",
+      "subtitle": "laptop sleeve \u00b7 jet black",
+      "category": "travel",
+      "price": 195,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0DLGSTPYR",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "yacht",
+        "concert"
+      ],
+      "vibes": [
+        "luxury",
+        "minimal",
+        "adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "zomake-packable-30l",
+      "sku": "AFF-ZO-001",
+      "name": "packable hiking daypack",
+      "subtitle": "30L \u00b7 water resistant \u00b7 orange",
+      "category": "travel",
+      "price": 22,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07CBT2RN4",
+      "image": null,
+      "activities": [
+        "beach",
+        "camping",
+        "roadtrip"
+      ],
+      "vibes": [
+        "adventure",
+        "active",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "venture-pal-35l",
+      "sku": "AFF-VP-001",
+      "name": "venture pal ultralight pack",
+      "subtitle": "35L foldable daypack",
+      "category": "travel",
+      "price": 20,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B01BY6UEL8",
+      "image": null,
+      "activities": [
+        "camping",
+        "beach",
+        "gym"
+      ],
+      "vibes": [
+        "adventure",
+        "budget",
+        "active"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "miycoo-hiking-45l",
+      "sku": "AFF-MY-001",
+      "name": "packable hiking backpack",
+      "subtitle": "45L waterproof \u00b7 blue",
+      "category": "travel",
+      "price": 26,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0D7W2669L",
+      "image": null,
+      "activities": [
+        "camping",
+        "roadtrip",
+        "beach"
+      ],
+      "vibes": [
+        "adventure",
+        "active",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "matein-travel-backpack",
+      "sku": "AFF-MA-001",
+      "name": "large travel backpack",
+      "subtitle": "expandable anti-theft \u00b7 beige",
+      "category": "travel",
+      "price": 40,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0BFHS8LWM",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "camping",
+        "concert"
+      ],
+      "vibes": [
+        "adventure",
+        "practical",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "hydaway-collapsible-15l",
+      "sku": "AFF-HY-001",
+      "name": "hydaway collapsible pack",
+      "subtitle": "15L eco-friendly daypack",
+      "category": "travel",
+      "price": 45,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0C221PQZX",
+      "image": null,
+      "activities": [
+        "beach",
+        "brunch",
+        "concert"
+      ],
+      "vibes": [
+        "minimal",
+        "eco",
+        "adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "amazon-thermal-set",
+      "sku": "AFF-AE-001",
+      "name": "amazon essentials thermal set",
+      "subtitle": "long johns underwear",
+      "category": "underwear",
+      "price": 28,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07QC8WDLS",
+      "image": null,
+      "activities": [
+        "ski",
+        "camping"
+      ],
+      "vibes": [
+        "comfort",
+        "budget",
+        "winter"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "fruit-loom-waffle-thermal",
+      "sku": "AFF-FL-001",
+      "name": "recycled waffle thermal",
+      "subtitle": "henley top \u00b7 greystone",
+      "category": "underwear",
+      "price": 18,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B08D349WR7",
+      "image": null,
+      "activities": [
+        "camping",
+        "ski"
+      ],
+      "vibes": [
+        "budget",
+        "comfort",
+        "eco"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "fruit-loom-thermal-bottom",
+      "sku": "AFF-FL-002",
+      "name": "recycled thermal bottom",
+      "subtitle": "waffle long johns",
+      "category": "underwear",
+      "price": 16,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B08D2M6V3Q",
+      "image": null,
+      "activities": [
+        "ski",
+        "camping"
+      ],
+      "vibes": [
+        "budget",
+        "comfort",
+        "eco"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "david-archy-pj-set",
+      "sku": "AFF-DA-001",
+      "name": "david archy cotton pj set",
+      "subtitle": "raglan sleeve loungewear",
+      "category": "loungewear",
+      "price": 45,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07SGC6ZDV",
+      "image": null,
+      "activities": [
+        "poker",
+        "brunch"
+      ],
+      "vibes": [
+        "comfort",
+        "classic",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "tommy-john-pj-pants",
+      "sku": "AFF-TJ-001",
+      "name": "tommy john lounge pants",
+      "subtitle": "second skin pj bottoms",
+      "category": "loungewear",
+      "price": 68,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07JM35D1T",
+      "image": null,
+      "activities": [
+        "spa",
+        "meditation",
+        "brunch"
+      ],
+      "vibes": [
+        "luxury",
+        "comfort",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "bamboo-cool-lounge-pants",
+      "sku": "AFF-BC-001",
+      "name": "bamboo lounge pants 2-pack",
+      "subtitle": "soft comfy pj pant",
+      "category": "loungewear",
+      "price": 35,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CG9HMYK8",
+      "image": null,
+      "activities": [
+        "meditation",
+        "yoga",
+        "spa"
+      ],
+      "vibes": [
+        "eco",
+        "comfort",
+        "wellness"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "eddie-bauer-thermal-set",
+      "sku": "AFF-EB-001",
+      "name": "eddie bauer thermal set",
+      "subtitle": "2pc lounge \u00b7 thermal + sweatpants",
+      "category": "loungewear",
+      "price": 38,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0B435Y7P1",
+      "image": null,
+      "activities": [
+        "camping",
+        "ski",
+        "roadtrip"
+      ],
+      "vibes": [
+        "outdoor",
+        "comfort",
+        "adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "thermajohn-long-johns",
+      "sku": "AFF-TH-001",
+      "name": "thermajohn fleece lined set",
+      "subtitle": "base layer cold weather",
+      "category": "underwear",
+      "price": 30,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B018DQI4U0",
+      "image": null,
+      "activities": [
+        "ski",
+        "camping"
+      ],
+      "vibes": [
+        "budget",
+        "winter",
+        "active"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "lapasa-thermal-top",
+      "sku": "AFF-LA-001",
+      "name": "lapasa hunting undershirt",
+      "subtitle": "thermal long sleeve",
+      "category": "underwear",
+      "price": 32,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B09ZQCSSSJ",
+      "image": null,
+      "activities": [
+        "camping",
+        "ski",
+        "roadtrip"
+      ],
+      "vibes": [
+        "outdoor",
+        "active",
+        "winter"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "comfneat-thermal-2pack",
+      "sku": "AFF-CF-001",
+      "name": "waffle thermal undershirt 2pk",
+      "subtitle": "soft crew neck",
+      "category": "underwear",
+      "price": 26,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B083RC5XCV",
+      "image": null,
+      "activities": [
+        "ski",
+        "camping"
+      ],
+      "vibes": [
+        "budget",
+        "comfort",
+        "winter"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "duofold-flex-thermal-shirt",
+      "sku": "AFF-DF-001",
+      "name": "duofold flex weight thermal",
+      "subtitle": "mid-weight shirt",
+      "category": "underwear",
+      "price": 28,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B074P9VMZY",
+      "image": null,
+      "activities": [
+        "ski",
+        "gym",
+        "camping"
+      ],
+      "vibes": [
+        "active",
+        "performance",
+        "winter"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "lands-end-plush-robe",
+      "sku": "AFF-LE-001",
+      "name": "lands end plush wrap robe",
+      "subtitle": "cozy long robe",
+      "category": "robes",
+      "price": 90,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CKFNDW2W",
+      "image": null,
+      "activities": [
+        "spa",
+        "hot-tub",
+        "sauna"
+      ],
+      "vibes": [
+        "luxury",
+        "comfort",
+        "cozy"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "lands-end-cotton-nightgown",
+      "sku": "AFF-LE-002",
+      "name": "cotton midcalf nightgown",
+      "subtitle": "long sleeve classic",
+      "category": "loungewear",
+      "price": 60,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0FJYJ6FXV",
+      "image": null,
+      "activities": [
+        "spa",
+        "meditation"
+      ],
+      "vibes": [
+        "comfort",
+        "classic",
+        "feminine"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "ekouaer-zipper-robe",
+      "sku": "AFF-EK-001",
+      "name": "zipper housecoat robe",
+      "subtitle": "3/4 sleeves loungewear",
+      "category": "robes",
+      "price": 35,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07VL18Z5G",
+      "image": null,
+      "activities": [
+        "spa",
+        "brunch"
+      ],
+      "vibes": [
+        "budget",
+        "comfort",
+        "practical"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "ekouaer-pj-set-2pack",
+      "sku": "AFF-EK-002",
+      "name": "pj set 2-pack",
+      "subtitle": "long sleeve v-neck",
+      "category": "loungewear",
+      "price": 40,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0D2RV8BJG",
+      "image": null,
+      "activities": [
+        "brunch",
+        "meditation"
+      ],
+      "vibes": [
+        "budget",
+        "comfort",
+        "practical"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "real-essentials-lounge-3pk",
+      "sku": "AFF-RE-001",
+      "name": "pj pants 3-pack",
+      "subtitle": "soft lounge bottoms",
+      "category": "loungewear",
+      "price": 35,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0B3S2QV8B",
+      "image": null,
+      "activities": [
+        "poker",
+        "brunch"
+      ],
+      "vibes": [
+        "budget",
+        "comfort",
+        "practical"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "pudolla-mesh-joggers",
+      "sku": "AFF-PU-001",
+      "name": "lightweight mesh joggers",
+      "subtitle": "zipper pockets \u00b7 workout",
+      "category": "loungewear",
+      "price": 28,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0DJ93SL4D",
+      "image": null,
+      "activities": [
+        "gym",
+        "yoga",
+        "roadtrip"
+      ],
+      "vibes": [
+        "active",
+        "budget",
+        "athletic"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "shiyifa-fleece-joggers",
+      "sku": "AFF-SH-001",
+      "name": "winter fleece joggers",
+      "subtitle": "thermal track pants",
+      "category": "loungewear",
+      "price": 32,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B09BC6N8JG",
+      "image": null,
+      "activities": [
+        "ski",
+        "camping",
+        "roadtrip"
+      ],
+      "vibes": [
+        "winter",
+        "comfort",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "polare-leather-daypack",
+      "sku": "AFF-PO-001",
+      "name": "full grain leather daypack",
+      "subtitle": "italian leather \u00b7 YKK zippers",
+      "category": "travel",
+      "price": 85,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B08PKHD1ZY",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "roadtrip"
+      ],
+      "vibes": [
+        "luxury",
+        "classic",
+        "quality"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "lovevook-travel-40l",
+      "sku": "AFF-LV-001",
+      "name": "travel backpack 40L",
+      "subtitle": "TSA approved + packing cubes",
+      "category": "travel",
+      "price": 50,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0CJYD3N79",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "camping",
+        "concert"
+      ],
+      "vibes": [
+        "practical",
+        "adventure",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "tangcorle-expandable-50l",
+      "sku": "AFF-TC-001",
+      "name": "expandable travel pack 50L",
+      "subtitle": "USB port \u00b7 water resistant",
+      "category": "travel",
+      "price": 45,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B0BJVXFQSC",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "camping"
+      ],
+      "vibes": [
+        "adventure",
+        "practical",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "keyocean-cotton-nightgown",
+      "sku": "AFF-KO-001",
+      "name": "100% cotton nightgown",
+      "subtitle": "long sleeve ladies gown",
+      "category": "loungewear",
+      "price": 32,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07BQMX4QG",
+      "image": null,
+      "activities": [
+        "spa",
+        "meditation"
+      ],
+      "vibes": [
+        "comfort",
+        "classic",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "nachila-nightgown",
+      "sku": "AFF-NA-001",
+      "name": "viscose short sleeve nightshirt",
+      "subtitle": "cool sleepwear",
+      "category": "loungewear",
+      "price": 26,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B09Q58T9PY",
+      "image": null,
+      "activities": [
+        "spa",
+        "beach"
+      ],
+      "vibes": [
+        "budget",
+        "comfort",
+        "summer"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "jacques-marie-mage-zephirin",
+      "sku": "EYE-JMM-001",
+      "name": "jacques marie mage zephirin",
+      "subtitle": "limited edition \u00b7 japan acetate \u00b7 $895",
+      "category": "eyewear",
+      "price": 895,
+      "currency": "USD",
+      "url": "https://jacquesmariemage.com/products/zephirin",
+      "image": null,
+      "activities": [
+        "yacht",
+        "golf",
+        "rooftop",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "jmm",
+      "active": true
+    },
+    {
+      "id": "jacques-marie-mage-fellini",
+      "sku": "EYE-JMM-002",
+      "name": "jacques marie mage fellini",
+      "subtitle": "noir \u00b7 japanese titanium \u00b7 $950",
+      "category": "eyewear",
+      "price": 950,
+      "currency": "USD",
+      "url": "https://jacquesmariemage.com/products/fellini",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "poker",
+        "concert",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "night",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "jmm",
+      "active": true
+    },
+    {
+      "id": "jacques-marie-mage-ascari",
+      "sku": "EYE-JMM-003",
+      "name": "jacques marie mage ascari",
+      "subtitle": "racing heritage \u00b7 limited 500 \u00b7 $1,050",
+      "category": "eyewear",
+      "price": 1050,
+      "currency": "USD",
+      "url": "https://jacquesmariemage.com/products/ascari",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "yacht",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "adventure",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "jmm",
+      "active": true
+    },
+    {
+      "id": "oliver-peoples-gregory-peck",
+      "sku": "EYE-OP-001",
+      "name": "oliver peoples gregory peck sun",
+      "subtitle": "iconic round \u00b7 crystal \u00b7 $450",
+      "category": "eyewear",
+      "price": 450,
+      "currency": "USD",
+      "url": "https://www.oliverpeoples.com/usa/0OV5217S--1485W4",
+      "image": null,
+      "activities": [
+        "brunch",
+        "beach",
+        "rooftop",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "leisure",
+        "classic",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "oliver-peoples",
+      "active": true
+    },
+    {
+      "id": "oliver-peoples-cary-grant",
+      "sku": "EYE-OP-002",
+      "name": "oliver peoples cary grant sun",
+      "subtitle": "horn \u00b7 polarized \u00b7 $525",
+      "category": "eyewear",
+      "price": 525,
+      "currency": "USD",
+      "url": "https://www.oliverpeoples.com/usa/0OV5413SU--1612R5",
+      "image": null,
+      "activities": [
+        "golf",
+        "yacht",
+        "brunch",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "classic",
+        "social",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "oliver-peoples",
+      "active": true
+    },
+    {
+      "id": "persol-714-steve-mcqueen",
+      "sku": "EYE-PER-001",
+      "name": "persol 714 steve mcqueen",
+      "subtitle": "folding \u00b7 havana \u00b7 $395",
+      "category": "eyewear",
+      "price": 395,
+      "currency": "USD",
+      "url": "https://www.persol.com/usa/0PO0714SM--24-S3",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "beach",
+        "concert",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "classic",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "persol",
+      "active": true
+    },
+    {
+      "id": "persol-649",
+      "sku": "EYE-PER-002",
+      "name": "persol 649 original",
+      "subtitle": "italian legend \u00b7 polarized \u00b7 $340",
+      "category": "eyewear",
+      "price": 340,
+      "currency": "USD",
+      "url": "https://www.persol.com/usa/0PO0649--24-57",
+      "image": null,
+      "activities": [
+        "golf",
+        "brunch",
+        "rooftop",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "classic",
+        "leisure",
+        "social",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "persol",
+      "active": true
+    },
+    {
+      "id": "tom-ford-tf-1009",
+      "sku": "EYE-TF-001",
+      "name": "tom ford philippe aviator",
+      "subtitle": "gold metal \u00b7 gradient \u00b7 $495",
+      "category": "eyewear",
+      "price": 495,
+      "currency": "USD",
+      "url": "https://www.tomford.com/philippe-02/FT1009.html",
+      "image": null,
+      "activities": [
+        "yacht",
+        "rooftop",
+        "nightclub",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "bold",
+        "party",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "tom-ford",
+      "active": true
+    },
+    {
+      "id": "tom-ford-tf-237",
+      "sku": "EYE-TF-002",
+      "name": "tom ford snowdon",
+      "subtitle": "james bond spectre \u00b7 $445",
+      "category": "eyewear",
+      "price": 445,
+      "currency": "USD",
+      "url": "https://www.tomford.com/snowdon/FT0237.html",
+      "image": null,
+      "activities": [
+        "poker",
+        "nightclub",
+        "ski",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "night",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "tom-ford",
+      "active": true
+    },
+    {
+      "id": "garrett-leight-kinney",
+      "sku": "EYE-GL-001",
+      "name": "garrett leight kinney sun",
+      "subtitle": "california cool \u00b7 $395",
+      "category": "eyewear",
+      "price": 395,
+      "currency": "USD",
+      "url": "https://www.garrettleight.com/collections/sun/products/kinney-sun",
+      "image": null,
+      "activities": [
+        "beach",
+        "brunch",
+        "pool",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "leisure",
+        "social",
+        "relaxation",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "garrett-leight",
+      "active": true
+    },
+    {
+      "id": "garrett-leight-hampton",
+      "sku": "EYE-GL-002",
+      "name": "garrett leight hampton",
+      "subtitle": "venice beach heritage \u00b7 $375",
+      "category": "eyewear",
+      "price": 375,
+      "currency": "USD",
+      "url": "https://www.garrettleight.com/collections/sun/products/hampton-sun",
+      "image": null,
+      "activities": [
+        "rooftop",
+        "roadtrip",
+        "concert",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "social",
+        "adventure",
+        "leisure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "garrett-leight",
+      "active": true
+    },
+    {
+      "id": "mykita-lite-steen",
+      "sku": "EYE-MYK-001",
+      "name": "mykita lite steen",
+      "subtitle": "german ultralight \u00b7 $545",
+      "category": "eyewear",
+      "price": 545,
+      "currency": "USD",
+      "url": "https://mykita.com/en/sun/lite-sun/steen",
+      "image": null,
+      "activities": [
+        "gym",
+        "yoga",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "luxury",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "mykita",
+      "active": true
+    },
+    {
+      "id": "mykita-leica-ml-06",
+      "sku": "EYE-MYK-002",
+      "name": "mykita + leica ml 06",
+      "subtitle": "photography collab \u00b7 $795",
+      "category": "eyewear",
+      "price": 795,
+      "currency": "USD",
+      "url": "https://mykita.com/en/sun/leica/ml-06",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "concert",
+        "rooftop",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "bold",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "mykita",
+      "active": true
+    },
+    {
+      "id": "ray-ban-aviator-original",
+      "sku": "EYE-RB-001",
+      "name": "ray-ban aviator classic",
+      "subtitle": "gold frame \u00b7 green G-15 \u00b7 $182",
+      "category": "eyewear",
+      "price": 182,
+      "currency": "USD",
+      "url": "https://www.ray-ban.com/usa/sunglasses/RB3025-L0205",
+      "image": null,
+      "activities": [
+        "beach",
+        "pool",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "classic",
+        "adventure",
+        "daydrink",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "ray-ban",
+      "active": true
+    },
+    {
+      "id": "ray-ban-wayfarer-original",
+      "sku": "EYE-RB-002",
+      "name": "ray-ban original wayfarer",
+      "subtitle": "black \u00b7 polarized \u00b7 $207",
+      "category": "eyewear",
+      "price": 207,
+      "currency": "USD",
+      "url": "https://www.ray-ban.com/usa/sunglasses/RB2140-901-58",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "beach",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "classic",
+        "social",
+        "party",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "ray-ban",
+      "active": true
+    },
+    {
+      "id": "ray-ban-clubmaster",
+      "sku": "EYE-RB-003",
+      "name": "ray-ban clubmaster classic",
+      "subtitle": "tortoise \u00b7 gold \u00b7 $198",
+      "category": "eyewear",
+      "price": 198,
+      "currency": "USD",
+      "url": "https://www.ray-ban.com/usa/sunglasses/RB3016-W0366",
+      "image": null,
+      "activities": [
+        "poker",
+        "brunch",
+        "rooftop",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "classic",
+        "social",
+        "night",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "ray-ban",
+      "active": true
+    },
+    {
+      "id": "maui-jim-baby-beach",
+      "sku": "EYE-MJ-001",
+      "name": "maui jim baby beach",
+      "subtitle": "titanium \u00b7 polarized plus2 \u00b7 $349",
+      "category": "eyewear",
+      "price": 349,
+      "currency": "USD",
+      "url": "https://www.mauijim.com/US/en_US/shop/sunglasses/aviators/baby-beach",
+      "image": null,
+      "activities": [
+        "beach",
+        "yacht",
+        "golf",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "leisure",
+        "luxury",
+        "relaxation",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "maui-jim",
+      "active": true
+    },
+    {
+      "id": "maui-jim-honi",
+      "sku": "EYE-MJ-002",
+      "name": "maui jim ho'okipa",
+      "subtitle": "sport wrap \u00b7 reader +2.0 \u00b7 $279",
+      "category": "eyewear",
+      "price": 279,
+      "currency": "USD",
+      "url": "https://www.mauijim.com/US/en_US/shop/sunglasses/wrap/hookipa-reader",
+      "image": null,
+      "activities": [
+        "golf",
+        "beach",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "leisure",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "maui-jim",
+      "active": true
+    },
+    {
+      "id": "oakley-sutro-lite",
+      "sku": "EYE-OAK-001",
+      "name": "oakley sutro lite",
+      "subtitle": "prizm road \u00b7 cycling \u00b7 $204",
+      "category": "eyewear",
+      "price": 204,
+      "currency": "USD",
+      "url": "https://www.oakley.com/en-us/product/W0OO9463",
+      "image": null,
+      "activities": [
+        "gym",
+        "roadtrip",
+        "concert",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "bold",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "oakley",
+      "active": true
+    },
+    {
+      "id": "costa-ferg-xl",
+      "sku": "EYE-COS-001",
+      "name": "costa ferg xl",
+      "subtitle": "580g glass \u00b7 fishing \u00b7 $279",
+      "category": "eyewear",
+      "price": 279,
+      "currency": "USD",
+      "url": "https://www.costadelmar.com/en-us/sunglasses/ferg-xl/06S9012.html",
+      "image": null,
+      "activities": [
+        "yacht",
+        "beach",
+        "pool",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "leisure",
+        "active",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "costa",
+      "active": true
+    },
+    {
+      "id": "glasses-com-rx-aviator",
+      "sku": "EYE-RX-001",
+      "name": "prescription aviator",
+      "subtitle": "glasses.com \u00b7 rx lenses \u00b7 from $95",
+      "category": "eyewear",
+      "price": 95,
+      "currency": "USD",
+      "url": "https://www.glasses.com/gl-us/sunglasses/aviator",
+      "image": null,
+      "activities": [
+        "golf",
+        "roadtrip",
+        "brunch",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "classic",
+        "leisure",
+        "budget",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "glasses-com",
+      "prescription": true,
+      "active": true
+    },
+    {
+      "id": "glasses-com-rx-wayfarer",
+      "sku": "EYE-RX-002",
+      "name": "prescription wayfarer",
+      "subtitle": "glasses.com \u00b7 rx lenses \u00b7 from $115",
+      "category": "eyewear",
+      "price": 115,
+      "currency": "USD",
+      "url": "https://www.glasses.com/gl-us/sunglasses/wayfarer-style",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "beach",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "classic",
+        "social",
+        "budget",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "glasses-com",
+      "prescription": true,
+      "active": true
+    },
+    {
+      "id": "warby-parker-haskell-sun",
+      "sku": "EYE-WP-001",
+      "name": "warby parker haskell sun",
+      "subtitle": "rx available \u00b7 $145",
+      "category": "eyewear",
+      "price": 145,
+      "currency": "USD",
+      "url": "https://www.warbyparker.com/sunglasses/men/haskell/crystal",
+      "image": null,
+      "activities": [
+        "brunch",
+        "rooftop",
+        "beach",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "social",
+        "leisure",
+        "budget",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "warby-parker",
+      "prescription": true,
+      "active": true
+    },
+    {
+      "id": "warby-parker-barkley-sun",
+      "sku": "EYE-WP-002",
+      "name": "warby parker barkley sun",
+      "subtitle": "rx available \u00b7 round \u00b7 $145",
+      "category": "eyewear",
+      "price": 145,
+      "currency": "USD",
+      "url": "https://www.warbyparker.com/sunglasses/men/barkley/burnt-umber-tortoise",
+      "image": null,
+      "activities": [
+        "yoga",
+        "brunch",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "mindful",
+        "classic",
+        "budget",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "warby-parker",
+      "prescription": true,
+      "active": true
+    },
+    {
+      "id": "moncler-maya-black",
+      "sku": "OUT-MON-001",
+      "name": "moncler maya",
+      "subtitle": "iconic short down \u00b7 black \u00b7 $1,695",
+      "category": "outerwear",
+      "price": 1695,
+      "currency": "USD",
+      "url": "https://www.moncler.com/en-us/maya-short-down-jacket-black-I20911A0013768950999.html",
+      "image": null,
+      "activities": [
+        "ski",
+        "nightclub",
+        "rooftop",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "bold",
+        "night",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "moncler",
+      "active": true
+    },
+    {
+      "id": "moncler-montbeliard",
+      "sku": "OUT-MON-002",
+      "name": "moncler montbeliard",
+      "subtitle": "long down parka \u00b7 navy \u00b7 $2,150",
+      "category": "outerwear",
+      "price": 2150,
+      "currency": "USD",
+      "url": "https://www.moncler.com/en-us/montbeliard-long-down-jacket-navy-I20911C0010168950742.html",
+      "image": null,
+      "activities": [
+        "ski",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "moncler",
+      "active": true
+    },
+    {
+      "id": "moncler-cuvellier",
+      "sku": "OUT-MON-003",
+      "name": "moncler cuvellier",
+      "subtitle": "hooded down \u00b7 black \u00b7 $1,890",
+      "category": "outerwear",
+      "price": 1890,
+      "currency": "USD",
+      "url": "https://www.moncler.com/en-us/cuvellier-hooded-down-jacket-black.html",
+      "image": null,
+      "activities": [
+        "ski",
+        "rooftop",
+        "poker",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "night",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "moncler",
+      "active": true
+    },
+    {
+      "id": "canada-goose-expedition",
+      "sku": "OUT-CG-001",
+      "name": "canada goose expedition parka",
+      "subtitle": "extreme cold \u00b7 heritage \u00b7 $1,595",
+      "category": "outerwear",
+      "price": 1595,
+      "currency": "USD",
+      "url": "https://www.canadagoose.com/us/en/expedition-parka-4660M.html",
+      "image": null,
+      "activities": [
+        "ski",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "luxury",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "canada-goose",
+      "active": true
+    },
+    {
+      "id": "canada-goose-chilliwack",
+      "sku": "OUT-CG-002",
+      "name": "canada goose chilliwack bomber",
+      "subtitle": "bomber style \u00b7 navy \u00b7 $1,150",
+      "category": "outerwear",
+      "price": 1150,
+      "currency": "USD",
+      "url": "https://www.canadagoose.com/us/en/chilliwack-bomber-7999M.html",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "concert",
+        "poker",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "bold",
+        "night",
+        "social",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "canada-goose",
+      "active": true
+    },
+    {
+      "id": "canada-goose-langford",
+      "sku": "OUT-CG-003",
+      "name": "canada goose langford parka",
+      "subtitle": "urban heritage \u00b7 graphite \u00b7 $1,295",
+      "category": "outerwear",
+      "price": 1295,
+      "currency": "USD",
+      "url": "https://www.canadagoose.com/us/en/langford-parka-2062M.html",
+      "image": null,
+      "activities": [
+        "ski",
+        "rooftop",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "adventure",
+        "classic",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "canada-goose",
+      "active": true
+    },
+    {
+      "id": "canada-goose-crofton",
+      "sku": "OUT-CG-004",
+      "name": "canada goose crofton",
+      "subtitle": "black label \u00b7 down hoodie \u00b7 $795",
+      "category": "outerwear",
+      "price": 795,
+      "currency": "USD",
+      "url": "https://www.canadagoose.com/us/en/crofton-hoody-black-label-2252MB.html",
+      "image": null,
+      "activities": [
+        "gym",
+        "roadtrip",
+        "ski",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "luxury",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "canada-goose",
+      "active": true
+    },
+    {
+      "id": "triple-fat-goose-nordby",
+      "sku": "OUT-TFG-001",
+      "name": "triple fat goose nordby",
+      "subtitle": "down parka \u00b7 black \u00b7 $695",
+      "category": "outerwear",
+      "price": 695,
+      "currency": "USD",
+      "url": "https://triplefatgoose.com/collections/mens/products/nordby-down-parka-black",
+      "image": null,
+      "activities": [
+        "ski",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "triple-fat-goose",
+      "active": true
+    },
+    {
+      "id": "triple-fat-goose-aiden",
+      "sku": "OUT-TFG-002",
+      "name": "triple fat goose aiden",
+      "subtitle": "bomber \u00b7 olive \u00b7 $595",
+      "category": "outerwear",
+      "price": 595,
+      "currency": "USD",
+      "url": "https://triplefatgoose.com/collections/mens/products/aiden-down-bomber-olive",
+      "image": null,
+      "activities": [
+        "nightclub",
+        "concert",
+        "rooftop",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "bold",
+        "night",
+        "social",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "triple-fat-goose",
+      "active": true
+    },
+    {
+      "id": "triple-fat-goose-eberly",
+      "sku": "OUT-TFG-003",
+      "name": "triple fat goose eberly",
+      "subtitle": "long parka \u00b7 navy \u00b7 $795",
+      "category": "outerwear",
+      "price": 795,
+      "currency": "USD",
+      "url": "https://triplefatgoose.com/collections/mens/products/eberly-long-down-parka-navy",
+      "image": null,
+      "activities": [
+        "ski",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "classic",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "triple-fat-goose",
+      "active": true
+    },
+    {
+      "id": "north-face-nuptse",
+      "sku": "OUT-TNF-001",
+      "name": "the north face 1996 retro nuptse",
+      "subtitle": "iconic puffer \u00b7 black \u00b7 $330",
+      "category": "outerwear",
+      "price": 330,
+      "currency": "USD",
+      "url": "https://www.thenorthface.com/en-us/mens/mens-jackets-and-vests/mens-insulated-and-down/1996-retro-nuptse-jacket-pNF0A3C8D",
+      "image": null,
+      "activities": [
+        "ski",
+        "concert",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "bold",
+        "adventure",
+        "classic",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "north-face",
+      "active": true
+    },
+    {
+      "id": "north-face-thermoball-eco",
+      "sku": "OUT-TNF-002",
+      "name": "the north face thermoball eco",
+      "subtitle": "packable \u00b7 black \u00b7 $230",
+      "category": "outerwear",
+      "price": 230,
+      "currency": "USD",
+      "url": "https://www.thenorthface.com/en-us/mens/mens-jackets-and-vests/mens-insulated-and-down/thermoball-eco-jacket-2.0-pNF0A5GLK",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "gym",
+        "camping",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "north-face",
+      "active": true
+    },
+    {
+      "id": "patagonia-down-sweater",
+      "sku": "OUT-PAT-001",
+      "name": "patagonia down sweater",
+      "subtitle": "800-fill \u00b7 black \u00b7 $279",
+      "category": "outerwear",
+      "price": 279,
+      "currency": "USD",
+      "url": "https://www.patagonia.com/product/mens-down-sweater-jacket/84675.html",
+      "image": null,
+      "activities": [
+        "camping",
+        "roadtrip",
+        "ski",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "active",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "patagonia",
+      "active": true
+    },
+    {
+      "id": "patagonia-nano-puff",
+      "sku": "OUT-PAT-002",
+      "name": "patagonia nano puff",
+      "subtitle": "primaloft \u00b7 packable \u00b7 $199",
+      "category": "outerwear",
+      "price": 199,
+      "currency": "USD",
+      "url": "https://www.patagonia.com/product/mens-nano-puff-jacket/84212.html",
+      "image": null,
+      "activities": [
+        "gym",
+        "roadtrip",
+        "camping",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "patagonia",
+      "active": true
+    },
+    {
+      "id": "arc-teryx-cerium",
+      "sku": "OUT-ARC-001",
+      "name": "arc'teryx cerium hoody",
+      "subtitle": "850-fill down \u00b7 black \u00b7 $450",
+      "category": "outerwear",
+      "price": 450,
+      "currency": "USD",
+      "url": "https://arcteryx.com/us/en/shop/mens/cerium-hoody",
+      "image": null,
+      "activities": [
+        "ski",
+        "camping",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "luxury",
+        "active",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "arcteryx",
+      "active": true
+    },
+    {
+      "id": "arc-teryx-atom",
+      "sku": "OUT-ARC-002",
+      "name": "arc'teryx atom hoody",
+      "subtitle": "coreloft \u00b7 versatile \u00b7 $300",
+      "category": "outerwear",
+      "price": 300,
+      "currency": "USD",
+      "url": "https://arcteryx.com/us/en/shop/mens/atom-hoody",
+      "image": null,
+      "activities": [
+        "gym",
+        "ski",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "adventure",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "arcteryx",
+      "active": true
+    },
+    {
+      "id": "amazon-essentials-puffer",
+      "sku": "OUT-AE-001",
+      "name": "amazon essentials puffer",
+      "subtitle": "budget \u00b7 black \u00b7 $55",
+      "category": "outerwear",
+      "price": 55,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07BKQNS6K",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "concert",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "budget",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "alpine-north-vegan-puffer",
+      "sku": "OUT-AN-001",
+      "name": "alpine north vegan puffer",
+      "subtitle": "cruelty-free \u00b7 $180",
+      "category": "outerwear",
+      "price": 180,
+      "currency": "USD",
+      "url": "https://alpinenorthstore.com/collections/mens-puffers",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "concert",
+        "gym",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "active",
+        "bold",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "alpine-north",
+      "active": true
+    },
+    {
+      "id": "orolay-thickened-puffer",
+      "sku": "OUT-ORO-001",
+      "name": "orolay thickened puffer",
+      "subtitle": "amazon coat \u00b7 $140",
+      "category": "outerwear",
+      "price": 140,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/B07FF9LD6G",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "brunch",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "budget",
+        "classic",
+        "captain-adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "ugg-ultra-mini",
+      "sku": "TOX-FW-001",
+      "name": "ugg classic ultra mini",
+      "subtitle": "the icon \u00b7 $150",
+      "category": "footwear",
+      "tier": "high",
+      "price": 150,
+      "currency": "USD",
+      "url": "https://www.ugg.com/classic-ultra-mini",
+      "image": "https://www.ugg.com/dw/image/v2/AAPL_PRD/on/demandware.static/-/Sites-US-Library/default/dwdc91d91a/images/1116109_CHE.jpg",
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "ski",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "cozy",
+        "luxury",
+        "relaxation"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": false
+    },
+    {
+      "id": "ugg-tasman",
+      "sku": "TOX-FW-002",
+      "name": "ugg tasman",
+      "subtitle": "slipper-boot hybrid \u00b7 $120",
+      "category": "footwear",
+      "tier": "high",
+      "price": 120,
+      "currency": "USD",
+      "url": "https://www.ugg.com/tasman",
+      "image": "https://www.ugg.com/dw/image/v2/AAPL_PRD/on/demandware.static/-/Sites-US-Library/default/dw5b5b5b5b/images/5950_CHE.jpg",
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "poker",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "cozy",
+        "leisure",
+        "relaxation"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": false
+    },
+    {
+      "id": "ugg-neumel",
+      "sku": "TOX-FW-003",
+      "name": "ugg neumel",
+      "subtitle": "chukka style \u00b7 $140",
+      "category": "footwear",
+      "tier": "high",
+      "price": 140,
+      "currency": "USD",
+      "url": "https://www.ugg.com/neumel",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "ski"
+      ],
+      "vibes": [
+        "cozy",
+        "classic",
+        "refined"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "emu-stinger-micro",
+      "sku": "TOX-FW-004",
+      "name": "emu australia stinger micro",
+      "subtitle": "merino lined \u00b7 $140",
+      "category": "footwear",
+      "tier": "high",
+      "price": 140,
+      "currency": "USD",
+      "url": "https://www.emuaustralia.com/stinger-micro",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "cozy",
+        "adventure",
+        "sustainable"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "birkenstock-boston",
+      "sku": "TOX-FW-005",
+      "name": "birkenstock boston clog",
+      "subtitle": "elevated comfort \u00b7 $165",
+      "category": "footwear",
+      "tier": "high",
+      "price": 165,
+      "currency": "USD",
+      "url": "https://www.birkenstock.com/boston",
+      "image": null,
+      "activities": [
+        "brunch",
+        "spa",
+        "yoga",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "classic",
+        "comfort",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "birkenstock-arizona",
+      "sku": "TOX-FW-006",
+      "name": "birkenstock arizona",
+      "subtitle": "classic sandal \u00b7 $110",
+      "category": "footwear",
+      "tier": "high",
+      "price": 110,
+      "currency": "USD",
+      "url": "https://www.birkenstock.com/arizona",
+      "image": null,
+      "activities": [
+        "pool",
+        "beach",
+        "spa",
+        "brunch"
+      ],
+      "vibes": [
+        "classic",
+        "leisure",
+        "summer"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "dansko-professional",
+      "sku": "TOX-FW-007",
+      "name": "dansko professional clog",
+      "subtitle": "all-day comfort \u00b7 $145",
+      "category": "footwear",
+      "tier": "high",
+      "price": 145,
+      "currency": "USD",
+      "url": "https://www.dansko.com/professional",
+      "image": null,
+      "activities": [
+        "gym",
+        "yoga",
+        "spa"
+      ],
+      "vibes": [
+        "comfort",
+        "wellness",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "minnetonka-sheepskin",
+      "sku": "TOX-FW-008",
+      "name": "minnetonka sheepskin ankle boot",
+      "subtitle": "heritage moccasin \u00b7 $90",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 90,
+      "currency": "USD",
+      "url": "https://www.minnetonkamoccasin.com",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "camping"
+      ],
+      "vibes": [
+        "cozy",
+        "heritage",
+        "adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "sorel-out-n-about",
+      "sku": "TOX-FW-009",
+      "name": "sorel out n about slip-on",
+      "subtitle": "waterproof comfort \u00b7 $100",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 100,
+      "currency": "USD",
+      "url": "https://www.sorel.com",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "camping",
+        "ski",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "rugged",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "llbean-wicked-good",
+      "sku": "TOX-FW-010",
+      "name": "l.l.bean wicked good moccasins",
+      "subtitle": "lifetime guarantee \u00b7 $99",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 99,
+      "currency": "USD",
+      "url": "https://www.llbean.com/wicked-good-moccasins",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "poker"
+      ],
+      "vibes": [
+        "cozy",
+        "heritage",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "bearpaw-brady",
+      "sku": "TOX-FW-011",
+      "name": "bearpaw brady boot",
+      "subtitle": "ugg alternative \u00b7 $80",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 80,
+      "currency": "USD",
+      "url": "https://www.bearpaw.com",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "cozy",
+        "budget",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "koolaburra-burra",
+      "sku": "TOX-FW-012",
+      "name": "koolaburra by ugg burra",
+      "subtitle": "ugg value line \u00b7 $80",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 80,
+      "currency": "USD",
+      "url": "https://www.koolaburra.com",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "cozy",
+        "budget",
+        "relaxation"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "merrell-jungle-slide",
+      "sku": "TOX-FW-013",
+      "name": "merrell jungle slide",
+      "subtitle": "outdoor cred \u00b7 $90",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 90,
+      "currency": "USD",
+      "url": "https://www.merrell.com/jungle-slide",
+      "image": null,
+      "activities": [
+        "camping",
+        "roadtrip",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "adventure",
+        "outdoor",
+        "rugged"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "crocs-classic",
+      "sku": "TOX-FW-014",
+      "name": "crocs classic clog",
+      "subtitle": "the iconic original \u00b7 $55",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 55,
+      "currency": "USD",
+      "url": "https://www.crocs.com/classic-clog",
+      "image": "https://media.crocs.com/images/t_pdphero/f_auto,q_auto/products/10001_001_ALT100/crocs",
+      "activities": [
+        "pool",
+        "beach",
+        "spa",
+        "brunch"
+      ],
+      "vibes": [
+        "playful",
+        "comfort",
+        "bold"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "crocs-mellow-slide",
+      "sku": "TOX-FW-015",
+      "name": "crocs mellow slide",
+      "subtitle": "recovery slide \u00b7 $40",
+      "category": "footwear",
+      "tier": "low",
+      "price": 40,
+      "currency": "USD",
+      "url": "https://www.crocs.com/mellow-slide",
+      "image": null,
+      "activities": [
+        "pool",
+        "spa",
+        "gym"
+      ],
+      "vibes": [
+        "comfort",
+        "wellness",
+        "recovery"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "crocs-echo",
+      "sku": "TOX-FW-016",
+      "name": "crocs echo clog",
+      "subtitle": "chunky fashion \u00b7 $70",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 70,
+      "currency": "USD",
+      "url": "https://www.crocs.com/echo-clog",
+      "image": "https://media.crocs.com/images/t_pdphero/f_auto,q_auto/products/207937_001_ALT100/crocs",
+      "activities": [
+        "brunch",
+        "concert",
+        "pool"
+      ],
+      "vibes": [
+        "bold",
+        "playful",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "crocs-literide-360",
+      "sku": "TOX-FW-017",
+      "name": "crocs literide 360",
+      "subtitle": "refined comfort \u00b7 $65",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 65,
+      "currency": "USD",
+      "url": "https://www.crocs.com/literide-360",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "travel"
+      ],
+      "vibes": [
+        "comfort",
+        "minimal",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "oofos-oocloog",
+      "sku": "TOX-FW-018",
+      "name": "oofos oocloog",
+      "subtitle": "recovery focused \u00b7 $80",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 80,
+      "currency": "USD",
+      "url": "https://www.oofos.com/oocloog",
+      "image": null,
+      "activities": [
+        "gym",
+        "spa",
+        "yoga"
+      ],
+      "vibes": [
+        "wellness",
+        "recovery",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "kane-revive",
+      "sku": "TOX-FW-019",
+      "name": "kane footwear revive",
+      "subtitle": "sustainable recovery \u00b7 $75",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 75,
+      "currency": "USD",
+      "url": "https://www.kanefootwear.com/revive",
+      "image": null,
+      "activities": [
+        "gym",
+        "spa",
+        "beach"
+      ],
+      "vibes": [
+        "sustainable",
+        "recovery",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "keen-yogui",
+      "sku": "TOX-FW-020",
+      "name": "keen yogui",
+      "subtitle": "outdoor recovery \u00b7 $60",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 60,
+      "currency": "USD",
+      "url": "https://www.keenfootwear.com/yogui",
+      "image": null,
+      "activities": [
+        "camping",
+        "beach",
+        "roadtrip"
+      ],
+      "vibes": [
+        "outdoor",
+        "adventure",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "native-jefferson",
+      "sku": "TOX-FW-021",
+      "name": "native shoes jefferson",
+      "subtitle": "lightweight vegan \u00b7 $55",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 55,
+      "currency": "USD",
+      "url": "https://www.nativeshoes.com/jefferson",
+      "image": null,
+      "activities": [
+        "pool",
+        "beach",
+        "brunch"
+      ],
+      "vibes": [
+        "sustainable",
+        "playful",
+        "summer"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "joybees-cozy-lined",
+      "sku": "TOX-FW-022",
+      "name": "joybees cozy lined clog",
+      "subtitle": "crocs competitor \u00b7 $50",
+      "category": "footwear",
+      "tier": "low",
+      "price": 50,
+      "currency": "USD",
+      "url": "https://www.joybees.com/cozy-lined-clog",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "cozy",
+        "comfort",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "amazon-shearling-boot",
+      "sku": "TOX-FW-023",
+      "name": "amazon essentials shearling boot",
+      "subtitle": "solid basics \u00b7 $35",
+      "category": "footwear",
+      "tier": "low",
+      "price": 35,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/shearling-boot",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "cozy",
+        "budget",
+        "basic"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "dream-pairs-mini",
+      "sku": "TOX-FW-024",
+      "name": "dream pairs mini boot",
+      "subtitle": "amazon bestseller \u00b7 $40",
+      "category": "footwear",
+      "tier": "low",
+      "price": 40,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/dream-pairs",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "cozy",
+        "budget",
+        "basic"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "cushionaire-hip",
+      "sku": "TOX-FW-025",
+      "name": "cushionaire hip boot",
+      "subtitle": "comfort focused \u00b7 $45",
+      "category": "footwear",
+      "tier": "low",
+      "price": 45,
+      "currency": "USD",
+      "url": "https://www.amazon.com/dp/cushionaire",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "cozy",
+        "comfort",
+        "budget"
+      ],
+      "source": "affiliate",
+      "affiliate": "amazon",
+      "active": true
+    },
+    {
+      "id": "lands-end-suede-shearling",
+      "sku": "TOX-FW-026",
+      "name": "lands' end suede shearling boot",
+      "subtitle": "quality basics \u00b7 $70",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 70,
+      "currency": "USD",
+      "url": "https://www.landsend.com/suede-shearling",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "camping"
+      ],
+      "vibes": [
+        "cozy",
+        "classic",
+        "heritage"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "ferragamo-gancini-loafer",
+      "sku": "TOX-FW-027",
+      "name": "salvatore ferragamo gancini loafer",
+      "subtitle": "italian luxury \u00b7 $850",
+      "category": "footwear",
+      "tier": "high",
+      "price": 850,
+      "priceValue": 850,
+      "currency": "USD",
+      "url": "https://www.ferragamo.com/shop/us/en/men/shoes/loafers-moccasins",
+      "image": null,
+      "activities": [
+        "poker",
+        "yacht",
+        "brunch",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "luxury",
+        "refined",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "ferragamo-driver-moccasin",
+      "sku": "TOX-FW-028",
+      "name": "salvatore ferragamo driver",
+      "subtitle": "driving moccasin \u00b7 $695",
+      "category": "footwear",
+      "tier": "high",
+      "price": 695,
+      "priceValue": 695,
+      "currency": "USD",
+      "url": "https://www.ferragamo.com/shop/us/en/men/shoes/drivers",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "yacht",
+        "brunch"
+      ],
+      "vibes": [
+        "luxury",
+        "leisure",
+        "refined"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "ferragamo-sneaker",
+      "sku": "TOX-FW-029",
+      "name": "salvatore ferragamo low-top sneaker",
+      "subtitle": "luxury casual \u00b7 $750",
+      "category": "footwear",
+      "tier": "high",
+      "price": 750,
+      "priceValue": 750,
+      "currency": "USD",
+      "url": "https://www.ferragamo.com/shop/us/en/men/shoes/sneakers",
+      "image": null,
+      "activities": [
+        "brunch",
+        "rooftop",
+        "concert"
+      ],
+      "vibes": [
+        "luxury",
+        "modern",
+        "refined"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "gucci-horsebit-loafer",
+      "sku": "TOX-FW-030",
+      "name": "gucci horsebit loafer",
+      "subtitle": "iconic luxury \u00b7 $920",
+      "category": "footwear",
+      "tier": "high",
+      "price": 920,
+      "priceValue": 920,
+      "currency": "USD",
+      "url": "https://www.gucci.com/us/en/st/men-shoes-loafers-drivers",
+      "image": null,
+      "activities": [
+        "poker",
+        "yacht",
+        "nightclub"
+      ],
+      "vibes": [
+        "luxury",
+        "bold",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "gucci-ace-sneaker",
+      "sku": "TOX-FW-031",
+      "name": "gucci ace sneaker",
+      "subtitle": "luxury sneaker \u00b7 $730",
+      "category": "footwear",
+      "tier": "high",
+      "price": 730,
+      "priceValue": 730,
+      "currency": "USD",
+      "url": "https://www.gucci.com/us/en/st/men-shoes-sneakers",
+      "image": null,
+      "activities": [
+        "brunch",
+        "rooftop",
+        "concert"
+      ],
+      "vibes": [
+        "luxury",
+        "bold",
+        "playful"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "tods-gommino-driver",
+      "sku": "TOX-FW-032",
+      "name": "tod's gommino driving shoe",
+      "subtitle": "italian craftsmanship \u00b7 $545",
+      "category": "footwear",
+      "tier": "high",
+      "price": 545,
+      "priceValue": 545,
+      "currency": "USD",
+      "url": "https://www.tods.com/us-en/men/shoes/gommino.html",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "yacht",
+        "brunch"
+      ],
+      "vibes": [
+        "luxury",
+        "classic",
+        "refined"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "common-projects-achilles",
+      "sku": "TOX-FW-033",
+      "name": "common projects achilles low",
+      "subtitle": "minimalist luxury \u00b7 $450",
+      "category": "footwear",
+      "tier": "high",
+      "price": 450,
+      "priceValue": 450,
+      "currency": "USD",
+      "url": "https://www.mrporter.com/en-us/mens/product/common-projects/shoes/low-top-sneakers/original-achilles-leather-sneakers/666467151986450",
+      "image": null,
+      "activities": [
+        "brunch",
+        "rooftop",
+        "roadtrip"
+      ],
+      "vibes": [
+        "minimal",
+        "luxury",
+        "refined"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "koio-capri-triple-white",
+      "sku": "TOX-FW-034",
+      "name": "koio capri triple white",
+      "subtitle": "italian leather \u00b7 $295",
+      "category": "footwear",
+      "tier": "high",
+      "price": 295,
+      "priceValue": 295,
+      "currency": "USD",
+      "url": "https://www.koio.co/products/capri-triple-white-men",
+      "image": null,
+      "activities": [
+        "brunch",
+        "rooftop",
+        "concert"
+      ],
+      "vibes": [
+        "minimal",
+        "refined",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "jordan-1-retro-high",
+      "sku": "TOX-FW-035",
+      "name": "air jordan 1 retro high og",
+      "subtitle": "basketball icon \u00b7 $180",
+      "category": "footwear",
+      "tier": "high",
+      "price": 180,
+      "priceValue": 180,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/air-jordan-1-retro-high-og-mens-shoes",
+      "image": null,
+      "activities": [
+        "concert",
+        "nightclub",
+        "gym"
+      ],
+      "vibes": [
+        "bold",
+        "classic",
+        "streetwear"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "jordan-4-retro",
+      "sku": "TOX-FW-036",
+      "name": "air jordan 4 retro",
+      "subtitle": "basketball legend \u00b7 $210",
+      "category": "footwear",
+      "tier": "high",
+      "price": 210,
+      "priceValue": 210,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/air-jordan-4-retro-mens-shoes",
+      "image": null,
+      "activities": [
+        "concert",
+        "nightclub",
+        "gym"
+      ],
+      "vibes": [
+        "bold",
+        "streetwear",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "jordan-11-retro",
+      "sku": "TOX-FW-037",
+      "name": "air jordan 11 retro",
+      "subtitle": "grail status \u00b7 $225",
+      "category": "footwear",
+      "tier": "high",
+      "price": 225,
+      "priceValue": 225,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/air-jordan-11-retro-mens-shoes",
+      "image": null,
+      "activities": [
+        "concert",
+        "nightclub",
+        "poker"
+      ],
+      "vibes": [
+        "luxury",
+        "bold",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "lebron-21",
+      "sku": "TOX-FW-038",
+      "name": "nike lebron 21",
+      "subtitle": "performance basketball \u00b7 $200",
+      "category": "footwear",
+      "tier": "high",
+      "price": 200,
+      "priceValue": 200,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/lebron-21-basketball-shoes",
+      "image": null,
+      "activities": [
+        "gym",
+        "concert"
+      ],
+      "vibes": [
+        "active",
+        "bold",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "kobe-6-protro",
+      "sku": "TOX-FW-039",
+      "name": "nike kobe 6 protro",
+      "subtitle": "mamba mentality \u00b7 $190",
+      "category": "footwear",
+      "tier": "high",
+      "price": 190,
+      "priceValue": 190,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/kobe-6-protro-basketball-shoes",
+      "image": null,
+      "activities": [
+        "gym",
+        "concert"
+      ],
+      "vibes": [
+        "active",
+        "classic",
+        "bold"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "curry-11",
+      "sku": "TOX-FW-040",
+      "name": "under armour curry 11",
+      "subtitle": "splash brother \u00b7 $160",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 160,
+      "priceValue": 160,
+      "currency": "USD",
+      "url": "https://www.underarmour.com/en-us/c/mens/footwear/basketball/",
+      "image": null,
+      "activities": [
+        "gym"
+      ],
+      "vibes": [
+        "active",
+        "modern",
+        "bold"
+      ],
+      "source": "affiliate",
+      "affiliate": "underarmour",
+      "active": true
+    },
+    {
+      "id": "nike-dunk-low",
+      "sku": "TOX-FW-041",
+      "name": "nike dunk low",
+      "subtitle": "streetwear essential \u00b7 $115",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 115,
+      "priceValue": 115,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/dunk-low-mens-shoes",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "roadtrip"
+      ],
+      "vibes": [
+        "streetwear",
+        "classic",
+        "playful"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "nike-air-force-1",
+      "sku": "TOX-FW-042",
+      "name": "nike air force 1 '07",
+      "subtitle": "timeless classic \u00b7 $115",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 115,
+      "priceValue": 115,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/air-force-1-07-mens-shoes",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "roadtrip",
+        "nightclub"
+      ],
+      "vibes": [
+        "classic",
+        "streetwear",
+        "bold"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "adidas-samba",
+      "sku": "TOX-FW-043",
+      "name": "adidas samba og",
+      "subtitle": "heritage soccer \u00b7 $100",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 100,
+      "priceValue": 100,
+      "currency": "USD",
+      "url": "https://www.adidas.com/us/samba-og-shoes/B75806.html",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "roadtrip"
+      ],
+      "vibes": [
+        "heritage",
+        "classic",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "adidas",
+      "active": true
+    },
+    {
+      "id": "adidas-gazelle",
+      "sku": "TOX-FW-044",
+      "name": "adidas gazelle",
+      "subtitle": "retro vibes \u00b7 $100",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 100,
+      "priceValue": 100,
+      "currency": "USD",
+      "url": "https://www.adidas.com/us/gazelle-shoes/BB5476.html",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "roadtrip"
+      ],
+      "vibes": [
+        "heritage",
+        "retro",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": "adidas",
+      "active": true
+    },
+    {
+      "id": "adidas-stan-smith",
+      "sku": "TOX-FW-045",
+      "name": "adidas stan smith",
+      "subtitle": "tennis legend \u00b7 $95",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 95,
+      "priceValue": 95,
+      "currency": "USD",
+      "url": "https://www.adidas.com/us/stan-smith-shoes/FX5500.html",
+      "image": null,
+      "activities": [
+        "tennis",
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "minimal",
+        "classic",
+        "heritage"
+      ],
+      "source": "affiliate",
+      "affiliate": "adidas",
+      "active": true
+    },
+    {
+      "id": "new-balance-2002r",
+      "sku": "TOX-FW-048",
+      "name": "new balance 2002r",
+      "subtitle": "comfort tech \u00b7 $150",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 150,
+      "priceValue": 150,
+      "currency": "USD",
+      "url": "https://www.newbalance.com/pd/2002r/M2002R.html",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "concert"
+      ],
+      "vibes": [
+        "comfort",
+        "modern",
+        "streetwear"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "asics-gel-kayano-14",
+      "sku": "TOX-FW-049",
+      "name": "asics gel-kayano 14",
+      "subtitle": "y2k runner \u00b7 $150",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 150,
+      "priceValue": 150,
+      "currency": "USD",
+      "url": "https://www.asics.com/us/en-us/gel-kayano-14/",
+      "image": null,
+      "activities": [
+        "concert",
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "retro",
+        "streetwear",
+        "bold"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "on-cloud-5",
+      "sku": "TOX-FW-050",
+      "name": "on cloud 5",
+      "subtitle": "swiss engineering \u00b7 $150",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 150,
+      "priceValue": 150,
+      "currency": "USD",
+      "url": "https://www.on-running.com/en-us/products/cloud-5",
+      "image": null,
+      "activities": [
+        "gym",
+        "yoga",
+        "roadtrip"
+      ],
+      "vibes": [
+        "modern",
+        "comfort",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "on-cloudmonster",
+      "sku": "TOX-FW-051",
+      "name": "on cloudmonster",
+      "subtitle": "max cushion \u00b7 $180",
+      "category": "footwear",
+      "tier": "high",
+      "price": 180,
+      "priceValue": 180,
+      "currency": "USD",
+      "url": "https://www.on-running.com/en-us/products/cloudmonster",
+      "image": null,
+      "activities": [
+        "gym",
+        "roadtrip"
+      ],
+      "vibes": [
+        "modern",
+        "bold",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "hoka-clifton-9",
+      "sku": "TOX-FW-052",
+      "name": "hoka clifton 9",
+      "subtitle": "cloud walking \u00b7 $145",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 145,
+      "priceValue": 145,
+      "currency": "USD",
+      "url": "https://www.hoka.com/en/us/mens-road/clifton-9/",
+      "image": null,
+      "activities": [
+        "gym",
+        "roadtrip",
+        "yoga"
+      ],
+      "vibes": [
+        "comfort",
+        "wellness",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "hoka-bondi-8",
+      "sku": "TOX-FW-053",
+      "name": "hoka bondi 8",
+      "subtitle": "max cushion \u00b7 $165",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 165,
+      "priceValue": 165,
+      "currency": "USD",
+      "url": "https://www.hoka.com/en/us/mens-road/bondi-8/",
+      "image": null,
+      "activities": [
+        "gym",
+        "roadtrip"
+      ],
+      "vibes": [
+        "comfort",
+        "wellness",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "brooks-ghost-15",
+      "sku": "TOX-FW-054",
+      "name": "brooks ghost 15",
+      "subtitle": "smooth runner \u00b7 $140",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 140,
+      "priceValue": 140,
+      "currency": "USD",
+      "url": "https://www.brooksrunning.com/en_us/ghost-15-mens-running-shoe/",
+      "image": null,
+      "activities": [
+        "gym"
+      ],
+      "vibes": [
+        "active",
+        "comfort",
+        "wellness"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "nike-vaporfly-3",
+      "sku": "TOX-FW-055",
+      "name": "nike zoomx vaporfly 3",
+      "subtitle": "race day \u00b7 $260",
+      "category": "footwear",
+      "tier": "high",
+      "price": 260,
+      "priceValue": 260,
+      "currency": "USD",
+      "url": "https://www.nike.com/t/vaporfly-3-road-racing-shoes",
+      "image": null,
+      "activities": [
+        "gym"
+      ],
+      "vibes": [
+        "active",
+        "performance",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": "nike",
+      "active": true
+    },
+    {
+      "id": "allen-edmonds-park-avenue",
+      "sku": "TOX-FW-056",
+      "name": "allen edmonds park avenue",
+      "subtitle": "american classic \u00b7 $395",
+      "category": "footwear",
+      "tier": "high",
+      "price": 395,
+      "priceValue": 395,
+      "currency": "USD",
+      "url": "https://www.allenedmonds.com/product/mens-park-avenue-cap-toe-oxford-3023876",
+      "image": null,
+      "activities": [
+        "poker",
+        "brunch"
+      ],
+      "vibes": [
+        "classic",
+        "refined",
+        "heritage"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "allen-edmonds-strand",
+      "sku": "TOX-FW-057",
+      "name": "allen edmonds strand",
+      "subtitle": "brogue oxford \u00b7 $425",
+      "category": "footwear",
+      "tier": "high",
+      "price": 425,
+      "priceValue": 425,
+      "currency": "USD",
+      "url": "https://www.allenedmonds.com/product/mens-strand-cap-toe-oxford-3022866",
+      "image": null,
+      "activities": [
+        "poker",
+        "brunch"
+      ],
+      "vibes": [
+        "classic",
+        "refined",
+        "heritage"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "cole-haan-original-grand",
+      "sku": "TOX-FW-058",
+      "name": "cole haan originalgrand wingtip",
+      "subtitle": "comfort dress \u00b7 $160",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 160,
+      "priceValue": 160,
+      "currency": "USD",
+      "url": "https://www.colehaan.com/mens-originalgrand-wingtip-oxford",
+      "image": null,
+      "activities": [
+        "poker",
+        "brunch"
+      ],
+      "vibes": [
+        "modern",
+        "comfort",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "cole-haan-zerogrand",
+      "sku": "TOX-FW-059",
+      "name": "cole haan zerogrand stitchlite",
+      "subtitle": "athletic dress \u00b7 $180",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 180,
+      "priceValue": 180,
+      "currency": "USD",
+      "url": "https://www.colehaan.com/mens-zerogrand-stitchlite-oxford",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "modern",
+        "comfort",
+        "active"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "clarks-desert-boot",
+      "sku": "TOX-FW-060",
+      "name": "clarks desert boot",
+      "subtitle": "british icon \u00b7 $150",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 150,
+      "priceValue": 150,
+      "currency": "USD",
+      "url": "https://www.clarksusa.com/c/Desert-Boot/p/26155484",
+      "image": null,
+      "activities": [
+        "brunch",
+        "roadtrip",
+        "concert"
+      ],
+      "vibes": [
+        "heritage",
+        "classic",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "clarks-wallabee",
+      "sku": "TOX-FW-061",
+      "name": "clarks wallabee",
+      "subtitle": "moccasin style \u00b7 $160",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 160,
+      "priceValue": 160,
+      "currency": "USD",
+      "url": "https://www.clarksusa.com/c/Wallabee/p/26155512",
+      "image": null,
+      "activities": [
+        "brunch",
+        "concert",
+        "roadtrip"
+      ],
+      "vibes": [
+        "heritage",
+        "retro",
+        "relaxed"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "blundstone-500",
+      "sku": "TOX-FW-062",
+      "name": "blundstone 500 original",
+      "subtitle": "aussie chelsea \u00b7 $210",
+      "category": "footwear",
+      "tier": "high",
+      "price": 210,
+      "priceValue": 210,
+      "currency": "USD",
+      "url": "https://www.blundstone.com/500-stout-brown",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "camping",
+        "brunch",
+        "captain-adventure"
+      ],
+      "vibes": [
+        "rugged",
+        "heritage",
+        "adventure"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "rm-williams-craftsman",
+      "sku": "TOX-FW-063",
+      "name": "r.m. williams craftsman",
+      "subtitle": "australian icon \u00b7 $545",
+      "category": "footwear",
+      "tier": "high",
+      "price": 545,
+      "priceValue": 545,
+      "currency": "USD",
+      "url": "https://www.rmwilliams.com/us/craftsman/B543Y.html",
+      "image": null,
+      "activities": [
+        "poker",
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "heritage",
+        "luxury",
+        "refined"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "redwing-iron-ranger",
+      "sku": "TOX-FW-064",
+      "name": "red wing iron ranger",
+      "subtitle": "american heritage \u00b7 $350",
+      "category": "footwear",
+      "tier": "high",
+      "price": 350,
+      "priceValue": 350,
+      "currency": "USD",
+      "url": "https://www.redwingshoes.com/heritage/mens/Iron-Ranger-08111.html",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "camping",
+        "concert"
+      ],
+      "vibes": [
+        "heritage",
+        "rugged",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "redwing-classic-moc",
+      "sku": "TOX-FW-065",
+      "name": "red wing classic moc",
+      "subtitle": "work heritage \u00b7 $320",
+      "category": "footwear",
+      "tier": "high",
+      "price": 320,
+      "priceValue": 320,
+      "currency": "USD",
+      "url": "https://www.redwingshoes.com/heritage/mens/Classic-Moc-00875.html",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "camping"
+      ],
+      "vibes": [
+        "heritage",
+        "rugged",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "thursday-captain",
+      "sku": "TOX-FW-066",
+      "name": "thursday boot captain",
+      "subtitle": "quality value \u00b7 $199",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 199,
+      "priceValue": 199,
+      "currency": "USD",
+      "url": "https://thursdayboots.com/products/mens-captain-brandy",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "brunch",
+        "poker"
+      ],
+      "vibes": [
+        "classic",
+        "heritage",
+        "refined"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "thursday-scout",
+      "sku": "TOX-FW-067",
+      "name": "thursday boot scout",
+      "subtitle": "chukka style \u00b7 $179",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 179,
+      "priceValue": 179,
+      "currency": "USD",
+      "url": "https://thursdayboots.com/products/mens-scout-walnut",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "brunch",
+        "concert"
+      ],
+      "vibes": [
+        "classic",
+        "casual",
+        "heritage"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "sperry-topsider",
+      "sku": "TOX-FW-068",
+      "name": "sperry authentic original",
+      "subtitle": "boat shoe icon \u00b7 $100",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 100,
+      "priceValue": 100,
+      "currency": "USD",
+      "url": "https://www.sperry.com/en/authentic-original-boat-shoe/",
+      "image": null,
+      "activities": [
+        "yacht",
+        "pool",
+        "beach",
+        "brunch"
+      ],
+      "vibes": [
+        "classic",
+        "nautical",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "glerups-wool-slipper",
+      "sku": "TOX-FW-069",
+      "name": "glerups wool slipper",
+      "subtitle": "danish cozy \u00b7 $130",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 130,
+      "priceValue": 130,
+      "currency": "USD",
+      "url": "https://www.glerups.com/collections/slippers",
+      "image": null,
+      "activities": [
+        "brunch",
+        "spa",
+        "meditation"
+      ],
+      "vibes": [
+        "cozy",
+        "sustainable",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "allbirds-wool-runner",
+      "sku": "TOX-FW-070",
+      "name": "allbirds wool runner",
+      "subtitle": "sustainable comfort \u00b7 $98",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 98,
+      "priceValue": 98,
+      "currency": "USD",
+      "url": "https://www.allbirds.com/products/mens-wool-runners",
+      "image": null,
+      "activities": [
+        "roadtrip",
+        "yoga",
+        "brunch"
+      ],
+      "vibes": [
+        "sustainable",
+        "comfort",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "allbirds-tree-dasher",
+      "sku": "TOX-FW-071",
+      "name": "allbirds tree dasher 2",
+      "subtitle": "sustainable running \u00b7 $135",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 135,
+      "priceValue": 135,
+      "currency": "USD",
+      "url": "https://www.allbirds.com/products/mens-tree-dasher-2",
+      "image": null,
+      "activities": [
+        "gym",
+        "roadtrip"
+      ],
+      "vibes": [
+        "sustainable",
+        "active",
+        "modern"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "tretorn-nylite",
+      "sku": "TOX-FW-072",
+      "name": "tretorn nylite plus",
+      "subtitle": "swedish tennis \u00b7 $85",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 85,
+      "priceValue": 85,
+      "currency": "USD",
+      "url": "https://www.tretorn.com/nylite-plus-canvas-sneaker/",
+      "image": null,
+      "activities": [
+        "tennis",
+        "brunch",
+        "yacht"
+      ],
+      "vibes": [
+        "preppy",
+        "classic",
+        "leisure"
+      ],
+      "source": "affiliate",
+      "affiliate": null,
+      "active": true
+    },
+    {
+      "id": "superga-2750",
+      "sku": "TOX-FW-073",
+      "name": "superga 2750 cotu classic",
+      "subtitle": "italian canvas \u00b7 $65",
+      "category": "footwear",
+      "tier": "low",
+      "price": 65,
+      "priceValue": 65,
+      "currency": "USD",
+      "url": "https://www.superga-usa.com/products/2750-cotu-classic",
+      "image": null,
+      "activities": [
+        "beach",
+        "brunch",
+        "pool"
+      ],
+      "vibes": [
+        "classic",
+        "casual",
+        "summer"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "vans-old-skool",
+      "sku": "TOX-FW-074",
+      "name": "vans old skool",
+      "subtitle": "skate legend \u00b7 $70",
+      "category": "footwear",
+      "tier": "low",
+      "price": 70,
+      "priceValue": 70,
+      "currency": "USD",
+      "url": "https://www.vans.com/en-us/shoes-c00081/old-skool-pvn000d3hy28",
+      "image": null,
+      "activities": [
+        "concert",
+        "roadtrip",
+        "brunch"
+      ],
+      "vibes": [
+        "streetwear",
+        "classic",
+        "casual"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "converse-chuck-70",
+      "sku": "TOX-FW-075",
+      "name": "converse chuck 70 high",
+      "subtitle": "premium classic \u00b7 $90",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 90,
+      "priceValue": 90,
+      "currency": "USD",
+      "url": "https://www.converse.com/shop/p/chuck-70-high-top-unisex-shoe/162050C.html",
+      "image": null,
+      "activities": [
+        "concert",
+        "roadtrip",
+        "brunch"
+      ],
+      "vibes": [
+        "classic",
+        "heritage",
+        "bold"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "puma-suede-classic",
+      "sku": "TOX-FW-076",
+      "name": "puma suede classic xxi",
+      "subtitle": "retro suede \u00b7 $75",
+      "category": "footwear",
+      "tier": "low",
+      "price": 75,
+      "priceValue": 75,
+      "currency": "USD",
+      "url": "https://us.puma.com/us/en/pd/suede-classic-xxi-sneakers/374915",
+      "image": null,
+      "activities": [
+        "concert",
+        "roadtrip",
+        "brunch"
+      ],
+      "vibes": [
+        "retro",
+        "classic",
+        "casual"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "reebok-club-c",
+      "sku": "TOX-FW-077",
+      "name": "reebok club c 85",
+      "subtitle": "tennis classic \u00b7 $85",
+      "category": "footwear",
+      "tier": "mid",
+      "price": 85,
+      "priceValue": 85,
+      "currency": "USD",
+      "url": "https://www.reebok.com/us/club-c-85/AR0456.html",
+      "image": null,
+      "activities": [
+        "tennis",
+        "brunch",
+        "roadtrip"
+      ],
+      "vibes": [
+        "retro",
+        "classic",
+        "minimal"
+      ],
+      "source": "affiliate",
+      "affiliate": "rakuten",
+      "active": true
+    },
+    {
+      "id": "travel-openstory-backpack-001",
+      "name": "Open Story Carry-On Backpack",
+      "brand": "Open Story",
+      "category": "travel",
+      "tier": "low",
+      "price": 80,
+      "url": "https://www.target.com/s?searchTerm=open+story+backpack",
+      "image": null,
+      "description": "Target's travel brand - modern, functional carry-on backpack",
+      "vibes": [
+        "minimal",
+        "functional",
+        "modern"
+      ],
+      "activities": [
+        "travel",
+        "everyday",
+        "work"
+      ],
+      "tags": [
+        "backpack",
+        "carry-on",
+        "target"
+      ],
+      "affiliate": {
+        "network": "Target Partners",
+        "program": "target",
+        "commission": "1-8%",
+        "cookie": "7 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-openstory-weekender-001",
+      "name": "Open Story Weekender Bag",
+      "brand": "Open Story",
+      "category": "travel",
+      "tier": "low",
+      "price": 70,
+      "url": "https://www.target.com/s?searchTerm=open+story+weekender",
+      "image": null,
+      "description": "Stylish weekender duffle from Target's Open Story line",
+      "vibes": [
+        "minimal",
+        "functional",
+        "versatile"
+      ],
+      "activities": [
+        "travel",
+        "weekend-trips"
+      ],
+      "tags": [
+        "weekender",
+        "duffle",
+        "target"
+      ],
+      "affiliate": {
+        "network": "Target Partners",
+        "program": "target",
+        "commission": "1-8%",
+        "cookie": "7 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-away-backpack-001",
+      "name": "Away The Expandable Backpack",
+      "brand": "Away",
+      "category": "travel",
+      "tier": "high",
+      "price": 295,
+      "url": "https://www.awaytravel.com/travel-bags/expandable-backpack",
+      "image": null,
+      "description": "Premium expandable travel backpack, carry-on compliant",
+      "vibes": [
+        "luxe",
+        "minimal",
+        "modern"
+      ],
+      "activities": [
+        "travel",
+        "business",
+        "everyday"
+      ],
+      "tags": [
+        "backpack",
+        "carry-on",
+        "premium",
+        "expandable"
+      ],
+      "affiliate": {
+        "network": "Direct",
+        "program": "away",
+        "commission": "7%",
+        "cookie": "30 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-peakdesign-everyday-001",
+      "name": "Peak Design Everyday Backpack 30L",
+      "brand": "Peak Design",
+      "category": "travel",
+      "tier": "high",
+      "price": 290,
+      "url": "https://www.peakdesign.com/products/everyday-backpack",
+      "image": null,
+      "description": "Iconic modular backpack, lifetime warranty",
+      "vibes": [
+        "adventure",
+        "functional",
+        "premium"
+      ],
+      "activities": [
+        "travel",
+        "photography",
+        "everyday"
+      ],
+      "tags": [
+        "backpack",
+        "modular",
+        "camera",
+        "tech"
+      ],
+      "affiliate": {
+        "network": "ShareASale",
+        "program": "peakdesign",
+        "commission": "8%",
+        "cookie": "30 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-cotopaxi-allpa-001",
+      "name": "Cotopaxi Allpa 35L Travel Pack",
+      "brand": "Cotopaxi",
+      "category": "travel",
+      "tier": "mid",
+      "price": 200,
+      "url": "https://www.cotopaxi.com/products/allpa-35l-travel-pack",
+      "image": null,
+      "description": "Adventure travel pack, sustainable materials, colorful",
+      "vibes": [
+        "adventure",
+        "colorful",
+        "sustainable"
+      ],
+      "activities": [
+        "travel",
+        "hiking",
+        "adventure"
+      ],
+      "tags": [
+        "backpack",
+        "travel-pack",
+        "sustainable"
+      ],
+      "affiliate": {
+        "network": "Direct",
+        "program": "cotopaxi",
+        "commission": "10%",
+        "cookie": "30 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-nomatic-travel-001",
+      "name": "NOMATIC Travel Pack 30L",
+      "brand": "NOMATIC",
+      "category": "travel",
+      "tier": "mid",
+      "price": 260,
+      "url": "https://www.nomatic.com/products/travel-pack",
+      "image": null,
+      "description": "Tech-focused travel backpack, tons of organization",
+      "vibes": [
+        "functional",
+        "modern",
+        "tech"
+      ],
+      "activities": [
+        "travel",
+        "business",
+        "digital-nomad"
+      ],
+      "tags": [
+        "backpack",
+        "tech",
+        "organization"
+      ],
+      "affiliate": {
+        "network": "Direct",
+        "program": "nomatic",
+        "commission": "8%",
+        "cookie": "30 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-tortuga-outbreaker-001",
+      "name": "Tortuga Outbreaker 45L",
+      "brand": "Tortuga",
+      "category": "travel",
+      "tier": "mid",
+      "price": 249,
+      "url": "https://www.tortugabackpacks.com/products/outbreaker-travel-backpack",
+      "image": null,
+      "description": "Maximum carry-on size, digital nomad favorite",
+      "vibes": [
+        "functional",
+        "adventure",
+        "practical"
+      ],
+      "activities": [
+        "travel",
+        "digital-nomad",
+        "long-trips"
+      ],
+      "tags": [
+        "backpack",
+        "carry-on",
+        "max-size"
+      ],
+      "affiliate": {
+        "network": "Direct",
+        "program": "tortuga",
+        "commission": "10%",
+        "cookie": "45 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-aer-travelpro-001",
+      "name": "Aer Travel Pack 3",
+      "brand": "Aer",
+      "category": "travel",
+      "tier": "mid",
+      "price": 250,
+      "url": "https://www.aersf.com/travel-pack-3",
+      "image": null,
+      "description": "Sleek urban travel pack, San Francisco design",
+      "vibes": [
+        "minimal",
+        "urban",
+        "sleek"
+      ],
+      "activities": [
+        "travel",
+        "business",
+        "everyday"
+      ],
+      "tags": [
+        "backpack",
+        "urban",
+        "minimalist"
+      ],
+      "affiliate": {
+        "network": "Direct",
+        "program": "aer",
+        "commission": "8%",
+        "cookie": "30 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-amazonbasics-carryon-001",
+      "name": "Amazon Basics Carry-On Backpack",
+      "brand": "Amazon Basics",
+      "category": "travel",
+      "tier": "low",
+      "price": 55,
+      "url": "https://www.amazon.com/dp/B01J24H87S",
+      "image": null,
+      "description": "Budget carry-on compliant backpack",
+      "vibes": [
+        "functional",
+        "practical",
+        "value"
+      ],
+      "activities": [
+        "travel",
+        "everyday"
+      ],
+      "tags": [
+        "backpack",
+        "carry-on",
+        "budget",
+        "amazon"
+      ],
+      "affiliate": {
+        "network": "Amazon Associates",
+        "program": "amazon",
+        "commission": "4%",
+        "cookie": "24 hours"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "travel-monos-metro-001",
+      "name": "Monos Metro Backpack",
+      "brand": "Monos",
+      "category": "travel",
+      "tier": "mid",
+      "price": 195,
+      "url": "https://monos.com/products/metro-backpack",
+      "image": null,
+      "description": "Sleek vegan leather backpack, modern aesthetic",
+      "vibes": [
+        "luxe",
+        "minimal",
+        "vegan"
+      ],
+      "activities": [
+        "travel",
+        "business",
+        "everyday"
+      ],
+      "tags": [
+        "backpack",
+        "vegan-leather",
+        "modern"
+      ],
+      "affiliate": {
+        "network": "Direct",
+        "program": "monos",
+        "commission": "8%",
+        "cookie": "30 days"
+      },
+      "sourcing": {
+        "type": "affiliate"
+      },
+      "active": true
+    },
+    {
+      "id": "printify-6929f98c7b419747000916d7",
+      "printify_id": "6929f98c7b419747000916d7",
+      "name": "Unisex Oversized Boxy Tee",
+      "price": 29.58,
+      "category": "tops",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100285/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929f979eeefa5c3bc0bfc64",
+      "printify_id": "6929f979eeefa5c3bc0bfc64",
+      "name": "Unisex Oversized Boxy Tee",
+      "price": 29.58,
+      "category": "tops",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100285/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929f87e08e5b94ccd0185d2",
+      "printify_id": "6929f87e08e5b94ccd0185d2",
+      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
+      "price": 57.7,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929f87e08e5b94ccd0185d2/72928/16656/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929f14c5dc7ab7fa7025725",
+      "printify_id": "6929f14c5dc7ab7fa7025725",
+      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
+      "price": 57.7,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929f14c5dc7ab7fa7025725/72928/16656/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929f0d4e07f035cf5021e7c",
+      "printify_id": "6929f0d4e07f035cf5021e7c",
+      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
+      "price": 57.7,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929f0d4e07f035cf5021e7c/72928/16656/copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929ef67d7e308d6df0d8c8a",
+      "printify_id": "6929ef67d7e308d6df0d8c8a",
+      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
+      "price": 57.7,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929ef67d7e308d6df0d8c8a/72928/16656/copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929ee81cecf816d92020b31",
+      "printify_id": "6929ee81cecf816d92020b31",
+      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
+      "price": 57.7,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929ee81cecf816d92020b31/72928/16656/copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929b6d89b3dbbfde2088c5a",
+      "printify_id": "6929b6d89b3dbbfde2088c5a",
+      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
+      "price": 57.7,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16656/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6928d1e58a961747da091ea0",
+      "printify_id": "6928d1e58a961747da091ea0",
+      "name": "Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fash",
+      "price": 98.82,
+      "category": "outerwear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6928d1e58a961747da091ea0/63243/101820/copy-of-urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-2",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-68eb2d89f88f52634a10b4bc",
+      "printify_id": "68eb2d89f88f52634a10b4bc",
+      "name": "Long Sleeve Kimono Robe (AOP)",
+      "price": 57.7,
+      "category": "loungewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/29522/long-sleeve-kimono-robe-aop.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-68ea0502cb19b441780d9728",
+      "printify_id": "68ea0502cb19b441780d9728",
+      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
+      "price": 57.7,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16656/stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-68ea040f0bb1a283330ee380",
+      "printify_id": "68ea040f0bb1a283330ee380",
+      "name": "Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fash",
+      "price": 98.82,
+      "category": "outerwear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/68ea040f0bb1a283330ee380/63243/101820/urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-2",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-68585dd350fb3f4f5c0595f4",
+      "printify_id": "68585dd350fb3f4f5c0595f4",
+      "name": "Women's Thongs (AOP)",
+      "price": 24.15,
+      "category": "underwear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/102782/womens-thongs-aop.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-685855b6c5c9efe54a0a9585",
+      "printify_id": "685855b6c5c9efe54a0a9585",
+      "name": "Unisex Oversized Boxy Tee",
+      "price": 29.58,
+      "category": "tops",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100285/unisex-oversized-boxy-tee.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6856fa7c0ea6932ed9007b99",
+      "printify_id": "6856fa7c0ea6932ed9007b99",
+      "name": "Women's Thongs (AOP)",
+      "price": 24.15,
+      "category": "underwear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6856fa7c0ea6932ed9007b99/105608/102782/womens-thongs-aop.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "aff-zimmerli-soft-lounge",
+      "sku": "AFF-ZM-232",
+      "name": "Soft Lounge",
+      "subtitle": "zimmerli \u00b7 swiss made",
+      "category": "loungewear",
+      "price": 0,
+      "currency": "USD",
+      "url": "https://www.zimmerli.com/en-us/products/soft-lounge-pullover-cloud-801043604-031",
+      "image": "http://www.zimmerli.com/cdn/shop/files/Zimmerli_SS25_801043604-031_model_front_5b60a6e5-4790-471a-a2f5-38db7aa00f03_600x.jpg?v=1737725237",
+      "activities": [
+        "spa",
+        "romantic",
+        "leisure"
+      ],
+      "vibes": [
+        "luxury",
+        "indulgent",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "zimmerli",
+        "commission": "10%"
+      },
+      "active": true
+    },
+    {
+      "id": "aff-zimmerli-soft-lounge",
+      "sku": "AFF-ZM-233",
+      "name": "Soft Lounge",
+      "subtitle": "zimmerli \u00b7 swiss made",
+      "category": "loungewear",
+      "price": 0,
+      "currency": "USD",
+      "url": "https://www.zimmerli.com/en-us/products/soft-lounge-pullover-blue-melange-801043604-547",
+      "image": "http://www.zimmerli.com/cdn/shop/files/Zimmerli_AW25_801043604-547_model_front_600x.jpg?v=1752671276",
+      "activities": [
+        "spa",
+        "romantic",
+        "leisure"
+      ],
+      "vibes": [
+        "luxury",
+        "indulgent",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "zimmerli",
+        "commission": "10%"
+      },
+      "active": true
+    },
+    {
+      "id": "aff-zimmerli-sea-island",
+      "sku": "AFF-ZM-234",
+      "name": "Sea Island",
+      "subtitle": "zimmerli \u00b7 swiss made",
+      "category": "underwear",
+      "price": 0,
+      "currency": "USD",
+      "url": "https://www.zimmerli.com/en-us/products/sea-island-boxer-dark-grey-2861446-078",
+      "image": "http://www.zimmerli.com/cdn/shop/files/Zimmerli_AW24_2861446-078_model_front_08b6c713-daf3-45c2-87ae-165db9a92084_600x.jpg?v=1724450275",
+      "activities": [
+        "spa",
+        "romantic",
+        "leisure"
+      ],
+      "vibes": [
+        "luxury",
+        "indulgent",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "network": "direct",
+        "program": "zimmerli",
+        "commission": "10%"
+      },
+      "active": true
+    },
+    {
+      "id": "amzn-ugg-robinson",
+      "title": "UGG Men's Robinson Robe",
+      "description": "Luxury plush robe, perfect for lounging. Soft, comfortable, and stylish.",
+      "price": 145.0,
+      "image": "https://m.media-amazon.com/images/I/51+6y+g+LJL._AC_UY1000_.jpg",
+      "category": "lounge",
+      "tags": [
+        "robe",
+        "luxury",
+        "ugg",
+        "comfort"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "vendor": "amazon",
+        "link": "https://www.amazon.com/UGG-Mens-Robinson-Black-Heather/dp/B07997QDGP",
+        "commission_rate": 0.04
+      },
+      "active": false,
+      "created_at": 1764423828.536762
+    },
+    {
+      "id": "amzn-polo-plush",
+      "title": "Polo Ralph Lauren Microfiber Plush Robe",
+      "description": "Classic luxury. Microfiber plush bathrobe with signature pony embroidery.",
+      "price": 95.0,
+      "image": "https://m.media-amazon.com/images/I/51K+j+g+LJL._AC_UY1000_.jpg",
+      "category": "lounge",
+      "tags": [
+        "robe",
+        "luxury",
+        "ralph lauren",
+        "classic"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "vendor": "amazon",
+        "link": "https://www.amazon.com/POLO-RALPH-LAUREN-Microfiber-Sleeve/dp/B07DKDPFR2",
+        "commission_rate": 0.04
+      },
+      "active": false,
+      "created_at": 1764423828.536763
+    },
+    {
+      "id": "amzn-comfy-original",
+      "title": "The Comfy Original | Oversized Wearable Blanket",
+      "description": "The original wearable blanket seen on Shark Tank. Ultra soft and warm.",
+      "price": 49.99,
+      "image": "https://m.media-amazon.com/images/I/71+6y+g+LJL._AC_UY1000_.jpg",
+      "category": "lounge",
+      "tags": [
+        "blanket hoodie",
+        "comfy",
+        "warm",
+        "oversized"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "vendor": "amazon",
+        "link": "https://www.amazon.com/COMFY-Original-Oversized-Microfiber-Wearable/dp/B07DKVCNLZ",
+        "commission_rate": 0.04
+      },
+      "active": false,
+      "created_at": 1764423828.536763
+    },
+    {
+      "id": "amzn-bedsure-hoodie",
+      "title": "Bedsure Wearable Blanket Hoodie",
+      "description": "Sherpa fleece oversized sweatshirt blanket. Maximum coziness.",
+      "price": 29.99,
+      "image": "https://m.media-amazon.com/images/I/71K+j+g+LJL._AC_UY1000_.jpg",
+      "category": "lounge",
+      "tags": [
+        "blanket hoodie",
+        "bedsure",
+        "value",
+        "warm"
+      ],
+      "source": "affiliate",
+      "affiliate": {
+        "vendor": "amazon",
+        "link": "https://www.amazon.com/Bedsure-Wearable-Blanket-Hoodie-Gifts/dp/B0C22WJ4N6",
+        "commission_rate": 0.04
+      },
+      "active": false,
+      "created_at": 1764423828.536764
+    }
+  ],
+  "sites": [
+    {
+      "id": "iamtoxico",
+      "name": "iamtoxico",
+      "domain": "iamtoxico.com",
+      "focus": [
+        "underwear",
+        "loungewear",
+        "robes",
+        "accessories"
+      ],
+      "defaultVibes": [
+        "bold",
+        "party",
+        "indulgent"
+      ]
+    },
+    {
+      "id": "melodiclabs",
+      "name": "Melodic Labs",
+      "domain": "melodiclabs.com",
+      "focus": [
+        "music",
+        "playlists"
+      ],
+      "defaultVibes": [
+        "leisure",
+        "relaxation",
+        "social"
+      ]
+    }
+  ]
+}

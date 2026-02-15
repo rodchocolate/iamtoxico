@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.pyc
+.env
+*.log
+logs/
+fetch_images.log
+shopify-app/.env
+shopify-app/__pycache__/
+
+# Large reference TIFs (JPG versions kept)
+*.tif

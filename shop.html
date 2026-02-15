@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop — TOXICO</title>
+  <link rel="preload" as="image" href="./toxico.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="shop-page">
+  <header class="site-header">
+    <a class="brand" href="/">TOXICO</a>
+  </header>
+
+  <main class="container">
+    <h1 class="page-title">Shop</h1>
+    <section class="shop-grid">
+      <article class="product-card">
+        <div class="product-art" aria-hidden="true"></div>
+        <div class="product-info">
+          <h2 class="product-title">Hoodie</h2>
+          <p class="product-desc">Heavyweight fleece hoodie</p>
+          <div class="product-cta">
+            <a class="btn" href="#" aria-label="Shop Hoodie">Shop Hoodie</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-art" aria-hidden="true"></div>
+        <div class="product-info">
+          <h2 class="product-title">Jogger</h2>
+          <p class="product-desc">Relaxed fit jogger</p>
+          <div class="product-cta">
+            <a class="btn" href="#" aria-label="Shop Jogger">Shop Jogger</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> TOXICO</small>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
