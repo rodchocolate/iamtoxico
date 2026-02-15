@@ -7,6 +7,9 @@ logs/
 fetch_images.log
 shopify-app/.env
 shopify-app/__pycache__/
+.venv/
+.pytest_cache/
+spotify_tokens.json
 
 # Large reference TIFs (JPG versions kept)
 *.tif
