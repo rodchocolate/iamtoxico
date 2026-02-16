@@ -155,16 +155,27 @@
 
 <script>
 (function () {
-  const CATALOG_URL = '/api/valet/catalog';
+  const CATALOG_URLS = ['/api/valet/catalog', 'data/catalog.json'];
   const grid     = document.getElementById('product-grid');
   const loading  = document.getElementById('loading');
   const empty    = document.getElementById('empty');
   const countEl  = document.getElementById('count');
 
-  /* ---- fetch catalog from valet API ---- */
-  fetch(CATALOG_URL)
-    .then(r => r.json())
-    .then(data => {
+  /* ---- try each catalog source in order ---- */
+  function tryFetch(urls) {
+    if (!urls.length) {
+      loading.style.display = 'none';
+      empty.textContent = 'could not load products.';
+      empty.style.display = 'block';
+      return;
+    }
+    fetch(urls[0])
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(renderProducts)
+      .catch(() => tryFetch(urls.slice(1)));
+  }
+
+  function renderProducts(data) {
       loading.style.display = 'none';
 
       const products = data.products || data.items || data || [];
@@ -198,12 +209,9 @@
 
         grid.appendChild(card);
       });
-    })
-    .catch(err => {
-      loading.style.display = 'none';
-      empty.textContent = 'could not load products. ' + err.message;
-      empty.style.display = 'block';
-    });
+  }
+
+  tryFetch(CATALOG_URLS);
 })();
 </script>
 </body>
