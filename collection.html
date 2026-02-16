@@ -138,7 +138,7 @@
 </header>
 
 <main>
-  <h1>all products</h1>
+  <h1>toxico originals</h1>
   <p class="subtitle" id="count"></p>
 
   <div id="loading">
@@ -178,7 +178,8 @@
   function renderProducts(data) {
       loading.style.display = 'none';
 
-      const products = data.products || data.items || data || [];
+      const all = data.products || data.items || data || [];
+      const products = all.filter(p => p.source === 'printify');
       if (!Array.isArray(products) || products.length === 0) {
         empty.style.display = 'block';
         return;
