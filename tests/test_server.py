@@ -65,6 +65,10 @@ class TestStaticServing:
         rv = client.get("/shop.html")
         assert rv.status_code == 200
 
+    def test_collection_html_serves(self, client):
+        rv = client.get("/collection.html")
+        assert rv.status_code == 200
+
     def test_styles_css_serves(self, client):
         rv = client.get("/styles.css")
         assert rv.status_code == 200

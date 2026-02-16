@@ -1,15 +1,20 @@
 """
 Printify API Connector for iamtoxico
 Connects Shopify store to Printify for POD fulfillment
+Full-featured: shops, catalog, products, orders, images, webhooks,
+pagination, rate-limit retry.
 """
 
 import os
+import time
 import requests
-from typing import Optional, Dict, List
+from typing import Optional, Dict, List, Any
 
 class PrintifyConnector:
     BASE_URL = "https://api.printify.com/v1"
-    
+    MAX_RETRIES = 3
+    RETRY_DELAY = 1.0  # seconds
+
     def __init__(self, api_key: Optional[str] = None):
         self.api_key = api_key or os.getenv("PRINTIFY_API_KEY")
         if not self.api_key:
@@ -19,13 +24,56 @@ class PrintifyConnector:
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json"
         }
-    
-    def _request(self, method: str, endpoint: str, data: dict = None) -> dict:
-        """Make authenticated request to Printify API"""
+
+    # ------------------------------------------------------------------
+    # Core HTTP with retry / rate-limit back-off
+    # ------------------------------------------------------------------
+
+    def _request(self, method: str, endpoint: str, data: dict = None,
+                 params: dict = None) -> Any:
+        """Make authenticated request with automatic retry on 429/5xx."""
         url = f"{self.BASE_URL}{endpoint}"
-        response = requests.request(method, url, headers=self.headers, json=data)
-        response.raise_for_status()
-        return response.json() if response.content else {}
+        last_exc = None
+        for attempt in range(1, self.MAX_RETRIES + 1):
+            try:
+                resp = requests.request(
+                    method, url, headers=self.headers,
+                    json=data, params=params, timeout=30,
+                )
+                if resp.status_code == 429:
+                    retry_after = float(
+                        resp.headers.get("Retry-After", self.RETRY_DELAY * attempt)
+                    )
+                    time.sleep(retry_after)
+                    continue
+                resp.raise_for_status()
+                return resp.json() if resp.content else {}
+            except requests.exceptions.RequestException as exc:
+                last_exc = exc
+                if attempt < self.MAX_RETRIES:
+                    time.sleep(self.RETRY_DELAY * attempt)
+        raise last_exc  # type: ignore[misc]
+
+    # ------------------------------------------------------------------
+    # Pagination helper
+    # ------------------------------------------------------------------
+
+    def _paginate(self, endpoint: str, key: str = "data") -> List[dict]:
+        """Fetch all pages from a paginated endpoint."""
+        results: List[dict] = []
+        page = 1
+        while True:
+            data = self._request("GET", endpoint, params={"page": page, "limit": 100})
+            if isinstance(data, list):
+                results.extend(data)
+                break  # non-paginated list endpoint
+            items = data.get(key, data.get("data", []))
+            results.extend(items)
+            last_page = data.get("last_page", 1)
+            if page >= last_page:
+                break
+            page += 1
+        return results
     
     # ============ SHOP MANAGEMENT ============
     
@@ -58,8 +106,8 @@ class PrintifyConnector:
     # ============ PRODUCTS ============
     
     def get_products(self, shop_id: int) -> List[dict]:
-        """List all products in a shop"""
-        return self._request("GET", f"/shops/{shop_id}/products.json")
+        """List all products in a shop (paginated)."""
+        return self._paginate(f"/shops/{shop_id}/products.json")
     
     def get_product(self, shop_id: int, product_id: str) -> dict:
         """Get specific product"""
@@ -68,10 +116,18 @@ class PrintifyConnector:
     def create_product(self, shop_id: int, product_data: dict) -> dict:
         """Create a new product"""
         return self._request("POST", f"/shops/{shop_id}/products.json", product_data)
-    
+
+    def update_product(self, shop_id: int, product_id: str, product_data: dict) -> dict:
+        """Update an existing product."""
+        return self._request("PUT", f"/shops/{shop_id}/products/{product_id}.json", product_data)
+
     def publish_product(self, shop_id: int, product_id: str, publish_data: dict) -> dict:
         """Publish product to connected store (Shopify)"""
         return self._request("POST", f"/shops/{shop_id}/products/{product_id}/publish.json", publish_data)
+
+    def unpublish_product(self, shop_id: int, product_id: str) -> dict:
+        """Unpublish product from connected store."""
+        return self._request("POST", f"/shops/{shop_id}/products/{product_id}/unpublish.json")
     
     def delete_product(self, shop_id: int, product_id: str) -> dict:
         """Delete a product"""
@@ -94,20 +150,77 @@ class PrintifyConnector:
     # ============ ORDERS ============
     
     def get_orders(self, shop_id: int) -> List[dict]:
-        """List all orders"""
-        return self._request("GET", f"/shops/{shop_id}/orders.json")
-    
+        """List all orders (paginated)."""
+        return self._paginate(f"/shops/{shop_id}/orders.json")
+
     def get_order(self, shop_id: int, order_id: str) -> dict:
         """Get specific order"""
         return self._request("GET", f"/shops/{shop_id}/orders/{order_id}.json")
-    
+
+    def create_order(self, shop_id: int, order_data: dict) -> dict:
+        """Create a new order for production."""
+        return self._request("POST", f"/shops/{shop_id}/orders.json", order_data)
+
     def submit_order(self, shop_id: int, order_id: str) -> dict:
         """Submit order for production"""
         return self._request("POST", f"/shops/{shop_id}/orders/{order_id}/send_to_production.json")
-    
+
+    def cancel_order(self, shop_id: int, order_id: str) -> dict:
+        """Cancel an order."""
+        return self._request("POST", f"/shops/{shop_id}/orders/{order_id}/cancel.json")
+
     def calculate_shipping(self, shop_id: int, order_data: dict) -> dict:
         """Calculate shipping costs"""
         return self._request("POST", f"/shops/{shop_id}/orders/shipping.json", order_data)
+
+    # ============ WEBHOOKS ============
+
+    def get_webhooks(self, shop_id: int) -> List[dict]:
+        """List registered webhooks."""
+        return self._request("GET", f"/shops/{shop_id}/webhooks.json")
+
+    def create_webhook(self, shop_id: int, topic: str, url: str) -> dict:
+        """Register a webhook.
+
+        Topics:
+            order:created, order:updated, order:sent-to-production,
+            order:shipping-update, order:completed,
+            product:publish:started, product:publish:succeeded,
+            product:publish:failed, product:deleted
+        """
+        return self._request("POST", f"/shops/{shop_id}/webhooks.json", {
+            "topic": topic,
+            "url": url,
+        })
+
+    def delete_webhook(self, shop_id: int, webhook_id: str) -> dict:
+        """Delete a webhook."""
+        return self._request("DELETE", f"/shops/{shop_id}/webhooks/{webhook_id}.json")
+
+    def ensure_webhooks(self, shop_id: int, base_url: str) -> List[dict]:
+        """Ensure all required webhooks are registered (idempotent).
+
+        Returns list of created/existing webhook records.
+        """
+        required_topics = [
+            "order:created",
+            "order:updated",
+            "order:sent-to-production",
+            "order:shipping-update",
+            "order:completed",
+            "product:publish:started",
+            "product:publish:succeeded",
+            "product:publish:failed",
+        ]
+        existing = self.get_webhooks(shop_id)
+        existing_topics = {w.get("topic") for w in existing}
+        results = list(existing)
+        for topic in required_topics:
+            if topic not in existing_topics:
+                hook_url = f"{base_url}/printify/webhooks"
+                wh = self.create_webhook(shop_id, topic, hook_url)
+                results.append(wh)
+        return results
 
 
 # ============ TOXICO PRODUCT TEMPLATES ============
@@ -188,30 +301,19 @@ def create_toxico_hoodie(connector: PrintifyConnector, shop_id: int,
 
 
 if __name__ == "__main__":
-    # Quick test
     import sys
-    
+
     api_key = os.getenv("PRINTIFY_API_KEY")
     if not api_key:
         print("❌ PRINTIFY_API_KEY not set")
-        print("   Get your key from: https://printify.com/app/account/api")
-        print("   Then: export PRINTIFY_API_KEY=your_key_here")
         sys.exit(1)
-    
     try:
-        connector = PrintifyConnector(api_key)
-        shops = connector.get_shops()
-        
-        print("✓ Connected to Printify!")
-        print(f"  Shops: {len(shops)}")
-        for shop in shops:
-            print(f"    - {shop['title']} (ID: {shop['id']})")
-        
-        # Show some blueprints
-        blueprints = connector.get_blueprints()
-        print(f"\n  Available blueprints: {len(blueprints)}")
-        for bp in blueprints[:5]:
-            print(f"    - {bp['title']} (ID: {bp['id']})")
-        
+        c = PrintifyConnector(api_key)
+        shops = c.get_shops()
+        print(f"✓ Connected — {len(shops)} shop(s)")
+        for s in shops:
+            print(f"  • {s['title']} (ID: {s['id']})")
+            hooks = c.get_webhooks(s["id"])
+            print(f"    Webhooks: {len(hooks)}")
     except Exception as e:
-        print(f"❌ Error: {e}")
+        print(f"❌ {e}")

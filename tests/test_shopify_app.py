@@ -104,3 +104,104 @@ class TestPrintifyBlueprints:
         shopify_app.printify = None
         rv = shopify_client.get('/printify/blueprints')
         assert rv.status_code == 400
+
+
+# ===================================================================
+# NEW: Additional webhook endpoints
+# ===================================================================
+
+class TestShopifyProductWebhook:
+    def test_webhook_products_accepts_post(self, shopify_client):
+        rv = shopify_client.post(
+            '/shopify/webhooks/products',
+            json={'id': 777, 'title': 'New Hoodie'},
+            headers={'X-Shopify-Hmac-SHA256': '', 'X-Shopify-Topic': 'products/create'}
+        )
+        assert rv.status_code == 200
+        assert rv.get_json()['status'] == 'received'
+
+
+class TestShopifyRefundWebhook:
+    def test_webhook_refunds_accepts_post(self, shopify_client):
+        rv = shopify_client.post(
+            '/shopify/webhooks/refunds',
+            json={'id': 50, 'order_id': 100},
+            headers={'X-Shopify-Hmac-SHA256': '', 'X-Shopify-Topic': 'refunds/create'}
+        )
+        assert rv.status_code == 200
+        assert rv.get_json()['status'] == 'received'
+
+
+class TestShopifyAppWebhook:
+    def test_webhook_app_uninstalled(self, shopify_client):
+        rv = shopify_client.post(
+            '/shopify/webhooks/app',
+            json={},
+            headers={'X-Shopify-Hmac-SHA256': '', 'X-Shopify-Topic': 'app/uninstalled'}
+        )
+        assert rv.status_code == 200
+        assert rv.get_json()['status'] == 'received'
+
+
+class TestPrintifyInboundWebhook:
+    def test_printify_webhook_accepts_post(self, shopify_client):
+        rv = shopify_client.post(
+            '/printify/webhooks',
+            json={'type': 'order:shipping-update', 'resource': {}}
+        )
+        assert rv.status_code == 200
+        assert rv.get_json()['status'] == 'received'
+
+    def test_printify_webhook_handles_completion(self, shopify_client):
+        rv = shopify_client.post(
+            '/printify/webhooks',
+            json={'type': 'order:completed', 'resource': {'external_id': '123'}}
+        )
+        assert rv.status_code == 200
+
+
+class TestWebhookRegistration:
+    def test_register_webhooks_endpoint(self, shopify_client):
+        rv = shopify_client.post('/webhooks/register')
+        assert rv.status_code == 200
+        data = rv.get_json()
+        assert 'shopify' in data
+        assert 'printify' in data
+
+
+class TestOrderTopicRouting:
+    def test_orders_create_topic(self, shopify_client):
+        rv = shopify_client.post(
+            '/shopify/webhooks/orders',
+            json={'id': 1, 'line_items': [{'sku': 'PRFY_p1_100', 'quantity': 1}],
+                  'shipping_address': {'first_name': 'A', 'last_name': 'B',
+                                       'address1': '1 St', 'city': 'NY',
+                                       'province_code': 'NY', 'country_code': 'US',
+                                       'zip': '10001'}, 'email': 'a@b.com'},
+            headers={'X-Shopify-Topic': 'orders/create'}
+        )
+        assert rv.status_code == 200
+
+    def test_orders_cancelled_topic(self, shopify_client):
+        rv = shopify_client.post(
+            '/shopify/webhooks/orders',
+            json={'id': 2, 'line_items': []},
+            headers={'X-Shopify-Topic': 'orders/cancelled'}
+        )
+        assert rv.status_code == 200
+
+    def test_orders_fulfilled_topic(self, shopify_client):
+        rv = shopify_client.post(
+            '/shopify/webhooks/orders',
+            json={'id': 3},
+            headers={'X-Shopify-Topic': 'orders/fulfilled'}
+        )
+        assert rv.status_code == 200
+
+    def test_orders_updated_topic(self, shopify_client):
+        rv = shopify_client.post(
+            '/shopify/webhooks/orders',
+            json={'id': 4},
+            headers={'X-Shopify-Topic': 'orders/updated'}
+        )
+        assert rv.status_code == 200
