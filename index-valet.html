@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>iamtoxico — valet</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #2d3436; /* Steel grey / gunmetal */
+      --chat-bg: #353b3d; /* Slightly lighter gunmetal */
+      --primary-color: #B19CD9; /* Soft lavender purple - easier on eyes */
+      --primary-dark: #9B7ED9;
+      --primary-bright: #D4A5FF; /* Brighter purple for highlights */
+      --text-color: #ffffff;
+      --text-secondary: #b3b3b3;
+      --bubble-user: #B19CD9;
+      --bubble-ai: #3d4345;
+      --border-color: #4a5255;
+      --tier-high: #D4AF37; /* Gold */
+      --tier-mid: #B19CD9; /* Purple */
+      --tier-low: #81ECEC; /* Aqua */
+      --safe-area-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      height: 100dvh;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    /* Side gutter tiled background carousel */
+    .gutter-bg-carousel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    .gutter-bg-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: 200px auto;
+      background-repeat: repeat;
+      background-position: top left;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out, background-size 1.5s ease-in-out;
+      filter: blur(0.5px) brightness(0.5);
+    }
+    
+    .gutter-bg-slide.active {
+      opacity: 0.6;
+    }
+    
+    .app-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(53, 59, 61, 0.2);
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Header - matches MelodicLabs */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: rgba(53, 59, 61, 0.4);
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(5px);
+      z-index: 10;
+    }
+    
+    .logo {
+      font-weight: 700;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .header-controls {
+      display: flex;
+      gap: 4px;
+    }
+    
+    .header-controls button {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.2rem;
+      padding: 8px;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+    
+    .header-controls button:hover {
+      color: var(--primary-color);
+    }
+    
+    /* Chat Area - matches MelodicLabs */
+    .chat-container {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+    
+    /* Background carousel */
+    .bg-carousel {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+    
+    .bg-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      height: auto;
+      background-size: auto 100vh;
+      background-position: top center;
+      background-repeat: repeat-y;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out, background-size 1.5s ease-in-out;
+      filter: blur(1px) brightness(0.75);
+    }
+    
+    .bg-slide.active {
+      opacity: 0.75;
+    }
+
+    /* Swap Modes */
+    .gutter-bg-slide.full-mode {
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+    }
+    
+    .bg-slide.tile-mode {
+      background-size: 200px auto !important;
+      background-repeat: repeat !important;
+      background-position: top left !important;
+    }
+    
+    /* Ensure content stays above background */
+    .chat-container > *:not(.bg-carousel) {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .message {
+      display: flex;
+      flex-direction: column;
+      max-width: 85%;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    .message.ai {
+      align-self: flex-start;
+      align-items: flex-start;
+    }
+    
+    .bubble {
+      padding: 12px 16px;
+      border-radius: 18px;
+      font-size: 1rem;
+      line-height: 1.4;
+      word-wrap: break-word;
+      background-color: var(--bubble-ai);
+      color: var(--text-color);
+      border-bottom-left-radius: 4px;
+    }
+    
+    /* Category Bubble Links - like chat bubbles */
+    .category-bubbles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 10px 0;
+      margin-bottom: 10px;
+    }
+    
+    .category-bubble {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: rgba(177, 156, 217, 0.15);
+      border: 1px solid var(--primary-color);
+      border-radius: 20px;
+      color: var(--primary-color);
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    
+    .category-bubble:hover, .category-bubble.active {
+      background: var(--primary-color);
+      color: #000;
+    }
+    
+    .category-bubble i {
+      font-size: 0.9rem;
+    }
+    
+    .category-bubble .count {
+      background: rgba(0,0,0,0.2);
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 0.7rem;
+    }
+    
+    /* Cards Grid - 3x3 on desktop, list on mobile */
+    #cardsContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    #offersContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid rgba(177, 156, 217, 0.2);
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+    
+    #offersContainer .song-card {
+      background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(177, 156, 217, 0.05));
+      border: 1px solid rgba(177, 156, 217, 0.3);
+    }
+    
+    /* Product Grid Container - 10 rows x 3 columns */
+    #productGridContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    @media (min-width: 600px) {
+      #productGridContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+    }
+    
+    /* Price tier indicators */
+    .song-card.tier-high {
+      border-left: 3px solid #D4AF37;
+    }
+    .song-card.tier-mid {
+      border-left: 3px solid var(--primary-color);
+    }
+    .song-card.tier-low {
+      border-left: 3px solid #81ECEC;
+    }
+    
+    #responseContainer {
+      margin-bottom: 10px;
+    }
+    
+    #responseContainer.hidden {
+      display: none;
+    }
+    
+    @media (min-width: 600px) {
+      #cardsContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+      #offersContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+    }
+    
+    /* Song/Product Cards - matches MelodicLabs */
+    .song-card {
+      margin: 0;
+      /* Darker background based on chat bubble color (#3d4345) with low opacity */
+      background-color: rgba(30, 33, 34, 0.15);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border-color);
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.2s;
+      min-height: 80px;
+    }
+    
+    /* Grid card layout adjustments for desktop */
+    @media (min-width: 600px) {
+      .song-card {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 12px;
+        min-height: 140px;
+      }
+      
+      .song-card .album-art {
+        width: 100%;
+        height: 80px;
+        margin-bottom: 8px;
+      }
+      
+      .song-card .song-info {
+        align-items: center;
+      }
+      
+      .song-card .card-actions {
+        justify-content: center;
+        margin-top: 8px;
+      }
+      
+      .song-card:hover {
+        transform: translateY(-2px);
+        background-color: rgba(45, 50, 52, 0.25);
+      }
+    }
+    
+    .song-card.offer {
+      border-color: var(--primary-color);
+      border-width: 2px;
+    }
+    
+    .song-card:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .album-art {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      object-fit: cover;
+      background-color: #4a5255;
+      border: 1px solid var(--border-color);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .album-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .album-art .fallback-icon {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .song-info {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      flex: 1;
+    }
+    
+    .card-type {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-secondary);
+      margin-bottom: 2px;
+    }
+    
+    .song-card.offer .card-type {
+      color: var(--primary-color);
+    }
+    
+    .song-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+    
+    .song-artist {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      line-height: 1.2;
+      margin-top: 2px;
+      word-break: break-word;
+    }
+    
+    .card-price-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 2px;
+    }
+    
+    .card-price {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    
+    .card-profit {
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+    
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    
+    .action-btn {
+      background: none;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    
+    .action-btn:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+    
+    .action-btn.offer-btn {
+      background: var(--primary-color);
+      border-color: var(--primary-color);
+      color: #000;
+    }
+    
+    /* Like/Nope voting buttons */
+    .vote-buttons {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+    }
+    
+    .vote-btn {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 1rem;
+    }
+    
+    .vote-btn:active {
+      transform: scale(0.95);
+    }
+    
+    .vote-btn.like:hover, .vote-btn.like.voted {
+      background: rgba(57, 255, 20, 0.2);
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+    
+    .vote-btn.nope:hover, .vote-btn.nope.voted {
+      background: rgba(255, 100, 100, 0.2);
+      border-color: #ff6b6b;
+      color: #ff6b6b;
+    }
+
+    /* Liked items get pink border */
+    .song-card.liked {
+      border: 2px solid #FFB6C1 !important;
+      box-shadow: 0 0 12px rgba(255, 182, 193, 0.3);
+    }
+
+    /* Non-commercial cards (youtube, song) get navy border */
+    .song-card.youtube, .song-card.song {
+      border: 2px solid #1e3a5f;
+    }
+
+    /* Commercial/product cards default to purple */
+    .song-card.product, .song-card.offer, .song-card.travel {
+      border: 2px solid transparent;
+    }
+    
+    /* Floating action bar for likes */
+    .likes-bar {
+      position: fixed;
+      bottom: calc(20vh + 20px + var(--safe-area-bottom));
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(45, 52, 54, 0.95);
+      border: 1px solid var(--primary-color);
+      border-radius: 24px;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s;
+    }
+    
+    .likes-bar.hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-50%) translateY(20px);
+    }
+    
+    .likes-count {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary-color);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    
+    .likes-bar button {
+      background: var(--primary-color);
+      border: none;
+      color: #000;
+      padding: 8px 14px;
+      border-radius: 16px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .likes-bar button:hover {
+      background: var(--primary-dark);
+    }
+    
+    .likes-bar .clear-btn {
+      background: rgba(255,100,100,0.2);
+      color: #ff6b6b;
+      padding: 8px 10px;
+    }
+    
+    /* Export modal */
+    .export-content {
+      background: #1a1d1e;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 12px;
+      font-family: monospace;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      max-height: 300px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin-bottom: 16px;
+    }
+    
+    /* Input Area - matches MelodicLabs 20vh */
+    .input-area {
+      padding: 15px;
+      padding-bottom: calc(15px + var(--safe-area-bottom));
+      background-color: rgba(53, 59, 61, 0.4);
+      backdrop-filter: blur(5px);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      height: 20vh;
+      min-height: 100px;
+    }
+    
+    #chat-input {
+      flex: 1;
+      background-color: #3d4345;
+      border: none;
+      border-radius: 16px;
+      padding: 12px 16px;
+      color: white;
+      font-size: 1rem;
+      font-family: inherit;
+      resize: none;
+      height: 100%;
+    }
+    
+    #chat-input:focus {
+      outline: 2px solid var(--primary-color);
+    }
+    
+    #chat-input::placeholder {
+      color: var(--text-secondary);
+    }
+    
+    .icon-btn {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 50%;
+      transition: color 0.2s, background-color 0.2s;
+      margin-top: 5px;
+    }
+    
+    .icon-btn:active {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .icon-btn.primary {
+      color: var(--primary-color);
+    }
+    
+    /* Modals - matches MelodicLabs */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 100;
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+    
+    .modal.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .modal-content {
+      background-color: var(--chat-bg);
+      width: 90%;
+      max-width: 400px;
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    
+    .modal-header h3 {
+      font-size: 1.1rem;
+    }
+    
+    .modal-header button {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    
+    .prefs-input {
+      width: 100%;
+      padding: 12px;
+      background-color: #3d4345;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+      margin-bottom: 16px;
+    }
+    
+    .prefs-input:focus {
+      outline: 2px solid var(--primary-color);
+      border-color: transparent;
+    }
+    
+    .prefs-input::placeholder {
+      color: var(--text-secondary);
+    }
+    
+    .prefs-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+      min-height: 32px;
+    }
+    
+    .chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba(57, 255, 20, 0.15);
+      border: 1px solid var(--primary-color);
+      border-radius: 20px;
+      font-size: 0.85rem;
+      color: var(--primary-color);
+    }
+    
+    .chip-remove {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: none;
+      background: var(--primary-color);
+      color: #000;
+      font-size: 0.7rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-actions {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .full-width {
+      width: 100%;
+      padding: 12px;
+      background-color: var(--primary-color);
+      border: none;
+      border-radius: 8px;
+      color: #000;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    
+    .btn-secondary {
+      flex: 1;
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 8px;
+      color: var(--text-color);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      flex: 1;
+      padding: 12px;
+      background-color: var(--primary-color);
+      border: none;
+      border-radius: 8px;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    
+    /* Desktop Enhancements - matches MelodicLabs with side columns */
+    @media (min-width: 768px) {
+      .app-container {
+        max-width: 800px;
+        border-left: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color);
+        box-shadow: 0 0 40px rgba(0,0,0,0.3);
+      }
+      
+      .message {
+        max-width: 85%;
+      }
+      
+      /* Better scrollbar for desktop */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-color);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #4a5255;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5a6265;
+      }
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Loading animation */
+    .loading .album-art {
+      animation: pulse 1.5s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.7; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Gutter Background Carousel (tiled, behind app-container) -->
+  <div class="gutter-bg-carousel" id="gutterBgCarousel">
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-1.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-2.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-3.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-4.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-5.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-6.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-7.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-8.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-9.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-10.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-11.jpg')"></div>
+    <div class="gutter-bg-slide" style="background-image: url('bg-graffiti-12.jpg')"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header - matches MelodicLabs -->
+    <header>
+      <div class="logo">
+        <i class="fas fa-heart"></i> iamtoxico
+      </div>
+      <div class="header-controls">
+        <button id="refreshBtn" title="Refresh"><i class="fas fa-sync-alt"></i></button>
+        <button id="settingsBtn" title="AI Settings"><i class="fas fa-cog"></i></button>
+        <button id="prefsBtn" title="Preferences"><i class="fas fa-question"></i></button>
+      </div>
+    </header>
+    
+    <!-- Chat/Cards Area - matches MelodicLabs -->
+    <div id="chat-container" class="chat-container">
+      <!-- Background Carousel -->
+      <div class="bg-carousel" id="bgCarousel">
+        <div class="bg-slide" style="background-image: url('bg-graffiti-1.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-2.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-3.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-4.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-5.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-6.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-7.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-8.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-9.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-10.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-11.jpg')"></div>
+        <div class="bg-slide" style="background-image: url('bg-graffiti-12.jpg')"></div>
+      </div>
+      
+      <div class="message ai">
+        <div class="bubble">
+          what are you looking to get into?
+        </div>
+      </div>
+      
+      <!-- Category Bubble Links -->
+      <div id="categoryBubbles" class="category-bubbles">
+        <!-- Will be populated from catalog categories -->
+      </div>
+      
+      <div id="cardsContainer">
+        <!-- AI Cards will be inserted here (9 cards: 3x3) -->
+      </div>
+      
+      <div id="offersContainer">
+        <!-- Quick offers row (3 cards) -->
+      </div>
+      
+      <div id="productGridContainer">
+        <!-- Product catalog grid: 30 cards (10 rows x 3) - high/mid/low tiers -->
+      </div>
+      
+      <div id="responseContainer" class="message ai hidden">
+        <div class="bubble" id="aiResponse"></div>
+      </div>
+      
+      <!-- PUNCHLIST:
+           - Add canned phrases / personality per page
+           - Add user preferences (lifestyle cues, vibe preferences)
+           - Each page should have distinct personality voice
+           - Eventually load personality config from JSON per page
+      -->
+    </div>
+
+    <!-- Input Area - matches MelodicLabs 20vh -->
+    <div class="input-area">
+      <!-- Category select hidden - LLM handles detection from natural language -->
+      <select id="categorySelect" class="category-select" style="display:none;">
+        <option value="">auto</option>
+      </select>
+      <button id="voiceBtn" class="icon-btn"><i class="fas fa-microphone"></i></button>
+      <textarea id="chat-input" placeholder="looking for something specific..." rows="1"></textarea>
+      <button id="sendBtn" class="icon-btn primary"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Preferences Modal - matches MelodicLabs modal style -->
+  <div id="prefs-modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-sliders-h"></i> refine your feed</h3>
+        <button id="prefsClose"><i class="fas fa-times"></i></button>
+      </div>
+      
+      <input type="text" class="prefs-input" id="prefsInput" placeholder='e.g., "no country music", "more 90s vibes"' autocomplete="off">
+      
+      <div class="prefs-chips" id="prefsChips">
+        <!-- Chips will be inserted here -->
+      </div>
+      
+      <div class="modal-actions">
+        <button class="btn-secondary" id="prefsClear">clear all</button>
+        <button class="btn-primary" id="prefsApply">apply</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Likes Floating Bar -->
+  <div id="likesBar" class="likes-bar hidden">
+    <div class="likes-count">
+      <i class="fas fa-heart"></i> <span id="likesCountNum">0</span>
+      <span style="opacity:0.3; margin: 0 8px;">|</span>
+      <i class="fas fa-times" style="color: #ff6b6b;"></i> <span id="nopesCountNum" style="color: #ff6b6b;">0</span>
+    </div>
+    <button id="exportLikesBtn"><i class="fas fa-copy"></i> Export</button>
+    <button id="clearLikesBtn" class="clear-btn"><i class="fas fa-trash"></i></button>
+  </div>
+
+  <!-- Export Modal -->
+  <div id="export-modal" class="modal hidden">
+    <div class="modal-content" style="max-width: 500px;">
+      <div class="modal-header">
+        <h3><i class="fas fa-heart"></i> Liked Products</h3>
+        <button id="exportClose"><i class="fas fa-times"></i></button>
+      </div>
+      
+      <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 12px;">
+        Copy this list and paste it to curate your catalog. <strong>Keep the liked ones, remove the rest.</strong>
+      </p>
+      
+      <div id="exportContent" class="export-content">
+        <!-- Export data will be inserted here -->
+      </div>
+      
+      <div class="modal-actions">
+        <button class="btn-secondary" id="exportCopyJson">Copy JSON</button>
+        <button class="btn-primary" id="exportCopyList">Copy List</button>
+      </div>
+      
+      <div id="exportStatus" style="margin-top: 12px; padding: 8px; border-radius: 6px; font-size: 0.85rem; display: none; background: rgba(57, 255, 20, 0.2); color: var(--primary-color);"></div>
+    </div>
+  </div>
+
+  <!-- LLM Settings Modal -->
+  <div id="settings-modal" class="modal hidden">
+    <div class="modal-content" style="max-width: 450px;">
+      <div class="modal-header">
+        <h3><i class="fas fa-robot"></i> AI Settings</h3>
+        <button id="settingsClose"><i class="fas fa-times"></i></button>
+      </div>
+      
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.85rem;">LLM Provider</label>
+        <select id="llmProvider" class="prefs-input" style="margin-bottom: 0;">
+          <optgroup label="⭐ Free Tier Available">
+            <option value="gemini">🔮 Google Gemini — 1,500 req/day free</option>
+            <option value="groq">⚡ Groq — 14,400 req/day free (fastest!)</option>
+            <option value="deepseek">🚀 DeepSeek — generous free ($0.14/M cheapest)</option>
+            <option value="cerebras">🧠 Cerebras — free tier (fastest inference)</option>
+            <option value="sambanova">🌊 SambaNova — free tier (enterprise speed)</option>
+            <option value="together">🤝 Together AI — $1 free credit</option>
+            <option value="fireworks">🔥 Fireworks AI — $1 free credit</option>
+            <option value="cohere">💼 Cohere — 1,000 req/month free</option>
+            <option value="mistral">🌬️ Mistral AI — limited free (EU)</option>
+            <option value="xai">🐦 xAI Grok — limited free</option>
+          </optgroup>
+          <optgroup label="💰 Paid Only (Best Quality)">
+            <option value="openai">🤖 OpenAI GPT-4o — best overall</option>
+            <option value="claude">🎭 Anthropic Claude — best personality</option>
+            <option value="perplexity">🔍 Perplexity — search-augmented</option>
+          </optgroup>
+        </select>
+      </div>
+      
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.85rem;">API Key <span style="opacity: 0.6;">(stored locally only)</span></label>
+        <input type="password" class="prefs-input" id="llmApiKey" placeholder="Enter your API key..." autocomplete="off" style="margin-bottom: 0;">
+        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;">
+          <i class="fas fa-lock" style="color: var(--primary-color);"></i> Keys are stored in your browser only, never sent to our servers.
+        </div>
+      </div>
+      
+      <div id="providerInfo" style="background: rgba(57, 255, 20, 0.1); border: 1px solid rgba(57, 255, 20, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 16px; font-size: 0.85rem;">
+        <div id="providerName" style="font-weight: 600; color: var(--primary-color); margin-bottom: 4px;">Google Gemini</div>
+        <div id="providerDesc" style="color: var(--text-secondary);">Free tier available. Fast responses, good quality.</div>
+        <a id="providerLink" href="https://aistudio.google.com/app/apikey" target="_blank" style="color: var(--primary-color); text-decoration: none; font-size: 0.8rem;"><i class="fas fa-external-link-alt"></i> Get API Key</a>
+      </div>
+      
+      <div style="margin-bottom: 16px;">
+        <label style="display: block; margin-bottom: 8px; color: var(--text-secondary); font-size: 0.85rem;">Model Override <span style="opacity: 0.6;">(optional)</span></label>
+        <input type="text" class="prefs-input" id="llmModel" placeholder="e.g., gpt-4o-mini, claude-3-haiku-20240307" autocomplete="off" style="margin-bottom: 0;">
+      </div>
+      
+      <div class="modal-actions">
+        <button class="btn-secondary" id="settingsTest"><i class="fas fa-bolt"></i> Test</button>
+        <button class="btn-primary" id="settingsSave">Save Settings</button>
+      </div>
+      
+      <div id="settingsStatus" style="margin-top: 12px; padding: 8px; border-radius: 6px; font-size: 0.85rem; display: none;"></div>
+    </div>
+  </div>
+
+  <script>
+    // ==========================================
+    // iamtoxico Shopping Valet
+    // ==========================================
+    
+    const API_PROXY = '/api/valet';
+    
+    // State
+    let userPrefs = JSON.parse(sessionStorage.getItem('userPrefs') || '[]');
+    let currentCards = [];
+    let chatHistory = JSON.parse(sessionStorage.getItem('chatHistory') || '[]');
+    let detectedCategory = null;
+    
+    // LLM Provider Settings (stored in localStorage for persistence)
+    let llmSettings = JSON.parse(localStorage.getItem('llmSettings') || JSON.stringify({
+      provider: 'gemini',
+      apiKey: '',
+      model: ''
+    }));
+    
+    // Provider metadata for UI
+    const LLM_PROVIDERS = {
+      gemini: {
+        name: 'Google Gemini',
+        desc: 'Free tier: 1,500 req/day. Fast, good quality.',
+        link: 'https://aistudio.google.com/app/apikey',
+        defaultModel: 'gemini-2.0-flash'
+      },
+      groq: {
+        name: 'Groq',
+        desc: 'Free tier: 14,400 req/day. FASTEST inference available.',
+        link: 'https://console.groq.com/keys',
+        defaultModel: 'llama-3.3-70b-versatile'
+      },
+      deepseek: {
+        name: 'DeepSeek',
+        desc: 'Generous free tier. CHEAPEST paid: $0.14/M tokens.',
+        link: 'https://platform.deepseek.com/api_keys',
+        defaultModel: 'deepseek-chat'
+      },
+      cerebras: {
+        name: 'Cerebras',
+        desc: 'Free tier available. Fastest inference (wafer-scale chip).',
+        link: 'https://cloud.cerebras.ai/',
+        defaultModel: 'llama3.1-70b'
+      },
+      sambanova: {
+        name: 'SambaNova',
+        desc: 'Free tier available. Enterprise-grade speed.',
+        link: 'https://cloud.sambanova.ai/',
+        defaultModel: 'Meta-Llama-3.1-70B-Instruct'
+      },
+      together: {
+        name: 'Together AI',
+        desc: '$1 free credit. Many open models available.',
+        link: 'https://api.together.xyz/settings/api-keys',
+        defaultModel: 'meta-llama/Llama-3.3-70B-Instruct-Turbo'
+      },
+      fireworks: {
+        name: 'Fireworks AI',
+        desc: '$1 free credit. Fast open model inference.',
+        link: 'https://fireworks.ai/account/api-keys',
+        defaultModel: 'accounts/fireworks/models/llama-v3p1-70b-instruct'
+      },
+      cohere: {
+        name: 'Cohere',
+        desc: 'Free tier: 1,000 req/month. Good for structured output.',
+        link: 'https://dashboard.cohere.com/api-keys',
+        defaultModel: 'command-r-plus'
+      },
+      mistral: {
+        name: 'Mistral AI',
+        desc: 'Limited free tier. Fast, EU-based.',
+        link: 'https://console.mistral.ai/api-keys/',
+        defaultModel: 'mistral-large-latest'
+      },
+      xai: {
+        name: 'xAI Grok',
+        desc: 'Limited free tier. Good for current events.',
+        link: 'https://console.x.ai/',
+        defaultModel: 'grok-beta'
+      },
+      openai: {
+        name: 'OpenAI',
+        desc: 'No free tier ($5 min). Best overall quality.',
+        link: 'https://platform.openai.com/api-keys',
+        defaultModel: 'gpt-4o'
+      },
+      claude: {
+        name: 'Anthropic Claude',
+        desc: 'No free tier ($5 min). Best for personality/nuance.',
+        link: 'https://console.anthropic.com/settings/keys',
+        defaultModel: 'claude-3-5-sonnet-20241022'
+      },
+      perplexity: {
+        name: 'Perplexity',
+        desc: 'No free API tier. Search-augmented responses.',
+        link: 'https://www.perplexity.ai/settings/api',
+        defaultModel: 'llama-3.1-sonar-large-128k-online'
+      }
+    };
+    
+    // Valet categories for reference
+    const VALET_CATEGORIES = [
+      'music', 'travel', 'luxury', 'nightclub', 'stripclub', 'yachts', 'charter',
+      'ski', 'resort', 'sunset', 'sunrise', 'yoga', 'wellness', 'beach', 'mountain',
+      'city', 'fashion', 'art', 'food', 'wine', 'cocktails', 'spa', 'adventure',
+      'romantic', 'party', 'chill', 'work', 'focus', 'sleep', 'morning', 'evening'
+    ];
+    
+    // Display settings - LLM can control these
+    // REAL_PHOTOS_ONLY: Only display products with actual product photography (not placeholders)
+    let REAL_PHOTOS_ONLY = false;  // DEFAULT: Show all products (use icons for missing photos)
+    
+    // DOM Elements
+    const cardsContainer = document.getElementById('cardsContainer');
+    const offersContainer = document.getElementById('offersContainer');
+    const responseContainer = document.getElementById('responseContainer');
+    const aiResponse = document.getElementById('aiResponse');
+    const chatContainer = document.getElementById('chat-container');
+    const chatInput = document.getElementById('chat-input');
+    const categorySelect = document.getElementById('categorySelect');
+    const sendBtn = document.getElementById('sendBtn');
+    const refreshBtn = document.getElementById('refreshBtn');
+    const prefsBtn = document.getElementById('prefsBtn');
+    const prefsModal = document.getElementById('prefs-modal');
+    const prefsClose = document.getElementById('prefsClose');
+    const prefsInput = document.getElementById('prefsInput');
+    const prefsChips = document.getElementById('prefsChips');
+    const prefsClear = document.getElementById('prefsClear');
+    const prefsApply = document.getElementById('prefsApply');
+    
+    // ==========================================
+    // Card Templates - matches MelodicLabs song-card
+    // ==========================================
+    
+    function createCard(item, index) {
+      const card = document.createElement('div');
+      
+      // Check if this item is liked
+      const isLiked = item.id && productVotes[item.id]?.vote === 'like';
+      const likedClass = isLiked ? 'liked' : '';
+      
+      card.className = `song-card ${item.type} ${likedClass}`.trim();
+      card.dataset.index = index;
+      if (item.id) card.dataset.id = item.id;
+      
+      // Icon based on type/category
+      const typeIcons = {
+        youtube: 'fa-youtube',
+        travel: 'fa-plane',
+        song: 'fa-music',
+        offer: 'fa-shopping-cart',
+        content: 'fa-play',
+        product: 'fa-tag',
+        discovery: 'fa-compass'
+      };
+      const catIcons = {
+        underwear: 'fa-fire',
+        loungewear: 'fa-couch',
+        eyewear: 'fa-glasses',
+        outerwear: 'fa-snowflake',
+        footwear: 'fa-shoe-prints',
+        travel: 'fa-suitcase',
+        wellness: 'fa-heart',
+        robes: 'fa-spa',
+        grooming: 'fa-cut',
+        fragrance: 'fa-spray-can',
+        accessories: 'fa-gem'
+      };
+      const icon = catIcons[item.category] || typeIcons[item.type] || 'fa-tag';
+      
+      // Color accent based on type or tier
+      const tierColors = {
+        high: '#D4AF37',  // Gold
+        mid: '#B19CD9',   // Lavender purple
+        low: '#81ECEC'    // Aqua
+      };
+      const typeColors = {
+        youtube: '#ff0000',
+        travel: '#00bcd4',
+        song: '#1db954',
+        offer: '#B388FF',
+        product: '#B388FF',
+        discovery: '#FFB86C'
+      };
+      const accentColor = (item.tier && tierColors[item.tier]) || typeColors[item.type] || '#B388FF';
+      
+      // Check if product has image
+      const hasImage = item.image && item.image !== 'null';
+      
+      // Image or icon display
+      const albumArtContent = hasImage 
+        ? `<img src="${item.image}" alt="${item.title}" style="width:100%;height:100%;object-fit:cover;border-radius:10px;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+           <div class="fallback-icon" style="display:none;justify-content:center;align-items:center;width:100%;height:100%;"><i class="fas ${icon}" style="font-size: 2rem; color: ${accentColor};"></i></div>`
+        : `<i class="fab ${item.type === 'youtube' ? 'fa-youtube' : ''}" style="font-size: 2rem; color: ${accentColor};"></i>
+           <i class="fas ${item.type !== 'youtube' ? icon : ''}" style="font-size: 2rem; color: ${accentColor};"></i>`;
+      
+      // Calculate profit display for products
+      let profitDisplay = '';
+      const priceNum = item.priceValue || parseFloat(String(item.price || '').replace(/[^0-9.]/g, ''));
+      if (priceNum && (item.type === 'product' || item.type === 'offer')) {
+        const isOwned = item.source === 'internal' || item.source === 'printify';
+        const marginPct = isOwned ? 0.70 : (item.tier === 'high' ? 0.10 : item.tier === 'low' ? 0.06 : 0.08);
+        const profit = (priceNum * marginPct).toFixed(0);
+        profitDisplay = `<div class="card-profit" style="color: ${accentColor}; font-size: 0.7rem; opacity: 0.8;">+$${profit}</div>`;
+      }
+      
+      card.innerHTML = `
+        <div class="album-art" style="background: ${hasImage ? '#1a1a2e' : `linear-gradient(135deg, ${accentColor}22, ${accentColor}44)`};">
+          ${albumArtContent}
+        </div>
+        <div class="song-info">
+          <div class="card-type" style="color: ${accentColor};">${item.category || item.type}</div>
+          <div class="song-title">${item.title}</div>
+          <div class="song-artist">${item.subtitle || ''}</div>
+          <div class="card-price-row">
+            ${item.price ? `<span class="card-price">${item.price}</span>` : ''}
+            ${profitDisplay}
+          </div>
+        </div>
+        <div class="card-actions">
+          <button class="action-btn" style="color: ${accentColor};">
+            <i class="fas fa-external-link-alt"></i>
+          </button>
+        </div>
+      `;
+      
+      card.addEventListener('click', () => handleCardClick(item));
+      return card;
+    }
+    
+    function handleCardClick(item) {
+      if (item.url) {
+        window.open(item.url, '_blank');
+      } else {
+        console.log('Card clicked:', item);
+      }
+    }
+    
+    // ==========================================
+    // Content Generation
+    // ==========================================
+    
+    // Product catalog - loaded from API
+    let PRODUCT_CATALOG = [];
+    let catalogLoaded = false;
+    
+    // Load catalog from server
+    async function loadCatalog() {
+      try {
+        const response = await fetch('/api/valet/catalog?active_only=true');
+        if (response.ok) {
+          const data = await response.json();
+          PRODUCT_CATALOG = data.products.map(p => ({
+            id: p.id,
+            type: 'offer',
+            category: p.category,
+            title: p.name,
+            subtitle: p.subtitle || p.description,
+            price: p.price ? `$${p.price}` : '',
+            priceValue: p.price || 0,
+            priceNum: p.price || 0,
+            url: p.url,
+            image: p.image || null,
+            tier: p.tier || 'mid',
+            source: p.source || 'affiliate',
+            vendor: (typeof p.affiliate === 'string' ? p.affiliate : p.affiliate?.vendor) || p.brand || p.source || 'unknown',
+            tags: [...(p.vibes || []), ...(p.activities || []), p.category]
+          }));
+          catalogLoaded = true;
+          console.log(`✓ Loaded ${PRODUCT_CATALOG.length} products from catalog`);
+          
+          // DEBUG: Inspect loaded catalog data
+          const withImg = PRODUCT_CATALOG.filter(p => p.image && p.image !== 'null');
+          console.log(`DEBUG: Catalog loaded. Total: ${PRODUCT_CATALOG.length}, With Images: ${withImg.length}`);
+          if (withImg.length > 0) {
+            console.log('DEBUG: Sample item with image:', withImg[0]);
+          } else {
+            console.log('DEBUG: No items with images found in catalog!');
+            // Log a raw item to see structure
+            console.log('DEBUG: Raw item sample:', data.products.find(p => p.source === 'printify') || data.products[0]);
+          }
+          
+          // Render category bubbles
+          renderCategoryBubbles();
+          
+          // Render initial product grid
+          renderProductGrid('');
+        }
+      } catch (e) {
+        console.log('Catalog load failed, using fallback:', e);
+      }
+      
+      // Fallback if API fails
+      if (PRODUCT_CATALOG.length === 0) {
+        PRODUCT_CATALOG = [
+          { id: 'fallback-1', type: 'offer', category: 'underwear', title: 'shop collection', subtitle: 'view all products', price: '', priceNum: 0, url: 'https://iamtoxico.com/collections/all', tags: ['all'] }
+        ];
+      }
+    }
+    
+    // ==========================================
+    // Category Bubbles - Quick Navigation
+    // ==========================================
+    
+    // Shopify store config (set your API when ready)
+    const SHOPIFY_CONFIG = {
+      store: 'iamtoxico', // your-store.myshopify.com
+      apiVersion: '2024-01',
+      accessToken: null // Set via settings later
+    };
+    
+    let activeCategory = null;
+    
+    function renderCategoryBubbles() {
+      const container = document.getElementById('categoryBubbles');
+      if (!container) return;
+      container.innerHTML = '';
+      
+      // Count products per category
+      const catCounts = {};
+      PRODUCT_CATALOG.forEach(p => {
+        catCounts[p.category] = (catCounts[p.category] || 0) + 1;
+      });
+      
+      // Category icons
+      const catIcons = {
+        underwear: 'fa-fire',
+        loungewear: 'fa-couch',
+        eyewear: 'fa-glasses',
+        outerwear: 'fa-snowflake',
+        travel: 'fa-suitcase',
+        wellness: 'fa-heart',
+        robes: 'fa-spa',
+        grooming: 'fa-cut',
+        fragrance: 'fa-spray-can',
+        accessories: 'fa-gem',
+        home: 'fa-home',
+        outdoor: 'fa-sun'
+      };
+      
+      // "All" bubble first
+      const allBubble = document.createElement('a');
+      allBubble.className = `category-bubble ${!activeCategory ? 'active' : ''}`;
+      allBubble.href = '#';
+      allBubble.innerHTML = `<i class="fas fa-th"></i> All <span class="count">${PRODUCT_CATALOG.length}</span>`;
+      allBubble.addEventListener('click', (e) => {
+        e.preventDefault();
+        activeCategory = null;
+        renderCategoryBubbles();
+        renderProductGrid('');
+      });
+      container.appendChild(allBubble);
+      
+      // Sort by count descending
+      const sorted = Object.entries(catCounts).sort((a, b) => b[1] - a[1]);
+      
+      sorted.forEach(([cat, count]) => {
+        const bubble = document.createElement('a');
+        bubble.className = `category-bubble ${activeCategory === cat ? 'active' : ''}`;
+        bubble.href = `#${cat}`;
+        bubble.dataset.category = cat;
+        
+        const icon = catIcons[cat] || 'fa-tag';
+        bubble.innerHTML = `<i class="fas ${icon}"></i> ${cat} <span class="count">${count}</span>`;
+        
+        bubble.addEventListener('click', (e) => {
+          e.preventDefault();
+          activeCategory = cat;
+          renderCategoryBubbles();
+          renderProductGrid('', cat);
+          
+          // If Shopify API is configured, could also fetch from there
+          if (SHOPIFY_CONFIG.accessToken) {
+            // Future: fetchShopifyCollection(cat);
+          }
+        });
+        
+        container.appendChild(bubble);
+      });
+    }
+    
+    // Current anchor seed for music continuity
+    let anchorSeed = null;
+    
+    // Track liked/carted items for context
+    let likedItems = JSON.parse(sessionStorage.getItem('likedItems') || '[]');
+    let currentOffers = [];
+    
+    // ==========================================
+    // Product Voting System (Like/Nope)
+    // ==========================================
+    
+    // Votes stored in localStorage (persist across sessions)
+    let productVotes = JSON.parse(localStorage.getItem('productVotes') || '{}');
+    // { productId: { vote: 'like'|'nope', name, category, price, timestamp } }
+    
+    function saveVotes() {
+      localStorage.setItem('productVotes', JSON.stringify(productVotes));
+      updateLikesBar();
+    }
+    
+    function voteProduct(productId, vote, productData) {
+      console.log(`User voted: ${vote.toUpperCase()} on ${productId}`);
+      
+      if (productVotes[productId]?.vote === vote) {
+        // Toggle off if same vote
+        delete productVotes[productId];
+      } else {
+        productVotes[productId] = {
+          vote,
+          name: productData.name || productData.title,
+          category: productData.category,
+          price: productData.price,
+          url: productData.url,
+          timestamp: Date.now()
+        };
+      }
+      saveVotes();
+    }
+    
+    function getLikedProducts() {
+      return Object.entries(productVotes)
+        .filter(([id, data]) => data.vote === 'like')
+        .map(([id, data]) => ({ id, ...data }));
+    }
+    
+    function getNopedProducts() {
+      return Object.entries(productVotes)
+        .filter(([id, data]) => data.vote === 'nope')
+        .map(([id, data]) => ({ id, ...data }));
+    }
+    
+    function updateLikesBar() {
+      const likesBar = document.getElementById('likesBar');
+      const likesCountNum = document.getElementById('likesCountNum');
+      const nopesCountNum = document.getElementById('nopesCountNum');
+      
+      const liked = getLikedProducts();
+      const noped = getNopedProducts();
+      
+      if (liked.length > 0 || noped.length > 0) {
+        likesBar.classList.remove('hidden');
+        likesCountNum.textContent = liked.length;
+        if (nopesCountNum) nopesCountNum.textContent = noped.length;
+      } else {
+        likesBar.classList.add('hidden');
+      }
+    }
+    
+        }
+      }
+    }
+    
+    function showExportModal() {
+      const liked = getLikedProducts();
+      const noped = getNopedProducts();
+      
+      const exportContent = document.getElementById('exportContent');
+      
+      // Create readable summary
+      let summary = `=== LIKED (${liked.length}) - KEEP THESE ===\n`;
+      liked.forEach(p => {
+        summary += `✅ ${p.id} | ${p.name} | ${p.category} | ${p.price || 'N/A'}\n`;
+      });
+      
+      summary += `\n=== NOPED (${noped.length}) - REMOVE THESE ===\n`;
+      noped.forEach(p => {
+        summary += `❌ ${p.id} | ${p.name} | ${p.category}\n`;
+      });
+      
+      summary += `\n--- JSON for catalog culling ---\n`;
+      summary += JSON.stringify({
+        keep: liked.map(p => p.id),
+        remove: noped.map(p => p.id),
+        liked_details: liked,
+        noped_details: noped
+      }, null, 2);
+      
+      exportContent.textContent = summary;
+      
+      document.getElementById('export-modal').classList.remove('hidden');
+    }
+    
+    // Get contextually relevant offers using nearest neighbor on tags
+    // Find best matching product from catalog - prefer products with images
+    function findBestProductMatch(name, category) {
+      if (!name || PRODUCT_CATALOG.length === 0) return null;
+      
+      const searchTerms = name.toLowerCase().split(/\s+/);
+      
+      // Score products by match quality
+      const scored = PRODUCT_CATALOG
+        .filter(p => p.active !== false)
+        .map(p => {
+          const productName = (p.title || p.name || '').toLowerCase();
+          const productBrand = (p.brand || '').toLowerCase();
+          const productTags = (p.tags || []).map(t => t.toLowerCase());
+          
+          let score = 0;
+          
+          // Exact name match = very high
+          if (productName === name.toLowerCase()) score += 100;
+          
+          // Partial name match
+          searchTerms.forEach(term => {
+            if (productName.includes(term)) score += 10;
+            if (productBrand.includes(term)) score += 5;
+            if (productTags.some(t => t.includes(term))) score += 3;
+          });
+          
+          // Category match
+          if (category && p.category === category) score += 15;
+          
+          // MASSIVELY prefer products with images (user: "make it glaring")
+          // This is a 200 point boost - images are CRITICAL for display
+          if (p.image && p.image !== 'null' && p.image !== '') score += 200;
+          
+          // Prefer active/available products
+          if (p.active === true) score += 5;
+          
+          return { ...p, score };
+        })
+        .filter(p => p.score > 0)
+        .sort((a, b) => b.score - a.score);
+      
+      return scored[0] || null;
+    }
+    
+    function getRelevantOffers(context, exclude = [], count = 2) {
+      const contextTags = context.toLowerCase().split(/\s+/);
+      
+      // Score each product by tag overlap
+      const scored = PRODUCT_CATALOG
+        .filter(p => !exclude.includes(p.id))
+        .map(p => {
+          const tagScore = p.tags.reduce((score, tag) => {
+            return score + (contextTags.some(ct => ct.includes(tag) || tag.includes(ct)) ? 2 : 0);
+          }, 0);
+          // Boost if category matches
+          const categoryScore = contextTags.some(ct => p.category.includes(ct)) ? 3 : 0;
+          return { ...p, score: tagScore + categoryScore + Math.random() }; // Random tiebreaker
+        })
+        .sort((a, b) => b.score - a.score);
+      
+      return scored.slice(0, count);
+    }
+    
+    // Static offers row - will be updated contextually
+    function getInitialOffers() {
+      return [
+        PRODUCT_CATALOG[0],
+        PRODUCT_CATALOG[1],
+        { type: 'refresh', category: 'refresh', title: 'new ideas', subtitle: 'tap to regenerate', url: null }
+      ];
+    }
+    
+    async function generateCards(query = '') {
+      // Show loading state for AI response
+      responseContainer.classList.remove('hidden');
+      aiResponse.textContent = 'thinking...';
+      
+      // Show loading state - 6 cards
+      cardsContainer.innerHTML = '';
+      for (let i = 0; i < 6; i++) {
+        const loadingCard = document.createElement('div');
+        loadingCard.className = 'song-card loading';
+        loadingCard.innerHTML = `
+          <div class="album-art"></div>
+          <div class="song-info">
+            <div class="card-type">loading...</div>
+            <div class="song-title">—</div>
+          </div>
+        `;
+        cardsContainer.appendChild(loadingCard);
+      }
+      
+      // Render contextual offers row based on query
+      renderOffers(query);
+      
+      try {
+        // Build prompt with preferences
+        const prefsStr = userPrefs.length > 0 ? `User preferences: ${userPrefs.join(', ')}. ` : '';
+        const fullQuery = `${prefsStr}${query || 'Suggest content for someone who likes style, music, and travel'}`;
+        
+        // Try real API first
+        let cards = [];
+        try {
+          // Get selected category (or null for auto)
+          const selectedCategory = categorySelect.value || null;
+          
+          // Count commercial likes (products, travel - not songs/youtube)
+          const commercialLikes = getLikedProducts().filter(p => 
+            !['song', 'youtube', 'video', 'music'].includes(p.category)
+          ).length;
+          const likedProductNames = getLikedProducts().map(p => p.name).slice(0, 5);
+          
+          const response = await fetch(API_PROXY, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ 
+              query: fullQuery,
+              anchor: anchorSeed,
+              category: selectedCategory,
+              history: chatHistory.slice(-6),  // Last 6 for detection
+              commercial_likes: commercialLikes,  // For product mode trigger
+              liked_products: likedProductNames,  // Context for recommendations
+              // LLM provider settings (user's key)
+              llm: {
+                provider: llmSettings.provider,
+                apiKey: llmSettings.apiKey,
+                model: llmSettings.model
+              }
+            })
+          });
+          
+          if (response.ok) {
+            const data = await response.json();
+            console.log('API response:', data);
+            
+            // Handle explicit commands (sorting/grouping)
+            if (data.mode === 'command') {
+              if (data.command === 'group_by_type') {
+                renderGroupedGrid('category');
+                if (data.response) aiResponse.textContent = data.response;
+                return;
+              } else if (data.command === 'group_by_vendor') {
+                renderGroupedGrid('vendor');
+                if (data.response) aiResponse.textContent = data.response;
+                return;
+              }
+            }
+            
+            // Track chat history
+            chatHistory.push(query || 'refresh');
+            sessionStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+            
+            // Update detected category if AI found one
+            if (data.detected_category && !selectedCategory) {
+              detectedCategory = data.detected_category;
+              // Auto-select in dropdown as hint
+              if (VALET_CATEGORIES.includes(detectedCategory)) {
+                categorySelect.value = detectedCategory;
+              }
+            }
+            
+            // Show AI's conversational response
+            if (data.response) {
+              aiResponse.textContent = data.response;
+            } else {
+              responseContainer.classList.add('hidden');
+            }
+            
+            // Check which mode the AI used
+            const isProductMode = data.mode === 'product' || data._product_mode;
+            
+            if (isProductMode && data.products) {
+              // PRODUCT MODE: Build cards from AI product suggestions
+              const aiProducts = data.products || [];
+              const vibes = data.vibes || [];
+              
+              // Match AI suggestions against catalog, prefer products with images
+              for (const suggestion of aiProducts) {
+                const match = findBestProductMatch(suggestion.name, suggestion.category);
+                if (match) {
+                  cards.push({
+                    type: 'product',
+                    category: match.category,
+                    title: match.name,
+                    subtitle: suggestion.reason || match.brand || '',
+                    url: match.url,
+                    price: match.price ? `$${match.price}` : '',
+                    image: match.image,
+                    id: match.id,
+                    source: match.source,
+                    tier: match.tier || 'mid'
+                  });
+                } else {
+                  // AI suggested something not in catalog - show as discovery
+                  cards.push({
+                    type: 'discovery',
+                    category: suggestion.category,
+                    title: suggestion.name,
+                    subtitle: suggestion.reason || suggestion.vibe || '',
+                    url: `https://google.com/search?q=${encodeURIComponent(suggestion.name + ' buy')}`,
+                    tier: 'mid'
+                  });
+                }
+              }
+              
+              // If AI returned vibes, store for context
+              if (vibes.length > 0) {
+                sessionStorage.setItem('lastVibes', JSON.stringify(vibes));
+              }
+            } else {
+              // DEFAULT MODE: YouTube, Songs, Travel (eyeballs + offers)
+              const yt = data.youtube || [];
+              const songs = data.songs || [];
+              const travel = data.travel || [];
+              
+              // Row 1
+              if (yt[0]) cards.push({
+                type: 'youtube', category: 'video',
+                title: yt[0].title, subtitle: yt[0].channel || 'YouTube',
+                url: yt[0].url || `https://youtube.com/results?search_query=${encodeURIComponent(yt[0].searchQuery || yt[0].title)}`,
+                vibe: yt[0].vibe
+              });
+              if (songs[0]) cards.push({
+                type: 'song', category: 'music',
+                title: songs[0].title, subtitle: songs[0].artist,
+                url: `spotify:search:${encodeURIComponent(songs[0].title + ' ' + songs[0].artist)}`,
+                vibe: songs[0].vibe
+              });
+              if (travel[0]) cards.push({
+                type: 'travel', category: 'travel',
+                title: travel[0].name, subtitle: travel[0].location || 'luxury hotel',
+                url: `https://expedia.com/Hotel-Search?destination=${encodeURIComponent(travel[0].location || '')}`,
+                price: travel[0].price_hint || '',
+                vibe: travel[0].vibe
+              });
+              
+              // Row 2
+              if (yt[1]) cards.push({
+                type: 'youtube', category: 'video',
+                title: yt[1].title, subtitle: yt[1].channel || 'YouTube',
+                url: yt[1].url || `https://youtube.com/results?search_query=${encodeURIComponent(yt[1].searchQuery || yt[1].title)}`,
+                vibe: yt[1].vibe
+              });
+              if (songs[1]) cards.push({
+                type: 'song', category: 'music',
+                title: songs[1].title, subtitle: songs[1].artist,
+                url: `spotify:search:${encodeURIComponent(songs[1].title + ' ' + songs[1].artist)}`,
+                vibe: songs[1].vibe
+              });
+              if (travel[1]) cards.push({
+                type: 'travel', category: 'travel',
+                title: travel[1].name, subtitle: travel[1].location || 'luxury hotel',
+                url: `https://expedia.com/Hotel-Search?destination=${encodeURIComponent(travel[1].location || '')}`,
+                price: travel[1].price_hint || '',
+                vibe: travel[1].vibe
+              });
+              
+              // Row 3
+              if (yt[2]) cards.push({
+                type: 'youtube', category: 'video',
+                title: yt[2].title, subtitle: yt[2].channel || 'YouTube',
+                url: yt[2].url || `https://youtube.com/results?search_query=${encodeURIComponent(yt[2].searchQuery || yt[2].title)}`,
+                vibe: yt[2].vibe
+              });
+              if (songs[2]) cards.push({
+                type: 'song', category: 'music',
+                title: songs[2].title, subtitle: songs[2].artist,
+                url: `spotify:search:${encodeURIComponent(songs[2].title + ' ' + songs[2].artist)}`,
+                vibe: songs[2].vibe
+              });
+              if (travel[2]) cards.push({
+                type: 'travel', category: 'travel',
+                title: travel[2].name, subtitle: travel[2].location || 'luxury hotel',
+                url: `https://expedia.com/Hotel-Search?destination=${encodeURIComponent(travel[2].location || '')}`,
+                price: travel[2].price_hint || '',
+                vibe: travel[2].vibe
+              });
+              
+              // Update anchor seed with first song for continuity
+              if (songs[0]) anchorSeed = `${songs[0].artist} - ${songs[0].title}`;
+            }
+            
+            // Log AI reasoning
+            if (data.anchor_blend) {
+              console.log('AI reasoning:', data.anchor_blend);
+            }
+          }
+        } catch (e) {
+          console.log('API error:', e);
+        }
+        
+        // Fallback to catalog data if API fails or returns nothing
+        if (cards.length === 0 && PRODUCT_CATALOG.length > 0) {
+          const fallbackItems = shuffleArray([...PRODUCT_CATALOG]).slice(0, 6);
+          cards = fallbackItems.map(p => ({
+            type: 'product',
+            category: p.category,
+            title: p.title,
+            subtitle: p.subtitle || p.brand || 'Catalog Item',
+            url: p.url,
+            price: p.price,
+            image: p.image,
+            id: p.id,
+            tier: p.tier || 'mid'
+          }));
+        } else if (cards.length === 0) {
+             // Only use demo content if catalog is empty
+             cards = shuffleArray([...DEMO_CONTENT]);
+        }
+        
+        // Render cards
+        currentCards = cards;
+        renderCards(cards);
+        
+        // Always render product grid (30 products in 10 rows)
+        renderProductGrid(query, activeCategory);
+        
+        // Render offers
+        renderOffers(query);
+        
+      } catch (error) {
+        console.error('Error generating cards:', error);
+        // Fallback to catalog on error
+        if (PRODUCT_CATALOG.length > 0) {
+             const fallbackItems = shuffleArray([...PRODUCT_CATALOG]).slice(0, 6);
+             const cards = fallbackItems.map(p => ({
+                type: 'product',
+                category: p.category,
+                title: p.title,
+                subtitle: p.subtitle || p.brand || 'Catalog Item',
+                url: p.url,
+                price: p.price,
+                image: p.image,
+                id: p.id,
+                tier: p.tier || 'mid'
+              }));
+             renderCards(cards);
+        } else {
+             renderCards(DEMO_CONTENT);
+        }
+        renderProductGrid('', activeCategory);
+      }
+    }
+    
+    function renderCards(cards) {
+      cardsContainer.innerHTML = '';
+      cards.forEach((card, i) => {
+        cardsContainer.appendChild(createCard(card, i));
+      });
+      // Scroll to show cards
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+    
+    function renderOffers(context = '') {
+      offersContainer.innerHTML = '';
+      
+      // Get contextually relevant offers
+      const relevantOffers = getRelevantOffers(context, likedItems, 2);
+      currentOffers = [
+        ...relevantOffers,
+        { type: 'refresh', category: 'refresh', title: 'new ideas', subtitle: 'tap to regenerate', url: null }
+      ];
+      
+      currentOffers.forEach((offer, i) => {
+        const card = createOfferCard(offer, i);
+        offersContainer.appendChild(card);
+      });
+    }
+    
+    // ==========================================
+    // Product Grid - 30 products (10 rows x 3: high/mid/low)
+    // ==========================================
+    
+    function renderProductGrid(context = '', categoryFilter = null) {
+      const gridContainer = document.getElementById('productGridContainer');
+      if (!gridContainer) return;
+      
+      // Reset display property to allow CSS to take over (grid/flex)
+      gridContainer.style.display = '';
+      gridContainer.innerHTML = '';
+      
+      if (PRODUCT_CATALOG.length === 0) return;
+      
+      // Filter by category if specified
+      let products = categoryFilter 
+        ? PRODUCT_CATALOG.filter(p => p.category === categoryFilter)
+        : [...PRODUCT_CATALOG];
+      
+      if (products.length === 0) return;
+      
+      // CRITICAL: Only show products with REAL photos (not placeholders)
+     
+      const withRealPhotos = products.filter(p => {
+        const img = p.image;
+        if (!img || img === 'null' || img === '') return false;
+        // Case-insensitive check for placeholder
+        if (typeof img === 'string' && img.toLowerCase().includes('placehold')) return false;
+        return true;
+      });
+      
+      // DEBUG: Log first few images to see what's happening
+      if (products.length > 0 && withRealPhotos.length === 0) {
+          console.log('DEBUG: No photos found. First 3 items:', products.slice(0, 3).map(p => ({id: p.id, image: p.image})));
+      }
+
+      const noPhotos = products.filter(p => !withRealPhotos.includes(p));
+      
+      // If REAL_PHOTOS_ONLY is true, only use products with real photos
+      let productsToShow = REAL_PHOTOS_ONLY ? withRealPhotos : [...withRealPhotos, ...noPhotos];
+      
+      if (productsToShow.length === 0) {
+        console.warn('⚠️ No products with REAL photos to display! Add product photography.');
+        // Fall back to all products if real-photos-only yields nothing
+        if (REAL_PHOTOS_ONLY) {
+          // Show message instead of empty grid
+          gridContainer.innerHTML = '<div style="text-align:center;padding:40px;color:#888;">No products with photos yet.<br>Add product photography to display items.</div>';
+          return;
+        }
+        productsToShow = products;
+      }
+      
+      // Sort: Real photos first, then random shuffle
+      productsToShow.sort((a, b) => {
+        const aImg = a.image;
+        const bImg = b.image;
+        
+        const aHasPhoto = aImg && aImg !== 'null' && aImg !== '' && (typeof aImg === 'string' && !aImg.toLowerCase().includes('placehold'));
+        const bHasPhoto = bImg && bImg !== 'null' && bImg !== '' && (typeof bImg === 'string' && !bImg.toLowerCase().includes('placehold'));
+        
+        // Prioritize photos
+        if (aHasPhoto && !bHasPhoto) return -1;
+        if (!aHasPhoto && bHasPhoto) return 1;
+        
+        // Random shuffle with slight price bias within groups
+        return (Math.random() - 0.5) + ((b.priceNum || 0) - (a.priceNum || 0)) * 0.001;
+      });
+      
+      // Assign tiers based on price
+      const assignTiers = (arr) => {
+        const sorted = [...arr].sort((a, b) => (b.priceNum || 0) - (a.priceNum || 0));
+        const third = Math.ceil(sorted.length / 3);
+        return sorted.map((p, i) => ({
+          ...p,
+          tier: i < third ? 'high' : i < third * 2 ? 'mid' : 'low'
+        }));
+      };
+      
+      const tieredProducts = assignTiers(productsToShow);
+      
+      // Take up to 30 (or however many we have with images)
+      const finalList = tieredProducts.slice(0, 30);
+      
+      // Render
+      finalList.forEach((product, i) => {
+        const card = createProductCard(product, i);
+        gridContainer.appendChild(card);
+      });
+      
+      const photoCount = finalList.filter(p => p.image && p.image !== 'null' && !p.image.includes('placehold')).length;
+      const noPhotoCount = finalList.length - photoCount;
+      console.log(`✓ Rendered ${finalList.length} products: ${photoCount} with REAL photos, ${noPhotoCount} without${categoryFilter ? ` (${categoryFilter})` : ''} [REAL_PHOTOS_ONLY=${REAL_PHOTOS_ONLY}]`);
+      
+      // Warning if not enough real photos
+      if (photoCount < 25 && REAL_PHOTOS_ONLY) {
+        console.warn(`⚠️ Only ${photoCount} products have real photos! Add product photography.`);
+      }
+    }
+    
+    function createProductCard(item, index) {
+      const card = document.createElement('div');
+      const tierClass = item.tier ? `tier-${item.tier}` : '';
+      
+      // Check if this item is liked
+      const isLiked = item.id && productVotes[item.id]?.vote === 'like';
+      const likedClass = isLiked ? 'liked' : '';
+      
+      card.className = `song-card offer ${tierClass} ${likedClass}`.trim();
+      card.dataset.index = index;
+      if (item.id) card.dataset.id = item.id;
+      
+      // Tier colors (now using purple for mid)
+      const tierColors = {
+        high: '#D4AF37',  // Gold
+        mid: '#B19CD9',   // Lavender purple
+        low: '#81ECEC'    // Aqua
+      };
+      const accentColor = tierColors[item.tier] || '#B19CD9';
+      
+      // Category icon
+      const catIcons = {
+        underwear: 'fa-fire',
+        loungewear: 'fa-couch',
+        eyewear: 'fa-glasses',
+        outerwear: 'fa-snowflake',
+        footwear: 'fa-shoe-prints',
+        travel: 'fa-suitcase',
+        wellness: 'fa-heart',
+        robes: 'fa-spa',
+        grooming: 'fa-cut',
+        fragrance: 'fa-spray-can',
+        accessories: 'fa-gem'
+      };
+      const icon = catIcons[item.category] || 'fa-tag';
+      
+      // Calculate profit (affiliate commission estimate or margin)
+      let profitDisplay = '';
+      if (item.priceValue || item.price) {
+        const priceNum = item.priceValue || parseFloat(String(item.price).replace(/[^0-9.]/g, ''));
+        if (priceNum) {
+          // Estimate: affiliates ~8-12%, owned products ~70%
+          const isOwned = item.source === 'internal' || item.source === 'printify';
+          const marginPct = isOwned ? 0.70 : (item.tier === 'high' ? 0.10 : item.tier === 'low' ? 0.06 : 0.08);
+          const profit = (priceNum * marginPct).toFixed(0);
+          profitDisplay = `<div class="card-profit" style="color: ${accentColor}; font-size: 0.7rem; opacity: 0.8;">+$${profit}</div>`;
+        }
+      }
+      
+      // Check existing vote
+      const existingVote = productVotes[item.id]?.vote;
+      const likeClass = existingVote === 'like' ? 'voted' : '';
+      const nopeClass = existingVote === 'nope' ? 'voted' : '';
+      
+      // Image or icon display
+      const hasImage = item.image && item.image !== 'null';
+      const albumArtContent = hasImage 
+        ? `<img src="${item.image}" alt="${item.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+           <div class="fallback-icon" style="display:none;"><i class="fas ${icon}" style="font-size: 2rem; color: ${accentColor};"></i></div>`
+        : `<i class="fas ${icon}" style="font-size: 2rem; color: ${accentColor};"></i>`;
+      
+      card.innerHTML = `
+        <div class="album-art" style="background: ${hasImage ? '#1a1a2e' : `linear-gradient(135deg, ${accentColor}22, ${accentColor}44)`};">
+          ${albumArtContent}
+        </div>
+        <div class="song-info">
+          <div class="card-type" style="color: ${accentColor};">${item.category}</div>
+          <div class="song-title">${item.title}</div>
+          <div class="song-artist">${item.subtitle || ''}</div>
+          <div class="card-price-row">
+            ${item.price ? `<span class="card-price">${item.price}</span>` : ''}
+            ${profitDisplay}
+          </div>
+        </div>
+        <div class="vote-buttons">
+          <button class="vote-btn nope ${nopeClass}" title="Nope"><i class="fas fa-times"></i></button>
+          <button class="vote-btn like ${likeClass}" title="Like"><i class="fas fa-heart"></i></button>
+        </div>
+      `;
+      
+      // Vote buttons
+      const likeBtn = card.querySelector('.vote-btn.like');
+      const nopeBtn = card.querySelector('.vote-btn.nope');
+      
+      likeBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        voteProduct(item.id, 'like', item);
+        likeBtn.classList.toggle('voted', productVotes[item.id]?.vote === 'like');
+        nopeBtn.classList.remove('voted');
+      });
+      
+      nopeBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        voteProduct(item.id, 'nope', item);
+        nopeBtn.classList.toggle('voted', productVotes[item.id]?.vote === 'nope');
+        likeBtn.classList.remove('voted');
+      });
+      
+      // Card click opens product page
+      card.addEventListener('click', () => {
+        if (item.url) window.open(item.url, '_blank');
+      });
+      
+      return card;
+    }
+
+    // Handle offer card like/cart click - "I see your move" response
+    function handleOfferLike(item) {
+      // Track the like
+      if (item.id && !likedItems.includes(item.id)) {
+        likedItems.push(item.id);
+        sessionStorage.setItem('likedItems', JSON.stringify(likedItems));
+      }
+      
+      // Show "I see your move" response
+      responseContainer.classList.remove('hidden');
+      aiResponse.textContent = 'I see your move. 👀';
+      
+      // Get 2 more contextually relevant offers + refresh
+      const moreOffers = getRelevantOffers(
+        item.tags ? item.tags.join(' ') : item.category,
+        likedItems,
+        2
+      );
+      
+      currentOffers = [
+        ...moreOffers,
+        { type: 'refresh', category: 'refresh', title: 'more ideas', subtitle: 'keep exploring', url: null }
+      ];
+      
+      // Re-render offers
+      offersContainer.innerHTML = '';
+      currentOffers.forEach((offer, i) => {
+        offersContainer.appendChild(createOfferCard(offer, i));
+      });
+      
+      // Scroll to show new offers
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+    
+    function createOfferCard(item, index) {
+      const card = document.createElement('div');
+      card.className = `song-card ${item.type}`;
+      card.dataset.index = index;
+      if (item.id) card.dataset.id = item.id;
+      
+      const isRefresh = item.type === 'refresh';
+      const icon = isRefresh ? 'fa-sync-alt' : 'fa-tag';
+      const accentColor = isRefresh ? '#B19CD9' : '#D4A5FF'; // Purple tones
+      
+      // Check existing vote
+      const existingVote = productVotes[item.id]?.vote;
+      const likeClass = existingVote === 'like' ? 'voted' : '';
+      const nopeClass = existingVote === 'nope' ? 'voted' : '';
+      
+      card.innerHTML = `
+        <div class="album-art" style="background: linear-gradient(135deg, ${accentColor}22, ${accentColor}44);">
+          <i class="fas ${icon}" style="font-size: 2rem; color: ${accentColor};"></i>
+        </div>
+        <div class="song-info">
+          <div class="card-type" style="color: ${accentColor};">${item.category}</div>
+          <div class="song-title">${item.title}</div>
+          <div class="song-artist">${item.subtitle || ''}</div>
+          ${item.price ? `<div class="card-price">${item.price}</div>` : ''}
+        </div>
+        ${isRefresh ? `
+          <div class="card-actions">
+            <button class="action-btn" style="color: ${accentColor};">
+              <i class="fas fa-redo"></i>
+            </button>
+          </div>
+        ` : `
+          <div class="vote-buttons">
+            <button class="vote-btn nope ${nopeClass}" title="Nope"><i class="fas fa-times"></i></button>
+            <button class="vote-btn like ${likeClass}" title="Like"><i class="fas fa-heart"></i></button>
+          </div>
+        `}
+      `;
+      
+      if (isRefresh) {
+        card.addEventListener('click', () => generateCards());
+      } else {
+        // Vote buttons
+        const likeBtn = card.querySelector('.vote-btn.like');
+        const nopeBtn = card.querySelector('.vote-btn.nope');
+        
+        likeBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          voteProduct(item.id, 'like', item);
+          // Update button states
+          likeBtn.classList.toggle('voted', productVotes[item.id]?.vote === 'like');
+          nopeBtn.classList.remove('voted');
+        });
+        
+        nopeBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          voteProduct(item.id, 'nope', item);
+          // Update button states
+          nopeBtn.classList.toggle('voted', productVotes[item.id]?.vote === 'nope');
+          likeBtn.classList.remove('voted');
+        });
+        
+        // Card click opens product page
+        card.addEventListener('click', () => {
+          if (item.url) window.open(item.url, '_blank');
+        });
+      }
+      
+      return card;
+    }
+    
+    // Demo content for fallback
+    const DEMO_CONTENT = [
+      {
+        type: 'youtube',
+        category: 'video',
+        title: 'Underground Techno Bunker',
+        subtitle: 'HATE',
+        url: 'https://www.youtube.com/watch?v=example1',
+        vibe: 'dark'
+      },
+      {
+        type: 'song',
+        category: 'music',
+        title: 'Midnight City',
+        subtitle: 'M83',
+        url: 'spotify:track:example2',
+        vibe: 'nostalgic'
+      },
+      {
+        type: 'travel',
+        category: 'travel',
+        title: 'Aman Tokyo',
+        subtitle: 'Tokyo, Japan',
+        url: 'https://www.aman.com/resorts/aman-tokyo',
+        price: '$$$$',
+        vibe: 'luxury'
+      },
+      {
+        type: 'product',
+        category: 'fashion',
+        title: 'Rick Owens Geobasket',
+        subtitle: 'Sneakers',
+        url: 'https://www.rickowens.eu',
+        price: '$1,200',
+        vibe: 'avant-garde'
+      },
+      {
+        type: 'youtube',
+        category: 'video',
+        title: 'Boiler Room Berlin',
+        subtitle: 'Boiler Room',
+        url: 'https://www.youtube.com/watch?v=example3',
+        vibe: 'party'
+      },
+      {
+        type: 'song',
+        category: 'music',
+        title: 'After Hours',
+        subtitle: 'The Weeknd',
+        url: 'spotify:track:example4',
+        vibe: 'late night'
+      }
+    ];
+    
+    function shuffleArray(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+    
+    // ==========================================
+    // Preferences Management
+    // ==========================================
+    
+    function renderPrefsChips() {
+      prefsChips.innerHTML = '';
+      userPrefs.forEach((pref, i) => {
+        const chip = document.createElement('div');
+        chip.className = 'chip';
+        chip.innerHTML = `
+          <span>${pref}</span>
+          <button class="chip-remove" data-index="${i}"><i class="fas fa-times"></i></button>
+        `;
+        chip.querySelector('.chip-remove').addEventListener('click', (e) => {
+          e.stopPropagation();
+          userPrefs.splice(i, 1);
+          sessionStorage.setItem('userPrefs', JSON.stringify(userPrefs));
+          renderPrefsChips();
+        });
+        prefsChips.appendChild(chip);
+      });
+    }
+    
+    function addPref(text) {
+      const pref = text.trim().toLowerCase();
+      if (pref && !userPrefs.includes(pref)) {
+        userPrefs.push(pref);
+        sessionStorage.setItem('userPrefs', JSON.stringify(userPrefs));
+        renderPrefsChips();
+      }
+    }
+    
+    // ==========================================
+    // Event Listeners
+    // ==========================================
+    
+    // Send button
+    sendBtn.addEventListener('click', () => {
+      const query = chatInput.value.trim();
+      if (query) {
+        generateCards(query);
+        chatInput.value = '';
+      }
+    });
+    
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendBtn.click();
+      }
+    });
+    
+    // Refresh
+    refreshBtn.addEventListener('click', () => {
+      generateCards();
+    });
+    
+    // Preferences modal
+    prefsBtn.addEventListener('click', () => {
+      prefsModal.classList.remove('hidden');
+      renderPrefsChips();
+    });
+    
+    prefsClose.addEventListener('click', () => {
+      prefsModal.classList.add('hidden');
+    });
+    
+    prefsModal.addEventListener('click', (e) => {
+      if (e.target === prefsModal) {
+        prefsModal.classList.add('hidden');
+      }
+    });
+    
+    prefsInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        addPref(prefsInput.value);
+        prefsInput.value = '';
+      }
+    });
+    
+    prefsClear.addEventListener('click', () => {
+      userPrefs = [];
+      sessionStorage.setItem('userPrefs', JSON.stringify(userPrefs));
+      renderPrefsChips();
+    });
+    
+    prefsApply.addEventListener('click', () => {
+      if (prefsInput.value.trim()) {
+        addPref(prefsInput.value);
+        prefsInput.value = '';
+      }
+      prefsModal.classList.add('hidden');
+      generateCards();
+    });
+    
+    // ==========================================
+    // Likes Bar & Export Modal Events
+    // ==========================================
+    
+    const likesBar = document.getElementById('likesBar');
+    const exportLikesBtn = document.getElementById('exportLikesBtn');
+    const clearLikesBtn = document.getElementById('clearLikesBtn');
+    const exportModal = document.getElementById('export-modal');
+    const exportClose = document.getElementById('exportClose');
+    const exportCopyJson = document.getElementById('exportCopyJson');
+    const exportCopyList = document.getElementById('exportCopyList');
+    const exportStatus = document.getElementById('exportStatus');
+    
+    exportLikesBtn.addEventListener('click', showExportModal);
+    clearLikesBtn.addEventListener('click', clearAllVotes);
+    
+    exportClose.addEventListener('click', () => {
+      exportModal.classList.add('hidden');
+    });
+    
+    exportModal.addEventListener('click', (e) => {
+      if (e.target === exportModal) {
+        exportModal.classList.add('hidden');
+      }
+    });
+    
+    exportCopyJson.addEventListener('click', () => {
+      const liked = getLikedProducts();
+      const noped = getNopedProducts();
+      const json = JSON.stringify({
+        keep: liked.map(p => p.id),
+        remove: noped.map(p => p.id),
+        liked_details: liked,
+        noped_details: noped
+      }, null, 2);
+      
+      navigator.clipboard.writeText(json).then(() => {
+        exportStatus.style.display = 'block';
+        exportStatus.textContent = '✓ JSON copied to clipboard!';
+        setTimeout(() => { exportStatus.style.display = 'none'; }, 2000);
+      });
+    });
+    
+    exportCopyList.addEventListener('click', () => {
+      const liked = getLikedProducts();
+      const noped = getNopedProducts();
+      
+      let list = `KEEP (${liked.length}):\n`;
+      liked.forEach(p => list += `• ${p.id}: ${p.name}\n`);
+      list += `\nREMOVE (${noped.length}):\n`;
+      noped.forEach(p => list += `• ${p.id}: ${p.name}\n`);
+      
+      navigator.clipboard.writeText(list).then(() => {
+        exportStatus.style.display = 'block';
+        exportStatus.textContent = '✓ List copied to clipboard!';
+        setTimeout(() => { exportStatus.style.display = 'none'; }, 2000);
+      });
+    });
+    
+    // ==========================================
+    // LLM Settings Management
+    // ==========================================
+    
+    const settingsBtn = document.getElementById('settingsBtn');
+    const settingsModal = document.getElementById('settings-modal');
+    const settingsClose = document.getElementById('settingsClose');
+    const llmProviderSelect = document.getElementById('llmProvider');
+    const llmApiKeyInput = document.getElementById('llmApiKey');
+    const llmModelInput = document.getElementById('llmModel');
+    const settingsTest = document.getElementById('settingsTest');
+    const settingsSave = document.getElementById('settingsSave');
+    const settingsStatus = document.getElementById('settingsStatus');
+    const providerName = document.getElementById('providerName');
+    const providerDesc = document.getElementById('providerDesc');
+    const providerLink = document.getElementById('providerLink');
+    
+    function updateProviderInfo() {
+      const provider = LLM_PROVIDERS[llmProviderSelect.value];
+      if (provider) {
+        providerName.textContent = provider.name;
+        providerDesc.textContent = provider.desc;
+        providerLink.href = provider.link;
+        llmModelInput.placeholder = `e.g., ${provider.defaultModel}`;
+      }
+    }
+    
+    function loadSettingsUI() {
+      llmProviderSelect.value = llmSettings.provider || 'gemini';
+      llmApiKeyInput.value = llmSettings.apiKey || '';
+      llmModelInput.value = llmSettings.model || '';
+      updateProviderInfo();
+    }
+    
+    function showSettingsStatus(message, isError = false) {
+      settingsStatus.style.display = 'block';
+      settingsStatus.textContent = message;
+      settingsStatus.style.background = isError ? 'rgba(255, 100, 100, 0.2)' : 'rgba(57, 255, 20, 0.2)';
+      settingsStatus.style.color = isError ? '#ff6b6b' : 'var(--primary-color)';
+      setTimeout(() => { settingsStatus.style.display = 'none'; }, 3000);
+    }
+    
+    // Settings modal events
+    settingsBtn.addEventListener('click', () => {
+      loadSettingsUI();
+      settingsModal.classList.remove('hidden');
+    });
+    
+    settingsClose.addEventListener('click', () => {
+      settingsModal.classList.add('hidden');
+    });
+    
+    settingsModal.addEventListener('click', (e) => {
+      if (e.target === settingsModal) {
+        settingsModal.classList.add('hidden');
+      }
+    });
+    
+    llmProviderSelect.addEventListener('change', updateProviderInfo);
+    
+    settingsSave.addEventListener('click', () => {
+      llmSettings = {
+        provider: llmProviderSelect.value,
+        apiKey: llmApiKeyInput.value.trim(),
+        model: llmModelInput.value.trim()
+      };
+      localStorage.setItem('llmSettings', JSON.stringify(llmSettings));
+      showSettingsStatus('Settings saved!');
+      setTimeout(() => settingsModal.classList.add('hidden'), 1000);
+    });
+    
+    settingsTest.addEventListener('click', async () => {
+      const testSettings = {
+        provider: llmProviderSelect.value,
+        apiKey: llmApiKeyInput.value.trim(),
+        model: llmModelInput.value.trim()
+      };
+      
+      settingsTest.disabled = true;
+      settingsTest.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Testing...';
+      
+      try {
+        const response = await fetch('/api/valet/test', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(testSettings)
+        });
+        
+        const data = await response.json();
+        if (data.success) {
+          showSettingsStatus(`✓ ${data.provider} connected! (${data.model})`);
+        } else {
+          showSettingsStatus(`✗ ${data.error}`, true);
+        }
+      } catch (e) {
+        showSettingsStatus(`✗ Connection failed: ${e.message}`, true);
+      }
+      
+      settingsTest.disabled = false;
+      settingsTest.innerHTML = '<i class="fas fa-bolt"></i> Test';
+    });
+    
+    // ==========================================
+    // Init
+    // ==========================================
+    
+    // Load product catalog from API first
+    loadCatalog();
+    
+    renderPrefsChips();
+    loadSettingsUI();
+    updateLikesBar(); // Show likes bar if there are saved likes
+    
+    // ==========================================
+    // Background Carousel (dual-phase: tiled then cover)
+    // Pattern: 4s black → [4s tiled + 4s cover] per photo → next photo
+    // Total 8 seconds per photo (4 tiled + 4 cover)
+    
+    const bgCarouselContainer = document.getElementById('bgCarousel');
+    const gutterCarouselContainer = document.getElementById('gutterBgCarousel');
+    
+    // 1. Capture original images
+    const originalBgSlides = Array.from(document.querySelectorAll('.bg-slide'));
+    const imageUrls = originalBgSlides.map(slide => slide.style.backgroundImage);
+    
+    // 2. Rebuild slides with duplicates for smooth transitions
+    // We create 2 slides for each image: Phase A and Phase B
+    // This allows us to crossfade between phases of the SAME image using distinct DOM elements
+    
+    function rebuildSlides() {
+      // Clear containers
+      bgCarouselContainer.innerHTML = '';
+      gutterCarouselContainer.innerHTML = '';
+      
+      imageUrls.forEach((imgUrl) => {
+        // Create 4 elements per image (2 for bg, 2 for gutter)
+        // Phase A: Tile Inside / Full Outside
+        const bgA = document.createElement('div');
+        bgA.className = 'bg-slide tile-mode';
+        bgA.style.backgroundImage = imgUrl;
+        
+        const gutterA = document.createElement('div');
+        gutterA.className = 'gutter-bg-slide full-mode';
+        gutterA.style.backgroundImage = imgUrl;
+        
+        // Phase B: Full Inside / Tile Outside
+        const bgB = document.createElement('div');
+        bgB.className = 'bg-slide';
+        bgB.style.backgroundImage = imgUrl;
+        
+        const gutterB = document.createElement('div');
+        gutterB.className = 'gutter-bg-slide';
+        gutterB.style.backgroundImage = imgUrl;
+        
+        // Append in order A, B
+        bgCarouselContainer.appendChild(bgA);
+        bgCarouselContainer.appendChild(bgB);
+        
+        gutterCarouselContainer.appendChild(gutterA);
+        gutterCarouselContainer.appendChild(gutterB);
+      });
+    }
+    
+    rebuildSlides();
+    
+    // 3. Re-select the newly created slides
+    const bgSlides = document.querySelectorAll('.bg-slide');
+    const gutterSlides = document.querySelectorAll('.gutter-bg-slide');
+    
+    console.log(`Rebuilt slides: ${bgSlides.length} slides from ${imageUrls.length} images`);
+    
+    // === PHASE TIMING CONFIG ===
+    const PHASE_DURATION = 4000;  // 4 seconds per phase
+    const INITIAL_BLACK = 4000;   // 4 seconds black at start
+    
+    // Start with random index (must be even to start on Phase A of a photo)
+    // Math.floor(Math.random() * 12) * 2 ensures we pick an even index (0, 2, 4...)
+    let currentBg = Math.floor(Math.random() * (bgSlides.length / 2)) * 2;
+    
+    function advancePhase() {
+      // Simply move to the next slide
+      // The slides are already pre-configured as A -> B -> A -> B ...
+      
+      if (bgSlides.length === 0) return;
+
+      // 1. Remove active from current
+      bgSlides[currentBg].classList.remove('active');
+      gutterSlides[currentBg].classList.remove('active');
+      
+      // 2. Increment
+      currentBg = (currentBg + 1) % bgSlides.length;
+      
+      console.log(`Advancing to slide ${currentBg} (Phase ${currentBg % 2 === 0 ? 'A' : 'B'})`);
+
+      // 3. Add active to next
+      bgSlides[currentBg].classList.add('active');
+      gutterSlides[currentBg].classList.add('active');
+    }
+    
+    // Start sequence
+    if (bgSlides.length > 0) {
+      setTimeout(() => {
+        // Activate first slide
+        bgSlides[currentBg].classList.add('active');
+        gutterSlides[currentBg].classList.add('active');
+        
+        // Continue cycling every 4s
+        setInterval(advancePhase, PHASE_DURATION);
+      }, INITIAL_BLACK);
+    }
+    
+    // ==========================================
+    // SAVED: Original synced behavior (for future modularization)
+    // Uncomment to restore: both tiled + cover show simultaneously
+    // ==========================================
+    /*
+    // --- SYNCED MODE (original) ---
+    const syncedFirstDelay = 3000;
+    const syncedInterval = 7000;
+    let syncedCurrentBg = Math.floor(Math.random() * bgSlides.length);
+    
+    function rotateBgSynced() {
+      bgSlides.forEach(s => s.classList.remove('active'));
+      gutterSlides.forEach(s => s.classList.remove('active'));
+      syncedCurrentBg = (syncedCurrentBg + 1) % bgSlides.length;
+      bgSlides[syncedCurrentBg].classList.add('active');
+      if (gutterSlides.length > syncedCurrentBg) {
+        gutterSlides[syncedCurrentBg].classList.add('active');
+      }
+    }
+    
+    if (bgSlides.length > 0) {
+      setTimeout(() => {
+        bgSlides[syncedCurrentBg].classList.add('active');
+        if (gutterSlides.length > syncedCurrentBg) {
+          gutterSlides[syncedCurrentBg].classList.add('active');
+        }
+        if (bgSlides.length > 1) {
+          setInterval(rotateBgSynced, syncedInterval);
+        }
+      }, syncedFirstDelay);
+    }
+    // --- END SYNCED MODE ---
+    */
+    
+    // ==========================================
+    // GROUPED GRID VIEW
+    // ==========================================
+    
+    function renderGroupedGrid(groupBy) {
+      const gridContainer = document.getElementById('productGridContainer');
+      if (!gridContainer) return;
+      gridContainer.innerHTML = '';
+      
+      // Switch to block layout to allow headers + subgrids
+      gridContainer.style.display = 'block';
+      
+      if (PRODUCT_CATALOG.length === 0) return;
+      
+      // Group products
+      const groups = {};
+      
+      PRODUCT_CATALOG.forEach(p => {
+        // Filter out placeholders if needed
+        if (REAL_PHOTOS_ONLY) {
+             const img = p.image;
+             if (!img || img === 'null' || img === '' || img.includes('placehold')) return;
+        }
+
+        let key = 'Other';
+        if (groupBy === 'category') {
+          key = p.category || 'Uncategorized';
+        } else if (groupBy === 'vendor') {
+          key = p.vendor || 'Unknown';
+        }
+        
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(p);
+      });
+      
+      // Render groups
+      Object.keys(groups).sort().forEach(groupName => {
+        const products = groups[groupName];
+        if (products.length === 0) return;
+        
+        // Header
+        const header = document.createElement('div');
+        header.style.padding = '20px 0 10px 0';
+        header.style.borderBottom = '1px solid var(--border-color)';
+        header.style.marginBottom = '15px';
+        header.style.color = 'var(--primary-color)';
+        header.style.fontWeight = 'bold';
+        header.style.fontSize = '1.1rem';
+        header.style.textTransform = 'uppercase';
+        header.style.letterSpacing = '1px';
+        header.innerHTML = `<i class="fas fa-layer-group"></i> ${groupName} <span style="opacity:0.5;font-size:0.8rem;margin-left:8px;">(${products.length})</span>`;
+        gridContainer.appendChild(header);
+        
+        // Grid for this group
+        const groupGrid = document.createElement('div');
+        // Use inline styles to match the main grid behavior but nested
+        groupGrid.style.display = 'grid';
+        groupGrid.style.gridTemplateColumns = window.innerWidth >= 600 ? 'repeat(3, 1fr)' : '1fr';
+        groupGrid.style.gap = '12px';
+        groupGrid.style.marginBottom = '30px';
+        
+        products.forEach((product, i) => {
+            const card = createProductCard(product, i);
+            groupGrid.appendChild(card);
+        });
+        
+        gridContainer.appendChild(groupGrid);
+      });
+      
+      // Scroll to grid
+      setTimeout(() => gridContainer.scrollIntoView({ behavior: 'smooth' }), 100);
+    }
+  </script>
+</body>
+</html>
