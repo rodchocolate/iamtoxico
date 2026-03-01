@@ -63,7 +63,7 @@ class PrintifyConnector:
         results: List[dict] = []
         page = 1
         while True:
-            data = self._request("GET", endpoint, params={"page": page, "limit": 100})
+            data = self._request("GET", endpoint, params={"page": page, "limit": 50})
             if isinstance(data, list):
                 results.extend(data)
                 break  # non-paginated list endpoint
