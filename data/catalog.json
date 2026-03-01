@@ -6023,28 +6023,6 @@
       "active": true
     },
     {
-      "id": "printify-6929f98c7b419747000916d7",
-      "printify_id": "6929f98c7b419747000916d7",
-      "name": "Unisex Oversized Boxy Tee",
-      "price": 29.58,
-      "category": "tops",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100285/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-6929f979eeefa5c3bc0bfc64",
-      "printify_id": "6929f979eeefa5c3bc0bfc64",
-      "name": "Unisex Oversized Boxy Tee",
-      "price": 29.58,
-      "category": "tops",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100285/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
       "id": "printify-6929f87e08e5b94ccd0185d2",
       "printify_id": "6929f87e08e5b94ccd0185d2",
       "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
@@ -6100,39 +6078,6 @@
       "status": "active"
     },
     {
-      "id": "printify-6929b6d89b3dbbfde2088c5a",
-      "printify_id": "6929b6d89b3dbbfde2088c5a",
-      "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
-      "price": 57.7,
-      "category": "activewear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16656/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-6928d1e58a961747da091ea0",
-      "printify_id": "6928d1e58a961747da091ea0",
-      "name": "Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fash",
-      "price": 98.82,
-      "category": "outerwear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/6928d1e58a961747da091ea0/63243/101820/copy-of-urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-2",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-68eb2d89f88f52634a10b4bc",
-      "printify_id": "68eb2d89f88f52634a10b4bc",
-      "name": "Long Sleeve Kimono Robe (AOP)",
-      "price": 57.7,
-      "category": "loungewear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/29522/long-sleeve-kimono-robe-aop.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
       "id": "printify-68ea0502cb19b441780d9728",
       "printify_id": "68ea0502cb19b441780d9728",
       "name": "Stylish Athletic Joggers with Unique AOP Design, Trendy Acti",
@@ -6140,50 +6085,6 @@
       "category": "activewear",
       "margin_tier": "pod",
       "image": "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16656/stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-68ea040f0bb1a283330ee380",
-      "printify_id": "68ea040f0bb1a283330ee380",
-      "name": "Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fash",
-      "price": 98.82,
-      "category": "outerwear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/68ea040f0bb1a283330ee380/63243/101820/urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-2",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-68585dd350fb3f4f5c0595f4",
-      "printify_id": "68585dd350fb3f4f5c0595f4",
-      "name": "Women's Thongs (AOP)",
-      "price": 24.15,
-      "category": "underwear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/102782/womens-thongs-aop.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-685855b6c5c9efe54a0a9585",
-      "printify_id": "685855b6c5c9efe54a0a9585",
-      "name": "Unisex Oversized Boxy Tee",
-      "price": 29.58,
-      "category": "tops",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100285/unisex-oversized-boxy-tee.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-6856fa7c0ea6932ed9007b99",
-      "printify_id": "6856fa7c0ea6932ed9007b99",
-      "name": "Women's Thongs (AOP)",
-      "price": 24.15,
-      "category": "underwear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/6856fa7c0ea6932ed9007b99/105608/102782/womens-thongs-aop.jpg?camera_label=front",
       "source": "printify",
       "status": "active"
     },
