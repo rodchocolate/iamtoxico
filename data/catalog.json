@@ -6023,13 +6023,24 @@
       "active": true
     },
     {
-      "id": "printify-6929f87e08e5b94ccd0185d2",
-      "printify_id": "6929f87e08e5b94ccd0185d2",
-      "name": "Cyan Glow",
+      "id": "printify-68ea0502cb19b441780d9728",
+      "printify_id": "68ea0502cb19b441780d9728",
+      "name": "Toxico",
       "price": 120,
       "category": "activewear",
       "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/6929f87e08e5b94ccd0185d2/72928/16656/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "image": "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16656/stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929ee81cecf816d92020b31",
+      "printify_id": "6929ee81cecf816d92020b31",
+      "name": "Arctic River",
+      "price": 120,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929ee81cecf816d92020b31/72928/16656/copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
       "source": "printify",
       "status": "active"
     },
@@ -6041,6 +6052,17 @@
       "category": "activewear",
       "margin_tier": "pod",
       "image": "https://images-api.printify.com/mockup/6929f14c5dc7ab7fa7025725/72928/16656/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active"
+    },
+    {
+      "id": "printify-6929f87e08e5b94ccd0185d2",
+      "printify_id": "6929f87e08e5b94ccd0185d2",
+      "name": "Cyan Glow",
+      "price": 120,
+      "category": "activewear",
+      "margin_tier": "pod",
+      "image": "https://images-api.printify.com/mockup/6929f87e08e5b94ccd0185d2/72928/16656/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
       "source": "printify",
       "status": "active"
     },
@@ -6063,28 +6085,6 @@
       "category": "activewear",
       "margin_tier": "pod",
       "image": "https://images-api.printify.com/mockup/6929ef67d7e308d6df0d8c8a/72928/16656/copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-6929ee81cecf816d92020b31",
-      "printify_id": "6929ee81cecf816d92020b31",
-      "name": "Arctic River",
-      "price": 120,
-      "category": "activewear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/6929ee81cecf816d92020b31/72928/16656/copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
-      "source": "printify",
-      "status": "active"
-    },
-    {
-      "id": "printify-68ea0502cb19b441780d9728",
-      "printify_id": "68ea0502cb19b441780d9728",
-      "name": "Toxico",
-      "price": 120,
-      "category": "activewear",
-      "margin_tier": "pod",
-      "image": "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16656/stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
       "source": "printify",
       "status": "active"
     },
