@@ -16,7 +16,6 @@
     min-height: 100vh;
   }
 
-  /* dark overlay so text pops on busy bg */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -26,161 +25,170 @@
 
   header, main, footer { position: relative; z-index: 1; }
 
-  /* ---- product grid ---- */
-  main { padding: 2.5rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
-
-  h1 {
-    font-size: 2rem; font-weight: 600; margin-bottom: 1.5rem;
+  header {
+    padding: 1.5rem 2rem;
+    max-width: 1280px; margin: 0 auto;
+  }
+  header h1 {
+    font-size: 2rem; font-weight: 600;
     letter-spacing: .04em; text-transform: lowercase;
   }
 
-  #product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.6rem;
+  .filters {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 2rem .8rem;
+    display: flex; gap: .5rem; flex-wrap: wrap;
+  }
+  .filters button {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    color: #fff; font-family: inherit; font-size: .8rem;
+    padding: .4em 1em; border-radius: 20px; cursor: pointer;
+    transition: background .2s, border-color .2s;
+  }
+  .filters button:hover,
+  .filters button.active {
+    background: rgba(255,255,255,.18);
+    border-color: rgba(255,255,255,.3);
   }
 
-  .product-card {
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  .card {
     background: rgba(255,255,255,.06);
     border: 1px solid rgba(255,255,255,.1);
     border-radius: 12px;
     overflow: hidden;
     transition: transform .25s, border-color .25s;
-    cursor: pointer;
   }
-  .product-card:hover {
+  .card:hover {
     transform: translateY(-4px);
     border-color: rgba(255,255,255,.25);
   }
-  .product-card img {
-    width: 100%; aspect-ratio: 1; object-fit: cover;
-    background: #1a1a1a;
-  }
-  .product-card .info {
-    padding: 1rem 1.1rem;
-  }
-  .product-card .title {
-    font-size: 1rem; font-weight: 600;
-    margin-bottom: .35rem;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  }
-  .product-card .price {
-    font-size: .95rem; color: rgba(255,255,255,.55);
-  }
-  .product-card a.card-link {
+  .card a.card-link {
     display: block; text-decoration: none; color: inherit;
   }
-
-  /* loading / empty states */
-  #loading, #empty {
-    text-align: center; padding: 4rem 1rem;
-    color: rgba(255,255,255,.5); font-size: 1.05rem;
+  .card .img-wrap {
+    position: relative;
+    width: 100%; aspect-ratio: 1;
+    overflow: hidden; background: #1a1a1a;
   }
-  .spinner {
-    width: 36px; height: 36px; margin: 0 auto 1rem;
-    border: 3px solid rgba(255,255,255,.15);
-    border-top-color: #fff;
-    border-radius: 50%;
-    animation: spin .7s linear infinite;
+  .card .img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity .3s;
   }
-  @keyframes spin { to { transform: rotate(360deg); } }
+  .card .img-wrap img.back {
+    position: absolute; inset: 0; opacity: 0;
+  }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back  { opacity: 1; }
 
-  /* footer */
+  .card .info { padding: .9rem 1rem; }
+  .card .title {
+    font-size: .85rem; font-weight: 600;
+    margin-bottom: .2rem;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .card .meta {
+    font-size: .72rem; color: rgba(255,255,255,.4);
+    text-transform: uppercase; letter-spacing: .04em;
+  }
+  .card .price {
+    font-size: .8rem; color: rgba(255,255,255,.55);
+    margin-top: .15rem;
+  }
+
   footer {
     text-align: center; padding: 2rem;
-    color: rgba(255,255,255,.3); font-size: .8rem;
+    color: rgba(255,255,255,.25); font-size: .78rem;
   }
 
-  @media (max-width: 600px) {
-    main { padding: 1.5rem 1rem 3rem; }
-    #product-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .product-card .info { padding: .7rem .8rem; }
+  @media (max-width: 768px) {
+    main { padding: 1rem 1rem 3rem; }
+    header { padding: 1rem; }
+    .filters { padding: 0 1rem .6rem; }
+    #grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+    }
+    .card .info { padding: .6rem .7rem; }
+    .card .title { font-size: .78rem; }
   }
 </style>
 </head>
 <body>
 
-<main>
+<header>
   <h1>toxico originals</h1>
+</header>
 
-  <div id="loading">
-    <div class="spinner"></div>
-    loading collection&hellip;
-  </div>
+<div class="filters">
+  <button class="active" data-f="all">All</button>
+  <button data-f="apres">Apres</button>
+  <button data-f="harem">Harem</button>
+</div>
 
-  <div id="empty" style="display:none;">no products found.</div>
-
-  <div id="product-grid"></div>
+<main>
+  <div id="grid"></div>
 </main>
 
 <footer>&copy; 2025 toxico &mdash; elevated loungewear for the sporting life</footer>
 
 <script>
-(function () {
-  /* Shopify store — product pages, cart & checkout are all hosted here.
-     Printify publishes products automatically; we just link into them. */
-  const SHOPIFY_STORE = 'https://iamtoxico.myshopify.com';
-  const CATALOG_URLS = ['/api/valet/catalog', 'data/catalog.json'];
-  const grid     = document.getElementById('product-grid');
-  const loading  = document.getElementById('loading');
-  const empty    = document.getElementById('empty');
+const P = [
+  {t:"Arctic River Apres", y:"apres", p:120, u:"https://1tap6m-et.myshopify.com/products/arctic-river-apres", f:"https://images.printify.com/mockup/69dab8f544983647c30c0e4f/74644/19527/arctic-river-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab8f544983647c30c0e4f/74644/21126/arctic-river-apres.jpg?camera_label=back"},
+  {t:"Arctic River Harem Pant", y:"harem", p:120, u:"https://1tap6m-et.myshopify.com/products/arctic-river", f:"https://images.printify.com/mockup/69a462891ec5ca402c037d02/72928/16656/arctic-river-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a462891ec5ca402c037d02/72928/16657/arctic-river-harem-pant.jpg?camera_label=back"},
+  {t:"Cyan Glow Apres", y:"apres", p:120, u:"https://1tap6m-et.myshopify.com/products/cyan-glow-apres", f:"https://images.printify.com/mockup/69dab930d21aa5ff4f0de9f7/74644/19527/cyan-glow-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab930d21aa5ff4f0de9f7/74644/21126/cyan-glow-apres.jpg?camera_label=back"},
+  {t:"Cyan Glow Harem Pant", y:"harem", p:120, u:"https://1tap6m-et.myshopify.com/products/cyan-glow", f:"https://images.printify.com/mockup/69a4628f94ca9fbf1d020f6e/72928/16656/cyan-glow-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4628f94ca9fbf1d020f6e/72928/16657/cyan-glow-harem-pant.jpg?camera_label=back"},
+  {t:"Frozen Sky Apres", y:"apres", p:120, u:"https://1tap6m-et.myshopify.com/products/frozen-sky-apres", f:"https://images.printify.com/mockup/69dab96870e65284fd017291/74644/19527/frozen-sky-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab96870e65284fd017291/74644/21126/frozen-sky-apres.jpg?camera_label=back"},
+  {t:"Frozen Sky Harem Pant", y:"harem", p:120, u:"https://1tap6m-et.myshopify.com/products/frozen-sky", f:"https://images.printify.com/mockup/69a4629b7fc2996b8d0abe8e/72928/16656/frozen-sky-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4629b7fc2996b8d0abe8e/72928/16657/frozen-sky-harem-pant.jpg?camera_label=back"},
+  {t:"Hold Cards Apres", y:"apres", p:120, u:"https://1tap6m-et.myshopify.com/products/hold-cards-apres", f:"https://images.printify.com/mockup/69dab94b631ca9e1ce049366/74644/19527/hold-cards-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab94b631ca9e1ce049366/74644/21126/hold-cards-apres.jpg?camera_label=back"},
+  {t:"Hold Cards Harem Pant", y:"harem", p:120, u:"https://1tap6m-et.myshopify.com/products/hold-cards", f:"https://images.printify.com/mockup/69a46294eb470f86b105fab3/72928/16656/hold-cards-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a46294eb470f86b105fab3/72928/16657/hold-cards-harem-pant.jpg?camera_label=back"},
+  {t:"Hot Oil Apres", y:"apres", p:120, u:"https://1tap6m-et.myshopify.com/products/hot-oil-apres", f:"https://images.printify.com/mockup/69dab91218173cdb1a0cb04a/74644/19527/hot-oil-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab91218173cdb1a0cb04a/74644/21126/hot-oil-apres.jpg?camera_label=back"},
+  {t:"Hot Oil Harem Pant", y:"harem", p:120, u:"https://1tap6m-et.myshopify.com/products/hot-oil", f:"https://images.printify.com/mockup/69a4628c9f7e893e8a0e5219/72928/16656/hot-oil-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4628c9f7e893e8a0e5219/72928/16657/hot-oil-harem-pant.jpg?camera_label=back"},
+  {t:"Toxico Apres", y:"apres", p:120, u:"https://1tap6m-et.myshopify.com/products/toxico-apres", f:"https://images.printify.com/mockup/69dab8da70e65284fd01727d/74644/19527/toxico-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab8da70e65284fd01727d/74644/21126/toxico-apres.jpg?camera_label=back"},
+  {t:"Toxico Harem Pant", y:"harem", p:120, u:"https://1tap6m-et.myshopify.com/products/toxico", f:"https://images.printify.com/mockup/69a4628646730b56700a6ae1/72928/16656/toxico-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4628646730b56700a6ae1/72928/16657/toxico-harem-pant.jpg?camera_label=back"},
+];
 
-  /* turn a product name into a Shopify handle slug */
-  function slugify(str) {
-    return str.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  }
+const grid = document.getElementById('grid');
 
-  /* ---- try each catalog source in order ---- */
-  function tryFetch(urls) {
-    if (!urls.length) {
-      loading.style.display = 'none';
-      empty.textContent = 'could not load products.';
-      empty.style.display = 'block';
-      return;
-    }
-    fetch(urls[0])
-      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
-      .then(renderProducts)
-      .catch(() => tryFetch(urls.slice(1)));
-  }
+function render(filter) {
+  grid.innerHTML = '';
+  const items = filter === 'all' ? P : P.filter(p => p.y === filter);
+  items.forEach(p => {
+    const c = document.createElement('div');
+    c.className = 'card';
+    c.innerHTML =
+      '<a class="card-link" href="' + p.u + '" target="_blank" rel="noopener">' +
+      '<div class="img-wrap">' +
+        '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+        '<img class="back"  src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' +
+      '</div>' +
+      '<div class="info">' +
+        '<div class="title">' + p.t + '</div>' +
+        '<div class="meta">' + p.y + '</div>' +
+        '<div class="price">$' + p.p.toFixed(2) + '</div>' +
+      '</div>' +
+      '</a>';
+    grid.appendChild(c);
+  });
+}
 
-  function renderProducts(data) {
-      loading.style.display = 'none';
+document.querySelectorAll('.filters button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.f);
+  });
+});
 
-      const all = data.products || data.items || data || [];
-      const products = all.filter(p => p.source === 'printify');
-      if (!Array.isArray(products) || products.length === 0) {
-        empty.style.display = 'block';
-        return;
-      }
-
-      products.forEach(p => {
-        const card = document.createElement('div');
-        card.className = 'product-card';
-
-        const img   = p.image || (p.images && p.images[0]) || p.thumbnail || '';
-        const title = p.title || p.name || 'Untitled';
-        /* prices in catalog are already in dollars */
-        const price = p.price ? '$' + Number(p.price).toFixed(2) : '';
-        /* link to Shopify-hosted product page */
-        const link  = p.url || (SHOPIFY_STORE + '/products/' + slugify(title));
-
-        card.innerHTML =
-          '<a class="card-link" href="' + link + '" target="_blank" rel="noopener">' +
-          (img ? '<img src="' + img + '" alt="' + title + '" loading="lazy">'
-               : '<div style="width:100%;aspect-ratio:1;background:#1a1a1a;display:flex;align-items:center;justify-content:center;color:#555;font-size:.9rem;">no image</div>') +
-          '<div class="info">' +
-            '<div class="title">' + title + '</div>' +
-            (price ? '<div class="price">' + price + '</div>' : '') +
-          '</div>' +
-          '</a>';
-
-        grid.appendChild(card);
-      });
-  }
-
-  tryFetch(CATALOG_URLS);
-})();
+render('all');
 </script>
 </body>
 </html>
