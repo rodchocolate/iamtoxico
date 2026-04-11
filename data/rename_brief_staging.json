@@ -1,0 +1,1493 @@
+{
+  "shop_id": 22994552,
+  "record_count": 39,
+  "images_root": "/Users/melodiclabs/Library/Mobile Documents/com~apple~CloudDocs/rooot/iamtoxico.com/docs/design/reference-images",
+  "log_path": "/Users/melodiclabs/Library/Mobile Documents/com~apple~CloudDocs/rooot/iamtoxico.com/fetch_images.log",
+  "records": [
+    {
+      "product_id": "69d708e8882d261b3e051e4d",
+      "current_title": "Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69d708e8882d261b3e051e4d/74644/19527/copy-of-copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69d708e8882d261b3e051e4d/74644/21126/copy-of-copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69d708e8882d261b3e051e4d/74644/20670/copy-of-copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69d708e8882d261b3e051e4d/74644/20668/copy-of-copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "front",
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "back",
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "pocket",
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "sleeves",
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "hood",
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69d707639ec0f571b90ccce5",
+      "current_title": "Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69d707639ec0f571b90ccce5/74644/19527/copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69d707639ec0f571b90ccce5/74644/21126/copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69d707639ec0f571b90ccce5/74644/20670/copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69d707639ec0f571b90ccce5/74644/20668/copy-of-copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69d707c48125d173272e37e1",
+          "position": "pocket",
+          "file_name": "sunset - 1 1.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/53bea6e2-d5d5-4a92-a217-ea75a18ef3b1",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69d5b92fa35f821fb60f5b96",
+      "current_title": "Copy of Copy of Copy of Fashion Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69d5b92fa35f821fb60f5b96/74644/19527/copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69d5b92fa35f821fb60f5b96/74644/21126/copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69d5b92fa35f821fb60f5b96/74644/20670/copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69d5b92fa35f821fb60f5b96/74644/20668/copy-of-copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69d5b959583f279ab1b15603",
+          "position": "pocket",
+          "file_name": "sunset - 1.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/944d2cae-12df-40b3-9a4e-5d4801d7e59a",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69cdb9d7d800f24c8b031004",
+      "current_title": "Copy of Copy of Fashion Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69cdb9d7d800f24c8b031004/74644/19527/copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69cdb9d7d800f24c8b031004/74644/21126/copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69cdb9d7d800f24c8b031004/74644/20670/copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69cdb9d7d800f24c8b031004/74644/20668/copy-of-copy-of-fashion-hoodie-aop.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "back",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "sleeves",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "hood",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69c47d09183354e4aa0c4c27",
+      "current_title": "Copy of Copy of Hold Cards",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69c47d09183354e4aa0c4c27/72928/16656/copy-of-copy-of-hold-cards.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69c47d09183354e4aa0c4c27/72928/16657/copy-of-copy-of-hold-cards.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69c47d09183354e4aa0c4c27/72928/16871/copy-of-copy-of-hold-cards.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69c47d09183354e4aa0c4c27/72928/16872/copy-of-copy-of-hold-cards.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "waistband",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69bed3a6f2799e1de103afd6",
+      "current_title": "Men's Full-Zip Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 832,
+      "print_provider_id": 14,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69bed3a6f2799e1de103afd6/75719/24369/mens-full-zip-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69bed3a6f2799e1de103afd6/75719/24373/mens-full-zip-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69bed3a6f2799e1de103afd6/75719/35104/mens-full-zip-hoodie-aop.jpg?camera_label=on-person-front",
+        "https://images-api.printify.com/mockup/69bed3a6f2799e1de103afd6/75719/24374/mens-full-zip-hoodie-aop.jpg?camera_label=on-person-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "back",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69be5005f5cbf780aa041646",
+      "current_title": "Cotton Comforter",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 2706,
+      "print_provider_id": 10,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69be5005f5cbf780aa041646/148374/118432/cotton-comforter.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69be5005f5cbf780aa041646/148374/118436/cotton-comforter.jpg?camera_label=context",
+        "https://images-api.printify.com/mockup/69be5005f5cbf780aa041646/148375/118431/cotton-comforter.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69be5005f5cbf780aa041646/148375/118435/cotton-comforter.jpg?camera_label=context"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69b71cf98f5bd4f1530b6f69",
+      "current_title": "Copy of Hold Cards",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69b71cf98f5bd4f1530b6f69/72928/16656/copy-of-hold-cards.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69b71cf98f5bd4f1530b6f69/72928/16657/copy-of-hold-cards.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69b71cf98f5bd4f1530b6f69/72928/16871/copy-of-hold-cards.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69b71cf98f5bd4f1530b6f69/72928/16872/copy-of-hold-cards.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "waistband",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69b71a8e0d4ef24bca0fc151",
+      "current_title": "Copy of Frozen Sky",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69b71a8e0d4ef24bca0fc151/72928/16656/copy-of-frozen-sky.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69b71a8e0d4ef24bca0fc151/72928/16657/copy-of-frozen-sky.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69b71a8e0d4ef24bca0fc151/72928/16871/copy-of-frozen-sky.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69b71a8e0d4ef24bca0fc151/72928/16872/copy-of-frozen-sky.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "waistband",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69b643840855e0c5540e8d53",
+      "current_title": "Copy of Hold Cards",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69b643840855e0c5540e8d53/72928/16656/copy-of-hold-cards.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69b643840855e0c5540e8d53/72928/16657/copy-of-hold-cards.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69b643840855e0c5540e8d53/72928/16871/copy-of-hold-cards.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69b643840855e0c5540e8d53/72928/16872/copy-of-hold-cards.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "right_leg",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "left_leg",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "pocket",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69b57f2f8c4577fcee0f2bd9",
+      "current_title": "Copy of Fashion Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69b57f2f8c4577fcee0f2bd9/74644/19527/copy-of-fashion-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69b57f2f8c4577fcee0f2bd9/74644/21126/copy-of-fashion-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69b57f2f8c4577fcee0f2bd9/74644/20670/copy-of-fashion-hoodie-aop.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69b57f2f8c4577fcee0f2bd9/74644/20668/copy-of-fashion-hoodie-aop.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "front",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "back",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "sleeves",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "hood",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69b57f19ef961127590bc947",
+      "current_title": "Fashion Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69b57f19ef961127590bc947/74644/19527/fashion-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69b57f19ef961127590bc947/74644/21126/fashion-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69b57f19ef961127590bc947/74644/20670/fashion-hoodie-aop.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/69b57f19ef961127590bc947/74644/20668/fashion-hoodie-aop.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "back",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "pocket",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "sleeves",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "hood",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69a8c15a291e3fbf690b4ce6",
+      "current_title": "Copy of Copy of Men's Sports Warmup Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1338,
+      "print_provider_id": 47,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69a8c15a291e3fbf690b4ce6/101919/98551/copy-of-copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69a8c15a291e3fbf690b4ce6/101919/99208/copy-of-copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69a8c15a291e3fbf690b4ce6/101919/99211/copy-of-copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=person-front",
+        "https://images-api.printify.com/mockup/69a8c15a291e3fbf690b4ce6/101919/99212/copy-of-copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=person-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69a8c16e6484d7bbf80c4df6",
+          "position": "front",
+          "file_name": "IMG_0766.jpeg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/38db4a6c-27a2-48f7-a391-b8ff864e59d2",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69a8c0a3c9c0eae143032bff",
+      "current_title": "Copy of Men's Sports Warmup Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1338,
+      "print_provider_id": 47,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69a8c0a3c9c0eae143032bff/101919/98551/copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69a8c0a3c9c0eae143032bff/101919/99208/copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69a8c0a3c9c0eae143032bff/101919/99211/copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=person-front",
+        "https://images-api.printify.com/mockup/69a8c0a3c9c0eae143032bff/101919/99212/copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=person-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69a8c0f9584f91226c0e64ba",
+          "position": "front",
+          "file_name": "IMG_0721.jpeg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/a4810978-2c9f-4050-a764-4667faba0bca",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69a8c0649091fb07d5009557",
+      "current_title": "Men's Sports Warmup Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1338,
+      "print_provider_id": 47,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69a8c0649091fb07d5009557/101919/98551/mens-sports-warmup-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69a8c0649091fb07d5009557/101919/99208/mens-sports-warmup-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69a8c0649091fb07d5009557/101919/99211/mens-sports-warmup-hoodie-aop.jpg?camera_label=person-front",
+        "https://images-api.printify.com/mockup/69a8c0649091fb07d5009557/101919/99212/mens-sports-warmup-hoodie-aop.jpg?camera_label=person-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "front",
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69a8bdf917b1fdfce805ed71",
+      "current_title": "Copy of Basketball Rib Shorts (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1078,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69a8bdf917b1fdfce805ed71/88685/51926/copy-of-basketball-rib-shorts-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69a8bdf917b1fdfce805ed71/88685/51928/copy-of-basketball-rib-shorts-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69a8bdf917b1fdfce805ed71/88685/57658/copy-of-basketball-rib-shorts-aop.jpg?camera_label=pocket",
+        "https://images-api.printify.com/mockup/69a8bdf917b1fdfce805ed71/88685/55234/copy-of-basketball-rib-shorts-aop.jpg?camera_label=on-person-1-front"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69a7ab233d3a8bea0ae36204",
+          "position": "left_leg",
+          "file_name": "66589A98-5706-44E4-8158-2AA9203874DE.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/94eea601-bbe6-4528-b3f9-6339294d9a2d",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69a7aca6dec16f958407c92c",
+      "current_title": "Basketball Rib Shorts (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1078,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69a7aca6dec16f958407c92c/88687/51926/basketball-rib-shorts-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69a7aca6dec16f958407c92c/88687/51928/basketball-rib-shorts-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69a7aca6dec16f958407c92c/88687/57658/basketball-rib-shorts-aop.jpg?camera_label=pocket",
+        "https://images-api.printify.com/mockup/69a7aca6dec16f958407c92c/88687/55234/basketball-rib-shorts-aop.jpg?camera_label=on-person-1-front"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "left_leg",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "right_leg",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "69a7abf2fd87a69a35053825",
+      "current_title": "Basketball Rib Shorts (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1078,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/69a7abf2fd87a69a35053825/88685/51926/basketball-rib-shorts-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/69a7abf2fd87a69a35053825/88685/51928/basketball-rib-shorts-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/69a7abf2fd87a69a35053825/88685/57658/basketball-rib-shorts-aop.jpg?camera_label=pocket",
+        "https://images-api.printify.com/mockup/69a7abf2fd87a69a35053825/88685/55234/basketball-rib-shorts-aop.jpg?camera_label=on-person-1-front"
+      ],
+      "artwork": [
+        {
+          "upload_id": "69a7ab233d3a8bea0ae36204",
+          "position": "left_leg",
+          "file_name": "66589A98-5706-44E4-8158-2AA9203874DE.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/94eea601-bbe6-4528-b3f9-6339294d9a2d",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a7ab233d3a8bea0ae36204",
+          "position": "right_leg",
+          "file_name": "66589A98-5706-44E4-8158-2AA9203874DE.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/94eea601-bbe6-4528-b3f9-6339294d9a2d",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "699d503045b08ecd4a0586d4",
+      "current_title": "Men's Puffer Jacket (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 934,
+      "print_provider_id": 14,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/699d503045b08ecd4a0586d4/77830/36536/mens-puffer-jacket-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/699d503045b08ecd4a0586d4/77830/36540/mens-puffer-jacket-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/699d503045b08ecd4a0586d4/77830/38363/mens-puffer-jacket-aop.jpg?camera_label=on-person-front",
+        "https://images-api.printify.com/mockup/699d503045b08ecd4a0586d4/77830/38361/mens-puffer-jacket-aop.jpg?camera_label=on-person-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "front",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "back",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "front_right_sleeve",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "back_right_sleeve",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "front_left_sleeve",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "back_left_sleeve",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "Collar",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "692a38387eedbbe63d05851b",
+      "current_title": "Hooded Sherpa Fleece Blanket",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 736,
+      "print_provider_id": 10,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/692a38387eedbbe63d05851b/74535/19934/hooded-sherpa-fleece-blanket.jpg?camera_label=lifestyle-man",
+        "https://images-api.printify.com/mockup/692a38387eedbbe63d05851b/74535/20182/hooded-sherpa-fleece-blanket.jpg?camera_label=lifestyle-woman",
+        "https://images-api.printify.com/mockup/692a38387eedbbe63d05851b/74535/20231/hooded-sherpa-fleece-blanket.jpg?camera_label=front"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929f98c7b419747000916d7",
+      "current_title": "Copy of Copy of Unisex Oversized Boxy Tee",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1382,
+      "print_provider_id": 99,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100285/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100286/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100476/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=person-1-front",
+        "https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100477/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=person-1-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929f979eeefa5c3bc0bfc64",
+      "current_title": "Copy of Unisex Oversized Boxy Tee",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1382,
+      "print_provider_id": 99,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100285/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100286/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100476/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=person-1-front",
+        "https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100477/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=person-1-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929f87e08e5b94ccd0185d2",
+      "current_title": "Cyan Glow",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929f87e08e5b94ccd0185d2/72928/16656/cyan-glow.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929f87e08e5b94ccd0185d2/72928/16657/cyan-glow.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929f87e08e5b94ccd0185d2/72928/16871/cyan-glow.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929f87e08e5b94ccd0185d2/72928/16872/cyan-glow.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "right_leg",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "left_leg",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "pocket",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929f81786aa459b86021fb1",
+      "current_title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929f81786aa459b86021fb1/72928/16656/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929f81786aa459b86021fb1/72928/16657/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929f81786aa459b86021fb1/72928/16871/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929f81786aa459b86021fb1/72928/16872/copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "right_leg",
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929f14c5dc7ab7fa7025725",
+      "current_title": "Hot Oil",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929f14c5dc7ab7fa7025725/72928/16656/hot-oil.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929f14c5dc7ab7fa7025725/72928/16657/hot-oil.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929f14c5dc7ab7fa7025725/72928/16871/hot-oil.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929f14c5dc7ab7fa7025725/72928/16872/hot-oil.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929f0d4e07f035cf5021e7c",
+      "current_title": "Hold Cards",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929f0d4e07f035cf5021e7c/72928/16656/hold-cards.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929f0d4e07f035cf5021e7c/72928/16657/hold-cards.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929f0d4e07f035cf5021e7c/72928/16871/hold-cards.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929f0d4e07f035cf5021e7c/72928/16872/hold-cards.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929ef67d7e308d6df0d8c8a",
+      "current_title": "Frozen Sky",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929ef67d7e308d6df0d8c8a/72928/16656/frozen-sky.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929ef67d7e308d6df0d8c8a/72928/16657/frozen-sky.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929ef67d7e308d6df0d8c8a/72928/16871/frozen-sky.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929ef67d7e308d6df0d8c8a/72928/16872/frozen-sky.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929ee81cecf816d92020b31",
+      "current_title": "Arctic River",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929ee81cecf816d92020b31/72928/16656/arctic-river.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929ee81cecf816d92020b31/72928/16657/arctic-river.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929ee81cecf816d92020b31/72928/16871/arctic-river.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929ee81cecf816d92020b31/72928/16872/arctic-river.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929b6d89b3dbbfde2088c5a",
+      "current_title": "Copy of Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16656/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16657/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16871/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16872/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6929b4c9e07f035cf5020be6",
+      "current_title": "Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6929b4c9e07f035cf5020be6/72928/16656/copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6929b4c9e07f035cf5020be6/72928/16657/copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6929b4c9e07f035cf5020be6/72928/16871/copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/6929b4c9e07f035cf5020be6/72928/16872/copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "pocket",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6928d1e58a961747da091ea0",
+      "current_title": "Copy of Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fashion, Travel Lover Gift, Everyday Wear, Unisex Hoodie, Casual Sweatshirt",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 450,
+      "print_provider_id": 10,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6928d1e58a961747da091ea0/63243/101820/copy-of-urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-2",
+        "https://images-api.printify.com/mockup/6928d1e58a961747da091ea0/63243/4761/copy-of-urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6928d1e58a961747da091ea0/63243/101819/copy-of-urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-1",
+        "https://images-api.printify.com/mockup/6928d1e58a961747da091ea0/63243/101818/copy-of-urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=front"
+      ],
+      "artwork": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "back",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_sleeve",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_sleeve",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5af6d7a9-63cd-9cf9-68e8-a8339ea6928d",
+          "position": "waistband",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_hood",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_hood",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "690d4152cbcaca97250c276b",
+      "current_title": "Unisex Hooded Long Sleeve Tee",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1926,
+      "print_provider_id": 99,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/690d4152cbcaca97250c276b/119590/109926/unisex-hooded-long-sleeve-tee.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/690d4152cbcaca97250c276b/119590/109928/unisex-hooded-long-sleeve-tee.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/690d4152cbcaca97250c276b/119585/109926/unisex-hooded-long-sleeve-tee.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/690d4152cbcaca97250c276b/119585/109928/unisex-hooded-long-sleeve-tee.jpg?camera_label=back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "61ea1381-9e5f-1691-31ef-8e248db05ceb",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "68eb2d89f88f52634a10b4bc",
+      "current_title": "Long Sleeve Kimono Robe (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 923,
+      "print_provider_id": 14,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/29522/long-sleeve-kimono-robe-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/29856/long-sleeve-kimono-robe-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/28947/long-sleeve-kimono-robe-aop.jpg?camera_label=on-person-front",
+        "https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/29372/long-sleeve-kimono-robe-aop.jpg?camera_label=on-person-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front_right",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front_left",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "back",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "right_sleeve",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "left_sleeve",
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "68ea0502cb19b441780d9728",
+      "current_title": "Toxico",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16656/toxico.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16657/toxico.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16871/toxico.jpg?camera_label=man-front",
+        "https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16872/toxico.jpg?camera_label=man-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_leg",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "68ea040f0bb1a283330ee380",
+      "current_title": "Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fashion, Travel Lover Gift, Everyday Wear, Unisex Hoodie, Casual Sweatshirt",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 450,
+      "print_provider_id": 10,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/68ea040f0bb1a283330ee380/63243/101820/urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-2",
+        "https://images-api.printify.com/mockup/68ea040f0bb1a283330ee380/63243/4761/urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/68ea040f0bb1a283330ee380/63243/101819/urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=person-front-1",
+        "https://images-api.printify.com/mockup/68ea040f0bb1a283330ee380/63243/101818/urban-graphic-pullover-hoodie-stylish-streetwear-cozy-fashion-travel-lover-gift-everyday-wear-unisex-hoodie-casual-sweatshirt.jpg?camera_label=front"
+      ],
+      "artwork": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "back",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_sleeve",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_sleeve",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5af6d7a9-63cd-9cf9-68e8-a8339ea6928d",
+          "position": "waistband",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_hood",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_hood",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "68585dd350fb3f4f5c0595f4",
+      "current_title": "Women's Thongs (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1466,
+      "print_provider_id": 51,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/102782/womens-thongs-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/102783/womens-thongs-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/103987/womens-thongs-aop.jpg?camera_label=person-front",
+        "https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/103988/womens-thongs-aop.jpg?camera_label=person-side"
+      ],
+      "artwork": [
+        {
+          "upload_id": "3eadac78-b60d-c6e6-e70a-25f6d0fab467",
+          "position": "back",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "68585bdd2c35f6107c04a28f",
+      "current_title": "Unisex Pullover Hoodie (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 450,
+      "print_provider_id": 10,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/68585bdd2c35f6107c04a28f/63243/101818/unisex-pullover-hoodie-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/68585bdd2c35f6107c04a28f/63243/4761/unisex-pullover-hoodie-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/68585bdd2c35f6107c04a28f/63243/101819/unisex-pullover-hoodie-aop.jpg?camera_label=person-front-1",
+        "https://images-api.printify.com/mockup/68585bdd2c35f6107c04a28f/63243/101820/unisex-pullover-hoodie-aop.jpg?camera_label=person-front-2"
+      ],
+      "artwork": [
+        {
+          "upload_id": "7f7d1197-4458-5dd8-c5c6-7e20c12d55e3",
+          "position": "back",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "68585b8ee3ec6e146d195e1c",
+          "position": "right_hood",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "685855b6c5c9efe54a0a9585",
+      "current_title": "Unisex Oversized Boxy Tee",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1382,
+      "print_provider_id": 99,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100285/unisex-oversized-boxy-tee.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100286/unisex-oversized-boxy-tee.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100476/unisex-oversized-boxy-tee.jpg?camera_label=person-1-front",
+        "https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100477/unisex-oversized-boxy-tee.jpg?camera_label=person-1-back"
+      ],
+      "artwork": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    },
+    {
+      "product_id": "6856fa7c0ea6932ed9007b99",
+      "current_title": "Women's Thongs (AOP)",
+      "external_id": null,
+      "external_handle": null,
+      "blueprint_id": 1466,
+      "print_provider_id": 51,
+      "mockup_urls": [
+        "https://images-api.printify.com/mockup/6856fa7c0ea6932ed9007b99/105608/102782/womens-thongs-aop.jpg?camera_label=front",
+        "https://images-api.printify.com/mockup/6856fa7c0ea6932ed9007b99/105608/102783/womens-thongs-aop.jpg?camera_label=back",
+        "https://images-api.printify.com/mockup/6856fa7c0ea6932ed9007b99/105608/103987/womens-thongs-aop.jpg?camera_label=person-front",
+        "https://images-api.printify.com/mockup/6856fa7c0ea6932ed9007b99/105608/103988/womens-thongs-aop.jpg?camera_label=person-side"
+      ],
+      "artwork": [
+        {
+          "upload_id": "b1b482a6-fda6-25ef-c07e-c661fc0a2592",
+          "position": "front",
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ],
+      "candidate_source_paths": [],
+      "rename_prompt": "Propose 3 concise product names based on the source artwork and mockups. Avoid generic filler like Copy Of. Prefer names that feel editorial, memorable, and usable in Shopify."
+    }
+  ]
+}

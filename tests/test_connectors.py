@@ -141,12 +141,16 @@ class TestShopifyConnectorInit:
 
 class TestShopifyOAuth:
     def test_get_auth_url_contains_required_params(self):
-        c = ShopifyConnector(shop_domain='test.myshopify.com')
-        url = c.get_auth_url('http://localhost/callback', state='abc123')
-        assert 'client_id=' in url
-        assert 'redirect_uri=' in url
-        assert 'state=abc123' in url
-        assert 'scope=' in url
+        with patch.dict(os.environ, {
+            'SHOPIFY_API_KEY': 'test-key',
+            'SHOPIFY_API_SECRET': 'test-secret',
+        }, clear=False):
+            c = ShopifyConnector(shop_domain='test.myshopify.com')
+            url = c.get_auth_url('http://localhost/callback', state='abc123')
+            assert 'client_id=' in url
+            assert 'redirect_uri=' in url
+            assert 'state=abc123' in url
+            assert 'scope=' in url
 
     @patch('shopify_connector.requests.post')
     def test_exchange_token(self, mock_post):
@@ -155,24 +159,34 @@ class TestShopifyOAuth:
         resp.raise_for_status.return_value = None
         mock_post.return_value = resp
 
-        c = ShopifyConnector(shop_domain='test.myshopify.com')
-        result = c.exchange_token('auth-code-123')
-        assert result['access_token'] == 'shpat_new'
-        assert c.access_token == 'shpat_new'
+        with patch.dict(os.environ, {
+            'SHOPIFY_API_KEY': 'test-key',
+            'SHOPIFY_API_SECRET': 'test-secret',
+        }, clear=False):
+            c = ShopifyConnector(shop_domain='test.myshopify.com')
+            result = c.exchange_token('auth-code-123')
+            assert result['access_token'] == 'shpat_new'
+            assert c.access_token == 'shpat_new'
 
 
 class TestShopifyWebhookVerification:
     def test_verify_webhook_with_valid_hmac(self):
         import hmac as hmac_mod, hashlib, base64
-        c = ShopifyConnector(shop_domain='test.myshopify.com')
-        data = b'{"test": true}'
-        digest = hmac_mod.new(c.api_secret.encode(), data, hashlib.sha256).digest()
-        valid_hmac = base64.b64encode(digest).decode()
-        assert c.verify_webhook(data, valid_hmac) is True
+        with patch.dict(os.environ, {
+            'SHOPIFY_API_SECRET': 'test-secret',
+        }, clear=False):
+            c = ShopifyConnector(shop_domain='test.myshopify.com')
+            data = b'{"test": true}'
+            digest = hmac_mod.new(c.api_secret.encode(), data, hashlib.sha256).digest()
+            valid_hmac = base64.b64encode(digest).decode()
+            assert c.verify_webhook(data, valid_hmac) is True
 
     def test_verify_webhook_with_invalid_hmac(self):
-        c = ShopifyConnector(shop_domain='test.myshopify.com')
-        assert c.verify_webhook(b'data', 'invalid-hmac') is False
+        with patch.dict(os.environ, {
+            'SHOPIFY_API_SECRET': 'test-secret',
+        }, clear=False):
+            c = ShopifyConnector(shop_domain='test.myshopify.com')
+            assert c.verify_webhook(b'data', 'invalid-hmac') is False
 
 
 class TestShopifyConnectorAPI:
@@ -217,6 +231,35 @@ class TestShopifyConnectorAPI:
         mock_req.return_value = self._mock_response({'custom_collection': {'id': 6, 'title': 'Summer'}})
         result = connector.create_collection('Summer', products=[1, 2])
         assert result['title'] == 'Summer'
+
+    @patch('shopify_connector.requests.request')
+    def test_get_price_rules(self, mock_req, connector):
+        mock_req.return_value = self._mock_response({'price_rules': [{'id': 7, 'title': 'Apres Set 200'}]})
+        rules = connector.get_price_rules()
+        assert rules == [{'id': 7, 'title': 'Apres Set 200'}]
+
+    @patch('shopify_connector.requests.request')
+    def test_create_price_rule(self, mock_req, connector):
+        mock_req.return_value = self._mock_response({'price_rule': {'id': 7, 'title': 'Apres Set 200'}})
+        result = connector.create_price_rule({'title': 'Apres Set 200'})
+        assert result['id'] == 7
+        assert mock_req.call_args[0][0] == 'POST'
+        assert '/price_rules.json' in mock_req.call_args[0][1]
+
+    @patch('shopify_connector.requests.request')
+    def test_create_discount_code(self, mock_req, connector):
+        mock_req.return_value = self._mock_response({'discount_code': {'id': 11, 'code': 'APRESSET200'}})
+        result = connector.create_discount_code(7, 'APRESSET200')
+        assert result['code'] == 'APRESSET200'
+        assert '/price_rules/7/discount_codes.json' in mock_req.call_args[0][1]
+
+    def test_find_price_rule_by_title(self, connector):
+        with patch.object(connector, 'get_price_rules', return_value=[
+            {'id': 7, 'title': 'Apres Set 200'},
+            {'id': 8, 'title': 'Other Rule'},
+        ]):
+            result = connector.find_price_rule_by_title('Apres Set 200')
+        assert result == {'id': 7, 'title': 'Apres Set 200'}
 
 
 # ===================================================================

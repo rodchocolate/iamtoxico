@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — staging preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 0;
+  }
+  header, main, footer { position: relative; z-index: 1; }
+
+  header {
+    padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1280px; margin: 0 auto;
+  }
+  header h1 {
+    font-size: 1.4rem; font-weight: 600;
+    letter-spacing: .06em; text-transform: lowercase;
+  }
+  .badge {
+    background: rgba(255,200,0,.15); color: #ffc800;
+    font-size: .7rem; font-weight: 600; text-transform: uppercase;
+    padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
+  }
+
+  .filters {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 2rem .8rem;
+    display: flex; gap: .5rem; flex-wrap: wrap;
+  }
+  .filters button {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    color: #fff; font-family: inherit; font-size: .8rem;
+    padding: .4em 1em; border-radius: 20px; cursor: pointer;
+    transition: background .2s, border-color .2s;
+  }
+  .filters button:hover,
+  .filters button.active {
+    background: rgba(255,255,255,.18);
+    border-color: rgba(255,255,255,.3);
+  }
+
+  /* ── GRID: 3 across desktop, 2 across mobile ── */
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  .card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+    position: relative;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,.25);
+  }
+  .card .img-wrap {
+    position: relative;
+    width: 100%; aspect-ratio: 1;
+    overflow: hidden; background: #1a1a1a;
+  }
+  .card .img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity .3s;
+  }
+  .card .img-wrap img.back {
+    position: absolute; inset: 0; opacity: 0;
+  }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back  { opacity: 1; }
+
+  .card .info { padding: .9rem 1rem; }
+  .card .title {
+    font-size: .85rem; font-weight: 600;
+    margin-bottom: .2rem;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .card .meta {
+    font-size: .72rem; color: rgba(255,255,255,.4);
+    text-transform: uppercase; letter-spacing: .04em;
+  }
+  .shop-badge {
+    position: absolute; top: 8px; right: 8px;
+    font-size: .6rem; font-weight: 700; text-transform: uppercase;
+    padding: .2rem .5rem; border-radius: 4px; letter-spacing: .06em;
+  }
+  .shop-badge.staging { background: #ff4d4d; color: #fff; }
+  .shop-badge.live    { background: #00c864; color: #000; }
+
+  footer {
+    text-align: center; padding: 2rem;
+    color: rgba(255,255,255,.25); font-size: .78rem;
+  }
+
+  @media (max-width: 768px) {
+    main { padding: 1rem 1rem 3rem; }
+    header { padding: 1rem; }
+    .filters { padding: 0 1rem .6rem; }
+    #grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+    }
+    .card .info { padding: .6rem .7rem; }
+    .card .title { font-size: .78rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>toxico — staging preview</h1>
+  <span class="badge">local staging</span>
+</header>
+
+<div class="filters">
+  <button class="active" data-f="all">All</button>
+  <button data-f="staging">Staging Only</button>
+  <button data-f="live">Live Only</button>
+</div>
+
+<main>
+  <div id="grid"></div>
+</main>
+
+<footer>&copy; 2025 toxico &mdash; staging preview &mdash; not public</footer>
+
+<script>
+const P = [
+  /* -- LIVE (alphabetical) -- */
+  {t:"Arctic River Apres", y:"apres", s:"live", f:"https://images.printify.com/mockup/69dab8f544983647c30c0e4f/74644/19527/arctic-river-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab8f544983647c30c0e4f/74644/21126/arctic-river-apres.jpg?camera_label=back"},
+  {t:"Arctic River Harem Pant", y:"harem", s:"live", f:"https://images.printify.com/mockup/69a462891ec5ca402c037d02/72928/16656/arctic-river-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a462891ec5ca402c037d02/72928/16657/arctic-river-harem-pant.jpg?camera_label=back"},
+  {t:"Cyan Glow Apres", y:"apres", s:"live", f:"https://images.printify.com/mockup/69dab930d21aa5ff4f0de9f7/74644/19527/cyan-glow-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab930d21aa5ff4f0de9f7/74644/21126/cyan-glow-apres.jpg?camera_label=back"},
+  {t:"Cyan Glow Harem Pant", y:"harem", s:"live", f:"https://images.printify.com/mockup/69a4628f94ca9fbf1d020f6e/72928/16656/cyan-glow-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4628f94ca9fbf1d020f6e/72928/16657/cyan-glow-harem-pant.jpg?camera_label=back"},
+  {t:"Frozen Sky Apres", y:"apres", s:"live", f:"https://images.printify.com/mockup/69dab96870e65284fd017291/74644/19527/frozen-sky-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab96870e65284fd017291/74644/21126/frozen-sky-apres.jpg?camera_label=back"},
+  {t:"Frozen Sky Harem Pant", y:"harem", s:"live", f:"https://images.printify.com/mockup/69a4629b7fc2996b8d0abe8e/72928/16656/frozen-sky-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4629b7fc2996b8d0abe8e/72928/16657/frozen-sky-harem-pant.jpg?camera_label=back"},
+  {t:"Hold Cards Apres", y:"apres", s:"live", f:"https://images.printify.com/mockup/69dab94b631ca9e1ce049366/74644/19527/hold-cards-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab94b631ca9e1ce049366/74644/21126/hold-cards-apres.jpg?camera_label=back"},
+  {t:"Hold Cards Harem Pant", y:"harem", s:"live", f:"https://images.printify.com/mockup/69a46294eb470f86b105fab3/72928/16656/hold-cards-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a46294eb470f86b105fab3/72928/16657/hold-cards-harem-pant.jpg?camera_label=back"},
+  {t:"Hot Oil Apres", y:"apres", s:"live", f:"https://images.printify.com/mockup/69dab91218173cdb1a0cb04a/74644/19527/hot-oil-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab91218173cdb1a0cb04a/74644/21126/hot-oil-apres.jpg?camera_label=back"},
+  {t:"Hot Oil Harem Pant", y:"harem", s:"live", f:"https://images.printify.com/mockup/69a4628c9f7e893e8a0e5219/72928/16656/hot-oil-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4628c9f7e893e8a0e5219/72928/16657/hot-oil-harem-pant.jpg?camera_label=back"},
+  {t:"Toxico Apres", y:"apres", s:"live", f:"https://images.printify.com/mockup/69dab8da70e65284fd01727d/74644/19527/toxico-apres.jpg?camera_label=front", b:"https://images.printify.com/mockup/69dab8da70e65284fd01727d/74644/21126/toxico-apres.jpg?camera_label=back"},
+  {t:"Toxico Harem Pant", y:"harem", s:"live", f:"https://images.printify.com/mockup/69a4628646730b56700a6ae1/72928/16656/toxico-harem-pant.jpg?camera_label=front", b:"https://images.printify.com/mockup/69a4628646730b56700a6ae1/72928/16657/toxico-harem-pant.jpg?camera_label=back"},
+
+  /* -- STAGING (alphabetical) -- */
+  {t:"black flurry", y:"zip", s:"staging", f:"https://images-api.printify.com/mockup/699d503045b08ecd4a0586d4/77830/36536/mens-puffer-jacket-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/699d503045b08ecd4a0586d4/77830/36540/mens-puffer-jacket-aop.jpg?camera_label=back"},
+  {t:"brain ray", y:"cover", s:"staging", f:"https://images-api.printify.com/mockup/69a8c0649091fb07d5009557/101919/98551/mens-sports-warmup-hoodie-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/69a8c0649091fb07d5009557/101919/99208/mens-sports-warmup-hoodie-aop.jpg?camera_label=back"},
+  {t:"Brained Apres", y:"apres", s:"staging", f:"https://images-api.printify.com/mockup/69b57f2f8c4577fcee0f2bd9/74644/19527/brained-apres.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/69b57f2f8c4577fcee0f2bd9/74644/21126/brained-apres.jpg?camera_label=back"},
+  {t:"cyan glow", y:"Blanket", s:"staging", f:"https://images-api.printify.com/mockup/692a38387eedbbe63d05851b/74535/20231/hooded-sherpa-fleece-blanket.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/692a38387eedbbe63d05851b/74535/20182/hooded-sherpa-fleece-blanket.jpg?camera_label=lifestyle-woman"},
+  {t:"Cyan Glow Apres", y:"apres", s:"staging", f:"https://images-api.printify.com/mockup/69b57f19ef961127590bc947/74644/19527/cyan-glow-apres.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/69b57f19ef961127590bc947/74644/21126/cyan-glow-apres.jpg?camera_label=back"},
+  {t:"Cotton Comforter", y:"Comforter", s:"staging", f:"https://images-api.printify.com/mockup/69be5005f5cbf780aa041646/148374/118432/cotton-comforter.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/69be5005f5cbf780aa041646/148374/118436/cotton-comforter.jpg?camera_label=context"},
+  {t:"dusk or dawn", y:"Shorts", s:"staging", f:"https://images-api.printify.com/mockup/69a8bdf917b1fdfce805ed71/88685/51926/copy-of-basketball-rib-shorts-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/69a8bdf917b1fdfce805ed71/88685/51928/copy-of-basketball-rib-shorts-aop.jpg?camera_label=back"},
+  {t:"early prototype", y:"cover", s:"staging", f:"https://images-api.printify.com/mockup/69a8c15a291e3fbf690b4ce6/101919/98551/copy-of-copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/69a8c15a291e3fbf690b4ce6/101919/99208/copy-of-copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=back"},
+  {t:"elect electric", y:"cover", s:"staging", f:"https://images-api.printify.com/mockup/69a8c0a3c9c0eae143032bff/101919/98551/copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/69a8c0a3c9c0eae143032bff/101919/99208/copy-of-mens-sports-warmup-hoodie-aop.jpg?camera_label=back"},
+  {t:"Hooded Long Sleeve Tee", y:"Long Sleeve Tee", s:"staging", f:"https://images-api.printify.com/mockup/690d4152cbcaca97250c276b/119590/109926/unisex-hooded-long-sleeve-tee.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/690d4152cbcaca97250c276b/119590/109928/unisex-hooded-long-sleeve-tee.jpg?camera_label=back"},
+  {t:"Joggers — v2", y:"harem", s:"staging", f:"https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16656/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6929b6d89b3dbbfde2088c5a/72928/16657/copy-of-copy-of-stylish-athletic-joggers-with-unique-aop-design-trendy-activewear-comfortable-jogging-pants-gym-wear-gift-for-fitness-enthusiasts.jpg?camera_label=back"},
+  {t:"Kimono Robe (AOP)", y:"Kimono Robe", s:"staging", f:"https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/29522/long-sleeve-kimono-robe-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/68eb2d89f88f52634a10b4bc/77572/29856/long-sleeve-kimono-robe-aop.jpg?camera_label=back"},
+  {t:"Oversized Boxy Tee", y:"Boxy Tee", s:"staging", f:"https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100285/unisex-oversized-boxy-tee.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/685855b6c5c9efe54a0a9585/103548/100286/unisex-oversized-boxy-tee.jpg?camera_label=back"},
+  {t:"Pullover Hoodie (AOP)", y:"cover", s:"staging", f:"https://images-api.printify.com/mockup/68585bdd2c35f6107c04a28f/63243/101818/unisex-pullover-hoodie-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/68585bdd2c35f6107c04a28f/63243/4761/unisex-pullover-hoodie-aop.jpg?camera_label=back"},
+  {t:"soigne", y:"one tile", s:"staging", f:"https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100285/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6929f98c7b419747000916d7/103548/100286/copy-of-copy-of-unisex-oversized-boxy-tee.jpg?camera_label=back"},
+  {t:"Toxico", y:"harem", s:"staging", f:"https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16656/toxico.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/68ea0502cb19b441780d9728/72928/16657/toxico.jpg?camera_label=back"},
+  {t:"toxico", y:"one tile", s:"staging", f:"https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100285/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6929f979eeefa5c3bc0bfc64/103548/100286/copy-of-unisex-oversized-boxy-tee.jpg?camera_label=back"},
+  {t:"Women's Thong (AOP)", y:"Thong", s:"staging", f:"https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/102782/womens-thongs-aop.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/68585dd350fb3f4f5c0595f4/105608/102783/womens-thongs-aop.jpg?camera_label=back"},
+];
+
+const grid = document.getElementById('grid');
+
+function render(filter) {
+  grid.innerHTML = '';
+  const items = filter === 'all' ? P : P.filter(p => p.s === filter);
+  items.forEach(p => {
+    const c = document.createElement('div');
+    c.className = 'card';
+    c.innerHTML =
+      '<span class="shop-badge ' + p.s + '">' + p.s + '</span>' +
+      '<div class="img-wrap">' +
+        '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+        '<img class="back"  src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' +
+      '</div>' +
+      '<div class="info">' +
+        '<div class="title">' + p.t + '</div>' +
+        '<div class="meta">' + p.y + '</div>' +
+      '</div>';
+    grid.appendChild(c);
+  });
+}
+
+document.querySelectorAll('.filters button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    render(btn.dataset.f);
+  });
+});
+
+render('all');
+</script>
+</body>
+</html>

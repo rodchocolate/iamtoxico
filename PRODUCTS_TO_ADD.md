@@ -13,6 +13,13 @@ Paste your links here. I will process them and add them to the catalog.
 3. https://www.zimmerli.com/en-us/products/sea-island-boxer-dark-grey-2861446-078
 4. https://www.zimmerli.com/en-us/collections/herren-pullover
 5. https://www.zimmerli.com/en-us/collections/herren-pyjamas 
+6. https://www.k1racegear.com/products/k1-racegear-1-piece-rain-suit?variant=41381540752 (Motorsport / utility outerwear / editorial test)
+
+## Partner Prospect Queue
+*   **Dakine**: Reseller / wholesale prospect for bags, surf/snow accessories, and outdoor crossover items.
+*   **JanSport**: Reseller / wholesale prospect for backpacks and lifestyle carry.
+*   **Hung Adult Products**: Adult lifestyle prospect for age-gated toxico life expansion.
+*   **K1 RaceGear**: Motorsport / technical apparel prospect. Good fit for utility and anti-fashion editorial cards.
 
 ## Consignment & Resale Platforms (Luxury/Streetwear)
 *   **Grailed**: The go-to for curated men's luxury and streetwear. High overlap with the "toxico" aesthetic.
@@ -31,6 +38,12 @@ Paste your links here. I will process them and add them to the catalog.
 *   **US Audio Mart**: Massive classifieds for serious HiFi gear.
 *   **Sweetwater Gear Exchange**: Trusted pro-audio resale.
 *   **Discogs**: While mostly vinyl, the hardware section is key for DJ turntables and mixers.
+
+## Art / Design / Collectibles
+*   **Artsy**: Strong fit for editorial discovery around fine art and editions.
+*   **1stDibs**: High-end design objects, furniture, lighting, and collectible decor.
+*   **Chairish**: Design-forward furniture and decorative objects with a more approachable editorial tone.
+*   **Heritage Auctions**: Useful when the angle is collectible culture rather than everyday decor.
 
 ## Cycling (High-End & Prosumer)
 *   **Buycycle**: The leading platform for pre-owned high-end road, gravel, and triathlon bikes.

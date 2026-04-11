@@ -1,0 +1,2551 @@
+{
+  "shop_id": 22994552,
+  "images_root": "/Users/melodiclabs/Library/Mobile Documents/com~apple~CloudDocs/rooot/iamtoxico.com/docs/design/reference-images",
+  "log_path": "/Users/melodiclabs/Library/Mobile Documents/com~apple~CloudDocs/rooot/iamtoxico.com/fetch_images.log",
+  "uploaded_image_count": 10,
+  "product_count": 39,
+  "products": [
+    {
+      "product_id": "69d708e8882d261b3e051e4d",
+      "title": "Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "front",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "back",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "pocket",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "sleeves",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69d709046efb2422c326323e",
+          "position": "hood",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "sunset - 1 2.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/2a35f73b-8a98-4c73-b5af-a4206158af00",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69d707639ec0f571b90ccce5",
+      "title": "Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69d707c48125d173272e37e1",
+          "position": "pocket",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "sunset - 1 1.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/53bea6e2-d5d5-4a92-a217-ea75a18ef3b1",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69d5b92fa35f821fb60f5b96",
+      "title": "Copy of Copy of Copy of Fashion Hoodie (AOP)",
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69d5b959583f279ab1b15603",
+          "position": "pocket",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "sunset - 1.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/944d2cae-12df-40b3-9a4e-5d4801d7e59a",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69cdb9d7d800f24c8b031004",
+      "title": "Copy of Copy of Fashion Hoodie (AOP)",
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "front",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "back",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "sleeves",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "hood",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69c47d09183354e4aa0c4c27",
+      "title": "Copy of Copy of Hold Cards",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "waistband",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69bed3a6f2799e1de103afd6",
+      "title": "Men's Full-Zip Hoodie (AOP)",
+      "blueprint_id": 832,
+      "print_provider_id": 14,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "front",
+          "variant_ids": [
+            75714,
+            75715,
+            75716,
+            75717,
+            75718,
+            75719,
+            75720,
+            75721,
+            75722,
+            75723
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "back",
+          "variant_ids": [
+            75714,
+            75715,
+            75716,
+            75717,
+            75718,
+            75719,
+            75720,
+            75721,
+            75722,
+            75723
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69be5005f5cbf780aa041646",
+      "title": "Cotton Comforter",
+      "blueprint_id": 2706,
+      "print_provider_id": 10,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "front",
+          "variant_ids": [
+            148374,
+            148375,
+            148376,
+            148377
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69b71cf98f5bd4f1530b6f69",
+      "title": "Copy of Hold Cards",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "waistband",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69b71a8e0d4ef24bca0fc151",
+      "title": "Copy of Frozen Sky",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "waistband",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69b643840855e0c5540e8d53",
+      "title": "Copy of Hold Cards",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69b57f2f8c4577fcee0f2bd9",
+      "title": "Copy of Fashion Hoodie (AOP)",
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "front",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "back",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "sleeves",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "hood",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69b57f19ef961127590bc947",
+      "title": "Fashion Hoodie (AOP)",
+      "blueprint_id": 592,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "back",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "pocket",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "sleeves",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "hood",
+          "variant_ids": [
+            74644,
+            74645,
+            74646,
+            74647,
+            74648
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69a8c15a291e3fbf690b4ce6",
+      "title": "Copy of Copy of Men's Sports Warmup Hoodie (AOP)",
+      "blueprint_id": 1338,
+      "print_provider_id": 47,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69a8c16e6484d7bbf80c4df6",
+          "position": "front",
+          "variant_ids": [
+            101916,
+            101917,
+            101918,
+            101919,
+            101920,
+            101921,
+            101922,
+            101923
+          ],
+          "file_name": "IMG_0766.jpeg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/38db4a6c-27a2-48f7-a391-b8ff864e59d2",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69a8c0a3c9c0eae143032bff",
+      "title": "Copy of Men's Sports Warmup Hoodie (AOP)",
+      "blueprint_id": 1338,
+      "print_provider_id": 47,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69a8c0f9584f91226c0e64ba",
+          "position": "front",
+          "variant_ids": [
+            101916,
+            101917,
+            101918,
+            101919,
+            101920,
+            101921,
+            101922,
+            101923
+          ],
+          "file_name": "IMG_0721.jpeg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/a4810978-2c9f-4050-a764-4667faba0bca",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69a8c0649091fb07d5009557",
+      "title": "Men's Sports Warmup Hoodie (AOP)",
+      "blueprint_id": 1338,
+      "print_provider_id": 47,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69a8bfb465816041aa0b0a66",
+          "position": "front",
+          "variant_ids": [
+            101916,
+            101917,
+            101918,
+            101919,
+            101920,
+            101921,
+            101922,
+            101923
+          ],
+          "file_name": "tempImageMiQv8K.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/68d29e00-c6d9-404e-876c-dd38e52df4c6",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69a8bdf917b1fdfce805ed71",
+      "title": "Copy of Basketball Rib Shorts (AOP)",
+      "blueprint_id": 1078,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69a7ab233d3a8bea0ae36204",
+          "position": "left_leg",
+          "variant_ids": [
+            88684,
+            88685,
+            88686,
+            88687,
+            88688,
+            88689,
+            88690,
+            88691
+          ],
+          "file_name": "66589A98-5706-44E4-8158-2AA9203874DE.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/94eea601-bbe6-4528-b3f9-6339294d9a2d",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69a7aca6dec16f958407c92c",
+      "title": "Basketball Rib Shorts (AOP)",
+      "blueprint_id": 1078,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "left_leg",
+          "variant_ids": [
+            88684,
+            88685,
+            88686,
+            88687,
+            88688,
+            88689,
+            88690,
+            88691
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "right_leg",
+          "variant_ids": [
+            88684,
+            88685,
+            88686,
+            88687,
+            88688,
+            88689,
+            88690,
+            88691
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "69a7abf2fd87a69a35053825",
+      "title": "Basketball Rib Shorts (AOP)",
+      "blueprint_id": 1078,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "69a7ab233d3a8bea0ae36204",
+          "position": "left_leg",
+          "variant_ids": [
+            88684,
+            88685,
+            88686,
+            88687,
+            88688,
+            88689,
+            88690,
+            88691
+          ],
+          "file_name": "66589A98-5706-44E4-8158-2AA9203874DE.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/94eea601-bbe6-4528-b3f9-6339294d9a2d",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "69a7ab233d3a8bea0ae36204",
+          "position": "right_leg",
+          "variant_ids": [
+            88684,
+            88685,
+            88686,
+            88687,
+            88688,
+            88689,
+            88690,
+            88691
+          ],
+          "file_name": "66589A98-5706-44E4-8158-2AA9203874DE.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/94eea601-bbe6-4528-b3f9-6339294d9a2d",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "699d503045b08ecd4a0586d4",
+      "title": "Men's Puffer Jacket (AOP)",
+      "blueprint_id": 934,
+      "print_provider_id": 14,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "front",
+          "variant_ids": [
+            77828,
+            77829,
+            77830,
+            77831,
+            77832,
+            77833,
+            77834,
+            77835,
+            77836,
+            77837
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "back",
+          "variant_ids": [
+            77828,
+            77829,
+            77830,
+            77831,
+            77832,
+            77833,
+            77834,
+            77835,
+            77836,
+            77837
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "front_right_sleeve",
+          "variant_ids": [
+            77828,
+            77829,
+            77830,
+            77831,
+            77832,
+            77833,
+            77834,
+            77835,
+            77836,
+            77837
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "back_right_sleeve",
+          "variant_ids": [
+            77828,
+            77829,
+            77830,
+            77831,
+            77832,
+            77833,
+            77834,
+            77835,
+            77836,
+            77837
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "front_left_sleeve",
+          "variant_ids": [
+            77828,
+            77829,
+            77830,
+            77831,
+            77832,
+            77833,
+            77834,
+            77835,
+            77836,
+            77837
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "back_left_sleeve",
+          "variant_ids": [
+            77828,
+            77829,
+            77830,
+            77831,
+            77832,
+            77833,
+            77834,
+            77835,
+            77836,
+            77837
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "Collar",
+          "variant_ids": [
+            77828,
+            77829,
+            77830,
+            77831,
+            77832,
+            77833,
+            77834,
+            77835,
+            77836,
+            77837
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "692a38387eedbbe63d05851b",
+      "title": "Hooded Sherpa Fleece Blanket",
+      "blueprint_id": 736,
+      "print_provider_id": 10,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front",
+          "variant_ids": [
+            74535
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929f98c7b419747000916d7",
+      "title": "Copy of Copy of Unisex Oversized Boxy Tee",
+      "blueprint_id": 1382,
+      "print_provider_id": 99,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "variant_ids": [
+            103897,
+            103550,
+            103536,
+            103522,
+            103543,
+            103890,
+            103529,
+            103883,
+            103515,
+            103886,
+            103519,
+            103545,
+            103889,
+            103533,
+            103535,
+            103893,
+            103882,
+            103880,
+            103878,
+            103539,
+            103542,
+            103549,
+            103892,
+            103513,
+            103538,
+            103525,
+            103546,
+            103531,
+            103524,
+            103526,
+            103518,
+            103521,
+            103541,
+            103885,
+            103540,
+            103881,
+            103895,
+            103532,
+            103896,
+            103879,
+            103511,
+            103520,
+            103512,
+            103887,
+            103510,
+            103548,
+            103517,
+            103528,
+            103534,
+            103514,
+            103547,
+            103527,
+            103894,
+            103888,
+            103530,
+            103884,
+            103523,
+            103544,
+            103551,
+            103516,
+            103891,
+            103537,
+            103898
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "front",
+          "variant_ids": [
+            103897,
+            103550,
+            103536,
+            103522,
+            103543,
+            103890,
+            103529,
+            103883,
+            103515,
+            103886,
+            103519,
+            103545,
+            103889,
+            103533,
+            103535,
+            103893,
+            103882,
+            103880,
+            103878,
+            103539,
+            103542,
+            103549,
+            103892,
+            103513,
+            103538,
+            103525,
+            103546,
+            103531,
+            103524,
+            103526,
+            103518,
+            103521,
+            103541,
+            103885,
+            103540,
+            103881,
+            103895,
+            103532,
+            103896,
+            103879,
+            103511,
+            103520,
+            103512,
+            103887,
+            103510,
+            103548,
+            103517,
+            103528,
+            103534,
+            103514,
+            103547,
+            103527,
+            103894,
+            103888,
+            103530,
+            103884,
+            103523,
+            103544,
+            103551,
+            103516,
+            103891,
+            103537,
+            103898
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "variant_ids": [
+            103897,
+            103550,
+            103536,
+            103522,
+            103543,
+            103890,
+            103529,
+            103883,
+            103515,
+            103886,
+            103519,
+            103545,
+            103889,
+            103533,
+            103535,
+            103893,
+            103882,
+            103880,
+            103878,
+            103539,
+            103542,
+            103549,
+            103892,
+            103513,
+            103538,
+            103525,
+            103546,
+            103531,
+            103524,
+            103526,
+            103518,
+            103521,
+            103541,
+            103885,
+            103540,
+            103881,
+            103895,
+            103532,
+            103896,
+            103879,
+            103511,
+            103520,
+            103512,
+            103887,
+            103510,
+            103548,
+            103517,
+            103528,
+            103534,
+            103514,
+            103547,
+            103527,
+            103894,
+            103888,
+            103530,
+            103884,
+            103523,
+            103544,
+            103551,
+            103516,
+            103891,
+            103537,
+            103898
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929f979eeefa5c3bc0bfc64",
+      "title": "Copy of Unisex Oversized Boxy Tee",
+      "blueprint_id": 1382,
+      "print_provider_id": 99,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "variant_ids": [
+            103897,
+            103550,
+            103536,
+            103522,
+            103543,
+            103890,
+            103529,
+            103883,
+            103515,
+            103886,
+            103519,
+            103545,
+            103889,
+            103533,
+            103535,
+            103893,
+            103882,
+            103880,
+            103878,
+            103539,
+            103542,
+            103549,
+            103892,
+            103513,
+            103538,
+            103525,
+            103546,
+            103531,
+            103524,
+            103526,
+            103518,
+            103521,
+            103541,
+            103885,
+            103540,
+            103881,
+            103895,
+            103532,
+            103896,
+            103879,
+            103511,
+            103520,
+            103512,
+            103887,
+            103510,
+            103548,
+            103517,
+            103528,
+            103534,
+            103514,
+            103547,
+            103527,
+            103894,
+            103888,
+            103530,
+            103884,
+            103523,
+            103544,
+            103551,
+            103516,
+            103891,
+            103537,
+            103898
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "variant_ids": [
+            103897,
+            103550,
+            103536,
+            103522,
+            103543,
+            103890,
+            103529,
+            103883,
+            103515,
+            103886,
+            103519,
+            103545,
+            103889,
+            103533,
+            103535,
+            103893,
+            103882,
+            103880,
+            103878,
+            103539,
+            103542,
+            103549,
+            103892,
+            103513,
+            103538,
+            103525,
+            103546,
+            103531,
+            103524,
+            103526,
+            103518,
+            103521,
+            103541,
+            103885,
+            103540,
+            103881,
+            103895,
+            103532,
+            103896,
+            103879,
+            103511,
+            103520,
+            103512,
+            103887,
+            103510,
+            103548,
+            103517,
+            103528,
+            103534,
+            103514,
+            103547,
+            103527,
+            103894,
+            103888,
+            103530,
+            103884,
+            103523,
+            103544,
+            103551,
+            103516,
+            103891,
+            103537,
+            103898
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929f87e08e5b94ccd0185d2",
+      "title": "Cyan Glow",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929f81786aa459b86021fb1",
+      "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f84540890cbbd4f6169d",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": "bg-graffiti-9.jpg",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/264526c3-6486-4849-bf32-739f0708b704",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929f14c5dc7ab7fa7025725",
+      "title": "Hot Oil",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f7a430ad44ebe1ea721a",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929f0d4e07f035cf5021e7c",
+      "title": "Hold Cards",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f0ed76f5a88f2f06db08",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929ef67d7e308d6df0d8c8a",
+      "title": "Frozen Sky",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929ef8b586758307ea66554",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929ee81cecf816d92020b31",
+      "title": "Arctic River",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929eeb040561a7af702832b",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929b6d89b3dbbfde2088c5a",
+      "title": "Copy of Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6929b4c9e07f035cf5020be6",
+      "title": "Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929b52c40890cbbd4f60fdb",
+          "position": "pocket",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6928d1e58a961747da091ea0",
+      "title": "Copy of Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fashion, Travel Lover Gift, Everyday Wear, Unisex Hoodie, Casual Sweatshirt",
+      "blueprint_id": 450,
+      "print_provider_id": 10,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "back",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_sleeve",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_sleeve",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5af6d7a9-63cd-9cf9-68e8-a8339ea6928d",
+          "position": "waistband",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_hood",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_hood",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "690d4152cbcaca97250c276b",
+      "title": "Unisex Hooded Long Sleeve Tee",
+      "blueprint_id": 1926,
+      "print_provider_id": 99,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "61ea1381-9e5f-1691-31ef-8e248db05ceb",
+          "position": "front",
+          "variant_ids": [
+            119577,
+            119578,
+            119579,
+            119580,
+            119582,
+            119583,
+            119584,
+            119585,
+            119586,
+            119587,
+            119589,
+            119590,
+            119591,
+            119592,
+            119593,
+            119594,
+            119596,
+            119597,
+            119598,
+            119599,
+            119600,
+            119601,
+            119603,
+            119604,
+            119605,
+            119606,
+            119607,
+            119608,
+            119610,
+            119611,
+            119612,
+            119613,
+            119614,
+            119615,
+            119617,
+            119618
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "variant_ids": [
+            119577,
+            119578,
+            119579,
+            119580,
+            119582,
+            119583,
+            119584,
+            119585,
+            119586,
+            119587,
+            119589,
+            119590,
+            119591,
+            119592,
+            119593,
+            119594,
+            119596,
+            119597,
+            119598,
+            119599,
+            119600,
+            119601,
+            119603,
+            119604,
+            119605,
+            119606,
+            119607,
+            119608,
+            119610,
+            119611,
+            119612,
+            119613,
+            119614,
+            119615,
+            119617,
+            119618
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "68eb2d89f88f52634a10b4bc",
+      "title": "Long Sleeve Kimono Robe (AOP)",
+      "blueprint_id": 923,
+      "print_provider_id": 14,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front_right",
+          "variant_ids": [
+            77561,
+            77562,
+            77563,
+            77564,
+            77565,
+            77566,
+            77567,
+            77568,
+            77569,
+            77570,
+            77571,
+            77572
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "front_left",
+          "variant_ids": [
+            77561,
+            77562,
+            77563,
+            77564,
+            77565,
+            77566,
+            77567,
+            77568,
+            77569,
+            77570,
+            77571,
+            77572
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "back",
+          "variant_ids": [
+            77561,
+            77562,
+            77563,
+            77564,
+            77565,
+            77566,
+            77567,
+            77568,
+            77569,
+            77570,
+            77571,
+            77572
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "right_sleeve",
+          "variant_ids": [
+            77561,
+            77562,
+            77563,
+            77564,
+            77565,
+            77566,
+            77567,
+            77568,
+            77569,
+            77570,
+            77571,
+            77572
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "6929f8f976f5a88f2f06dbd6",
+          "position": "left_sleeve",
+          "variant_ids": [
+            77561,
+            77562,
+            77563,
+            77564,
+            77565,
+            77566,
+            77567,
+            77568,
+            77569,
+            77570,
+            77571,
+            77572
+          ],
+          "file_name": "pattern.png",
+          "preview_url": "https://pfy-prod-image-storage.s3.us-east-2.amazonaws.com/23653276/18e4974d-5899-4511-af03-73377be57be8",
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "68ea0502cb19b441780d9728",
+      "title": "Toxico",
+      "blueprint_id": 591,
+      "print_provider_id": 83,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_leg",
+          "variant_ids": [
+            72926,
+            72927,
+            72928,
+            72929,
+            72930,
+            72931
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "68ea040f0bb1a283330ee380",
+      "title": "Urban Graphic Pullover Hoodie, Stylish Streetwear, Cozy Fashion, Travel Lover Gift, Everyday Wear, Unisex Hoodie, Casual Sweatshirt",
+      "blueprint_id": 450,
+      "print_provider_id": 10,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "back",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_sleeve",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_sleeve",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5af6d7a9-63cd-9cf9-68e8-a8339ea6928d",
+          "position": "waistband",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "right_hood",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "left_hood",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "68585dd350fb3f4f5c0595f4",
+      "title": "Women's Thongs (AOP)",
+      "blueprint_id": 1466,
+      "print_provider_id": 51,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "3eadac78-b60d-c6e6-e70a-25f6d0fab467",
+          "position": "back",
+          "variant_ids": [
+            105606,
+            105607,
+            105608,
+            105609,
+            105610
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "68585bdd2c35f6107c04a28f",
+      "title": "Unisex Pullover Hoodie (AOP)",
+      "blueprint_id": 450,
+      "print_provider_id": 10,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "7f7d1197-4458-5dd8-c5c6-7e20c12d55e3",
+          "position": "back",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "68585b8ee3ec6e146d195e1c",
+          "position": "right_hood",
+          "variant_ids": [
+            63240,
+            63241,
+            63242,
+            63243,
+            63244,
+            63245
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "685855b6c5c9efe54a0a9585",
+      "title": "Unisex Oversized Boxy Tee",
+      "blueprint_id": 1382,
+      "print_provider_id": 99,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "685855589b0b5c3f611d779f",
+          "position": "front",
+          "variant_ids": [
+            103897,
+            103550,
+            103536,
+            103522,
+            103543,
+            103890,
+            103529,
+            103883,
+            103515,
+            103886,
+            103519,
+            103545,
+            103889,
+            103533,
+            103535,
+            103893,
+            103882,
+            103880,
+            103878,
+            103539,
+            103542,
+            103549,
+            103892,
+            103513,
+            103538,
+            103525,
+            103546,
+            103531,
+            103524,
+            103526,
+            103518,
+            103521,
+            103541,
+            103885,
+            103540,
+            103881,
+            103895,
+            103532,
+            103896,
+            103879,
+            103511,
+            103520,
+            103512,
+            103887,
+            103510,
+            103548,
+            103517,
+            103528,
+            103534,
+            103514,
+            103547,
+            103527,
+            103894,
+            103888,
+            103530,
+            103884,
+            103523,
+            103544,
+            103551,
+            103516,
+            103891,
+            103537,
+            103898
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        },
+        {
+          "upload_id": "5941187eb8e7e37b3f0e62e5",
+          "position": "neck",
+          "variant_ids": [
+            103897,
+            103550,
+            103536,
+            103522,
+            103543,
+            103890,
+            103529,
+            103883,
+            103515,
+            103886,
+            103519,
+            103545,
+            103889,
+            103533,
+            103535,
+            103893,
+            103882,
+            103880,
+            103878,
+            103539,
+            103542,
+            103549,
+            103892,
+            103513,
+            103538,
+            103525,
+            103546,
+            103531,
+            103524,
+            103526,
+            103518,
+            103521,
+            103541,
+            103885,
+            103540,
+            103881,
+            103895,
+            103532,
+            103896,
+            103879,
+            103511,
+            103520,
+            103512,
+            103887,
+            103510,
+            103548,
+            103517,
+            103528,
+            103534,
+            103514,
+            103547,
+            103527,
+            103894,
+            103888,
+            103530,
+            103884,
+            103523,
+            103544,
+            103551,
+            103516,
+            103891,
+            103537,
+            103898
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    },
+    {
+      "product_id": "6856fa7c0ea6932ed9007b99",
+      "title": "Women's Thongs (AOP)",
+      "blueprint_id": 1466,
+      "print_provider_id": 51,
+      "external": {},
+      "images": [
+        {
+          "upload_id": "b1b482a6-fda6-25ef-c07e-c661fc0a2592",
+          "position": "front",
+          "variant_ids": [
+            105606,
+            105607,
+            105608,
+            105609,
+            105610
+          ],
+          "file_name": null,
+          "preview_url": null,
+          "candidate_source_paths": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,36 @@
 import json
 import os
+import re
+import time
+from pathlib import Path
+
 import requests
 from bs4 import BeautifulSoup
-import time
 
-CATALOG_PATH = '/Users/jasonjenkins/Desktop/alpha/toxico/data/catalog.json'
-QUEUE_PATH = '/Users/jasonjenkins/Desktop/alpha/toxico/PRODUCTS_TO_ADD.md'
+ROOT = Path(__file__).resolve().parent
+CATALOG_PATH = ROOT / 'data' / 'catalog.json'
+QUEUE_PATH = ROOT / 'PRODUCTS_TO_ADD.md'
+QUEUE_LINE_PATTERN = re.compile(r'^(?:\d+\.\s+|-\s+)(https?://\S+)')
+
+
+def extract_queue_links(lines):
+    links = []
+    seen = set()
+    for raw_line in lines:
+        match = QUEUE_LINE_PATTERN.match(raw_line.strip())
+        if not match:
+            continue
+        url = match.group(1)
+        if url in seen:
+            continue
+        seen.add(url)
+        links.append(url)
+    return links
+
+
+def slugify(value):
+    slug = re.sub(r'[^a-z0-9]+', '-', value.lower()).strip('-')
+    return slug or 'item'
 
 def get_page_metadata(url):
     headers = {
@@ -18,13 +43,13 @@ def get_page_metadata(url):
         
         # Basic Metadata
         title = soup.find('meta', property='og:title')
-        title = title['content'] if title else soup.title.string
+        title = title['content'] if title and title.has_attr('content') else (soup.title.string.strip() if soup.title and soup.title.string else url)
         
         image = soup.find('meta', property='og:image')
-        image_url = image['content'] if image else None
+        image_url = image['content'] if image and image.has_attr('content') else None
         
         description = soup.find('meta', property='og:description')
-        desc = description['content'] if description else ''
+        desc = description['content'] if description and description.has_attr('content') else ''
         
         # Price extraction (specific to Zimmerli or generic)
         price = 0
@@ -40,14 +65,13 @@ def get_page_metadata(url):
                 if 'offers' in data:
                     price = data['offers'].get('price', 0)
                     currency = data['offers'].get('priceCurrency', 'USD')
-            except:
+            except (json.JSONDecodeError, TypeError, ValueError):
                 pass
                 
         # Fallback price search
         if not price:
             price_elem = soup.select_one('.price, .product-price, [data-price]')
             if price_elem:
-                import re
                 price_text = price_elem.get_text()
                 price_match = re.search(r'[\d\.]+', price_text)
                 if price_match:
@@ -76,17 +100,10 @@ def get_page_metadata(url):
         return None
 
 def process_queue():
-    with open(QUEUE_PATH, 'r') as f:
+    with open(QUEUE_PATH, 'r', encoding='utf-8') as f:
         lines = f.readlines()
-    
-    links = []
-    for line in lines:
-        if line.strip().startswith('1.') or line.strip().startswith('2.') or line.strip().startswith('3.') or line.strip().startswith('4.') or line.strip().startswith('5.') or line.strip().startswith('- http'):
-            # Extract URL
-            import re
-            url_match = re.search(r'(https?://[^\s]+)', line)
-            if url_match:
-                links.append(url_match.group(1))
+
+    links = extract_queue_links(lines)
     
     if not links:
         print("No links found in queue.")
@@ -94,8 +111,12 @@ def process_queue():
 
     print(f"Found {len(links)} links to process...")
     
-    with open(CATALOG_PATH, 'r') as f:
+    with open(CATALOG_PATH, 'r', encoding='utf-8') as f:
         catalog = json.load(f)
+
+    products = catalog.setdefault('products', [])
+    if not isinstance(products, list):
+        raise ValueError("catalog.json is missing a valid products list")
     
     new_products = []
     
@@ -107,11 +128,11 @@ def process_queue():
         print(f"Processing: {url}")
         data = get_page_metadata(url)
         if data:
-            product_id = 'aff-zimmerli-' + data['name'].lower().replace(' ', '-').replace('zimmerli-', '')[:20]
+            product_id = f"aff-zimmerli-{slugify(data['name'].replace('zimmerli-', ''))[:40]}"
             
             new_product = {
                 "id": product_id,
-                "sku": f"AFF-ZM-{len(catalog['products']) + len(new_products) + 1:03d}",
+                "sku": f"AFF-ZM-{len(products) + len(new_products) + 1:03d}",
                 "name": data['name'],
                 "subtitle": "zimmerli \u00b7 swiss made",
                 "category": data['category'],
@@ -131,7 +152,7 @@ def process_queue():
             }
             
             # Check if exists
-            if not any(p.get('url') == url for p in catalog['products']):
+            if not any(p.get('url') == url for p in products):
                 new_products.append(new_product)
                 print(f"✓ Added: {data['name']}")
             else:
@@ -140,9 +161,10 @@ def process_queue():
         time.sleep(1) # Be nice to the server
 
     if new_products:
-        catalog['products'].extend(new_products)
-        with open(CATALOG_PATH, 'w') as f:
+        products.extend(new_products)
+        with open(CATALOG_PATH, 'w', encoding='utf-8') as f:
             json.dump(catalog, f, indent=2)
+            f.write('\n')
         print(f"\nSuccessfully added {len(new_products)} products to catalog.")
     else:
         print("\nNo new products added.")

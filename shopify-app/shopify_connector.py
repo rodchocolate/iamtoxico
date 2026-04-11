@@ -14,6 +14,45 @@ import requests
 from urllib.parse import urlencode
 from typing import Optional, Dict, List, Any
 
+
+_ENV_FILE = os.path.join(os.path.dirname(__file__), ".env")
+_ENV_LOADED = False
+
+
+def _load_local_env() -> None:
+    """Load shopify-app/.env without overriding process environment."""
+    global _ENV_LOADED
+    if _ENV_LOADED:
+        return
+
+    if os.path.isfile(_ENV_FILE):
+        try:
+            with open(_ENV_FILE, encoding="utf-8") as env_file:
+                for raw_line in env_file:
+                    line = raw_line.strip()
+                    if not line or line.startswith("#") or "=" not in line:
+                        continue
+                    key, value = line.split("=", 1)
+                    os.environ.setdefault(
+                        key.strip(),
+                        value.strip().strip('"').strip("'"),
+                    )
+        except OSError:
+            pass
+
+    _ENV_LOADED = True
+
+
+def _mask_value(value: Optional[str]) -> str:
+    if not value:
+        return "(missing)"
+    if len(value) <= 8:
+        return "*" * len(value)
+    return f"{value[:4]}...{value[-4:]}"
+
+
+_load_local_env()
+
 class ShopifyConnector:
     API_VERSION = "2025-01"
     MAX_RETRIES = 3
@@ -21,20 +60,41 @@ class ShopifyConnector:
     TOKEN_FILE = os.path.join(os.path.dirname(__file__), "shopify_tokens.json")
 
     def __init__(self, shop_domain: str = None, access_token: str = None):
-        self.api_key = os.getenv("SHOPIFY_API_KEY", "6347ea0e4232c5d68711bb80f0623930")
-        self.api_secret = os.getenv("SHOPIFY_API_SECRET", "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")
+        _load_local_env()
+        self.api_key = os.getenv("SHOPIFY_API_KEY")
+        self.api_secret = os.getenv("SHOPIFY_API_SECRET")
         self.shop_domain = shop_domain  # e.g., "iamtoxico.myshopify.com"
         self.access_token = access_token
         self.scopes = "write_products,read_products,write_orders,read_orders"
+
+    def _require_shop_domain(self) -> str:
+        if not self.shop_domain:
+            raise ValueError("shop_domain is required")
+        return self.shop_domain
+
+    def _require_access_token(self) -> str:
+        if not self.access_token:
+            raise ValueError("Shopify access token is required")
+        return self.access_token
+
+    def _require_api_key(self) -> str:
+        if not self.api_key:
+            raise ValueError("SHOPIFY_API_KEY environment variable is required")
+        return self.api_key
+
+    def _require_api_secret(self) -> str:
+        if not self.api_secret:
+            raise ValueError("SHOPIFY_API_SECRET environment variable is required")
+        return self.api_secret
     
     @property
     def base_url(self) -> str:
-        return f"https://{self.shop_domain}/admin/api/{self.API_VERSION}"
+        return f"https://{self._require_shop_domain()}/admin/api/{self.API_VERSION}"
     
     @property
     def headers(self) -> dict:
         return {
-            "X-Shopify-Access-Token": self.access_token,
+            "X-Shopify-Access-Token": self._require_access_token(),
             "Content-Type": "application/json"
         }
     
@@ -43,19 +103,19 @@ class ShopifyConnector:
     def get_auth_url(self, redirect_uri: str, state: str = None) -> str:
         """Generate OAuth authorization URL"""
         params = {
-            "client_id": self.api_key,
+            "client_id": self._require_api_key(),
             "scope": self.scopes,
             "redirect_uri": redirect_uri,
             "state": state or os.urandom(16).hex()
         }
-        return f"https://{self.shop_domain}/admin/oauth/authorize?{urlencode(params)}"
+        return f"https://{self._require_shop_domain()}/admin/oauth/authorize?{urlencode(params)}"
     
     def exchange_token(self, code: str) -> dict:
         """Exchange authorization code for access token"""
-        url = f"https://{self.shop_domain}/admin/oauth/access_token"
+        url = f"https://{self._require_shop_domain()}/admin/oauth/access_token"
         data = {
-            "client_id": self.api_key,
-            "client_secret": self.api_secret,
+            "client_id": self._require_api_key(),
+            "client_secret": self._require_api_secret(),
             "code": code
         }
         response = requests.post(url, json=data)
@@ -67,7 +127,7 @@ class ShopifyConnector:
     def verify_webhook(self, data: bytes, hmac_header: str) -> bool:
         """Verify incoming webhook signature"""
         digest = hmac.new(
-            self.api_secret.encode(),
+            self._require_api_secret().encode(),
             data,
             hashlib.sha256
         ).digest()
@@ -209,6 +269,55 @@ class ShopifyConnector:
         result = self._request("POST", "/custom_collections.json", data)
         return result.get("custom_collection", {})
 
+    # ============ DISCOUNTS ============
+
+    def get_price_rules(self, limit: int = 50) -> List[dict]:
+        """List price rules for discount-code based promotions."""
+        result = self._request("GET", "/price_rules.json", params={"limit": limit})
+        return result.get("price_rules", [])
+
+    def create_price_rule(self, price_rule_data: dict) -> dict:
+        """Create a Shopify price rule."""
+        result = self._request("POST", "/price_rules.json", {"price_rule": price_rule_data})
+        return result.get("price_rule", {})
+
+    def update_price_rule(self, price_rule_id: int, price_rule_data: dict) -> dict:
+        """Update an existing Shopify price rule."""
+        result = self._request(
+            "PUT",
+            f"/price_rules/{price_rule_id}.json",
+            {"price_rule": price_rule_data},
+        )
+        return result.get("price_rule", {})
+
+    def get_discount_codes(self, price_rule_id: int) -> List[dict]:
+        """List discount codes attached to a price rule."""
+        result = self._request("GET", f"/price_rules/{price_rule_id}/discount_codes.json")
+        return result.get("discount_codes", [])
+
+    def create_discount_code(self, price_rule_id: int, code: str) -> dict:
+        """Create a discount code under a Shopify price rule."""
+        result = self._request(
+            "POST",
+            f"/price_rules/{price_rule_id}/discount_codes.json",
+            {"discount_code": {"code": code}},
+        )
+        return result.get("discount_code", {})
+
+    def find_price_rule_by_title(self, title: str, limit: int = 50) -> Optional[dict]:
+        """Return the first price rule whose title matches exactly."""
+        for rule in self.get_price_rules(limit=limit):
+            if rule.get("title") == title:
+                return rule
+        return None
+
+    def ensure_discount_code(self, price_rule_id: int, code: str) -> dict:
+        """Create a discount code only if it does not already exist."""
+        for existing in self.get_discount_codes(price_rule_id):
+            if existing.get("code", "").upper() == code.upper():
+                return existing
+        return self.create_discount_code(price_rule_id, code)
+
     # ============ WEBHOOKS ============
 
     def register_webhook(self, topic: str, address: str,
@@ -259,11 +368,11 @@ class ShopifyConnector:
     def save_token(self) -> None:
         """Persist access token to disk."""
         tokens = self._load_tokens_file()
-        tokens[self.shop_domain] = {
-            "access_token": self.access_token,
+        tokens[self._require_shop_domain()] = {
+            "access_token": self._require_access_token(),
             "scopes": self.scopes,
         }
-        with open(self.TOKEN_FILE, "w") as f:
+        with open(self.TOKEN_FILE, "w", encoding="utf-8") as f:
             json.dump(tokens, f, indent=2)
 
     @classmethod
@@ -279,7 +388,7 @@ class ShopifyConnector:
     def _load_tokens_file() -> dict:
         token_file = ShopifyConnector.TOKEN_FILE
         if os.path.exists(token_file):
-            with open(token_file) as f:
+            with open(token_file, encoding="utf-8") as f:
                 return json.load(f)
         return {}
 
@@ -427,9 +536,12 @@ if __name__ == "__main__":
     # Test connection
     print("Shopify Connector for iamtoxico")
     print("=" * 40)
-    print(f"API Key: {os.getenv('SHOPIFY_API_KEY', '6347ea...')[:10]}...")
-    print(f"API Secret: {os.getenv('SHOPIFY_API_SECRET', 'shpss_...')[:10]}...")
+    print(f"API Key: {_mask_value(os.getenv('SHOPIFY_API_KEY'))}")
+    print(f"API Secret: {_mask_value(os.getenv('SHOPIFY_API_SECRET'))}")
     print()
+    if not os.getenv("SHOPIFY_API_KEY") or not os.getenv("SHOPIFY_API_SECRET"):
+        print("Set SHOPIFY_API_KEY and SHOPIFY_API_SECRET in shopify-app/.env or your shell before running OAuth flows.")
+        print()
     print("To connect:")
     print("1. Create store at https://partners.shopify.com")
     print("2. Install this app on your store")

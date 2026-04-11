@@ -1,8 +1,8 @@
 import json
-import os
+from pathlib import Path
 
-file_path = '/Users/jasonjenkins/Desktop/alpha/toxico/data/catalog.json'
-ids_to_remove = [
+CATALOG_PATH = Path(__file__).resolve().parent / 'data' / 'catalog.json'
+IDS_TO_REMOVE = [
     'printify-6929b4c9e07f035cf5020be6',
     'new-balance-990v6',
     'new-balance-550',
@@ -12,16 +12,21 @@ ids_to_remove = [
 ]
 
 try:
-    with open(file_path, 'r') as f:
+    with open(CATALOG_PATH, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    original_count = len(data['products'])
-    data['products'] = [p for p in data['products'] if p['id'] not in ids_to_remove]
+    products = data.get('products')
+    if not isinstance(products, list):
+        raise ValueError('catalog.json is missing a valid products list')
+
+    original_count = len(products)
+    data['products'] = [p for p in products if p.get('id') not in IDS_TO_REMOVE]
     new_count = len(data['products'])
     removed_count = original_count - new_count
 
-    with open(file_path, 'w') as f:
+    with open(CATALOG_PATH, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
+        f.write('\n')
 
     print(f"Successfully removed {removed_count} items.")
     print(f"Original count: {original_count}")
