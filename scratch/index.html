@@ -45,7 +45,7 @@
     margin: 1.5rem 0 .6rem;
   }
 
-  #grid {
+  .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.4rem;
@@ -101,7 +101,7 @@
   }
 
   @media (max-width: 600px) {
-    #grid {
+    .grid {
       grid-template-columns: repeat(2, 1fr);
       gap: .8rem;
     }
@@ -117,37 +117,47 @@
   <span class="badge">staging board</span>
 </header>
 
-<main>
-  <div class="row-label">hoodies — big picture / pattern / mirror</div>
-  <div id="grid"></div>
-</main>
+<main id="main"></main>
 
 <footer>&copy; 2026 toxico &mdash; scratch &mdash; staging board, not promoted</footer>
 
 <script>
-const P = [
-  {t:"Fashion Hoodie", y:"big picture", f:"https://images-api.printify.com/mockup/6a079595d72c55b34003c4cb/74644/19527/fashion-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a079595d72c55b34003c4cb/74644/21126/fashion-hoodie-drop-slot.jpg?camera_label=back"},
-  {t:"Fashion Hoodie", y:"pattern",     f:"https://images-api.printify.com/mockup/6a0795960852663cf009cb94/74644/19527/fashion-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795960852663cf009cb94/74644/21126/fashion-hoodie-drop-slot.jpg?camera_label=back"},
-  {t:"Unisex Pullover Hoodie", y:"mirror", f:"https://images-api.printify.com/mockup/6a0795bd44285bcfb5080ace/63244/101818/unisex-pullover-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795bd44285bcfb5080ace/63244/4761/unisex-pullover-hoodie-drop-slot.jpg?camera_label=back"},
-];
+function tileHtml(p) {
+  const empty = !p.f;
+  const imgs = empty
+    ? 'mockup pending'
+    : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
+  return '<div class="card' + (empty ? ' empty' : '') + '">' +
+           '<div class="img-wrap">' + imgs + '</div>' +
+           '<div class="info">' +
+             '<div class="title">' + (p.t || '') + '</div>' +
+             '<div class="meta">' + (p.y || '') + '</div>' +
+           '</div>' +
+         '</div>';
+}
 
-const grid = document.getElementById('grid');
-
-P.forEach(p => {
-  const c = document.createElement('div');
-  c.className = 'card' + (p.f ? '' : ' empty');
-  const imgs = p.f
-    ? '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
-      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '')
-    : 'mockup pending';
-  c.innerHTML =
-    '<div class="img-wrap">' + imgs + '</div>' +
-    '<div class="info">' +
-      '<div class="title">' + p.t + '</div>' +
-      '<div class="meta">' + p.y + '</div>' +
-    '</div>';
-  grid.appendChild(c);
-});
+fetch('tiles.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    const main = document.getElementById('main');
+    (data.rows || []).forEach(row => {
+      if (row.label) {
+        const lbl = document.createElement('div');
+        lbl.className = 'row-label';
+        lbl.textContent = row.label;
+        main.appendChild(lbl);
+      }
+      const grid = document.createElement('div');
+      grid.className = 'grid';
+      grid.innerHTML = (row.tiles || []).map(tileHtml).join('');
+      main.appendChild(grid);
+    });
+  })
+  .catch(err => {
+    document.getElementById('main').innerHTML =
+      '<div class="row-label">tiles.json failed to load: ' + err + '</div>';
+  });
 </script>
 </body>
 </html>
