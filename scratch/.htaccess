@@ -1,0 +1,3 @@
+# Intentionally empty — overrides any stale directives left from earlier deploys.
+# lftp mirror --reverse without --delete leaves orphan files on the server, so
+# we ship a no-op .htaccess instead of removing it.
