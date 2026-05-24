@@ -7,120 +7,68 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   body {
-    font-family: 'Space Grotesk', sans-serif;
-    color: #fff;
+    font-family: 'Space Grotesk', sans-serif; color: #fff;
     background: #0b0b0b url('../bg-graffiti-10.jpg') center center / cover no-repeat fixed;
     min-height: 100vh;
   }
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background: rgba(0,0,0,.55);
-    z-index: 0;
-  }
+  body::before { content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }
   header, main, footer { position: relative; z-index: 1; }
-
   header {
-    padding: 1.5rem 2rem;
-    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
     max-width: 1280px; margin: 0 auto;
   }
-  header h1 {
-    font-size: 1.4rem; font-weight: 600;
-    letter-spacing: .06em; text-transform: lowercase;
-  }
+  header h1 { font-size: 1.4rem; font-weight: 600; letter-spacing: .06em; text-transform: lowercase; }
   .badge {
-    background: rgba(255,200,0,.15); color: #ffc800;
-    font-size: .7rem; font-weight: 600; text-transform: uppercase;
-    padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
+    background: rgba(255,200,0,.15); color: #ffc800; font-size: .7rem; font-weight: 600;
+    text-transform: uppercase; padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
   }
-
   main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+  .row-label { font-size: .7rem; opacity: .55; text-transform: uppercase; letter-spacing: .12em; margin: 1.5rem 0 .6rem; }
 
-  .row-label {
-    font-size: .7rem; opacity: .55;
-    text-transform: uppercase; letter-spacing: .12em;
-    margin: 1.5rem 0 .6rem;
-  }
-
+  /* each row is a 3-wide horizontal carousel (scroll/swipe through the rest) */
   .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.4rem;
+    display: grid; grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 2.8rem) / 3);
+    gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory;
+    padding-bottom: 1rem; scrollbar-width: thin;
   }
-
   .card {
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.1);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform .25s, border-color .25s;
-    position: relative;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; overflow: hidden; position: relative;
+    scroll-snap-align: start; transition: transform .25s, border-color .25s;
   }
-  .card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255,255,255,.25);
-  }
-  .card .img-wrap {
-    position: relative;
-    width: 100%; aspect-ratio: 1;
-    overflow: hidden; background: #1a1a1a;
-  }
-  .card .img-wrap img {
-    width: 100%; height: 100%; object-fit: cover;
-    transition: opacity .3s;
-  }
-  .card .img-wrap img.back {
-    position: absolute; inset: 0; opacity: 0;
-  }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
+  .card .img-wrap { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }
+  .card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+  .card .img-wrap img.back { position: absolute; inset: 0; opacity: 0; }
   .card:hover .img-wrap img.front { opacity: 0; }
   .card:hover .img-wrap img.back  { opacity: 1; }
-
   .card.empty .img-wrap {
     display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,.4); font-size: .75rem;
-    text-transform: lowercase; letter-spacing: .05em;
+    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em;
   }
-
   .card .info { padding: .9rem 1rem; }
-  .card .title {
-    font-size: .85rem; font-weight: 600;
-    margin-bottom: .2rem;
+  .card .title { font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }
+  .card .meta { font-size: .7rem; opacity: .65; text-transform: lowercase; }
+  .card .buy {
+    display: inline-block; margin-top: .5rem; font-size: .72rem; font-weight: 600; color: #ffc800;
+    text-decoration: none; border: 1px solid rgba(255,200,0,.4); padding: .25em .7em; border-radius: 6px;
   }
-  .card .meta {
-    font-size: .7rem; opacity: .65;
-    text-transform: lowercase;
-  }
-
-  footer {
-    text-align: center; padding: 1rem;
-    font-size: .7rem; opacity: .5;
-    max-width: 1280px; margin: 0 auto;
-  }
-
+  footer { text-align: center; padding: 1rem; font-size: .7rem; opacity: .5; max-width: 1280px; margin: 0 auto; }
   @media (max-width: 600px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: .8rem;
-    }
-    .card .info { padding: .6rem .7rem; }
-    .card .title { font-size: .78rem; }
+    .grid { grid-auto-columns: calc((100% - .8rem) / 2); gap: .8rem; }
+    .card .info { padding: .6rem .7rem; } .card .title { font-size: .78rem; }
   }
 </style>
 </head>
 <body>
-
 <header>
   <h1>toxico — scratch</h1>
   <span class="badge">staging board</span>
 </header>
-
 <main id="main"></main>
-
 <footer>&copy; 2026 toxico &mdash; scratch &mdash; staging board, not promoted</footer>
-
 <script>
 function tileHtml(p) {
   const empty = !p.f;
@@ -128,22 +76,21 @@ function tileHtml(p) {
     ? 'mockup pending'
     : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
       (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
+  const buy = p.u ? '<a class="buy" href="' + p.u + '" target="_blank">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
   return '<div class="card' + (empty ? ' empty' : '') + '">' +
            '<div class="img-wrap">' + imgs + '</div>' +
            '<div class="info">' +
              '<div class="title">' + (p.t || '') + '</div>' +
-             '<div class="meta">' + (p.y || '') + '</div>' +
+             '<div class="meta">' + (p.y || '') + '</div>' + buy +
            '</div>' +
          '</div>';
 }
-
 function renderTiles(data) {
   const main = document.getElementById('main');
   (data.rows || []).forEach(row => {
     if (row.label) {
       const lbl = document.createElement('div');
-      lbl.className = 'row-label';
-      lbl.textContent = row.label;
+      lbl.className = 'row-label'; lbl.textContent = row.label;
       main.appendChild(lbl);
     }
     const grid = document.createElement('div');
@@ -152,63 +99,71 @@ function renderTiles(data) {
     main.appendChild(grid);
   });
 }
-
 document.addEventListener('DOMContentLoaded', () => {
-  const __tilesEl = document.getElementById('tiles-data');
-  renderTiles(__tilesEl ? JSON.parse(__tilesEl.textContent) : {rows: []});
+  const el = document.getElementById('tiles-data');
+  renderTiles(el ? JSON.parse(el.textContent) : {rows: []});
 });
 </script>
-
-<!-- TILES:BEGIN — managed by hermes prototype skill; do not hand-edit -->
+<!-- TILES:BEGIN — managed by hermes prototype/instant_drop skills; do not hand-edit -->
 <script type="application/json" id="tiles-data">
 {
   "rows": [
     {
-      "label": "hoodies \u2014 big picture / pattern / mirror",
+      "label": "20260515 drop #1",
       "tiles": [
         {
-          "t": "Fashion Hoodie",
-          "y": "big picture",
+          "t": "apres single",
+          "y": "front/back/pocket",
           "f": "https://images-api.printify.com/mockup/6a079595d72c55b34003c4cb/74644/19527/fashion-hoodie-drop-slot.jpg?camera_label=front",
           "b": "https://images-api.printify.com/mockup/6a079595d72c55b34003c4cb/74644/21126/fashion-hoodie-drop-slot.jpg?camera_label=back"
         },
         {
-          "t": "Fashion Hoodie",
-          "y": "pattern",
+          "t": "apres mirror",
+          "y": "front/back/pocket",
           "f": "https://images-api.printify.com/mockup/6a0795960852663cf009cb94/74644/19527/fashion-hoodie-drop-slot.jpg?camera_label=front",
           "b": "https://images-api.printify.com/mockup/6a0795960852663cf009cb94/74644/21126/fashion-hoodie-drop-slot.jpg?camera_label=back"
         },
         {
-          "t": "Unisex Pullover Hoodie",
-          "y": "mirror",
-          "f": "https://images-api.printify.com/mockup/6a0795bd44285bcfb5080ace/63244/101818/unisex-pullover-hoodie-drop-slot.jpg?camera_label=front",
-          "b": "https://images-api.printify.com/mockup/6a0795bd44285bcfb5080ace/63244/4761/unisex-pullover-hoodie-drop-slot.jpg?camera_label=back"
-        }
-      ]
-    },
-    {
-      "label": "prototypes \u2014 emailed in",
-      "tiles": [
-        {
-          "t": "---------- Forwarded message ---------",
-          "y": "prototype",
-          "f": "uploads/20260524-211037-forwarded-message.jpg",
-          "b": "",
-          "added": "2026-05-24T21:10:37Z"
+          "t": "apres tile",
+          "y": "front/back/pocket",
+          "f": "https://images-api.printify.com/mockup/6a0795a50852663cf009cb99/74644/19527/cyan-glow-apres-drop-slot.jpg?camera_label=front",
+          "b": "https://images-api.printify.com/mockup/6a0795a50852663cf009cb99/74644/21126/cyan-glow-apres-drop-slot.jpg?camera_label=back"
         },
         {
-          "t": "untitled prototype",
-          "y": "",
-          "f": "uploads/20260524-211040-untitled-prototype.jpg",
-          "b": "",
-          "added": "2026-05-24T21:10:40Z"
+          "t": "harem brickup",
+          "y": "right_leg/left_leg/pocket",
+          "f": "https://images-api.printify.com/mockup/6a0795a15d21d707320f788b/72926/16656/hold-cards-drop-slot.jpg?camera_label=front",
+          "b": "https://images-api.printify.com/mockup/6a0795a15d21d707320f788b/72926/16657/hold-cards-drop-slot.jpg?camera_label=back"
         },
         {
-          "t": "green",
-          "y": "",
-          "f": "uploads/20260524-214203-green.jpg",
-          "b": "",
-          "added": "2026-05-24T21:42:03Z"
+          "t": "harem tile",
+          "y": "right_leg/left_leg",
+          "f": "https://images-api.printify.com/mockup/6a0795b75d21d707320f7893/72926/16656/toxico-drop-slot.jpg?camera_label=front",
+          "b": "https://images-api.printify.com/mockup/6a0795b75d21d707320f7893/72926/16657/toxico-drop-slot.jpg?camera_label=back"
+        },
+        {
+          "t": "harem single",
+          "y": "right_leg/left_leg/pocket",
+          "f": "https://images-api.printify.com/mockup/6a0795c54e9b4ee36b040d11/72928/16656/frozen-sky-harem-pant-drop-slot.jpg?camera_label=front",
+          "b": "https://images-api.printify.com/mockup/6a0795c54e9b4ee36b040d11/72928/16657/frozen-sky-harem-pant-drop-slot.jpg?camera_label=back"
+        },
+        {
+          "t": "hoop full",
+          "y": "left_leg/right_leg",
+          "f": "https://images-api.printify.com/mockup/6a079593e006ab566109c4ac/88685/51926/basketball-rib-shorts-drop-slot.jpg?camera_label=front",
+          "b": "https://images-api.printify.com/mockup/6a079593e006ab566109c4ac/88685/51928/basketball-rib-shorts-drop-slot.jpg?camera_label=back"
+        },
+        {
+          "t": "hoop half",
+          "y": "left_leg",
+          "f": "https://images-api.printify.com/mockup/6a0795a944285bcfb5080abd/88685/51926/basketball-rib-shorts-drop-slot.jpg?camera_label=front",
+          "b": "https://images-api.printify.com/mockup/6a0795a944285bcfb5080abd/88685/51928/basketball-rib-shorts-drop-slot.jpg?camera_label=back"
+        },
+        {
+          "t": "puffer single",
+          "y": "front/back/front_right_sleeve",
+          "f": "https://images-api.printify.com/mockup/6a0795ad14136fc0de0e0178/77830/36536/mens-puffer-jacket-drop-slot.jpg?camera_label=front",
+          "b": "https://images-api.printify.com/mockup/6a0795ad14136fc0de0e0178/77830/36540/mens-puffer-jacket-drop-slot.jpg?camera_label=back"
         }
       ]
     }
