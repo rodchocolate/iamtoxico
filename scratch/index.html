@@ -153,8 +153,10 @@ function renderTiles(data) {
   });
 }
 
-const __tilesEl = document.getElementById('tiles-data');
-renderTiles(__tilesEl ? JSON.parse(__tilesEl.textContent) : {rows: []});
+document.addEventListener('DOMContentLoaded', () => {
+  const __tilesEl = document.getElementById('tiles-data');
+  renderTiles(__tilesEl ? JSON.parse(__tilesEl.textContent) : {rows: []});
+});
 </script>
 
 <!-- TILES:BEGIN — managed by hermes prototype skill; do not hand-edit -->
