@@ -1,0 +1,7 @@
+# Allow JSON files to be served as data (some cPanel/ModSecurity setups
+# return 500 on bare .json without an explicit MIME type).
+AddType application/json .json
+
+<Files "*.json">
+    Require all granted
+</Files>
