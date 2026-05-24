@@ -14,7 +14,7 @@ on:
       deploy_path:
         description: 'Remote path on GoDaddy'
         required: true
-        default: '/public_html/iamtoxico.com/'
+        default: '/iamtoxico.com/'
         type: string
       dry_run:
         description: 'Dry run (preview only, no actual upload)'
@@ -55,7 +55,7 @@ jobs:
           FTP_HOST: ${{ secrets.GODADDY_SFTP_HOST }}
           FTP_USER: ${{ secrets.GODADDY_SFTP_USER }}
           FTP_PASS: ${{ secrets.GODADDY_SFTP_PASSWORD }}
-          DEPLOY_PATH: ${{ inputs.deploy_path || '/public_html/iamtoxico.com/' }}
+          DEPLOY_PATH: ${{ inputs.deploy_path || '/iamtoxico.com/' }}
           DRY_RUN: ${{ inputs.dry_run || false }}
         run: |
           sudo apt-get install -y lftp > /dev/null 2>&1
@@ -97,7 +97,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
           echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| **Target** | \`${{ inputs.deploy_path || '/public_html/iamtoxico.com/' }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| **Target** | \`${{ inputs.deploy_path || '/iamtoxico.com/' }}\` |" >> $GITHUB_STEP_SUMMARY
           echo "| **Dry Run** | ${{ inputs.dry_run || false }} |" >> $GITHUB_STEP_SUMMARY
           echo "| **Commit** | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
           echo "| **By** | ${{ github.actor }} |" >> $GITHUB_STEP_SUMMARY
