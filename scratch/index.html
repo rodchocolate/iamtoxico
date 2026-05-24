@@ -137,27 +137,23 @@ function tileHtml(p) {
          '</div>';
 }
 
-fetch('tiles.json?t=' + Date.now())
-  .then(r => r.json())
-  .then(data => {
-    const main = document.getElementById('main');
-    (data.rows || []).forEach(row => {
-      if (row.label) {
-        const lbl = document.createElement('div');
-        lbl.className = 'row-label';
-        lbl.textContent = row.label;
-        main.appendChild(lbl);
-      }
-      const grid = document.createElement('div');
-      grid.className = 'grid';
-      grid.innerHTML = (row.tiles || []).map(tileHtml).join('');
-      main.appendChild(grid);
-    });
-  })
-  .catch(err => {
-    document.getElementById('main').innerHTML =
-      '<div class="row-label">tiles.json failed to load: ' + err + '</div>';
+function renderTiles(data) {
+  const main = document.getElementById('main');
+  (data.rows || []).forEach(row => {
+    if (row.label) {
+      const lbl = document.createElement('div');
+      lbl.className = 'row-label';
+      lbl.textContent = row.label;
+      main.appendChild(lbl);
+    }
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+    grid.innerHTML = (row.tiles || []).map(tileHtml).join('');
+    main.appendChild(grid);
   });
+}
 </script>
+<script src="tiles.js?t=20260524"></script>
+<script>renderTiles(window.TILES || {rows: []});</script>
 </body>
 </html>

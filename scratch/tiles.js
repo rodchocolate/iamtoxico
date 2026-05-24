@@ -1,4 +1,4 @@
-{
+window.TILES = {
   "rows": [
     {
       "label": "hoodies — big picture / pattern / mirror",
@@ -9,4 +9,4 @@
       ]
     }
   ]
-}
+};
