@@ -40,7 +40,10 @@
   }
   .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
   .card .img-wrap { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }
+  .card .img-wrap a.img-link { display: block; width: 100%; height: 100%; }
   .card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+  a.collection-link { color: inherit; text-decoration: none; }
+  a.collection-link:hover { color: #ffc800; text-decoration: underline; }
   .card .img-wrap img.back { position: absolute; inset: 0; opacity: 0; }
   .card:hover .img-wrap img.front { opacity: 0; }
   .card:hover .img-wrap img.back  { opacity: 1; }
@@ -72,11 +75,14 @@
 <script>
 function tileHtml(p) {
   const empty = !p.f;
-  const imgs = empty
+  let imgs = empty
     ? 'mockup pending'
     : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
       (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
-  const buy = p.u ? '<a class="buy" href="' + p.u + '" target="_blank">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
+  // image -> product page (p.u); plain image when no URL yet (staging)
+  if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
+  // buy button -> prefilled checkout (p.buy), separate from the product-page image link
+  const buy = p.buy ? '<a class="buy" href="' + p.buy + '" target="_blank" rel="noopener">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
   return '<div class="card' + (empty ? ' empty' : '') + '">' +
            '<div class="img-wrap">' + imgs + '</div>' +
            '<div class="info">' +
@@ -90,7 +96,16 @@ function renderTiles(data) {
   (data.rows || []).forEach(row => {
     if (row.label) {
       const lbl = document.createElement('div');
-      lbl.className = 'row-label'; lbl.textContent = row.label;
+      lbl.className = 'row-label';
+      // row header -> collection page (row.href); plain text when no URL yet (staging)
+      if (row.href) {
+        const a = document.createElement('a');
+        a.href = row.href; a.target = '_blank'; a.rel = 'noopener';
+        a.className = 'collection-link'; a.textContent = row.label + ' →';
+        lbl.appendChild(a);
+      } else {
+        lbl.textContent = row.label;
+      }
       main.appendChild(lbl);
     }
     const grid = document.createElement('div');
