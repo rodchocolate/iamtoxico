@@ -6453,7 +6453,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14a1824d64bb2fb304d1b3/74644/19527/glown-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6465,7 +6465,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14a40645ee82bb4908f2d0/74644/19527/glown-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6477,7 +6477,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14a68701960a72e9068350/74644/19527/glown-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6489,7 +6489,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14a90d01960a72e90684b1/72926/16656/glown-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6501,7 +6501,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14ab8b3088414d8a0b05a0/72926/16656/glown-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
