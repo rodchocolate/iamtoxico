@@ -6561,7 +6561,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf044d3fef4d805e47c/74644/19527/eddy-hoodie-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6573,7 +6573,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf0a3121035a2078dcf/74644/19527/eddy-hoodie-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6585,7 +6585,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf055cf9d0e07013bf6/74644/19527/eddy-hoodie-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6597,7 +6597,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf055cf9d0e07013bf7/72926/16656/eddy-jogger-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6609,7 +6609,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf05a08221ca605cbf1/72926/16656/eddy-jogger-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6621,7 +6621,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf03088414d8a0b0e95/72928/16656/eddy-jogger-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6633,7 +6633,7 @@
       "price": 80,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf015f6f0f8f709c5b5/88685/51926/eddy-shorts-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6645,7 +6645,7 @@
       "price": 80,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf001960a72e9068ea2/88685/51926/eddy-shorts-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6657,7 +6657,7 @@
       "price": 140,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14bcf08a98a37122058349/77830/36536/eddy-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6669,7 +6669,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b51e401223f30cae3d/74644/19527/lee-canyon-hoodie-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6681,7 +6681,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b515f6f0f8f709c756/74644/19527/lee-canyon-hoodie-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6705,7 +6705,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b53088414d8a0b102b/72926/16656/lee-canyon-jogger-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6717,7 +6717,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b56a1f38751c08713a/72926/16656/lee-canyon-jogger-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6729,7 +6729,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b51e401223f30cae3c/72928/16656/lee-canyon-jogger-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6741,7 +6741,7 @@
       "price": 80,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b545ee82bb4909011e/88685/51926/lee-canyon-shorts-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6753,7 +6753,7 @@
       "price": 80,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b5fc16719b1d02824a/88685/51926/lee-canyon-shorts-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -6765,7 +6765,7 @@
       "price": 140,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a14c0b555cf9d0e07013d9b/77830/36536/lee-canyon-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
