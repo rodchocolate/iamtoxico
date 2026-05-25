@@ -22,6 +22,13 @@ on:
         default: false
         type: boolean
 
+# Serialize deploys so overlapping pushes (drop publish + backfill sweep) can't
+# clobber each other on GoDaddy. Queue rather than cancel — each upload finishes
+# atomically, and the newest queued run deploys last so live ends on latest content.
+concurrency:
+  group: deploy-godaddy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     name: SFTP Deploy
