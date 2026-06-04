@@ -7425,7 +7425,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a21d679755625b97004d3fc/74644/19527/art-hoodie-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -7437,7 +7437,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a21d679fe85de6d840ceebc/74644/19527/art-hoodie-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -7461,7 +7461,7 @@
       "price": 120,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a21d67872be63989c0bca96/72926/16656/art-jogger-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
@@ -7509,7 +7509,7 @@
       "price": 80,
       "category": "instant-drop",
       "margin_tier": "pod",
-      "image": "",
+      "image": "https://images.printify.com/mockup/6a21d6786b3a8e065707cf03/88685/51926/art-shorts-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
       "url": ""
