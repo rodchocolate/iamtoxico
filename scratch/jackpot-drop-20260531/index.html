@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — jackpot — drop 20260531</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Space Grotesk', sans-serif; color: #fff;
+    background: #0b0b0b url('../../bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before { content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }
+  header, main, footer { position: relative; z-index: 1; }
+  header {
+    padding: 1.5rem 2rem; display: flex; align-items: baseline; gap: 1rem;
+    max-width: 1280px; margin: 0 auto;
+  }
+  header h1 { font-size: 1.6rem; font-weight: 600; letter-spacing: .04em; text-transform: lowercase; }
+  .back { font-size: .8rem; opacity: .6; color: #fff; text-decoration: none; }
+  .back:hover { opacity: 1; color: #ffc800; }
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+  .grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.4rem;
+  }
+  .card {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; overflow: hidden; position: relative; transition: transform .25s, border-color .25s;
+  }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
+  .card .img-wrap { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }
+  .card .img-wrap a.img-link { display: block; width: 100%; height: 100%; }
+  .card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+  .card .img-wrap img.back { position: absolute; inset: 0; opacity: 0; }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back  { opacity: 1; }
+  .card.empty .img-wrap {
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em;
+  }
+  .card .info { padding: .9rem 1rem; }
+  .card .title { font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }
+  .card .meta { font-size: .7rem; opacity: .65; text-transform: lowercase; }
+  .card .buy {
+    display: inline-block; margin-top: .5rem; font-size: .72rem; font-weight: 600; color: #ffc800;
+    text-decoration: none; border: 1px solid rgba(255,200,0,.4); padding: .25em .7em; border-radius: 6px;
+  }
+  footer { text-align: center; padding: 1rem; font-size: .7rem; opacity: .5; max-width: 1280px; margin: 0 auto; }
+</style>
+</head>
+<body>
+<header>
+  <h1>jackpot — drop 20260531</h1>
+  <a class="back" href="../">← back to scratch</a>
+</header>
+<main id="main"></main>
+<footer>&copy; 2026 toxico</footer>
+<script>
+function tileHtml(p) {
+  const empty = !p.f;
+  let imgs = empty
+    ? 'mockup pending'
+    : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
+  if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
+  const buy = p.buy ? '<a class="buy" href="' + p.buy + '" target="_blank" rel="noopener">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
+  return '<div class="card' + (empty ? ' empty' : '') + '">' +
+           '<div class="img-wrap">' + imgs + '</div>' +
+           '<div class="info">' +
+             '<div class="title">' + (p.t || '') + '</div>' +
+             '<div class="meta">' + (p.y || '') + '</div>' + buy +
+           '</div>' +
+         '</div>';
+}
+document.addEventListener('DOMContentLoaded', () => {
+  const tiles = JSON.parse(document.getElementById('tiles-data').textContent);
+  document.getElementById('main').innerHTML =
+    '<div class="grid">' + tiles.map(tileHtml).join('') + '</div>';
+});
+</script>
+<script type="application/json" id="tiles-data">
+[
+  {
+    "t": "jackpot Hoodie Single",
+    "y": "$120",
+    "f": "https://images.printify.com/mockup/6a1cb47e279ee4205a07f801/74644/19527/jackpot-hoodie-single.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e279ee4205a07f801/74644/21126/jackpot-hoodie-single.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-hoodie-single",
+    "buy": "https://1tap6m-et.myshopify.com/cart/74644:1"
+  },
+  {
+    "t": "jackpot Hoodie Mirror",
+    "y": "$120",
+    "f": "https://images.printify.com/mockup/6a1cb47e8bd4e7de7f0eba0b/74644/19527/jackpot-hoodie-mirror.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e8bd4e7de7f0eba0b/74644/21126/jackpot-hoodie-mirror.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-hoodie-mirror",
+    "buy": "https://1tap6m-et.myshopify.com/cart/74644:1"
+  },
+  {
+    "t": "jackpot Hoodie Tile",
+    "y": "$120",
+    "f": "https://images.printify.com/mockup/6a1cb47e643735248007ea29/74644/19527/jackpot-hoodie-tile.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e643735248007ea29/74644/21126/jackpot-hoodie-tile.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-hoodie-tile",
+    "buy": "https://1tap6m-et.myshopify.com/cart/74644:1"
+  },
+  {
+    "t": "jackpot Jogger Brickup",
+    "y": "$120",
+    "f": "https://images.printify.com/mockup/6a1cb47ea0d9727f65041172/72926/16656/jackpot-jogger-brickup.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47ea0d9727f65041172/72926/16657/jackpot-jogger-brickup.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-jogger-brickup",
+    "buy": "https://1tap6m-et.myshopify.com/cart/72926:1"
+  },
+  {
+    "t": "jackpot Jogger Tile",
+    "y": "$120",
+    "f": "https://images.printify.com/mockup/6a1cb47e643735248007ea27/72926/16656/jackpot-jogger-tile.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e643735248007ea27/72926/16657/jackpot-jogger-tile.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-jogger-tile",
+    "buy": "https://1tap6m-et.myshopify.com/cart/72926:1"
+  },
+  {
+    "t": "jackpot Jogger Single",
+    "y": "$120",
+    "f": "https://images.printify.com/mockup/6a1cb47e643735248007ea28/72928/16656/jackpot-jogger-single.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e643735248007ea28/72928/16657/jackpot-jogger-single.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-jogger-single",
+    "buy": "https://1tap6m-et.myshopify.com/cart/72928:1"
+  },
+  {
+    "t": "jackpot Shorts Full",
+    "y": "$80",
+    "f": "https://images.printify.com/mockup/6a1cb47e1babc69aaa104923/88685/51926/jackpot-shorts-full.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e1babc69aaa104923/88685/51928/jackpot-shorts-full.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-shorts-full",
+    "buy": "https://1tap6m-et.myshopify.com/cart/88685:1"
+  },
+  {
+    "t": "jackpot Shorts Half",
+    "y": "$80",
+    "f": "https://images.printify.com/mockup/6a1cb47e4525ffd573110edc/88685/51926/jackpot-shorts-half.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e4525ffd573110edc/88685/51928/jackpot-shorts-half.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-shorts-half",
+    "buy": "https://1tap6m-et.myshopify.com/cart/88685:1"
+  },
+  {
+    "t": "jackpot Puffer Single",
+    "y": "$140",
+    "f": "https://images.printify.com/mockup/6a1cb47e997906336607f199/77830/36536/jackpot-puffer-single.jpg?camera_label=front",
+    "b": "https://images.printify.com/mockup/6a1cb47e997906336607f199/77830/36540/jackpot-puffer-single.jpg?camera_label=back",
+    "u": "https://1tap6m-et.myshopify.com/products/jackpot-puffer-single",
+    "buy": "https://1tap6m-et.myshopify.com/cart/77828:1"
+  }
+]
+</script>
+</body>
+</html>

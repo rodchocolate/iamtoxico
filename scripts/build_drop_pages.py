@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+"""Build a standalone per-drop page for every row on the scratch board, wire each
+row header to its page (row.href), and keep the scratch index in sync.
+
+- Reads scratch/index.html's inline tiles-data JSON.
+- For each row, writes scratch/<slug>/index.html (only index.html serves from
+  subdirs on this host) — a full-page wrapping grid of just that drop's tiles.
+- Sets row["href"] = "<slug>/" so the scratch renderer makes the header a link.
+- Doubles the row-label font size on the scratch index (.7rem -> 1.4rem).
+
+Idempotent; safe to re-run after new drops land.
+"""
+from __future__ import annotations
+
+import json
+import re
+import unicodedata
+from pathlib import Path
+
+SCRATCH = Path(__file__).resolve().parent.parent / "scratch"
+INDEX = SCRATCH / "index.html"
+
+
+def slugify(s: str) -> str:
+    s = s.replace("—", "-").replace("#", "")
+    s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
+    s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
+    return s or "drop"
+
+
+PAGE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — {label}</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{
+    font-family: 'Space Grotesk', sans-serif; color: #fff;
+    background: #0b0b0b url('../../bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }}
+  body::before {{ content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }}
+  header, main, footer {{ position: relative; z-index: 1; }}
+  header {{
+    padding: 1.5rem 2rem; display: flex; align-items: baseline; gap: 1rem;
+    max-width: 1280px; margin: 0 auto;
+  }}
+  header h1 {{ font-size: 1.6rem; font-weight: 600; letter-spacing: .04em; text-transform: lowercase; }}
+  .back {{ font-size: .8rem; opacity: .6; color: #fff; text-decoration: none; }}
+  .back:hover {{ opacity: 1; color: #ffc800; }}
+  main {{ padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }}
+  .grid {{
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.4rem;
+  }}
+  .card {{
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; overflow: hidden; position: relative; transition: transform .25s, border-color .25s;
+  }}
+  .card:hover {{ transform: translateY(-4px); border-color: rgba(255,255,255,.25); }}
+  .card .img-wrap {{ position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }}
+  .card .img-wrap a.img-link {{ display: block; width: 100%; height: 100%; }}
+  .card .img-wrap img {{ width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }}
+  .card .img-wrap img.back {{ position: absolute; inset: 0; opacity: 0; }}
+  .card:hover .img-wrap img.front {{ opacity: 0; }}
+  .card:hover .img-wrap img.back  {{ opacity: 1; }}
+  .card.empty .img-wrap {{
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em;
+  }}
+  .card .info {{ padding: .9rem 1rem; }}
+  .card .title {{ font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }}
+  .card .meta {{ font-size: .7rem; opacity: .65; text-transform: lowercase; }}
+  .card .buy {{
+    display: inline-block; margin-top: .5rem; font-size: .72rem; font-weight: 600; color: #ffc800;
+    text-decoration: none; border: 1px solid rgba(255,200,0,.4); padding: .25em .7em; border-radius: 6px;
+  }}
+  footer {{ text-align: center; padding: 1rem; font-size: .7rem; opacity: .5; max-width: 1280px; margin: 0 auto; }}
+</style>
+</head>
+<body>
+<header>
+  <h1>{label}</h1>
+  <a class="back" href="../">← back to scratch</a>
+</header>
+<main id="main"></main>
+<footer>&copy; 2026 toxico</footer>
+<script>
+function tileHtml(p) {{
+  const empty = !p.f;
+  let imgs = empty
+    ? 'mockup pending'
+    : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
+  if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
+  const buy = p.buy ? '<a class="buy" href="' + p.buy + '" target="_blank" rel="noopener">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
+  return '<div class="card' + (empty ? ' empty' : '') + '">' +
+           '<div class="img-wrap">' + imgs + '</div>' +
+           '<div class="info">' +
+             '<div class="title">' + (p.t || '') + '</div>' +
+             '<div class="meta">' + (p.y || '') + '</div>' + buy +
+           '</div>' +
+         '</div>';
+}}
+document.addEventListener('DOMContentLoaded', () => {{
+  const tiles = JSON.parse(document.getElementById('tiles-data').textContent);
+  document.getElementById('main').innerHTML =
+    '<div class="grid">' + tiles.map(tileHtml).join('') + '</div>';
+}});
+</script>
+<script type="application/json" id="tiles-data">
+{tiles_json}
+</script>
+</body>
+</html>
+"""
+
+
+def main() -> None:
+    html = INDEX.read_text(encoding="utf-8")
+    m = re.search(r'(<script type="application/json" id="tiles-data">)(.*?)(</script>)', html, re.S)
+    if not m:
+        raise SystemExit("tiles-data block not found")
+    data = json.loads(m.group(2))
+
+    built = 0
+    for row in data.get("rows", []):
+        label = row.get("label", "")
+        if not label:
+            continue
+        slug = slugify(label)
+        row["href"] = f"{slug}/"
+        page = PAGE.format(label=label, tiles_json=json.dumps(row.get("tiles", []), indent=2))
+        out = SCRATCH / slug / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page, encoding="utf-8")
+        built += 1
+
+    # double the header font size on the scratch index
+    html = re.sub(r"(\.row-label \{ font-size: )\.7rem", r"\g<1>1.4rem", html, count=1)
+
+    # write the href-augmented tiles-data back
+    new_block = m.group(1) + "\n" + json.dumps(data, indent=2) + "\n" + m.group(3)
+    html = html[:m.start()] + new_block + html[m.end():]
+    INDEX.write_text(html, encoding="utf-8")
+    print(f"built {built} per-drop pages; index updated (hrefs + 1.4rem labels)")
+
+
+if __name__ == "__main__":
+    main()
