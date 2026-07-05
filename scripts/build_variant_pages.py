@@ -89,10 +89,11 @@ def card(product: dict, shop_label: str) -> str:
 </div>"""
 
 
-def section(label: str, cards: list[str]) -> str:
+def section(label: str, cards: list[str], wrap: bool = False) -> str:
     if not cards:
         return ""
-    return f'<div class="row-label">{html.escape(label)}</div>\n<div class="grid">\n' + "\n".join(cards) + "\n</div>"
+    cls = "grid wrap" if wrap else "grid"
+    return f'<div class="row-label">{html.escape(label)}</div>\n<div class="{cls}">\n' + "\n".join(cards) + "\n</div>"
 
 
 def page(title: str, sections: list[str]) -> str:
@@ -123,6 +124,8 @@ def page(title: str, sections: list[str]) -> str:
   .row-label {{ font-size: 1.4rem; opacity: .55; text-transform: uppercase; letter-spacing: .12em; margin: 1.5rem 0 .6rem; }}
   .grid {{ display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2.8rem) / 3);
     gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: thin; }}
+  .grid.wrap {{ grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: unset;
+    overflow-x: visible; scroll-snap-type: none; }}
   .card {{ background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
     border-radius: 12px; overflow: hidden; position: relative; scroll-snap-align: start;
     transition: transform .25s, border-color .25s; }}
@@ -153,16 +156,20 @@ def page(title: str, sections: list[str]) -> str:
 
 
 def build_bags(live: list[dict], scratch: list[dict]) -> str:
-    sections = design_sections(scratch, BAG_LABELS)
-    for style, pat in BAG_STYLES:
-        cards = []
-        for shop_label, prods in (("live", live), ("scratch", scratch)):
-            for p in prods:
-                title = p.get("title", "")
-                if pat.search(title) and not PREVIEW_RX.match(title):
-                    cards.append(card(p, shop_label))
-        sections.append(section(f"{style} — base templates", cards))
-    return page("bags", sections)
+    """Backpack 01 decision board: originals are decided (waistband-color fill
+    applied); every other design shows as a Backpack 01 card awaiting a call."""
+    bp01 = {}
+    for p in scratch:
+        m = re.match(r"^(?P<design>.+) — Backpack 01$", p.get("title", ""))
+        if m:
+            bp01[m.group("design")] = p
+    decided = [card(bp01[d], "scratch") for d in DESIGN_ORDER if d in bp01]
+    rest = [card(bp01[d], "scratch")
+            for d in sorted((k for k in bp01 if k not in DESIGN_ORDER), key=str.lower)]
+    return page("bags", [
+        section("originals — decided — waistband color fill", decided),
+        section("unaddressed — pick per design", rest, wrap=True),
+    ])
 
 
 def hoodie_design(title: str) -> str:
