@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — bags</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Space Grotesk', sans-serif; color: #fff;
+    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before { content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }
+  header, main, footer { position: relative; z-index: 1; }
+  header { padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
+    max-width: 1280px; margin: 0 auto; }
+  header h1 { font-size: 1.4rem; font-weight: 600; letter-spacing: .06em; text-transform: lowercase; }
+  .badge { background: rgba(255,200,0,.15); color: #ffc800; font-size: .7rem; font-weight: 600;
+    text-transform: uppercase; padding: .3em .7em; border-radius: 6px; letter-spacing: .08em; }
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+  .row-label { font-size: 1.4rem; opacity: .55; text-transform: uppercase; letter-spacing: .12em; margin: 1.5rem 0 .6rem; }
+  .grid { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2.8rem) / 3);
+    gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: thin; }
+  .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; overflow: hidden; position: relative; scroll-snap-align: start;
+    transition: transform .25s, border-color .25s; }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
+  .card .img-wrap { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }
+  .card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+  .card .img-wrap img.back { position: absolute; inset: 0; opacity: 0; }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back { opacity: 1; }
+  .card.empty .img-wrap { display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em; }
+  .card .info { padding: .9rem 1rem; }
+  .card .title { font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }
+  .card .meta { font-size: .7rem; opacity: .65; text-transform: lowercase; }
+  .card .pid { font-size: .65rem; opacity: .45; font-family: monospace; margin-top: .3rem; user-select: all; }
+  footer { padding: 2rem; text-align: center; font-size: .7rem; opacity: .45; }
+</style>
+</head>
+<body>
+<header><h1>toxico — bags</h1><span class="badge">internal</span></header>
+<main>
+<div class="row-label">Backpack</div>
+<div class="grid">
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/69f146845dc6b585ce0d3a29/80776/55210/multifunctional-backpack-02.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/69f146845dc6b585ce0d3a29/80776/53130/multifunctional-backpack-02.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Multifunctional Backpack 02</div>
+    <div class="meta">live · unpublished</div>
+    <div class="pid">69f146845dc6b585ce0d3a29</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/69f1467d5dc6b585ce0d3a26/80776/55210/multifunctional-backpack-01.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/69f1467d5dc6b585ce0d3a26/80776/53130/multifunctional-backpack-01.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Multifunctional Backpack 01</div>
+    <div class="meta">live · unpublished</div>
+    <div class="pid">69f1467d5dc6b585ce0d3a26</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a07958dd5a67e96790937f4/80776/55210/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a07958dd5a67e96790937f4/80776/53130/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Multifunctional Diaper Backpack — drop slot</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a07958dd5a67e96790937f4</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a07958c8aacac07a3008be7/80776/55210/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a07958c8aacac07a3008be7/80776/53130/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Multifunctional Diaper Backpack — drop slot</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a07958c8aacac07a3008be7</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/69ed7f7bdd97afd4e008faab/80776/55210/copy-of-multifunctional-diaper-backpack.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/69ed7f7bdd97afd4e008faab/80776/53130/copy-of-multifunctional-diaper-backpack.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Copy of Multifunctional Diaper Backpack</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">69ed7f7bdd97afd4e008faab</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/69ed7f2f533460c7d203b75b/80776/55210/multifunctional-diaper-backpack.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/69ed7f2f533460c7d203b75b/80776/53130/multifunctional-diaper-backpack.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Multifunctional Diaper Backpack</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">69ed7f2f533460c7d203b75b</div>
+  </div>
+</div>
+</div>
+<div class="row-label">Leather Travel Bag</div>
+<div class="grid">
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/69f148508e4d6627ed0e58ed/164441/120405/leather-travel-bag-01.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/69f148508e4d6627ed0e58ed/164441/120379/leather-travel-bag-01.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Leather Travel Bag 01</div>
+    <div class="meta">live · unpublished</div>
+    <div class="pid">69f148508e4d6627ed0e58ed</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/69f146738e4d6627ed0e57d4/164441/120405/leather-travel-bag-02.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/69f146738e4d6627ed0e57d4/164441/120379/leather-travel-bag-02.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Leather Travel Bag 02</div>
+    <div class="meta">live · unpublished</div>
+    <div class="pid">69f146738e4d6627ed0e57d4</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a07958a1f2208ca9b041c0c/164441/120405/leather-travel-bag-drop-slot.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a07958a1f2208ca9b041c0c/164441/120379/leather-travel-bag-drop-slot.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Leather Travel Bag — drop slot</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a07958a1f2208ca9b041c0c</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a07958014136fc0de0e016f/164441/120405/leather-travel-bag-drop-slot.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a07958014136fc0de0e016f/164441/120379/leather-travel-bag-drop-slot.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Leather Travel Bag — drop slot</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a07958014136fc0de0e016f</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/69eff366ef4144b4b20074f2/164441/120405/copy-of-leather-travel-bag.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/69eff366ef4144b4b20074f2/164441/120379/copy-of-leather-travel-bag.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Copy of Leather Travel Bag</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">69eff366ef4144b4b20074f2</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/69ed8058fd5578489a07391a/164441/120405/leather-travel-bag.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/69ed8058fd5578489a07391a/164441/120379/leather-travel-bag.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Leather Travel Bag</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">69ed8058fd5578489a07391a</div>
+  </div>
+</div>
+</div>
+<div class="row-label">Laundry Bag</div>
+<div class="grid">
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/69f1468e5dc6b585ce0d3a2c/79956/44695/laundry-bag-02.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/69f1468e5dc6b585ce0d3a2c/79956/44700/laundry-bag-02.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Laundry Bag 02</div>
+    <div class="meta">live · unpublished</div>
+    <div class="pid">69f1468e5dc6b585ce0d3a2c</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/69f1466c4568b0bfc50be99e/79956/44695/laundry-bag-01.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/69f1466c4568b0bfc50be99e/79956/44700/laundry-bag-01.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Laundry Bag 01</div>
+    <div class="meta">live · unpublished</div>
+    <div class="pid">69f1466c4568b0bfc50be99e</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a0795885d21d707320f7881/79956/44695/laundry-bag-drop-slot.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a0795885d21d707320f7881/79956/44700/laundry-bag-drop-slot.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Laundry Bag — drop slot</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a0795885d21d707320f7881</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/69ed8082fd5578489a073939/79956/44695/copy-of-laundry-bag.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/69ed8082fd5578489a073939/79956/44700/copy-of-laundry-bag.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Copy of Laundry Bag</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">69ed8082fd5578489a073939</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/69ed7dc6e8bc887b9709a7f0/79956/44695/laundry-bag.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/69ed7dc6e8bc887b9709a7f0/79956/44700/laundry-bag.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Laundry Bag</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">69ed7dc6e8bc887b9709a7f0</div>
+  </div>
+</div>
+</div>
+<div class="row-label">Sling Bag</div>
+<div class="grid">
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/69f14664c5dbd5496e011435/110376/120168/sling-bag.jpg?camera_label=front" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Sling Bag</div>
+    <div class="meta">live · unpublished</div>
+    <div class="pid">69f14664c5dbd5496e011435</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a0795860852663cf009cb91/110376/120168/sling-bag-drop-slot.jpg?camera_label=front" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Sling Bag — drop slot</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a0795860852663cf009cb91</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/69ed81f7dd97afd4e008fca9/110376/120168/sling-bag.jpg?camera_label=front" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Sling Bag</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">69ed81f7dd97afd4e008fca9</div>
+  </div>
+</div>
+</div>
+</main>
+<footer>generated 2026-07-05 20:12 UTC — mockups refresh on rerun of scripts/build_variant_pages.py</footer>
+</body>
+</html>

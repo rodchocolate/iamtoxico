@@ -132,9 +132,12 @@ def select_mockup_url(images: Sequence[Dict[str, Any]], labels: Sequence[str]) -
 def build_print_areas_with_image(
     source_detail: Dict[str, Any],
     new_image_id: str,
+    keep_image_ids: Sequence[str] = (),
 ) -> List[Dict[str, Any]]:
     """Clone the source product's print_areas, swapping every placeholder's
-    image id for new_image_id while preserving x/y/scale/angle/pattern."""
+    image id for new_image_id while preserving x/y/scale/angle/pattern.
+    Layers whose id is in keep_image_ids (e.g. the rasterized pocket text)
+    keep their own id and placement instead of receiving the new design."""
     areas: List[Dict[str, Any]] = []
     for print_area in source_detail.get("print_areas", []):
         placeholders: List[Dict[str, Any]] = []
@@ -143,7 +146,8 @@ def build_print_areas_with_image(
             for image in placeholder.get("images", []):
                 if "-" in str(image.get("id", "")):
                     continue
-                entry: Dict[str, Any] = {"id": new_image_id}
+                keep = image.get("id") in keep_image_ids
+                entry: Dict[str, Any] = {"id": image["id"] if keep else new_image_id}
                 for key in ("x", "y", "scale", "angle", "pattern"):
                     if key in image:
                         entry[key] = copy.deepcopy(image[key])
@@ -193,8 +197,9 @@ def ensure_slot(
     slot_tag: str,
     drop_tag: str,
     existing_staging_products: List[Dict[str, Any]],
+    keep_image_ids: Sequence[str] = (),
 ) -> Dict[str, Any]:
-    print_areas = build_print_areas_with_image(source_detail, new_image_id)
+    print_areas = build_print_areas_with_image(source_detail, new_image_id, keep_image_ids)
     title_base = derive_card_title(template["members"])
     tags = ["toxico", "drop-preview", slot_tag, drop_tag]
     existing = find_slot(existing_staging_products, slot_tag)
@@ -437,6 +442,13 @@ def main() -> int:
     templates = json.loads(args.templates.read_text(encoding="utf-8"))
     print(f"loaded {len(templates)} templates from {args.templates.name}", flush=True)
 
+    drop_cfg_path = ROOT / "data" / "instant_drop.json"
+    keep_image_ids: List[str] = []
+    if drop_cfg_path.is_file():
+        pocket_text_id = json.loads(drop_cfg_path.read_text(encoding="utf-8")).get("pocket_text_image_id")
+        if pocket_text_id:
+            keep_image_ids.append(pocket_text_id)
+
     today_str = date.today().strftime("%Y%m%d")
     output_path = next_output_path(ROOT, today_str)
     n = int(output_path.stem.split("_")[1])
@@ -487,6 +499,7 @@ def main() -> int:
                 slot_tag=slot_tag,
                 drop_tag=drop_tag,
                 existing_staging_products=existing_staging,
+                keep_image_ids=keep_image_ids,
             )
             slots.append({
                 "id": str(slot["id"]),

@@ -1,0 +1,72 @@
+{
+ "_note": "Drives the hermes instant_drop skill (and scripts/drop_and_publish.py CLI, which mirrors these labels via templates.json product_label). Each emailed design is applied across these 9 templates (subset of data/templates.json, matched by hash) and published as live products. Title = '{design} {label}', e.g. 'Dreamer Hoodie Single'. Treatments confirmed from layout fields 2026-05-24; labels set 2026-05-25.",
+ "live_shop_id": 26651009,
+ "staging_shop_id": 22994552,
+ "products": [
+  {
+   "name": "apres single",
+   "label": "Hoodie Single",
+   "hash": "f3882e79bb",
+   "blueprint_id": 592,
+   "price_usd": 120
+  },
+  {
+   "name": "apres mirror",
+   "label": "Hoodie Mirror",
+   "hash": "4565deffa9",
+   "blueprint_id": 592,
+   "price_usd": 120
+  },
+  {
+   "name": "apres tile",
+   "label": "Hoodie Tile",
+   "hash": "6ef5eda081",
+   "blueprint_id": 592,
+   "price_usd": 120
+  },
+  {
+   "name": "harem brickup",
+   "label": "Jogger Brickup",
+   "hash": "ee33ed7d0d",
+   "blueprint_id": 591,
+   "price_usd": 120
+  },
+  {
+   "name": "harem tile",
+   "label": "Jogger Tile",
+   "hash": "71d1f8bdc4",
+   "blueprint_id": 591,
+   "price_usd": 120
+  },
+  {
+   "name": "harem single",
+   "label": "Jogger Single",
+   "hash": "5defb7a28a",
+   "blueprint_id": 591,
+   "price_usd": 120
+  },
+  {
+   "name": "hoop full",
+   "label": "Shorts Full",
+   "hash": "6dc5367c1b",
+   "blueprint_id": 1078,
+   "price_usd": 80
+  },
+  {
+   "name": "hoop half",
+   "label": "Shorts Half",
+   "hash": "d87df4b582",
+   "blueprint_id": 1078,
+   "price_usd": 80
+  },
+  {
+   "name": "puffer single",
+   "label": "Puffer Single",
+   "hash": "6c66d70fb3",
+   "blueprint_id": 934,
+   "price_usd": 140
+  }
+ ],
+ "pocket_text_image_id": "6a4ab8b35af2591d6603eb65",
+ "_note_pocket_text": "Rasterized pocket text (Abel #d4b655, from 69dc0d023ff9b45b450485fa's smaller layer; editable master kept on that staging product). instant_drop passes this id as keep_image_ids so the clone preserves the layer instead of swapping it for the drop design. Printify API cannot round-trip editor text layers (400: Provided images do not exist)."
+}
