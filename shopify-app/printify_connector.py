@@ -69,8 +69,9 @@ class PrintifyConnector:
                 break  # non-paginated list endpoint
             items = data.get(key, data.get("data", []))
             results.extend(items)
-            last_page = data.get("last_page", 1)
-            if page >= last_page:
+            # Don't trust last_page/total — Printify reports stale values right
+            # after bulk product creation. A short (or empty) page is the end.
+            if len(items) < 50:
                 break
             page += 1
         return results

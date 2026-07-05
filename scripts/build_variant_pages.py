@@ -34,6 +34,32 @@ BAG_STYLES = [
 
 HOODIE_BLUEPRINT = 592
 
+# Per-design preview products created in the scratch shop ("<design> — <label>")
+# so a bag can be picked per original and a replacement hoodie template chosen.
+DESIGN_ORDER = ["Arctic River", "Cyan Glow", "Frozen Sky", "Hold Cards", "Hot Oil", "Toxico"]
+BAG_LABELS = ["Backpack 01", "Backpack 02", "Leather Travel Bag 01",
+              "Leather Travel Bag 02", "Laundry Bag", "Sling Bag"]
+HOODIE_CANDIDATE_LABELS = ["Pullover Hoodie", "Hooded Long Sleeve Tee", "Warmup Hoodie"]
+PREVIEW_RX = re.compile(
+    rf"^(?P<design>{'|'.join(DESIGN_ORDER)}) — "
+    rf"(?P<label>{'|'.join(BAG_LABELS + HOODIE_CANDIDATE_LABELS)})$"
+)
+
+
+def design_sections(scratch: list[dict], labels: list[str]) -> list[str]:
+    """One row per original design, cards in fixed label order."""
+    by_key = {}
+    for p in scratch:
+        m = PREVIEW_RX.match(p.get("title", ""))
+        if m and m.group("label") in labels:
+            by_key[(m.group("design"), m.group("label"))] = p
+    sections = []
+    for design in DESIGN_ORDER:
+        cards = [card(by_key[(design, lb)], "scratch")
+                 for lb in labels if (design, lb) in by_key]
+        sections.append(section(design, cards))
+    return sections
+
 
 def mockup_urls(product: dict) -> tuple[str, str]:
     imgs = [str(i.get("src", "")) for i in product.get("images", []) if i.get("src")]
@@ -127,14 +153,15 @@ def page(title: str, sections: list[str]) -> str:
 
 
 def build_bags(live: list[dict], scratch: list[dict]) -> str:
-    sections = []
+    sections = design_sections(scratch, BAG_LABELS)
     for style, pat in BAG_STYLES:
         cards = []
         for shop_label, prods in (("live", live), ("scratch", scratch)):
             for p in prods:
-                if pat.search(p.get("title", "")):
+                title = p.get("title", "")
+                if pat.search(title) and not PREVIEW_RX.match(title):
                     cards.append(card(p, shop_label))
-        sections.append(section(style, cards))
+        sections.append(section(f"{style} — base templates", cards))
     return page("bags", sections)
 
 
@@ -145,6 +172,7 @@ def hoodie_design(title: str) -> str:
 
 
 def build_hoodies(live: list[dict], scratch: list[dict]) -> str:
+    sections_new = design_sections(scratch, HOODIE_CANDIDATE_LABELS)
     live_hoodies = [p for p in live if p.get("blueprint_id") == HOODIE_BLUEPRINT]
     groups: dict[str, list[str]] = {}
     order: list[str] = []
@@ -154,7 +182,10 @@ def build_hoodies(live: list[dict], scratch: list[dict]) -> str:
             groups[key] = []
             order.append(key)
         groups[key].append(card(p, "live"))
-    sections = [section(k, groups[k]) for k in order]
+    sections = ['<div class="row-label">— new template candidates —</div>']
+    sections += sections_new
+    sections.append('<div class="row-label">— current live hoodies —</div>')
+    sections += [section(k, groups[k]) for k in order]
     template_cards = [card(p, "scratch")
                       for p in scratch if p.get("blueprint_id") == HOODIE_BLUEPRINT]
     sections.append(section("templates — scratch", template_cards))
