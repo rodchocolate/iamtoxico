@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — hoop shorts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Space Grotesk', sans-serif; color: #fff;
+    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before { content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }
+  header, main, footer { position: relative; z-index: 1; }
+  header { padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
+    max-width: 1280px; margin: 0 auto; }
+  header h1 { font-size: 1.4rem; font-weight: 600; letter-spacing: .06em; text-transform: lowercase; }
+  .badge { background: rgba(255,200,0,.15); color: #ffc800; font-size: .7rem; font-weight: 600;
+    text-transform: uppercase; padding: .3em .7em; border-radius: 6px; letter-spacing: .08em; }
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+  .row-label { font-size: 1.4rem; opacity: .55; text-transform: uppercase; letter-spacing: .12em; margin: 1.5rem 0 .6rem; }
+  .grid { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2.8rem) / 3);
+    gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: thin; }
+  .grid.wrap { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: unset;
+    overflow-x: visible; scroll-snap-type: none; }
+  .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; overflow: hidden; position: relative; scroll-snap-align: start;
+    transition: transform .25s, border-color .25s; }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
+  .card .img-wrap { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }
+  .card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+  .card .img-wrap img.back { position: absolute; inset: 0; opacity: 0; }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back { opacity: 1; }
+  .card.empty .img-wrap { display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em; }
+  .card .info { padding: .9rem 1rem; }
+  .card .title { font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }
+  .card .meta { font-size: .7rem; opacity: .65; text-transform: lowercase; }
+  .card .pid { font-size: .65rem; opacity: .45; font-family: monospace; margin-top: .3rem; user-select: all; }
+  footer { padding: 2rem; text-align: center; font-size: .7rem; opacity: .45; }
+</style>
+</head>
+<body>
+<header><h1>toxico — hoop shorts</h1><span class="badge">internal</span></header>
+<main>
+<div class="row-label">originals — text per staging reference</div>
+<div class="grid wrap">
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c3aab529ad989ae0facc7/88685/51926/arctic-river-hoop-shorts.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c3aab529ad989ae0facc7/88685/51928/arctic-river-hoop-shorts.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Arctic River — Hoop Shorts</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a4c3aab529ad989ae0facc7</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c3aaca624acf4390a1858/88685/51926/cyan-glow-hoop-shorts.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c3aaca624acf4390a1858/88685/51928/cyan-glow-hoop-shorts.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Cyan Glow — Hoop Shorts</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a4c3aaca624acf4390a1858</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c3aab56d36019a90c07d4/88685/51926/frozen-sky-hoop-shorts.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c3aab56d36019a90c07d4/88685/51928/frozen-sky-hoop-shorts.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Frozen Sky — Hoop Shorts</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a4c3aab56d36019a90c07d4</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c3aab9cae4f88b10768cc/88685/51926/hold-cards-hoop-shorts.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c3aab9cae4f88b10768cc/88685/51928/hold-cards-hoop-shorts.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Hold Cards — Hoop Shorts</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a4c3aab9cae4f88b10768cc</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c3aab2431a836600bbd90/88685/51926/hot-oil-hoop-shorts.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c3aab2431a836600bbd90/88685/51928/hot-oil-hoop-shorts.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Hot Oil — Hoop Shorts</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a4c3aab2431a836600bbd90</div>
+  </div>
+</div>
+<div class="card">
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c3aabb14c0c157104053a/88685/51926/toxico-hoop-shorts.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c3aabb14c0c157104053a/88685/51928/toxico-hoop-shorts.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="info">
+    <div class="title">Toxico — Hoop Shorts</div>
+    <div class="meta">scratch · unpublished</div>
+    <div class="pid">6a4c3aabb14c0c157104053a</div>
+  </div>
+</div>
+</div>
+</main>
+<footer>generated 2026-07-06 23:33 UTC — mockups refresh on rerun of scripts/build_variant_pages.py</footer>
+</body>
+</html>

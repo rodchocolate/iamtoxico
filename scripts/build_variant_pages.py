@@ -167,9 +167,24 @@ def build_bags(live: list[dict], scratch: list[dict]) -> str:
     rest = [card(bp01[d], "scratch")
             for d in sorted((k for k in bp01 if k not in DESIGN_ORDER), key=str.lower)]
     return page("bags", [
-        section("originals — decided — waistband color fill", decided),
-        section("unaddressed — pick per design", rest, wrap=True),
+        section("originals — waistband color fill", decided),
+        section("drops — dominant color fill", rest, wrap=True),
     ])
+
+
+def build_shorts(scratch: list[dict]) -> str:
+    cards = []
+    by = {}
+    for p in scratch:
+        m = re.match(r"^(?P<design>.+) — Hoop Shorts$", p.get("title", ""))
+        if m:
+            by[m.group("design")] = p
+    for d in DESIGN_ORDER:
+        if d in by:
+            cards.append(card(by[d], "scratch"))
+    for d in sorted((k for k in by if k not in DESIGN_ORDER), key=str.lower):
+        cards.append(card(by[d], "scratch"))
+    return page("hoop shorts", [section("originals — text per staging reference", cards, wrap=True)])
 
 
 def hoodie_design(title: str) -> str:
@@ -206,7 +221,8 @@ def main() -> int:
     scratch = connector.get_products(SCRATCH_SHOP)
     (ROOT / "bags.html").write_text(build_bags(live, scratch), encoding="utf-8")
     (ROOT / "hoodies.html").write_text(build_hoodies(live, scratch), encoding="utf-8")
-    print(f"wrote bags.html + hoodies.html (live={len(live)} scratch={len(scratch)} products)")
+    (ROOT / "shorts.html").write_text(build_shorts(scratch), encoding="utf-8")
+    print(f"wrote bags.html + hoodies.html + shorts.html (live={len(live)} scratch={len(scratch)} products)")
     return 0
 
 
