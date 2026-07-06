@@ -172,6 +172,18 @@ def build_bags(live: list[dict], scratch: list[dict]) -> str:
     ])
 
 
+def build_puffer(scratch: list[dict]) -> str:
+    by = {}
+    for p in scratch:
+        m = re.match(r"^(?P<design>.+) — Puffer Tile$", p.get("title", ""))
+        if m:
+            by[m.group("design")] = p
+    cards = [card(by[d], "scratch") for d in DESIGN_ORDER if d in by]
+    cards += [card(by[d], "scratch")
+              for d in sorted((k for k in by if k not in DESIGN_ORDER), key=str.lower)]
+    return page("puffer", [section("originals — harem tile sizing, slightly larger", cards, wrap=True)])
+
+
 def build_shorts(scratch: list[dict]) -> str:
     cards = []
     by = {}
@@ -222,7 +234,8 @@ def main() -> int:
     (ROOT / "bags.html").write_text(build_bags(live, scratch), encoding="utf-8")
     (ROOT / "hoodies.html").write_text(build_hoodies(live, scratch), encoding="utf-8")
     (ROOT / "shorts.html").write_text(build_shorts(scratch), encoding="utf-8")
-    print(f"wrote bags.html + hoodies.html + shorts.html (live={len(live)} scratch={len(scratch)} products)")
+    (ROOT / "puffer.html").write_text(build_puffer(scratch), encoding="utf-8")
+    print(f"wrote bags/hoodies/shorts/puffer pages (live={len(live)} scratch={len(scratch)} products)")
     return 0
 
 
