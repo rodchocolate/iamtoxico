@@ -1,809 +1,824 @@
 [
-  {
-    "hash": "8d33922e7a",
-    "blueprint_id": 949,
-    "print_provider_id": 47,
-    "layout": "front/pattern/single@0.32, back/pattern/single@0.32",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69f13d42829622ba2a0d0572",
-        "title": "Copy of Copy of Basketball Jersey (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f1456fd0b5e753820fcd9d",
-        "title": "Basketball Jersey 01",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "c223bc1276",
-    "blueprint_id": 949,
-    "print_provider_id": 47,
-    "layout": "front@1.00, back@1.05, back@1.05, back@1.00",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69f13cd76d872900770cf9b8",
-        "title": "Copy of Basketball Jersey (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69f13cb66e573ac4800f85bf",
-        "title": "Basketball Jersey (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbe032e0461edbb50acc58",
-        "title": "Copy of Copy of Copy of Basketball Jersey (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbdd6a70e65284fd01a69f",
-        "title": "Copy of Copy of Basketball Jersey (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbc8547404a25525045278",
-        "title": "Copy of Basketball Jersey (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146d60165b48fda00ff0f",
-        "title": "Basketball Jersey 07",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146d05e82523502029557",
-        "title": "Basketball Jersey 06",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146c25e8252350202954c",
-        "title": "Basketball Jersey 05",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146126d872900770cffb3",
-        "title": "Basketball Jersey 03",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f145c50f50f0059e07793c",
-        "title": "Basketball Jersey 02",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "f001f739dc",
-    "blueprint_id": 2952,
-    "print_provider_id": 14,
-    "layout": "front@1.00, front/single@0.10, back@1.00, left_side@2.11, right_side@2.11",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69eff366ef4144b4b20074f2",
-        "title": "Copy of Leather Travel Bag",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "d08d7e5c66",
-    "blueprint_id": 2686,
-    "print_provider_id": 90,
-    "layout": "body_inside_left@1.17, body_outside_left@1.17, upper_left@0.86, tongue_left@1.79, body_inside_right@1.17, body_outside_right@1.17, upper_right@0.86, tongue_right@1.79",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69efe19f9b62f49cc80e3cc8",
-        "title": "Copy of Copy of Copy of Men's Fur and Leather Boots",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed80ccaf9d97acd20b3881",
-        "title": "Copy of Copy of Men's Fur and Leather Boots",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed7b9ce04fc2c5580260e9",
-        "title": "Copy of Men's Fur and Leather Boots",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed7a7fe04fc2c55802603c",
-        "title": "Men's Fur and Leather Boots",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "8d947598ef",
-    "blueprint_id": 1577,
-    "print_provider_id": 10,
-    "layout": "front@1.48, front_bottom@1.38, front_pocket@1.24, front_pocket_flap@1.24, gusset/single@0.35",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed81f7dd97afd4e008fca9",
-        "title": "Sling Bag",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f14664c5dbd5496e011435",
-        "title": "Sling Bag",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "37a5a8e5e0",
-    "blueprint_id": 1034,
-    "print_provider_id": 10,
-    "layout": "front@1.00, back@1.00",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed8082fd5578489a073939",
-        "title": "Copy of Laundry Bag",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed7dc6e8bc887b9709a7f0",
-        "title": "Laundry Bag",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f1468e5dc6b585ce0d3a2c",
-        "title": "Laundry Bag 02",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f1466c4568b0bfc50be99e",
-        "title": "Laundry Bag 01",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "2c43aff15b",
-    "blueprint_id": 2952,
-    "print_provider_id": 14,
-    "layout": "front@0.74, back@0.74, left_side@1.57, right_side@1.57",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed8058fd5578489a07391a",
-        "title": "Leather Travel Bag",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f148508e4d6627ed0e58ed",
-        "title": "Leather Travel Bag 01",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146738e4d6627ed0e57d4",
-        "title": "Leather Travel Bag 02",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "355025bb7c",
-    "blueprint_id": 1066,
-    "print_provider_id": 14,
-    "layout": "front@0.78, back@0.78, front_pocket@0.77, right_side@0.94, left_side@0.94",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed7f7bdd97afd4e008faab",
-        "title": "Copy of Multifunctional Diaper Backpack",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f1467d5dc6b585ce0d3a26",
-        "title": "Multifunctional Backpack 01",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "d1366dc599",
-    "blueprint_id": 1066,
-    "print_provider_id": 14,
-    "layout": "back@1.00, front_pocket@0.99, right_side@1.21, left_side@1.21",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed7f2f533460c7d203b75b",
-        "title": "Multifunctional Diaper Backpack",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146845dc6b585ce0d3a29",
-        "title": "Multifunctional Backpack 02",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "bbcf11f09e",
-    "blueprint_id": 2768,
-    "print_provider_id": 90,
-    "layout": "left_outside@0.97, left_inside@0.96, left_inside@0.96, left_back@1.64, left_back@1.64, left_tongue@1.50, left_tongue@1.50, right_outside@0.96, right_outside@0.96, right_inside@0.97, right_inside@0.97, right_back@1.64, right_back@1.64, right_tongue@1.50, right_tongue@1.50",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69ed7a3bf449d2d6ec0fe902",
-        "title": "Men's Low-Top Leather Sneakers",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "4af3224d0c",
-    "blueprint_id": 1078,
-    "print_provider_id": 83,
-    "layout": "left_leg@1.11, left_leg/single@0.09, right_leg@1.11",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69e38742471a01f8f504a36b",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dc138ff6f60e22c60de4b0",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dc0ec33ff9b45b4504862c",
-        "title": "Copy of Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbe10ea6714c1fd5035e08",
-        "title": "Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "f3882e79bb",
-    "blueprint_id": 592,
-    "print_provider_id": 83,
-    "layout": "front@0.75, back@0.75, pocket@1.70, pocket/single@0.08, sleeves@0.63, sleeves@0.63, sleeves@0.63, hood@1.09",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69dc1182f6f60e22c60de46b",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dc0d023ff9b45b450485fa",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dc0b7b7404a25525045cb8",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbe2cc631ca9e1ce04c80e",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      }
-    ],
-    "display_name": "apres single"
-  },
-  {
-    "hash": "4565deffa9",
-    "blueprint_id": 592,
-    "print_provider_id": 83,
-    "layout": "front@1.26, front@1.26, back@1.26, back@1.26, pocket@0.86, sleeves@1.05, sleeves@1.05, hood@1.26, hood@1.26",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbe3a2cca0c3b3780bcea2",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbc664cca0c3b3780bcac5",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbbd402d7b2c15060925f5",
-        "title": "Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69d708e8882d261b3e051e4d",
-        "title": "Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69cdb9d7d800f24c8b031004",
-        "title": "Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      }
-    ],
-    "display_name": "apres mirror"
-  },
-  {
-    "hash": "6dc5367c1b",
-    "blueprint_id": 1078,
-    "print_provider_id": 83,
-    "layout": "left_leg@0.92, left_leg@0.92, right_leg@0.92, right_leg@0.92",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbe06462664c63aa04a490",
-        "title": "Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbde3368a4785b920e5f38",
-        "title": "Copy of Copy of Basketball Rib Shorts (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f1486c09f9f6b83d024e1a",
-        "title": "Basketball Rib Shorts 04",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f14864d0b5e753820fcfa1",
-        "title": "Basketball Rib Shorts 03",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f1485e5dc6b585ce0d3b43",
-        "title": "Basketball Rib Shorts 02",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f148598e4d6627ed0e58f4",
-        "title": "Basketball Rib Shorts 01",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146ca6d872900770d0025",
-        "title": "Basketball Rib Shorts 06",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146ba5dc6b585ce0d3a4a",
-        "title": "Basketball Rib Shorts 05",
-        "is_published": true
-      }
-    ],
-    "display_name": "hoop full"
-  },
-  {
-    "hash": "69752750e1",
-    "blueprint_id": 949,
-    "print_provider_id": 47,
-    "layout": "front@1.16",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbc81ee1a26b501e0ac216",
-        "title": "Basketball Jersey (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "2180522092",
-    "blueprint_id": 2706,
-    "print_provider_id": 10,
-    "layout": "front/single@0.27",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69dbbcc22d7b2c15060925d7",
-        "title": "Copy of Cotton Comforter",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69be5005f5cbf780aa041646",
-        "title": "Cotton Comforter",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "82706b450e",
-    "blueprint_id": 592,
-    "print_provider_id": 83,
-    "layout": "pocket@0.85",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69d707639ec0f571b90ccce5",
-        "title": "Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69d5b92fa35f821fb60f5b96",
-        "title": "Copy of Copy of Copy of Fashion Hoodie (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "ee33ed7d0d",
-    "blueprint_id": 591,
-    "print_provider_id": 83,
-    "layout": "right_leg/pattern/single@0.07, left_leg/pattern/single@0.07, pocket/single@0.12",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69b643840855e0c5540e8d53",
-        "title": "Copy of Hold Cards",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "6929b6d89b3dbbfde2088c5a",
-        "title": "Copy of Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69a4628f94ca9fbf1d020f6e",
-        "title": "Cyan Glow Harem Pant",
-        "is_published": true
-      }
-    ],
-    "display_name": "harem brickup"
-  },
-  {
-    "hash": "feaa3cd759",
-    "blueprint_id": 592,
-    "print_provider_id": 83,
-    "layout": "front/pattern/single@0.10, back/pattern/single@0.10, sleeves/pattern/single@0.08, hood/single@0.10",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69b57f2f8c4577fcee0f2bd9",
-        "title": "Brained Apres",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "6ef5eda081",
-    "blueprint_id": 592,
-    "print_provider_id": 83,
-    "layout": "front/single@0.17, back/single@0.21, pocket/single@0.32, sleeves/single@0.17, hood/single@0.21",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69b57f19ef961127590bc947",
-        "title": "Cyan Glow Apres",
-        "is_published": false
-      }
-    ],
-    "display_name": "apres tile"
-  },
-  {
-    "hash": "16ad0cd27a",
-    "blueprint_id": 1338,
-    "print_provider_id": 47,
-    "layout": "front@0.51",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69a8c15a291e3fbf690b4ce6",
-        "title": "Copy of Copy of Men's Sports Warmup Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69a8c0a3c9c0eae143032bff",
-        "title": "Copy of Men's Sports Warmup Hoodie (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "69a8c0649091fb07d5009557",
-        "title": "Men's Sports Warmup Hoodie (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "d87df4b582",
-    "blueprint_id": 1078,
-    "print_provider_id": 83,
-    "layout": "left_leg@0.95",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "69a8bdf917b1fdfce805ed71",
-        "title": "Copy of Basketball Rib Shorts (AOP)",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69f146e009f9f6b83d024d3e",
-        "title": "Basketball Rib Shorts 07",
-        "is_published": true
-      }
-    ],
-    "display_name": "hoop half"
-  },
-  {
-    "hash": "6c66d70fb3",
-    "blueprint_id": 934,
-    "print_provider_id": 14,
-    "layout": "front@0.76, back@0.76, front_right_sleeve@1.00, back_right_sleeve@1.00, front_left_sleeve@1.00, back_left_sleeve@1.00, Collar/single@0.32",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "699d503045b08ecd4a0586d4",
-        "title": "Men's Puffer Jacket (AOP)",
-        "is_published": false
-      }
-    ],
-    "display_name": "puffer single"
-  },
-  {
-    "hash": "b601a36a85",
-    "blueprint_id": 736,
-    "print_provider_id": 10,
-    "layout": "front/single@0.12",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "692a38387eedbbe63d05851b",
-        "title": "Hooded Sherpa Fleece Blanket",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "5b27211432",
-    "blueprint_id": 1382,
-    "print_provider_id": 99,
-    "layout": "front@0.95, front@0.93, neck@1.00",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "6929f98c7b419747000916d7",
-        "title": "Copy of Copy of Unisex Oversized Boxy Tee",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "6929f979eeefa5c3bc0bfc64",
-        "title": "Copy of Unisex Oversized Boxy Tee",
-        "is_published": false
-      },
-      {
-        "shop_id": 22994552,
-        "product_id": "685855b6c5c9efe54a0a9585",
-        "title": "Unisex Oversized Boxy Tee",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "468628cc7c",
-    "blueprint_id": 1926,
-    "print_provider_id": 99,
-    "layout": "front@0.92, neck@1.00",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "690d4152cbcaca97250c276b",
-        "title": "Unisex Hooded Long Sleeve Tee",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "18b3030044",
-    "blueprint_id": 923,
-    "print_provider_id": 14,
-    "layout": "front_right@0.52, front_left@0.52, back/single@0.32, right_sleeve/single@0.44, left_sleeve/single@0.44",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "68eb2d89f88f52634a10b4bc",
-        "title": "Long Sleeve Kimono Robe (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "71d1f8bdc4",
-    "blueprint_id": 591,
-    "print_provider_id": 83,
-    "layout": "right_leg/pattern/single@0.19, left_leg/pattern/single@0.19",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "68ea0502cb19b441780d9728",
-        "title": "Toxico",
-        "is_published": false
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69a4628646730b56700a6ae1",
-        "title": "Toxico Harem Pant",
-        "is_published": true
-      }
-    ],
-    "display_name": "harem tile"
-  },
-  {
-    "hash": "8d5cdb4f9c",
-    "blueprint_id": 1466,
-    "print_provider_id": 51,
-    "layout": "back/single@0.14",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "68585dd350fb3f4f5c0595f4",
-        "title": "Women's Thongs (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "02211a1d95",
-    "blueprint_id": 450,
-    "print_provider_id": 10,
-    "layout": "back/single@0.27, front/single@0.33, right_hood/single@0.22",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "68585bdd2c35f6107c04a28f",
-        "title": "Unisex Pullover Hoodie (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "122dd919ee",
-    "blueprint_id": 1466,
-    "print_provider_id": 51,
-    "layout": "front/single@0.32",
-    "members": [
-      {
-        "shop_id": 22994552,
-        "product_id": "6856fa7c0ea6932ed9007b99",
-        "title": "Women's Thongs (AOP)",
-        "is_published": false
-      }
-    ]
-  },
-  {
-    "hash": "e107d0e619",
-    "blueprint_id": 592,
-    "print_provider_id": 83,
-    "layout": "front/single@0.26, back/single@0.26, pocket/single@0.40, sleeves/single@0.22, hood/single@0.26",
-    "members": [
-      {
-        "shop_id": 26651009,
-        "product_id": "69dab96870e65284fd017291",
-        "title": "Frozen Sky Apres",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69dab94b631ca9e1ce049366",
-        "title": "Hold Cards Apres",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69dab930d21aa5ff4f0de9f7",
-        "title": "Cyan Glow Apres",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69dab91218173cdb1a0cb04a",
-        "title": "Hot Oil Apres",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69dab8f544983647c30c0e4f",
-        "title": "Arctic River Apres",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69dab8da70e65284fd01727d",
-        "title": "Toxico Apres",
-        "is_published": true
-      }
-    ]
-  },
-  {
-    "hash": "5defb7a28a",
-    "blueprint_id": 591,
-    "print_provider_id": 83,
-    "layout": "right_leg/single@0.43, left_leg/single@0.43, pocket@0.69",
-    "members": [
-      {
-        "shop_id": 26651009,
-        "product_id": "69a4629b7fc2996b8d0abe8e",
-        "title": "Frozen Sky Harem Pant",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69a46294eb470f86b105fab3",
-        "title": "Hold Cards Harem Pant",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69a4628c9f7e893e8a0e5219",
-        "title": "Hot Oil Harem Pant",
-        "is_published": true
-      },
-      {
-        "shop_id": 26651009,
-        "product_id": "69a462891ec5ca402c037d02",
-        "title": "Arctic River Harem Pant",
-        "is_published": true
-      }
-    ],
-    "display_name": "harem single"
-  }
+ {
+  "hash": "8d33922e7a",
+  "blueprint_id": 949,
+  "print_provider_id": 47,
+  "layout": "front/pattern/single@0.32, back/pattern/single@0.32",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69f13d42829622ba2a0d0572",
+    "title": "Copy of Copy of Basketball Jersey (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1456fd0b5e753820fcd9d",
+    "title": "Basketball Jersey 01",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "c223bc1276",
+  "blueprint_id": 949,
+  "print_provider_id": 47,
+  "layout": "front@1.00, back@1.05, back@1.05, back@1.00",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69f13cd76d872900770cf9b8",
+    "title": "Copy of Basketball Jersey (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69f13cb66e573ac4800f85bf",
+    "title": "Basketball Jersey (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe032e0461edbb50acc58",
+    "title": "Copy of Copy of Copy of Basketball Jersey (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbdd6a70e65284fd01a69f",
+    "title": "Copy of Copy of Basketball Jersey (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbc8547404a25525045278",
+    "title": "Copy of Basketball Jersey (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146d60165b48fda00ff0f",
+    "title": "Basketball Jersey 07",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146d05e82523502029557",
+    "title": "Basketball Jersey 06",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146c25e8252350202954c",
+    "title": "Basketball Jersey 05",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146126d872900770cffb3",
+    "title": "Basketball Jersey 03",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f145c50f50f0059e07793c",
+    "title": "Basketball Jersey 02",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "f001f739dc",
+  "blueprint_id": 2952,
+  "print_provider_id": 14,
+  "layout": "front@1.00, front/single@0.10, back@1.00, left_side@2.11, right_side@2.11",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69eff366ef4144b4b20074f2",
+    "title": "Copy of Leather Travel Bag",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "d08d7e5c66",
+  "blueprint_id": 2686,
+  "print_provider_id": 90,
+  "layout": "body_inside_left@1.17, body_outside_left@1.17, upper_left@0.86, tongue_left@1.79, body_inside_right@1.17, body_outside_right@1.17, upper_right@0.86, tongue_right@1.79",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69efe19f9b62f49cc80e3cc8",
+    "title": "Copy of Copy of Copy of Men's Fur and Leather Boots",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed80ccaf9d97acd20b3881",
+    "title": "Copy of Copy of Men's Fur and Leather Boots",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed7b9ce04fc2c5580260e9",
+    "title": "Copy of Men's Fur and Leather Boots",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed7a7fe04fc2c55802603c",
+    "title": "Men's Fur and Leather Boots",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "8d947598ef",
+  "blueprint_id": 1577,
+  "print_provider_id": 10,
+  "layout": "front@1.48, front_bottom@1.38, front_pocket@1.24, front_pocket_flap@1.24, gusset/single@0.35",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed81f7dd97afd4e008fca9",
+    "title": "Sling Bag",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f14664c5dbd5496e011435",
+    "title": "Sling Bag",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "37a5a8e5e0",
+  "blueprint_id": 1034,
+  "print_provider_id": 10,
+  "layout": "front@1.00, back@1.00",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed8082fd5578489a073939",
+    "title": "Copy of Laundry Bag",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed7dc6e8bc887b9709a7f0",
+    "title": "Laundry Bag",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1468e5dc6b585ce0d3a2c",
+    "title": "Laundry Bag 02",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1466c4568b0bfc50be99e",
+    "title": "Laundry Bag 01",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "2c43aff15b",
+  "blueprint_id": 2952,
+  "print_provider_id": 14,
+  "layout": "front@0.74, back@0.74, left_side@1.57, right_side@1.57",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed8058fd5578489a07391a",
+    "title": "Leather Travel Bag",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f148508e4d6627ed0e58ed",
+    "title": "Leather Travel Bag 01",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146738e4d6627ed0e57d4",
+    "title": "Leather Travel Bag 02",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "355025bb7c",
+  "blueprint_id": 1066,
+  "print_provider_id": 14,
+  "layout": "front@0.78, back@0.78, front_pocket@0.77, right_side@0.94, left_side@0.94",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed7f7bdd97afd4e008faab",
+    "title": "Copy of Multifunctional Diaper Backpack",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1467d5dc6b585ce0d3a26",
+    "title": "Multifunctional Backpack 01",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "d1366dc599",
+  "blueprint_id": 1066,
+  "print_provider_id": 14,
+  "layout": "back@1.00, front_pocket@0.99, right_side@1.21, left_side@1.21",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed7f2f533460c7d203b75b",
+    "title": "Multifunctional Diaper Backpack",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146845dc6b585ce0d3a29",
+    "title": "Multifunctional Backpack 02",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "bbcf11f09e",
+  "blueprint_id": 2768,
+  "print_provider_id": 90,
+  "layout": "left_outside@0.97, left_inside@0.96, left_inside@0.96, left_back@1.64, left_back@1.64, left_tongue@1.50, left_tongue@1.50, right_outside@0.96, right_outside@0.96, right_inside@0.97, right_inside@0.97, right_back@1.64, right_back@1.64, right_tongue@1.50, right_tongue@1.50",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69ed7a3bf449d2d6ec0fe902",
+    "title": "Men's Low-Top Leather Sneakers",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "4af3224d0c",
+  "blueprint_id": 1078,
+  "print_provider_id": 83,
+  "layout": "left_leg@1.11, left_leg/single@0.09, right_leg@1.11",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69e38742471a01f8f504a36b",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc138ff6f60e22c60de4b0",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc0ec33ff9b45b4504862c",
+    "title": "Copy of Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe10ea6714c1fd5035e08",
+    "title": "Copy of Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "f3882e79bb",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front@0.75, back@0.75, pocket@1.70, pocket/single@0.08, sleeves@0.63, sleeves@0.63, sleeves@0.63, hood@1.09",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc1182f6f60e22c60de46b",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc0d023ff9b45b450485fa",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc0b7b7404a25525045cb8",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe2cc631ca9e1ce04c80e",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   }
+  ],
+  "display_name": "apres single"
+ },
+ {
+  "hash": "4565deffa9",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front@1.26, front@1.26, back@1.26, back@1.26, pocket@0.86, sleeves@1.05, sleeves@1.05, hood@1.26, hood@1.26",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe3a2cca0c3b3780bcea2",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbc664cca0c3b3780bcac5",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbbd402d7b2c15060925f5",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69d708e8882d261b3e051e4d",
+    "title": "Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69cdb9d7d800f24c8b031004",
+    "title": "Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   }
+  ],
+  "display_name": "apres mirror"
+ },
+ {
+  "hash": "6dc5367c1b",
+  "blueprint_id": 1078,
+  "print_provider_id": 83,
+  "layout": "left_leg@0.92, left_leg@0.92, right_leg@0.92, right_leg@0.92",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe06462664c63aa04a490",
+    "title": "Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbde3368a4785b920e5f38",
+    "title": "Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1486c09f9f6b83d024e1a",
+    "title": "Basketball Rib Shorts 04",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f14864d0b5e753820fcfa1",
+    "title": "Basketball Rib Shorts 03",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1485e5dc6b585ce0d3b43",
+    "title": "Basketball Rib Shorts 02",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f148598e4d6627ed0e58f4",
+    "title": "Basketball Rib Shorts 01",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146ca6d872900770d0025",
+    "title": "Basketball Rib Shorts 06",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146ba5dc6b585ce0d3a4a",
+    "title": "Basketball Rib Shorts 05",
+    "is_published": true
+   }
+  ],
+  "display_name": "hoop full"
+ },
+ {
+  "hash": "69752750e1",
+  "blueprint_id": 949,
+  "print_provider_id": 47,
+  "layout": "front@1.16",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbc81ee1a26b501e0ac216",
+    "title": "Basketball Jersey (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "2180522092",
+  "blueprint_id": 2706,
+  "print_provider_id": 10,
+  "layout": "front/single@0.27",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbbcc22d7b2c15060925d7",
+    "title": "Copy of Cotton Comforter",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69be5005f5cbf780aa041646",
+    "title": "Cotton Comforter",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "82706b450e",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "pocket@0.85",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69d707639ec0f571b90ccce5",
+    "title": "Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69d5b92fa35f821fb60f5b96",
+    "title": "Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "ee33ed7d0d",
+  "blueprint_id": 591,
+  "print_provider_id": 83,
+  "layout": "right_leg/pattern/single@0.07, left_leg/pattern/single@0.07, pocket/single@0.12",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69b643840855e0c5540e8d53",
+    "title": "Copy of Hold Cards",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "6929b6d89b3dbbfde2088c5a",
+    "title": "Copy of Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4628f94ca9fbf1d020f6e",
+    "title": "Cyan Glow Harem Pant",
+    "is_published": true
+   }
+  ],
+  "display_name": "harem brickup"
+ },
+ {
+  "hash": "feaa3cd759",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front/pattern/single@0.10, back/pattern/single@0.10, sleeves/pattern/single@0.08, hood/single@0.10",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69b57f2f8c4577fcee0f2bd9",
+    "title": "Brained Apres",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "6ef5eda081",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front/single@0.17, back/single@0.21, pocket/single@0.32, sleeves/single@0.17, hood/single@0.21",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69b57f19ef961127590bc947",
+    "title": "Cyan Glow Apres",
+    "is_published": false
+   }
+  ],
+  "display_name": "apres tile"
+ },
+ {
+  "hash": "16ad0cd27a",
+  "blueprint_id": 1338,
+  "print_provider_id": 47,
+  "layout": "front@0.51",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69a8c15a291e3fbf690b4ce6",
+    "title": "Copy of Copy of Men's Sports Warmup Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69a8c0a3c9c0eae143032bff",
+    "title": "Copy of Men's Sports Warmup Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69a8c0649091fb07d5009557",
+    "title": "Men's Sports Warmup Hoodie (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "d87df4b582",
+  "blueprint_id": 1078,
+  "print_provider_id": 83,
+  "layout": "left_leg@0.95",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69a8bdf917b1fdfce805ed71",
+    "title": "Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146e009f9f6b83d024d3e",
+    "title": "Basketball Rib Shorts 07",
+    "is_published": true
+   }
+  ],
+  "display_name": "hoop half"
+ },
+ {
+  "hash": "6c66d70fb3",
+  "blueprint_id": 934,
+  "print_provider_id": 14,
+  "layout": "front@0.76, back@0.76, front_right_sleeve@1.00, back_right_sleeve@1.00, front_left_sleeve@1.00, back_left_sleeve@1.00, Collar/single@0.32",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "699d503045b08ecd4a0586d4",
+    "title": "Men's Puffer Jacket (AOP)",
+    "is_published": false
+   }
+  ],
+  "display_name": "puffer single"
+ },
+ {
+  "hash": "b601a36a85",
+  "blueprint_id": 736,
+  "print_provider_id": 10,
+  "layout": "front/single@0.12",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "692a38387eedbbe63d05851b",
+    "title": "Hooded Sherpa Fleece Blanket",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "5b27211432",
+  "blueprint_id": 1382,
+  "print_provider_id": 99,
+  "layout": "front@0.95, front@0.93, neck@1.00",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "6929f98c7b419747000916d7",
+    "title": "Copy of Copy of Unisex Oversized Boxy Tee",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "6929f979eeefa5c3bc0bfc64",
+    "title": "Copy of Unisex Oversized Boxy Tee",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "685855b6c5c9efe54a0a9585",
+    "title": "Unisex Oversized Boxy Tee",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "468628cc7c",
+  "blueprint_id": 1926,
+  "print_provider_id": 99,
+  "layout": "front@0.92, neck@1.00",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "690d4152cbcaca97250c276b",
+    "title": "Unisex Hooded Long Sleeve Tee",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "18b3030044",
+  "blueprint_id": 923,
+  "print_provider_id": 14,
+  "layout": "front_right@0.52, front_left@0.52, back/single@0.32, right_sleeve/single@0.44, left_sleeve/single@0.44",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "68eb2d89f88f52634a10b4bc",
+    "title": "Long Sleeve Kimono Robe (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "71d1f8bdc4",
+  "blueprint_id": 591,
+  "print_provider_id": 83,
+  "layout": "right_leg/pattern/single@0.19, left_leg/pattern/single@0.19",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "68ea0502cb19b441780d9728",
+    "title": "Toxico",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4628646730b56700a6ae1",
+    "title": "Toxico Harem Pant",
+    "is_published": true
+   }
+  ],
+  "display_name": "harem tile"
+ },
+ {
+  "hash": "8d5cdb4f9c",
+  "blueprint_id": 1466,
+  "print_provider_id": 51,
+  "layout": "back/single@0.14",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "68585dd350fb3f4f5c0595f4",
+    "title": "Women's Thongs (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "02211a1d95",
+  "blueprint_id": 450,
+  "print_provider_id": 10,
+  "layout": "back/single@0.27, front/single@0.33, right_hood/single@0.22",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "68585bdd2c35f6107c04a28f",
+    "title": "Unisex Pullover Hoodie (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "122dd919ee",
+  "blueprint_id": 1466,
+  "print_provider_id": 51,
+  "layout": "front/single@0.32",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "6856fa7c0ea6932ed9007b99",
+    "title": "Women's Thongs (AOP)",
+    "is_published": false
+   }
+  ]
+ },
+ {
+  "hash": "e107d0e619",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front/single@0.26, back/single@0.26, pocket/single@0.40, sleeves/single@0.22, hood/single@0.26",
+  "members": [
+   {
+    "shop_id": 26651009,
+    "product_id": "69dab96870e65284fd017291",
+    "title": "Frozen Sky Apres",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69dab94b631ca9e1ce049366",
+    "title": "Hold Cards Apres",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69dab930d21aa5ff4f0de9f7",
+    "title": "Cyan Glow Apres",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69dab91218173cdb1a0cb04a",
+    "title": "Hot Oil Apres",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69dab8f544983647c30c0e4f",
+    "title": "Arctic River Apres",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69dab8da70e65284fd01727d",
+    "title": "Toxico Apres",
+    "is_published": true
+   }
+  ]
+ },
+ {
+  "hash": "5defb7a28a",
+  "blueprint_id": 591,
+  "print_provider_id": 83,
+  "layout": "right_leg/single@0.43, left_leg/single@0.43, pocket@0.69",
+  "members": [
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4629b7fc2996b8d0abe8e",
+    "title": "Frozen Sky Harem Pant",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a46294eb470f86b105fab3",
+    "title": "Hold Cards Harem Pant",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4628c9f7e893e8a0e5219",
+    "title": "Hot Oil Harem Pant",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a462891ec5ca402c037d02",
+    "title": "Arctic River Harem Pant",
+    "is_published": true
+   }
+  ],
+  "display_name": "harem single"
+ },
+ {
+  "hash": "backpack01",
+  "blueprint_id": 1066,
+  "print_provider_id": 14,
+  "layout": "front@0.78, back@0.78, front_pocket@0.77, right_side@0.94, left_side@0.94",
+  "display_name": "backpack 01",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "6a07958c8aacac07a3008be7",
+    "title": "Multifunctional Diaper Backpack \u2014 drop slot",
+    "is_published": false
+   }
+  ]
+ }
 ]

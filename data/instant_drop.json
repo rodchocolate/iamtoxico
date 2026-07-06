@@ -65,6 +65,14 @@
    "hash": "6c66d70fb3",
    "blueprint_id": 934,
    "price_usd": 140
+  },
+  {
+   "name": "backpack 01",
+   "label": "Backpack",
+   "hash": "backpack01",
+   "blueprint_id": 1066,
+   "price_usd": 70.83,
+   "fill": "dominant"
   }
  ],
  "pocket_text_image_id": "6a4ab8b35af2591d6603eb65",
