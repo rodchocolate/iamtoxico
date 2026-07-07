@@ -48,6 +48,21 @@ class PrintifyConnector:
                     continue
                 resp.raise_for_status()
                 return resp.json() if resp.content else {}
+            except requests.exceptions.HTTPError as exc:
+                # 4xx is deterministic — retrying cannot change the outcome.
+                if exc.response is not None and 400 <= exc.response.status_code < 500:
+                    raise
+                last_exc = exc
+                if attempt < self.MAX_RETRIES:
+                    time.sleep(self.RETRY_DELAY * attempt)
+            except requests.exceptions.ReadTimeout as exc:
+                # The server may have processed the request already; blind-retrying
+                # a create double-fires (observed: duplicate Hoop Shorts products).
+                if method.upper() == "POST":
+                    raise
+                last_exc = exc
+                if attempt < self.MAX_RETRIES:
+                    time.sleep(self.RETRY_DELAY * attempt)
             except requests.exceptions.RequestException as exc:
                 last_exc = exc
                 if attempt < self.MAX_RETRIES:
