@@ -61,7 +61,7 @@
   }
   .row {
     display: grid; grid-auto-flow: column;
-    grid-auto-columns: calc((100% - 4rem) / 6);
+    grid-auto-columns: calc((100% - 2.4rem) / 4);
     gap: .8rem; overflow-x: auto; scroll-snap-type: x mandatory;
     padding-bottom: 1rem; scrollbar-width: thin;
   }
@@ -171,21 +171,18 @@ const P = [
   {k:"Toxico|backpack", t:"Toxico Backpack", y:"backpack", p:100, u:"https://1tap6m-et.myshopify.com/products/toxico-backpack", f:"https://images-api.printify.com/mockup/6a4ac8888295538b6103b974/80776/55210/toxico-backpack-01.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a4ac8888295538b6103b974/80776/53130/toxico-backpack-01.jpg?camera_label=back"},
 ];
 
-const STYLES = [
-  {y: "apres", label: "apres"},
-  {y: "harem", label: "harem"},
-  {y: "hoop", label: "hoop"},
-  {y: "backpack", label: "backpack"},
-];
+const DESIGNS = ["Arctic River", "Cyan Glow", "Frozen Sky", "Hold Cards", "Hot Oil", "Toxico"];
+const STYLE_ORDER = ["apres", "harem", "hoop", "backpack"];
 
 const rows = document.getElementById('rows');
 
-STYLES.forEach(s => {
-  const items = P.filter(p => p.y === s.y);
+DESIGNS.forEach(design => {
+  const items = P.filter(p => p.k.split('|')[0] === design)
+                 .sort((a, b) => STYLE_ORDER.indexOf(a.y) - STYLE_ORDER.indexOf(b.y));
   if (!items.length) return;
   const label = document.createElement('div');
   label.className = 'row-label';
-  label.textContent = s.label;
+  label.textContent = design.toLowerCase();
   rows.appendChild(label);
   const row = document.createElement('div');
   row.className = 'row';
