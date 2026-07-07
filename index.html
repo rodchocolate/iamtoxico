@@ -61,10 +61,12 @@
   }
   .row {
     display: grid; grid-auto-flow: column;
-    grid-auto-columns: calc((100% - 2.8rem) / 3);
-    gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory;
+    grid-auto-columns: calc((100% - 4rem) / 6);
+    gap: .8rem; overflow-x: auto; scroll-snap-type: x mandatory;
     padding-bottom: 1rem; scrollbar-width: thin;
   }
+  .row .card .title { font-size: .72rem; }
+  .row .card .info { padding: .6rem .7rem; }
   .row .card { scroll-snap-align: start; }
 
   .card {
@@ -121,8 +123,8 @@
     header { padding: 1rem; }
     .filters { padding: 0 1rem .6rem; }
     .row {
-      grid-auto-columns: calc((100% - .8rem) / 2);
-      gap: .8rem;
+      grid-auto-columns: calc((100% - 1.2rem) / 3);
+      gap: .6rem;
     }
     .card .info { padding: .6rem .7rem; }
     .card .title { font-size: .78rem; }
