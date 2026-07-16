@@ -68,7 +68,7 @@ jobs:
           sudo apt-get install -y lftp > /dev/null 2>&1
 
           # Deploy only public site assets. Keep internal tooling and staging helpers off the public host.
-          EXCLUDES="-x '\.git/' -x '\.github/' -x '__pycache__/' -x 'node_modules/' -x '\.venv/' -x 'venv/' -x '\.pytest_cache/' -x '\.DS_Store' -x '\.db$' -x '\.log$' -x '\.env$' -x 'logs/' -x 'docs/' -x 'tests/' -x 'scripts/' -x 'shopify-app/' -x 'deficient/' -x 'fetch_images\.log$' -x 'add_products\.py$' -x 'remove_products\.py$' -x 'server\.py$' -x 'start\.sh$' -x 'pytest\.ini$' -x 'preview\.html$' -x 'CLAUDE\.md$' -x 'README\.md$' -x 'TOXICO_LIFE_PLANNING\.md$' -x 'PRODUCTS_TO_ADD\.md$' -x 'agents\.md$' -x 'INVENTORY_COMMANDS\.md$' -x 'features\.md$' -x 'future\.md$' -x 'data/printify_source_provenance_staging\.json$' -x 'data/rename_brief_staging\.json$' -x 'pattern\.jpg$'"
+          EXCLUDES="-x '\.git/' -x '\.github/' -x 'aliensendracism/' -x '__pycache__/' -x 'node_modules/' -x '\.venv/' -x 'venv/' -x '\.pytest_cache/' -x '\.DS_Store' -x '\.db$' -x '\.log$' -x '\.env$' -x 'logs/' -x 'docs/' -x 'tests/' -x 'scripts/' -x 'shopify-app/' -x 'deficient/' -x 'fetch_images\.log$' -x 'add_products\.py$' -x 'remove_products\.py$' -x 'server\.py$' -x 'start\.sh$' -x 'pytest\.ini$' -x 'preview\.html$' -x 'CLAUDE\.md$' -x 'README\.md$' -x 'TOXICO_LIFE_PLANNING\.md$' -x 'PRODUCTS_TO_ADD\.md$' -x 'agents\.md$' -x 'INVENTORY_COMMANDS\.md$' -x 'features\.md$' -x 'future\.md$' -x 'data/printify_source_provenance_staging\.json$' -x 'data/rename_brief_staging\.json$' -x 'pattern\.jpg$'"
 
           if [ "$DRY_RUN" == "true" ]; then
             echo "🔍 DRY RUN — would upload these files:"
