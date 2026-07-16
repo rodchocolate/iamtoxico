@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Refresh the hoop/backpack mockup URLs embedded in index.html.
+"""Refresh the hoop/backpack mockup URLs in index.html's tiles-data block.
 
-The hoop and backpack rows point at scratch-preview mockups until the live
-products render their own; rerun this after Printify re-renders to swap in the
-current images (keyed by the P entries' k:"<Design>|<style>" field).
+Those tiles point at scratch-preview mockups; rerun after Printify re-renders
+to swap in current images, then rebuild the per-design pages.
 
     python3 scripts/refresh_index_mockups.py
 """
+import json
 import re
 import sys
 from pathlib import Path
@@ -18,8 +18,7 @@ from resolve_printify_sources import load_printify_env  # noqa: E402
 from printify_connector import PrintifyConnector  # noqa: E402
 
 SCRATCH = 22994552
-DESIGNS = ["Arctic River", "Cyan Glow", "Frozen Sky", "Hold Cards", "Hot Oil", "Toxico"]
-SOURCES = {"hoop": "{d} — Hoop Shorts", "backpack": "{d} — Backpack 01"}
+SOURCES = {"Hoop Shorts": "{d} — Hoop Shorts", "Backpack": "{d} — Backpack 01"}
 
 
 def main() -> int:
@@ -28,27 +27,34 @@ def main() -> int:
     by_title = {p["title"]: p for p in c.get_products(SCRATCH)}
     path = ROOT / "index.html"
     html = path.read_text(encoding="utf-8")
+    m = re.search(r'(<script type="application/json" id="tiles-data">)(.*?)(</script>)', html, re.S)
+    if not m:
+        raise SystemExit("index.html tiles-data block not found")
+    data = json.loads(m.group(2))
     swapped = 0
-    for style, tpl in SOURCES.items():
-        for d in DESIGNS:
-            p = by_title.get(tpl.format(d=d))
-            if not p:
-                continue
-            imgs = [i["src"] for i in p.get("images", []) if i.get("src")]
-            if not imgs:
-                continue
-            front = next((s for s in imgs if "camera_label=front" in s), imgs[0])
-            back = next((s for s in imgs if "camera_label=back" in s), front)
-            def sub(m):
-                return f'{m.group(1)}f:"{front}", b:"{back}"}}'
-            new = re.sub(
-                rf'(\{{k:"{re.escape(d)}\|{style}".*?)f:"[^"]*", b:"[^"]*"\}}',
-                sub, html)
-            if new != html:
-                swapped += 1
-                html = new
-    path.write_text(html, encoding="utf-8")
-    print(f"index.html: {swapped} entries refreshed")
+    for row in data.get("rows", []):
+        design = row["label"].title()
+        for tile in row.get("tiles", []):
+            for suffix, tpl in SOURCES.items():
+                if not tile.get("t", "").endswith(suffix):
+                    continue
+                p = by_title.get(tpl.format(d=design))
+                if not p:
+                    continue
+                imgs = [i["src"] for i in p.get("images", []) if i.get("src")]
+                if not imgs:
+                    continue
+                front = next((s for s in imgs if "camera_label=front" in s), imgs[0])
+                back = next((s for s in imgs if "camera_label=back" in s), front)
+                if tile.get("f") != front or tile.get("b") != back:
+                    tile["f"], tile["b"] = front, back
+                    swapped += 1
+    new_html = html[:m.start()] + m.group(1) + json.dumps(data, indent=2) + m.group(3) + html[m.end():]
+    path.write_text(new_html, encoding="utf-8")
+    print(f"index.html: {swapped} tiles refreshed")
+    if swapped:
+        import build_design_pages
+        build_design_pages.main()
     return 0
 
 

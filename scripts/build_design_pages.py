@@ -1,31 +1,25 @@
 #!/usr/bin/env python3
-"""Build a standalone per-drop page for every row on the scratch board, wire each
-row header to its page (row.href), and keep the scratch index in sync.
+"""Generate per-design pages for the originals (index.html), mirroring the
+scratch board's per-drop pages: one designs/<slug>/ page per row, and the
+index row headers linked via row.href.
 
-- Reads scratch/index.html's inline tiles-data JSON.
-- For each row, writes scratch/<slug>/index.html (only index.html serves from
-  subdirs on this host) — a full-page wrapping grid of just that drop's tiles.
-- Sets row["href"] = "<slug>/" so the scratch renderer makes the header a link.
-- Doubles the row-label font size on the scratch index (.7rem -> 1.4rem).
-
-Idempotent; safe to re-run after new drops land.
+    python3 scripts/build_design_pages.py
 """
-from __future__ import annotations
-
 import json
 import re
+import sys
 import unicodedata
 from pathlib import Path
 
-SCRATCH = Path(__file__).resolve().parent.parent / "scratch"
-INDEX = SCRATCH / "index.html"
+ROOT = Path(__file__).resolve().parent.parent
+INDEX = ROOT / "index.html"
+OUT = ROOT / "designs"
 
 
 def slugify(s: str) -> str:
-    s = s.replace("—", "-").replace("#", "")
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
-    return s or "drop"
+    return s or "design"
 
 
 PAGE = """<!DOCTYPE html>
@@ -67,41 +61,29 @@ PAGE = """<!DOCTYPE html>
   .card .img-wrap img.back {{ position: absolute; inset: 0; opacity: 0; }}
   .card:hover .img-wrap img.front {{ opacity: 0; }}
   .card:hover .img-wrap img.back  {{ opacity: 1; }}
-  .card.empty .img-wrap {{
-    display: flex; align-items: center; justify-content: center;
-    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em;
-  }}
   .card .info {{ padding: .9rem 1rem; }}
   .card .title {{ font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }}
   .card .meta {{ font-size: .7rem; opacity: .65; text-transform: lowercase; }}
-  .card .buy {{
-    display: inline-block; margin-top: .5rem; font-size: .72rem; font-weight: 600; color: #ffc800;
-    text-decoration: none; border: 1px solid rgba(255,200,0,.4); padding: .25em .7em; border-radius: 6px;
-  }}
   footer {{ text-align: center; padding: 1rem; font-size: .7rem; opacity: .5; max-width: 1280px; margin: 0 auto; }}
 </style>
 </head>
 <body>
 <header>
   <h1>{label}</h1>
-  <a class="back" href="../">← back to scratch</a>
+  <a class="back" href="../../">← back to originals</a>
 </header>
 <main id="main"></main>
 <footer>&copy; 2026 toxico</footer>
 <script>
 function tileHtml(p) {{
-  const empty = !p.f;
-  let imgs = empty
-    ? 'mockup pending'
-    : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
-      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
+  let imgs = '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+             (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
   if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
-  const buy = p.buy ? '<a class="buy" href="' + p.buy + '" target="_blank" rel="noopener">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
-  return '<div class="card' + (empty ? ' empty' : '') + '">' +
+  return '<div class="card">' +
            '<div class="img-wrap">' + imgs + '</div>' +
            '<div class="info">' +
              '<div class="title">' + (p.t || '') + '</div>' +
-             '<div class="meta">' + (p.y || '') + '</div>' + buy +
+             '<div class="meta">' + (p.y || '') + '</div>' +
            '</div>' +
          '</div>';
 }}
@@ -123,30 +105,20 @@ def main() -> None:
     html = INDEX.read_text(encoding="utf-8")
     m = re.search(r'(<script type="application/json" id="tiles-data">)(.*?)(</script>)', html, re.S)
     if not m:
-        raise SystemExit("tiles-data block not found")
+        raise SystemExit("index.html tiles-data block not found")
     data = json.loads(m.group(2))
-
-    built = 0
     for row in data.get("rows", []):
-        label = row.get("label", "")
-        if not label:
-            continue
-        slug = slugify(label)
-        row["href"] = f"{slug}/"
-        page = PAGE.format(label=label.replace(' — ', ' '), tiles_json=json.dumps(row.get("tiles", []), indent=2))
-        out = SCRATCH / slug / "index.html"
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(page, encoding="utf-8")
-        built += 1
-
-    # double the header font size on the scratch index
-    html = re.sub(r"(\.row-label \{ font-size: )\.7rem", r"\g<1>1.4rem", html, count=1)
-
-    # write the href-augmented tiles-data back
-    new_block = m.group(1) + "\n" + json.dumps(data, indent=2) + "\n" + m.group(3)
-    html = html[:m.start()] + new_block + html[m.end():]
-    INDEX.write_text(html, encoding="utf-8")
-    print(f"built {built} per-drop pages; index updated (hrefs + 1.4rem labels)")
+        slug = slugify(row["label"])
+        row["href"] = f"designs/{slug}/"
+        out_dir = OUT / slug
+        out_dir.mkdir(parents=True, exist_ok=True)
+        (out_dir / "index.html").write_text(
+            PAGE.format(label=row["label"],
+                        tiles_json=json.dumps(row.get("tiles", []), indent=1)),
+            encoding="utf-8")
+    new_html = html[:m.start()] + m.group(1) + json.dumps(data, indent=2) + m.group(3) + html[m.end():]
+    INDEX.write_text(new_html, encoding="utf-8")
+    print(f"built {len(data.get('rows', []))} design pages; index hrefs updated")
 
 
 if __name__ == "__main__":

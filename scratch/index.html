@@ -101,10 +101,10 @@ function renderTiles(data) {
       if (row.href) {
         const a = document.createElement('a');
         a.href = row.href; a.target = '_blank'; a.rel = 'noopener';
-        a.className = 'collection-link'; a.textContent = row.label + ' →';
+        a.className = 'collection-link'; a.textContent = row.label.replace(' — ', ' ') + ' →';
         lbl.appendChild(a);
       } else {
-        lbl.textContent = row.label;
+        lbl.textContent = row.label.replace(' — ', ' ');
       }
       main.appendChild(lbl);
     }
