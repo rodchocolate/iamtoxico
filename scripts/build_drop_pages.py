@@ -53,7 +53,7 @@ PAGE = """<!DOCTYPE html>
   .back:hover {{ opacity: 1; color: #ffc800; }}
   main {{ padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }}
   .grid {{
-    display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    display: grid; grid-template-columns: repeat(2, 1fr);
     gap: 1.4rem;
   }}
   .card {{
