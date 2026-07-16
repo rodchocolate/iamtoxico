@@ -15,9 +15,15 @@
   body::before { content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }
   header, main, footer { position: relative; z-index: 1; }
   header {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
     max-width: 1280px; margin: 0 auto;
   }
+  .crosslink {
+    color: #fff; font-size: .9rem; font-weight: 600;
+    text-transform: lowercase; letter-spacing: .06em;
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  .crosslink:hover { color: #ffc800; }
   header h1 {
     font-size: 2rem; font-weight: 600;
     letter-spacing: .04em; text-transform: lowercase;
@@ -64,6 +70,7 @@
 
 <header>
   <h1>toxico originals</h1>
+  <a class="crosslink" href="/scratch/">scratch</a>
 </header>
 
 <main id="main"></main>

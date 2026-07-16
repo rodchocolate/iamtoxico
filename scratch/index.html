@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>toxico — scratch</title>
+<title>toxico scratch</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -19,6 +19,12 @@
     max-width: 1280px; margin: 0 auto;
   }
   header h1 { font-size: 1.4rem; font-weight: 600; letter-spacing: .06em; text-transform: lowercase; }
+  .crosslink {
+    color: #fff; font-size: .9rem; font-weight: 600;
+    text-transform: lowercase; letter-spacing: .06em;
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  .crosslink:hover { color: #ffc800; }
   .badge {
     background: rgba(255,200,0,.15); color: #ffc800; font-size: .7rem; font-weight: 600;
     text-transform: uppercase; padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
@@ -67,8 +73,8 @@
 </head>
 <body>
 <header>
-  <h1>toxico — scratch</h1>
-  <span class="badge">staging board</span>
+  <h1>toxico scratch</h1>
+  <a class="crosslink" href="/">originals</a>
 </header>
 <main id="main"></main>
 <footer>&copy; 2026 toxico &mdash; scratch &mdash; staging board, not promoted</footer>
