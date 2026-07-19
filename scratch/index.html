@@ -88,7 +88,7 @@ function tileHtml(p) {
   // image -> product page (p.u); plain image when no URL yet (staging)
   if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
   // buy button -> prefilled checkout (p.buy), separate from the product-page image link
-  const buy = p.buy ? '<a class="buy" href="' + p.buy + '" target="_blank" rel="noopener">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
+  const buy = '';  // buy links disabled — cart permalinks carry Printify (not Shopify) variant ids
   return '<div class="card' + (empty ? ' empty' : '') + '">' +
            '<div class="img-wrap">' + imgs + '</div>' +
            '<div class="info">' +

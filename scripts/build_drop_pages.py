@@ -96,7 +96,7 @@ function tileHtml(p) {{
     : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
       (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
   if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
-  const buy = p.buy ? '<a class="buy" href="' + p.buy + '" target="_blank" rel="noopener">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
+  const buy = '';  // buy links disabled — cart permalinks carry Printify (not Shopify) variant ids
   return '<div class="card' + (empty ? ' empty' : '') + '">' +
            '<div class="img-wrap">' + imgs + '</div>' +
            '<div class="info">' +
