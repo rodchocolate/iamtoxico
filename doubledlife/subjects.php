@@ -3,5 +3,6 @@
   ['name' => 'Music in film on screen', 'kind' => 'concept', 'lede' => 'Music in film on screen Music theory', 'url' => '/s/music-in-film-on-screen-20260705-6a2e9a/'],
   ['name' => 'Toyota 4Runner', 'kind' => 'concept', 'lede' => 'I thought you would like this Certified 2024 Toyota 4Runner TRD Off-Road Premium w/ Moonroof Package for $51960 on Autotrader http://atcm.co/S2PVDP/2E9D7A61.', 'url' => '/s/toyota-4runner-20260705-96c59d/'],
   ['name' => 'research', 'kind' => 'question', 'lede' => '(no body)', 'url' => '/s/research-20260717-d2b81a/'],
+  ['name' => 'Avalon Norwood', 'kind' => 'venue', 'lede' => 'Avalon Norwood is a residential community in Norwood, Massachusetts, offering one-, two-, and three-bedroom apartments and townhomes for lease. It is managed by AvalonBay Communities.', 'url' => '/s/avalon-norwood-20260720-8c8b8a/'],
   ['name' => '#german #history', 'kind' => 'video', 'lede' => 'The video discusses the concept of a \'big lie\' regarding history and genealogy, specifically focusing on the history of Black people and whether they are indigenous to the Americas. The speaker argues that Americans are systematically lied to about their true history, and thes el', 'url' => '/s/german-history-20260720-829771/']
 ];
