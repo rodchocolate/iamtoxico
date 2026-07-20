@@ -44,8 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$locked) {
             $code = strval(random_int(1000, 9999));
             save_state('code_' . session_id(),
                 ['h' => hash('sha256', $code), 'exp' => time() + 600, 'tries' => 0]);
-            @mail($config['email'], 'doubled.life code', "Access code: $code\n(expires in 10 minutes)",
-                  "From: gate@doubled.life\r\n");
+            // Queue for the Studio poller (reliable Gmail SMTP + iMessage);
+            // GoDaddy mail() is too unreliable to deliver codes.
+            $pend = $STATE . '/pending';
+            if (!is_dir($pend)) { @mkdir($pend, 0700, true); }
+            file_put_contents($pend . '/' . session_id() . '.json',
+                json_encode(['code' => $code, 'ts' => time()]), LOCK_EX);
             $_SESSION['stage'] = 'code';
             $rl = ['fails' => 0, 'until' => 0]; save_state($rl_key, $rl);
         } else {
