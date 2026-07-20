@@ -1,0 +1,55 @@
+# Deploy the doubledlife/ subdirectory to the doubled.life addon domain.
+# Reuses the repo's GoDaddy SFTP secrets; only the subdirectory is mirrored.
+
+name: Deploy doubled.life
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'doubledlife/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (preview only, no actual upload)'
+        required: false
+        default: false
+        type: boolean
+
+concurrency:
+  group: deploy-doubledlife
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: SFTP Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy via lftp
+        env:
+          FTP_HOST: ${{ secrets.GODADDY_SFTP_HOST }}
+          FTP_USER: ${{ secrets.GODADDY_SFTP_USER }}
+          FTP_PASS: ${{ secrets.GODADDY_SFTP_PASSWORD }}
+          DRY_RUN: ${{ inputs.dry_run || false }}
+        run: |
+          sudo apt-get install -y lftp > /dev/null 2>&1
+          FLAGS="--reverse --verbose --only-newer"
+          if [ "$DRY_RUN" == "true" ]; then
+            FLAGS="$FLAGS --dry-run"
+          fi
+          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
+            set ftp:ssl-allow yes
+            set ftp:ssl-force no
+            set ssl:verify-certificate no
+            set ftp:passive-mode yes
+            set net:max-retries 3
+            set net:reconnect-interval-base 5
+            mirror $FLAGS ./doubledlife/ /doubled.life/
+            quit
+          "
+          echo "✅ Deploy complete"
