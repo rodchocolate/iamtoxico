@@ -177,7 +177,7 @@ $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
   <div class="cards" id="cards">
   <?php foreach ($subjects as $s): ?>
     <div class="card" data-t="<?= htmlspecialchars(strtolower($s['name'] . ' ' . $s['kind'] . ' ' . $s['lede'])) ?>">
-      <a href="<?= htmlspecialchars($s['url']) ?>">
+      <a href="<?= htmlspecialchars($s['url']) ?>" target="_blank" rel="noopener">
         <div class="kind"><?= htmlspecialchars($s['kind']) ?></div>
         <div class="name"><?= htmlspecialchars($s['name']) ?></div>
         <div class="lede"><?= htmlspecialchars($s['lede']) ?></div>
