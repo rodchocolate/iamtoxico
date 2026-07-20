@@ -1,8 +1,9 @@
 <?php
-// doubled.life — gated landing. Password (no username) -> 4-digit code emailed
-// to Jason -> 15-min-idle session -> subject index + search. Subject pages under
-// /s/ are open but unlisted; this landing is the only index of them.
-// config.php is injected at deploy time from GitHub Actions secrets.
+// doubled.life — gated landing. Animated landing (cratetalk background) ->
+// clicking proceed emails a 4-digit code to Jason -> code entry -> 15-min-idle
+// session -> subject index + search. Subject pages under /s/ are open but
+// unlisted; this landing is the only index of them. config.php is injected at
+// deploy time from GitHub Actions secrets.
 
 $config = @include __DIR__ . '/config.php';
 if (!$config) { http_response_code(503); exit('not configured'); }
@@ -34,21 +35,18 @@ $locked = time() < ($rl['until'] ?? 0);
 $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$locked) {
-    if (isset($_POST['password'])) {
-        if (hash_equals($config['pass_sha256'], hash('sha256', $_POST['password']))) {
-            $code = strval(random_int(1000, 9999));
-            save_state('code_' . session_id(),
-                ['h' => hash('sha256', $code), 'exp' => time() + 600, 'tries' => 0]);
-            @mail($config['email'], 'doubled.life code', "Access code: $code\n(expires in 10 minutes)",
-                  "From: gate@doubled.life\r\n");
-            $_SESSION['stage'] = 'code';
-            $rl = ['fails' => 0, 'until' => 0]; save_state($rl_key, $rl);
-        } else {
-            $rl['fails']++;
-            if ($rl['fails'] >= 5) { $rl['until'] = time() + 900; $rl['fails'] = 0; }
-            save_state($rl_key, $rl);
-            $msg = 'no';
-        }
+    if (isset($_POST['proceed'])) {
+        // Proceeding IS the trigger: send a code. Throttled so strangers
+        // clicking can't flood Jason's inbox/phone.
+        $rl['fails']++;
+        if ($rl['fails'] >= 5) { $rl['until'] = time() + 900; $rl['fails'] = 0; }
+        save_state($rl_key, $rl);
+        $code = strval(random_int(1000, 9999));
+        save_state('code_' . session_id(),
+            ['h' => hash('sha256', $code), 'exp' => time() + 600, 'tries' => 0]);
+        @mail($config['email'], 'doubled.life code', "Access code: $code\n(expires in 10 minutes)",
+              "From: gate@doubled.life\r\n");
+        $_SESSION['stage'] = 'code';
     } elseif (isset($_POST['code']) && ($_SESSION['stage'] ?? '') === 'code') {
         $c = load_state('code_' . session_id());
         if ($c && time() < $c['exp'] && $c['tries'] < 5) {
@@ -69,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$locked) {
 }
 
 $authed = ($_SESSION['auth'] ?? false) === true;
-$stage = $authed ? 'in' : (($_SESSION['stage'] ?? '') === 'code' ? 'code' : 'password');
+$stage = $authed ? 'in' : (($_SESSION['stage'] ?? '') === 'code' ? 'code' : 'landing');
 $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
 ?>
 <!DOCTYPE html>
@@ -84,6 +82,9 @@ $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: 'Space Grotesk', sans-serif; background: #0b0b0b; color: #fff; min-height: 100vh; }
   .gate { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
+  .gate.landing { background: #0b0b0b url('landing.webp') center center / cover no-repeat; }
+  .gate.landing h1, .gate.landing .m { text-shadow: 0 2px 12px rgba(0,0,0,.8); }
+  .gate.landing button { background: rgba(0,0,0,.55); backdrop-filter: blur(2px); }
   .gate h1 { font-size: 2rem; font-weight: 600; letter-spacing: .04em; text-transform: lowercase; }
   .gate form { display: flex; gap: .6rem; }
   .gate input { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff;
@@ -108,14 +109,13 @@ $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
 </style>
 </head>
 <body>
-<?php if ($stage === 'password'): ?>
-<div class="gate">
+<?php if ($stage === 'landing'): ?>
+<div class="gate landing">
   <h1>doubled.life</h1>
   <form method="post">
-    <input type="password" name="password" autofocus autocomplete="current-password">
-    <button type="submit">enter</button>
+    <button type="submit" name="proceed" value="1">proceed</button>
   </form>
-  <div class="m"><?= $locked ? 'locked — try later' : htmlspecialchars($msg) ?></div>
+  <div class="m"><?= $locked ? 'locked — try later' : '' ?></div>
 </div>
 <?php elseif ($stage === 'code'): ?>
 <div class="gate">
