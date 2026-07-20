@@ -38,7 +38,7 @@ jobs:
           DRY_RUN: ${{ inputs.dry_run || false }}
         run: |
           sudo apt-get install -y lftp > /dev/null 2>&1
-          FLAGS="--reverse --verbose --only-newer"
+          FLAGS="--reverse --verbose --delete"  # exact mirror: local dir is the whole truth for this domain
           if [ "$DRY_RUN" == "true" ]; then
             FLAGS="$FLAGS --dry-run"
           fi
