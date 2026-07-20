@@ -51,12 +51,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !$locked) {
             file_put_contents($pend . '/' . session_id() . '.json',
                 json_encode(['code' => $code, 'ts' => time()]), LOCK_EX);
             $_SESSION['stage'] = 'code';
+            $_SESSION['last_send'] = time();
             $rl = ['fails' => 0, 'until' => 0]; save_state($rl_key, $rl);
         } else {
             $rl['fails']++;
             if ($rl['fails'] >= 5) { $rl['until'] = time() + 900; $rl['fails'] = 0; }
             save_state($rl_key, $rl);
             $msg = 'no';
+        }
+    } elseif (isset($_POST['resend']) && ($_SESSION['stage'] ?? '') === 'code') {
+        // Resend: throttle to once per 15s so the button can't be spammed.
+        if (time() - ($_SESSION['last_send'] ?? 0) >= 15) {
+            $code = strval(random_int(1000, 9999));
+            save_state('code_' . session_id(),
+                ['h' => hash('sha256', $code), 'exp' => time() + 600, 'tries' => 0]);
+            $pend = $STATE . '/pending';
+            if (!is_dir($pend)) { @mkdir($pend, 0700, true); }
+            file_put_contents($pend . '/' . session_id() . '.json',
+                json_encode(['code' => $code, 'ts' => time()]), LOCK_EX);
+            $_SESSION['last_send'] = time();
+            $msg = 'resent';
+        } else {
+            $msg = 'wait a moment';
         }
     } elseif (isset($_POST['code']) && ($_SESSION['stage'] ?? '') === 'code') {
         $c = load_state('code_' . session_id());
@@ -146,6 +162,9 @@ $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
   <form method="post">
     <input type="text" name="code" inputmode="numeric" maxlength="4" placeholder="4-digit code" autofocus autocomplete="one-time-code">
     <button type="submit">confirm</button>
+  </form>
+  <form method="post" style="margin-top:.4rem">
+    <button type="submit" name="resend" value="1" style="background:none;border:none;color:#fff;opacity:.55;text-decoration:underline;cursor:pointer;font-family:inherit;font-size:.8rem">resend code</button>
   </form>
   <div class="m"><?= htmlspecialchars($msg ?: 'code sent') ?></div>
 </div>
