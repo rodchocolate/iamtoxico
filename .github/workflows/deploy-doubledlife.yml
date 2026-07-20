@@ -30,6 +30,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Inject gate config (repo is public — config never committed)
+        env:
+          PASS_SHA256: ${{ secrets.DOUBLED_PASS_SHA256 }}
+        run: |
+          cat > doubledlife/config.php <<EOF
+          <?php return ['pass_sha256' => '$PASS_SHA256', 'email' => 'jasonjenkins1981@gmail.com'];
+          EOF
+
       - name: Deploy via lftp
         env:
           FTP_HOST: ${{ secrets.GODADDY_SFTP_HOST }}
