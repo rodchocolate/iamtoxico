@@ -99,6 +99,21 @@ if ($authed) { $stage = 'in'; }
 elseif (($_SESSION['stage'] ?? '') === 'code') { $stage = 'code'; }
 elseif (($_SESSION['stage'] ?? '') === 'password') { $stage = 'password'; }
 $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
+
+// Notes tab: capture a planning note, queued for the Studio poller to record
+// into Hermes alongside the research corpus.
+$note_ok = false;
+if ($authed && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['note'])) {
+    $n = trim($_POST['note']);
+    if ($n !== '') {
+        $nd = $STATE . '/notes';
+        if (!is_dir($nd)) { @mkdir($nd, 0700, true); }
+        file_put_contents($nd . '/' . time() . '-' . bin2hex(random_bytes(3)) . '.json',
+            json_encode(['note' => $n, 'ts' => time()]), LOCK_EX);
+        $note_ok = true;
+    }
+}
+$videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 'video'));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -135,7 +150,30 @@ $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
   .card .kind { font-size: .7rem; opacity: .5; text-transform: uppercase; letter-spacing: .1em; }
   .card .name { font-size: 1.1rem; font-weight: 600; margin: .2rem 0 .4rem; }
   .card .lede { font-size: .85rem; opacity: .7; line-height: 1.45; }
-  @media (max-width: 768px) { .cards { grid-template-columns: 1fr; } }
+  .tabs { display: flex; gap: .3rem; max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+  .tabs button { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-bottom: none;
+    color: #fff; font-family: inherit; font-size: .8rem; letter-spacing: .06em; text-transform: lowercase;
+    padding: .55em 1.3em; border-radius: 8px 8px 0 0; cursor: pointer; opacity: .55; }
+  .tabs button.active { opacity: 1; background: rgba(255,255,255,.12); }
+  .panel { display: none; }
+  .panel.active { display: block; }
+  .vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+  .vtile { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,.1);
+    aspect-ratio: 1; background: #1a1a1a; display: block; text-decoration: none; }
+  .vtile img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+  .vtile:hover img { transform: scale(1.05); }
+  .vtile .cap { position: absolute; inset: auto 0 0 0; padding: .8rem .9rem; color: #fff;
+    font-size: .82rem; font-weight: 600; background: linear-gradient(transparent, rgba(0,0,0,.85)); }
+  .qcard .st { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .3rem; }
+  .qcard .st.run { color: #5fd08a; } .qcard .st.queued { color: #e0b64a; } .qcard .st.done { color: rgba(255,255,255,.4); }
+  .notes textarea { width: 100%; min-height: 9rem; background: rgba(255,255,255,.06); color: #fff;
+    border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 1rem; font-family: inherit;
+    font-size: .95rem; line-height: 1.5; resize: vertical; }
+  .notes button { margin-top: .8rem; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25);
+    color: #fff; font-family: inherit; font-size: .9rem; padding: .55em 1.4em; border-radius: 8px; cursor: pointer; }
+  .notes .hint { font-size: .78rem; opacity: .5; margin-top: .6rem; }
+  .empty { opacity: .4; font-size: .85rem; padding: 1rem 0; }
+  @media (max-width: 768px) { .cards, .vgrid { grid-template-columns: 1fr; } .tabs { flex-wrap: wrap; } }
 </style>
 </head>
 <body>
@@ -173,26 +211,85 @@ $subjects = $authed ? ((@include __DIR__ . '/subjects.php') ?: []) : [];
   <h1>doubled.life</h1>
   <input type="search" id="q" placeholder="search">
 </header>
+<div class="tabs">
+  <button class="active" data-tab="library">library</button>
+  <button data-tab="video">video</button>
+  <button data-tab="queue">queue</button>
+  <button data-tab="notes">notes</button>
+</div>
 <main>
-  <div class="cards" id="cards">
-  <?php foreach ($subjects as $s): ?>
-    <div class="card" data-t="<?= htmlspecialchars(strtolower($s['name'] . ' ' . $s['kind'] . ' ' . $s['lede'])) ?>">
-      <a href="<?= htmlspecialchars($s['url']) ?>" target="_blank" rel="noopener">
-        <div class="kind"><?= htmlspecialchars($s['kind']) ?></div>
-        <div class="name"><?= htmlspecialchars($s['name']) ?></div>
-        <div class="lede"><?= htmlspecialchars($s['lede']) ?></div>
-      </a>
+  <div class="panel active" id="library">
+    <div class="cards" id="cards">
+    <?php foreach ($subjects as $s): ?>
+      <div class="card" data-t="<?= htmlspecialchars(strtolower($s['name'] . ' ' . $s['kind'] . ' ' . $s['lede'])) ?>">
+        <a href="<?= htmlspecialchars($s['url']) ?>" target="_blank" rel="noopener">
+          <div class="kind"><?= htmlspecialchars($s['kind']) ?></div>
+          <div class="name"><?= htmlspecialchars($s['name']) ?></div>
+          <div class="lede"><?= htmlspecialchars($s['lede']) ?></div>
+        </a>
+      </div>
+    <?php endforeach; ?>
     </div>
-  <?php endforeach; ?>
+  </div>
+
+  <div class="panel" id="video">
+    <?php if ($videos): ?>
+    <div class="vgrid">
+      <?php foreach ($videos as $v): ?>
+      <a class="vtile" href="<?= htmlspecialchars($v['url']) ?>" target="_blank" rel="noopener"
+         data-t="<?= htmlspecialchars(strtolower($v['name'] . ' ' . $v['lede'])) ?>">
+        <?php if (!empty($v['thumb'])): ?><img src="<?= htmlspecialchars($v['thumb']) ?>" alt=""><?php endif; ?>
+        <span class="cap"><?= htmlspecialchars($v['name']) ?></span>
+      </a>
+      <?php endforeach; ?>
+    </div>
+    <?php else: ?><div class="empty">no video research yet</div><?php endif; ?>
+  </div>
+
+  <div class="panel" id="queue">
+    <div class="cards" id="qcards"><div class="empty">loading…</div></div>
+  </div>
+
+  <div class="panel" id="notes">
+    <form method="post" class="notes">
+      <textarea name="note" placeholder="a note for hermes — recorded for planning alongside the research corpus" autofocus></textarea>
+      <button type="submit">send to hermes</button>
+      <div class="hint"><?= $note_ok ? 'sent — hermes will log it' : 'goes into hermes planning; used when synthesizing across your research' ?></div>
+    </form>
   </div>
 </main>
 <script>
-document.getElementById('q').addEventListener('input', e => {
-  const q = e.target.value.toLowerCase();
-  document.querySelectorAll('#cards .card').forEach(c => {
-    c.style.display = c.dataset.t.includes(q) ? '' : 'none';
+const q = document.getElementById('q');
+function filter() {
+  const t = (q.value || '').toLowerCase();
+  document.querySelectorAll('.panel.active [data-t]').forEach(c => {
+    c.style.display = c.dataset.t.includes(t) ? '' : 'none';
   });
-});
+}
+q.addEventListener('input', filter);
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.tab).classList.add('active');
+  filter();
+  if (b.dataset.tab === 'queue') loadQueue();
+}));
+
+function loadQueue() {
+  fetch('gate_status.php').then(r => r.json()).then(d => {
+    const el = document.getElementById('qcards');
+    const jobs = (d && d.jobs) || [];
+    if (!jobs.length) { el.innerHTML = '<div class="empty">nothing in the last 24 hours</div>'; return; }
+    el.innerHTML = jobs.map(j =>
+      '<div class="card qcard" data-t="' + (j.target || '').toLowerCase() + '">' +
+        '<div style="padding:1.1rem 1.2rem">' +
+          '<div class="st ' + (j.status || 'done') + '">' + (j.status || '') + '</div>' +
+          '<div class="name">' + (j.target || 'request') + '</div>' +
+          '<div class="lede">' + (j.detail || '') + '</div>' +
+        '</div></div>').join('');
+  }).catch(() => { document.getElementById('qcards').innerHTML = '<div class="empty">queue unavailable</div>'; });
+}
 </script>
 <?php endif; ?>
 </body>
