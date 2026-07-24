@@ -1,4 +1,6 @@
 <?php
+// Guard: only render when included by the authed index (never on direct hit).
+if (!isset($subjects)) { http_response_code(404); exit; }
 // doubled.life authed view — four faithful index layouts (ESPN 2010 portal,
 // Napster transfer-list, CNN zones, iTunes library), each rendering the live
 // $subjects / $videos, recolored to the palette. Toggle persists in
