@@ -40,7 +40,10 @@ function dl_tabbar() {
 ?>
 <style>
   /* ---- unified controls (same across all four views) ---- */
-  .dltoggle { display:flex; gap:0; padding:.8rem 1rem .2rem; max-width:1180px; margin:0 auto; }
+  .dlhead { display:flex; align-items:center; justify-content:space-between; max-width:1180px; margin:0 auto; padding:1rem 1rem .2rem; }
+  .dlwm { font-size:1.4rem; font-weight:600; letter-spacing:.04em; color:var(--text); font-family:'Space Grotesk',sans-serif; }
+  .dlhead input { background:var(--panel); border:1px solid var(--line); color:var(--text); font-family:'Space Grotesk',sans-serif; font-size:.9rem; padding:.45em 1em; border-radius:8px; width:14rem; }
+  .dltoggle { display:flex; gap:0; padding:.4rem 1rem .2rem; max-width:1180px; margin:0 auto; }
   .dltoggle button { background:var(--panel); border:1px solid var(--line); color:var(--text);
     font-family:'Space Grotesk',sans-serif; font-size:.72rem; text-transform:lowercase; letter-spacing:.06em;
     padding:.45em 1em; cursor:pointer; opacity:.55; border-right:none; }
@@ -50,6 +53,7 @@ function dl_tabbar() {
   .dlrow-hidden { display:none !important; }
   /* content links: just underlined, in text color. pink is reserved for tabs. */
   .dlview a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
+  .dlview a:visited { color:var(--visited); }        /* clicked = golden pollen */
   /* unified tab bar + active = pink underline (identical everywhere) */
   .dltabs { display:flex; border-bottom:1px solid var(--line); }
   .dltab { padding:.5em 1.1em; cursor:pointer; text-decoration:none !important; color:var(--text);
@@ -142,6 +146,7 @@ function dl_tabbar() {
   #view-itunes .statusbar { border-top:1px solid var(--line); padding:5px; text-align:center; font-size:11px; color:var(--porcelain); opacity:.7; background:rgba(255,252,249,.05); }
 </style>
 
+<div class="dlhead"><span class="dlwm">doubled.life</span><input type="search" id="q" placeholder="search"></div>
 <div class="dltoggle">
   <button class="active" data-view="espn">espn</button>
   <button data-view="napster">napster</button>
@@ -187,7 +192,6 @@ function dl_tabbar() {
 <!-- ============ NAPSTER (transfer-list grid) ============ -->
 <div class="dlview" id="view-napster">
   <div class="win">
-    <div class="titlebar">doubled.life</div>
     <?= dl_tabbar() ?>
     <div class="dlpane active" data-pane="library"><div class="body"><table>
       <thead><tr><th style="width:40%">Subject</th><th>Kind</th><th>Date</th><th>Status</th></tr></thead>
@@ -211,7 +215,7 @@ function dl_tabbar() {
         <div class="media"><?= htmlspecialchars($hero['kind']) ?></div>
         <div class="hl"><?= dl_a($hero) ?></div><div class="dek"><?= htmlspecialchars($hero['lede']) ?></div>
       </div></div>
-      <div class="stack"><?php foreach (array_slice($rest,0,7) as $s): ?>
+      <div class="stack"><?php foreach ($rest as $s): ?>
         <div class="cd-small" data-t="<?= dl_t($s) ?>"><div class="hl"><span class="icon">›</span><?= dl_a($s) ?></div>
           <div class="meta"><?= htmlspecialchars($s['kind']) ?> · <?= htmlspecialchars($s['date']) ?></div></div>
       <?php endforeach; ?></div>
@@ -226,11 +230,9 @@ function dl_tabbar() {
 <!-- ============ iTunes (sidebar nav) ============ -->
 <div class="dlview" id="view-itunes">
   <div class="win">
-    <div class="tb">doubled.life</div>
     <div class="main">
       <div class="sidebar">
-        <h3>Library</h3>
-        <a class="dltab active" data-tab="library">All subjects</a>
+        <a class="dltab active" data-tab="library">Library</a>
         <a class="dltab" data-tab="videos">Videos</a>
         <a class="dltab" data-tab="queue">Queue</a>
         <a class="dltab" data-tab="notes">Notes</a>
