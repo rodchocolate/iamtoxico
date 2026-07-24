@@ -124,41 +124,54 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
 <title>doubled.life</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  :root {
+    --bg: #0e2a52;            /* blue background */
+    --text: #74d19a;          /* green main text */
+    --porcelain: #e9e4d8;     /* porcelain detail */
+    --line: rgba(233,228,216,.22);   /* porcelain borders */
+    --panel: rgba(233,228,216,.06);
+    --link: #ff8fc4;          /* pink */
+    --visited: #ffd95c;       /* yellow (clicked) */
+    --hover: #ffffff;         /* hover — the missing state */
+  }
+  a { color: var(--link); }
+  a:visited { color: var(--visited); }
+  a:hover { color: var(--hover); }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Space Grotesk', sans-serif; background: #0b0b0b; color: #fff; min-height: 100vh; }
+  body { font-family: 'Space Grotesk', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
   .gate { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; }
-  .gate.landing { background: #0b0b0b url('landing.webp') center center / cover no-repeat; }
+  .gate.landing { background: var(--bg) url('landing.webp') center center / cover no-repeat; }
   .gate.landing h1, .gate.landing .m { text-shadow: 0 2px 12px rgba(0,0,0,.8); }
   .gate.landing button { background: rgba(0,0,0,.55); backdrop-filter: blur(2px); }
   .gate h1 { font-size: 2rem; font-weight: 600; letter-spacing: .04em; text-transform: lowercase; }
   .gate form { display: flex; gap: .6rem; }
-  .gate input { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff;
+  .gate input { background: var(--panel); border: 1px solid var(--line); color: #fff;
     font-family: inherit; font-size: 1rem; padding: .6em 1em; border-radius: 8px; width: 14rem; }
-  .gate button { background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25); color: #fff;
+  .gate button { background: var(--line); border: 1px solid var(--line); color: #fff;
     font-family: inherit; font-size: 1rem; padding: .6em 1.2em; border-radius: 8px; cursor: pointer; }
   .gate .m { opacity: .5; font-size: .85rem; min-height: 1.2em; }
   header { padding: 1.5rem 2rem; max-width: 1280px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
   header h1 { font-size: 2rem; font-weight: 600; letter-spacing: .04em; text-transform: lowercase; }
-  header input { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff;
+  header input { background: var(--panel); border: 1px solid var(--line); color: #fff;
     font-family: inherit; font-size: .95rem; padding: .5em 1em; border-radius: 8px; width: 16rem; }
   main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
   .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
-  .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 12px;
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
     overflow: hidden; transition: transform .25s, border-color .25s; }
-  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
-  .card a { display: block; color: inherit; text-decoration: none; padding: 1.1rem 1.2rem; }
+  .card:hover { transform: translateY(-4px); border-color: var(--line); }
+  .card a { display: block; color: var(--text); text-decoration: none; padding: 1.1rem 1.2rem; }
   .card .kind { font-size: .7rem; opacity: .5; text-transform: uppercase; letter-spacing: .1em; }
   .card .name { font-size: 1.1rem; font-weight: 600; margin: .2rem 0 .4rem; }
   .card .lede { font-size: .85rem; opacity: .7; line-height: 1.45; }
   .tabs { display: flex; gap: .3rem; max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
-  .tabs button { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.12); border-bottom: none;
+  .tabs button { background: var(--panel); border: 1px solid var(--line); border-bottom: none;
     color: #fff; font-family: inherit; font-size: .8rem; letter-spacing: .06em; text-transform: lowercase;
     padding: .55em 1.3em; border-radius: 8px 8px 0 0; cursor: pointer; opacity: .55; }
-  .tabs button.active { opacity: 1; background: rgba(255,255,255,.12); }
+  .tabs button.active { opacity: 1; background: var(--line); }
   .panel { display: none; }
   .panel.active { display: block; }
   .vgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
-  .vtile { position: relative; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,.1);
+  .vtile { color: var(--text); position: relative; border-radius: 12px; overflow: hidden; border: 1px solid var(--line);
     aspect-ratio: 1; background: #1a1a1a; display: block; text-decoration: none; }
   .vtile img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
   .vtile:hover img { transform: scale(1.05); }
@@ -166,14 +179,43 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
     font-size: .82rem; font-weight: 600; background: linear-gradient(transparent, rgba(0,0,0,.85)); }
   .qcard .st { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .3rem; }
   .qcard .st.run { color: #5fd08a; } .qcard .st.queued { color: #e0b64a; } .qcard .st.done { color: rgba(255,255,255,.4); }
-  .notes textarea { width: 100%; min-height: 9rem; background: rgba(255,255,255,.06); color: #fff;
-    border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 1rem; font-family: inherit;
+  .notes textarea { width: 100%; min-height: 9rem; background: var(--panel); color: #fff;
+    border: 1px solid var(--line); border-radius: 12px; padding: 1rem; font-family: inherit;
     font-size: .95rem; line-height: 1.5; resize: vertical; }
-  .notes button { margin-top: .8rem; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.25);
+  .notes button { margin-top: .8rem; background: var(--line); border: 1px solid var(--line);
     color: #fff; font-family: inherit; font-size: .9rem; padding: .55em 1.4em; border-radius: 8px; cursor: pointer; }
   .notes .hint { font-size: .78rem; opacity: .5; margin-top: .6rem; }
   .empty { opacity: .4; font-size: .85rem; padding: 1rem 0; }
-  @media (max-width: 768px) { .cards, .vgrid { grid-template-columns: 1fr; } .tabs { flex-wrap: wrap; } }
+  .viewtoggle { display: flex; gap: 0; }
+  .viewtoggle button { background: var(--panel); border: 1px solid var(--line);
+    color: #fff; font-family: inherit; font-size: .72rem; text-transform: lowercase; letter-spacing: .06em;
+    padding: .45em 1em; cursor: pointer; opacity: .5; }
+  .viewtoggle button:first-child { border-radius: 8px 0 0 8px; }
+  .viewtoggle button:last-child { border-radius: 0 8px 8px 0; border-left: none; }
+  .viewtoggle button.active { opacity: 1; background: var(--panel); }
+  .view { display: none; } .view.active { display: block; }
+  .hero { color: var(--text); display: block; position: relative; max-width: 1280px; margin: 0 auto 1.8rem; border-radius: 16px;
+    overflow: hidden; text-decoration: none; color: #fff; background: #161616; }
+  .hero img { width: 100%; height: 420px; object-fit: cover; opacity: .82; display: block; }
+  .hero .noimg { height: 300px; }
+  .hero-body { position: absolute; inset: auto 0 0 0; padding: 2rem; background: linear-gradient(transparent, rgba(0,0,0,.92)); }
+  .hero .kind { font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; opacity: .7; }
+  .hero-name { font-size: 2.4rem; font-weight: 600; margin: .2rem 0 .4rem; letter-spacing: .02em; }
+  .hero-lede { font-size: 1rem; opacity: .82; max-width: 62ch; line-height: 1.5; }
+  .river { max-width: 1280px; margin: 0 auto; display: grid; gap: 1.1rem; }
+  .story { color: var(--text); display: grid; grid-template-columns: 190px 1fr; gap: 1.3rem; text-decoration: none; color: #fff;
+    border-bottom: 1px solid var(--panel); padding-bottom: 1.1rem; align-items: start; }
+  .story:hover .story-name { color: #9ecbff; }
+  .story-thumb { width: 190px; height: 115px; border-radius: 10px; overflow: hidden; background: #1a1a1a;
+    display: flex; align-items: center; justify-content: center; font-size: 2.4rem; font-weight: 600; color: rgba(255,255,255,.75); }
+  .story-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .story .meta { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; opacity: .5; }
+  .story-name { font-size: 1.3rem; font-weight: 600; margin: .15rem 0 .35rem; }
+  .story-lede { font-size: .88rem; opacity: .72; line-height: 1.5; }
+  .card.qcard.link { cursor: pointer; }
+  @media (max-width: 768px) { .cards, .vgrid { grid-template-columns: 1fr; } .tabs { flex-wrap: wrap; }
+    .story { grid-template-columns: 110px 1fr; gap: .9rem; } .story-thumb { width: 110px; height: 80px; font-size: 1.6rem; }
+    .hero-name { font-size: 1.6rem; } .hero img { height: 240px; } header { flex-wrap: wrap; gap: .6rem; } }
 </style>
 </head>
 <body>
@@ -206,11 +248,56 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
   </form>
   <div class="m"><?= htmlspecialchars($msg ?: 'code sent') ?></div>
 </div>
-<?php else: ?>
+<?php else:
+  function dl_hue($s) { return crc32($s) % 360; }
+  $hero = $subjects[0] ?? null;
+  $rest = array_slice($subjects, 1);
+?>
 <header>
   <h1>doubled.life</h1>
+  <div class="viewtoggle">
+    <button class="active" data-view="espn">espn</button>
+    <button data-view="napster">napster</button>
+  </div>
   <input type="search" id="q" placeholder="search">
 </header>
+
+<!-- ESPN reading view (default) -->
+<div class="view active" id="view-espn">
+  <main>
+  <?php if ($hero): ?>
+    <a class="hero" href="<?= htmlspecialchars($hero['url']) ?>" target="_blank" rel="noopener"
+       data-t="<?= htmlspecialchars(strtolower($hero['name'].' '.$hero['kind'].' '.$hero['lede'])) ?>">
+      <?php if (!empty($hero['thumb'])): ?><img src="<?= htmlspecialchars($hero['thumb']) ?>" alt="">
+      <?php else: ?><div class="noimg" style="background:hsl(<?= dl_hue($hero['name']) ?>,45%,20%)"></div><?php endif; ?>
+      <div class="hero-body">
+        <div class="kind"><?= htmlspecialchars($hero['kind']) ?></div>
+        <div class="hero-name"><?= htmlspecialchars($hero['name']) ?></div>
+        <div class="hero-lede"><?= htmlspecialchars($hero['lede']) ?></div>
+      </div>
+    </a>
+    <div class="river">
+    <?php foreach ($rest as $s): ?>
+      <a class="story" href="<?= htmlspecialchars($s['url']) ?>" target="_blank" rel="noopener"
+         data-t="<?= htmlspecialchars(strtolower($s['name'].' '.$s['kind'].' '.$s['lede'])) ?>">
+        <div class="story-thumb" style="background:hsl(<?= dl_hue($s['name']) ?>,42%,18%)">
+          <?php if (!empty($s['thumb'])): ?><img src="<?= htmlspecialchars($s['thumb']) ?>" alt="">
+          <?php else: ?><?= htmlspecialchars(strtoupper(substr($s['name'],0,1))) ?><?php endif; ?>
+        </div>
+        <div class="story-body">
+          <div class="meta"><?= htmlspecialchars($s['kind']) ?><?= $s['date'] ? ' · '.htmlspecialchars($s['date']) : '' ?></div>
+          <div class="story-name"><?= htmlspecialchars($s['name']) ?></div>
+          <div class="story-lede"><?= htmlspecialchars($s['lede']) ?></div>
+        </div>
+      </a>
+    <?php endforeach; ?>
+    </div>
+  <?php else: ?><div class="empty">no research yet</div><?php endif; ?>
+  </main>
+</div>
+
+<!-- Napster console view -->
+<div class="view" id="view-napster">
 <div class="tabs">
   <button class="active" data-tab="library">library</button>
   <button data-tab="video">video</button>
@@ -258,15 +345,34 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
     </form>
   </div>
 </main>
+</div>
 <script>
 const q = document.getElementById('q');
+function esc(s){ return (s||'').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function activeView(){ return document.querySelector('.view.active'); }
 function filter() {
   const t = (q.value || '').toLowerCase();
-  document.querySelectorAll('.panel.active [data-t]').forEach(c => {
+  const scope = activeView().classList.contains('view') && activeView().id === 'view-napster'
+    ? '.panel.active [data-t]' : '[data-t]';
+  activeView().querySelectorAll(scope).forEach(c => {
     c.style.display = c.dataset.t.includes(t) ? '' : 'none';
   });
 }
 q.addEventListener('input', filter);
+
+// view toggle (espn default), persisted
+function setView(v) {
+  document.querySelectorAll('.viewtoggle button').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+  document.getElementById('view-espn').classList.toggle('active', v === 'espn');
+  document.getElementById('view-napster').classList.toggle('active', v === 'napster');
+  try { localStorage.setItem('dl_view', v); } catch (e) {}
+  if (v === 'napster' && document.querySelector('.tabs .active')?.dataset.tab === 'queue') loadQueue();
+  filter();
+}
+document.querySelectorAll('.viewtoggle button').forEach(b => b.addEventListener('click', () => setView(b.dataset.view)));
+try { const saved = localStorage.getItem('dl_view'); if (saved) setView(saved); } catch (e) {}
+
+// napster tabs
 document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
   document.querySelectorAll('.tabs button').forEach(x => x.classList.remove('active'));
   document.querySelectorAll('.panel').forEach(x => x.classList.remove('active'));
@@ -281,13 +387,22 @@ function loadQueue() {
     const el = document.getElementById('qcards');
     const jobs = (d && d.jobs) || [];
     if (!jobs.length) { el.innerHTML = '<div class="empty">nothing in the last 24 hours</div>'; return; }
-    el.innerHTML = jobs.map(j =>
-      '<div class="card qcard" data-t="' + (j.target || '').toLowerCase() + '">' +
+    el.innerHTML = jobs.map(j => {
+      const inner =
         '<div style="padding:1.1rem 1.2rem">' +
-          '<div class="st ' + (j.status || 'done') + '">' + (j.status || '') + '</div>' +
-          '<div class="name">' + (j.target || 'request') + '</div>' +
-          '<div class="lede">' + (j.detail || '') + '</div>' +
-        '</div></div>').join('');
+          '<div class="st ' + (j.status || 'done') + '">' + esc(j.status || '') +
+            (j.url && j.status !== 'done' ? ' · view current' : '') + '</div>' +
+          '<div class="name">' + esc(j.target || 'request') + '</div>' +
+          '<div class="lede">' + esc(j.detail || '') + '</div>' +
+        '</div>';
+      const dt = 'data-t="' + esc((j.target || '').toLowerCase()) + '"';
+      // a queue item behaves like a library card whenever a page exists — even
+      // an in-progress update links to the existing page in the interim
+      return j.url
+        ? '<a class="card qcard link" href="' + esc(j.url) + '" target="_blank" rel="noopener" ' + dt + '>' + inner + '</a>'
+        : '<div class="card qcard" ' + dt + '>' + inner + '</div>';
+    }).join('');
+    filter();
   }).catch(() => { document.getElementById('qcards').innerHTML = '<div class="empty">queue unavailable</div>'; });
 }
 </script>

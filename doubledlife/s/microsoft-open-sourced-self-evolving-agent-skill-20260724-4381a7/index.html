@@ -7,31 +7,37 @@
 <title>MICROSOFT OPEN-SOURCED SELF-EVOLVING AGENT SKILLS SkillOpt…</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  :root {
+    --bg: #0e2a52; --text: #74d19a; --porcelain: #e9e4d8;
+    --line: rgba(233,228,216,.22); --panel: rgba(233,228,216,.06);
+    --link: #ff8fc4; --visited: #ffd95c; --hover: #ffffff;
+  }
+  a { color: var(--link); } a:visited { color: var(--visited); } a:hover { color: var(--hover); }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Space Grotesk', sans-serif; background: #0b0b0b; color: #fff; min-height: 100vh; }
+  body { font-family: 'Space Grotesk', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
   .wrap { max-width: 1100px; margin: 0 auto; padding: 1.5rem 2rem 4rem; }
   .masthead h1 { font-size: 3rem; font-weight: 600; letter-spacing: .04em; }
   .masthead .kind { display: inline-block; font-size: .75rem; text-transform: uppercase; letter-spacing: .12em;
-    opacity: .6; border: 1px solid rgba(255,255,255,.25); border-radius: 6px; padding: .25em .7em; margin: .4rem 0 0; }
+    opacity: .6; border: 1px solid var(--line); border-radius: 6px; padding: .25em .7em; margin: .4rem 0 0; }
   .stats { display: flex; gap: 2.2rem; margin: 1.2rem 0 1.8rem; }
   .stats div { text-align: left; }
   .stats .v { font-size: 1.4rem; font-weight: 600; }
   .stats .k { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; opacity: .5; }
   .cols { display: grid; grid-template-columns: 1fr 300px; gap: 2rem; }
   .lede { font-size: 1.05rem; line-height: 1.6; opacity: .9; margin-bottom: 1.4rem; }
-  .infobox { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 12px;
+  .infobox { background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
     overflow: hidden; align-self: start; }
   .infobox img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
   .infobox table { width: 100%; border-collapse: collapse; font-size: .82rem; }
-  .infobox td { padding: .5em .9em; border-top: 1px solid rgba(255,255,255,.08); vertical-align: top; }
+  .infobox td { padding: .5em .9em; border-top: 1px solid var(--line); vertical-align: top; }
   .infobox td:first-child { opacity: .55; white-space: nowrap; }
   .body h3 { font-size: 1.2rem; margin: 1.6rem 0 .6rem; }
   .body h4 { font-size: 1rem; margin: 1.2rem 0 .4rem; }
   .body p, .body li { font-size: .92rem; line-height: 1.6; opacity: .85; margin-bottom: .7rem; }
   .body ul { margin: 0 0 .7rem 1.2rem; }
-  .body a, .refs a { color: #9ecbff; text-decoration: none; word-break: break-all; }
+  .body a, .refs a { color: var(--link); text-decoration: none; word-break: break-all; }
   .body a:hover, .refs a:hover { text-decoration: underline; }
-  .refs { margin-top: 2.5rem; border-top: 1px solid rgba(255,255,255,.12); padding-top: 1.2rem; }
+  .refs { margin-top: 2.5rem; border-top: 1px solid var(--line); padding-top: 1.2rem; }
   .refs h3 { font-size: 1.1rem; margin-bottom: .8rem; }
   .refs ol { margin-left: 1.4rem; }
   .refs li { font-size: .82rem; line-height: 1.7; opacity: .8; }
