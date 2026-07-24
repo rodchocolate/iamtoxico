@@ -33,8 +33,13 @@ ENTRY_RE = re.compile(
     r'^\s*\{t:"(?P<title>[^"\\]*(?:\\.[^"\\]*)*)",\s*'
     r'y:"(?P<category>[^"\\]*(?:\\.[^"\\]*)*)",\s*'
     r's:"(?P<shop>live|staging)",\s*'
+    r'(?:p:(?P<price>\d+(?:\.\d+)?),\s*)?'
+    r'(?:u:"(?P<url>[^"\\]*(?:\\.[^"\\]*)*)",\s*)?'
     r'f:"(?P<front>[^"\\]*(?:\\.[^"\\]*)*)",\s*'
-    r'b:"(?P<back>[^"\\]*(?:\\.[^"\\]*)*)"\},\s*$'
+    r'b:"(?P<back>[^"\\]*(?:\\.[^"\\]*)*)"'
+    r'(?:,\s*c:(?P<colors>\[[^\]]*\]))?'
+    r'(?:,\s*g:"(?P<page>[^"]*)")?'
+    r'\},\s*$'
 )
 MOCKUP_PRODUCT_ID_RE = re.compile(r"/mockup/(?P<product_id>[^/]+)/")
 FRONT_LABELS = (
@@ -63,6 +68,7 @@ class PreviewEntry:
     shop: str
     front: str
     back: str
+    raw: str
 
 
 def js_escape(value: str) -> str:
@@ -74,13 +80,14 @@ def extract_product_id(url: str) -> str | None:
     return match.group("product_id") if match else None
 
 
-def parse_preview_entries(html: str) -> Tuple[List[PreviewEntry], List[PreviewEntry]]:
+def parse_preview_entries(html: str) -> List[PreviewEntry]:
+    """Parse P entries in file order. Order is meaningful (newest → oldest) and
+    is preserved on rewrite, as are any extra fields (p, u, c, g) via `raw`."""
     match = ARRAY_RE.search(html)
     if not match:
         raise ValueError("Could not find preview product array in preview.html")
 
-    live_entries: List[PreviewEntry] = []
-    staging_entries: List[PreviewEntry] = []
+    entries: List[PreviewEntry] = []
     for raw_line in match.group("body").splitlines():
         stripped = raw_line.strip()
         if not stripped or stripped.startswith("/*"):
@@ -90,41 +97,22 @@ def parse_preview_entries(html: str) -> Tuple[List[PreviewEntry], List[PreviewEn
         if not entry_match:
             raise ValueError(f"Unexpected preview entry line: {raw_line}")
 
-        entry = PreviewEntry(
-            title=entry_match.group("title").replace('\\"', '"').replace("\\\\", "\\"),
-            category=entry_match.group("category").replace('\\"', '"').replace("\\\\", "\\"),
-            shop=entry_match.group("shop"),
-            front=entry_match.group("front").replace('\\"', '"').replace("\\\\", "\\"),
-            back=entry_match.group("back").replace('\\"', '"').replace("\\\\", "\\"),
+        entries.append(
+            PreviewEntry(
+                title=entry_match.group("title").replace('\\"', '"').replace("\\\\", "\\"),
+                category=entry_match.group("category").replace('\\"', '"').replace("\\\\", "\\"),
+                shop=entry_match.group("shop"),
+                front=entry_match.group("front").replace('\\"', '"').replace("\\\\", "\\"),
+                back=entry_match.group("back").replace('\\"', '"').replace("\\\\", "\\"),
+                raw=raw_line,
+            )
         )
-        if entry.shop == "live":
-            live_entries.append(entry)
-        else:
-            staging_entries.append(entry)
 
-    return live_entries, staging_entries
+    return entries
 
 
-def format_entry(entry: PreviewEntry) -> str:
-    return (
-        f'  {{t:"{js_escape(entry.title)}", y:"{js_escape(entry.category)}", '
-        f's:"{entry.shop}", f:"{js_escape(entry.front)}", b:"{js_escape(entry.back)}"}},'
-    )
-
-
-def replace_preview_entries(
-    html: str,
-    live_entries: Sequence[PreviewEntry],
-    staging_entries: Sequence[PreviewEntry],
-) -> str:
-    body_lines = [
-        "  /* -- LIVE (alphabetical) -- */",
-        *(format_entry(entry) for entry in live_entries),
-        "",
-        "  /* -- STAGING (alphabetical) -- */",
-        *(format_entry(entry) for entry in staging_entries),
-    ]
-    replacement = "const P = [\n" + "\n".join(body_lines) + "\n];"
+def replace_preview_entries(html: str, entries: Sequence[PreviewEntry]) -> str:
+    replacement = "const P = [\n" + "\n".join(e.raw for e in entries) + "\n];"
     return ARRAY_RE.sub(lambda _: replacement, html, count=1)
 
 
@@ -142,18 +130,21 @@ def refresh_entry(entry: PreviewEntry, product: dict) -> PreviewEntry:
     images = product.get("images", [])
     front = select_mockup_url(images, FRONT_LABELS) or entry.front
     back = select_mockup_url(images, BACK_LABELS) or entry.back
+    raw = entry.raw.replace(f'f:"{js_escape(entry.front)}"', f'f:"{js_escape(front)}"')
+    raw = raw.replace(f'b:"{js_escape(entry.back)}"', f'b:"{js_escape(back)}"')
     return PreviewEntry(
         title=entry.title,
         category=entry.category,
         shop=entry.shop,
         front=front,
         back=back,
+        raw=raw,
     )
 
 
 def sync_entries(
     entries: Sequence[PreviewEntry],
-    products_by_id: Dict[str, dict],
+    products_by_shop: Dict[str, Dict[str, dict]],
     keep_missing: bool = False,
 ) -> Tuple[List[PreviewEntry], List[PreviewEntry]]:
     synced: List[PreviewEntry] = []
@@ -168,7 +159,7 @@ def sync_entries(
                 removed.append(entry)
             continue
 
-        product = products_by_id.get(product_id)
+        product = products_by_shop[entry.shop].get(product_id)
         if not product:
             if keep_missing:
                 synced.append(entry)
@@ -213,23 +204,25 @@ def main() -> int:
     connector = PrintifyConnector()
 
     html = args.preview_file.read_text(encoding="utf-8")
-    live_entries, staging_entries = parse_preview_entries(html)
+    entries = parse_preview_entries(html)
 
-    live_products = load_products_by_id(connector, args.live_shop_id)
-    staging_products = load_products_by_id(connector, args.staging_shop_id)
+    products_by_shop = {
+        "live": load_products_by_id(connector, args.live_shop_id),
+        "staging": load_products_by_id(connector, args.staging_shop_id),
+    }
 
-    synced_live, removed_live = sync_entries(live_entries, live_products, keep_missing=args.keep_missing)
-    synced_staging, removed_staging = sync_entries(staging_entries, staging_products, keep_missing=args.keep_missing)
+    synced, removed = sync_entries(entries, products_by_shop, keep_missing=args.keep_missing)
 
-    refreshed_html = replace_preview_entries(html, synced_live, synced_staging)
+    refreshed_html = replace_preview_entries(html, synced)
     if not args.dry_run:
         args.preview_file.write_text(refreshed_html, encoding="utf-8")
 
+    live_kept = sum(1 for e in synced if e.shop == "live")
     print(
-        f"Preview refresh complete: {len(synced_live)} live kept, {len(synced_staging)} staging kept, "
-        f"{len(removed_live) + len(removed_staging)} removed"
+        f"Preview refresh complete: {live_kept} live kept, {len(synced) - live_kept} staging kept, "
+        f"{len(removed)} removed"
     )
-    for entry in removed_live + removed_staging:
+    for entry in removed:
         print(f"removed\t{entry.shop}\t{entry.title}")
     return 0
 
