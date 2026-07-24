@@ -125,14 +125,14 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
   :root {
-    --bg: #0e2a52;            /* blue background */
-    --text: #74d19a;          /* green main text */
-    --porcelain: #e9e4d8;     /* porcelain detail */
-    --line: rgba(233,228,216,.22);   /* porcelain borders */
-    --panel: rgba(233,228,216,.06);
-    --link: #ff8fc4;          /* pink */
-    --visited: #ffd95c;       /* yellow (clicked) */
-    --hover: #ffffff;         /* hover — the missing state */
+    --bg: #26547c;            /* dusk blue — background */
+    --text: #06d6a0;          /* emerald — main text */
+    --porcelain: #fffcf9;     /* porcelain — detail */
+    --line: rgba(255,252,249,.24);   /* porcelain borders */
+    --panel: rgba(255,252,249,.06);
+    --link: #ef476f;          /* bubblegum pink — link */
+    --visited: #ffd166;       /* golden pollen — clicked */
+    --hover: #fffcf9;         /* porcelain — hover highlight */
   }
   a { color: var(--link); }
   a:visited { color: var(--visited); }
