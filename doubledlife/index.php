@@ -221,7 +221,6 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
 <body>
 <?php if ($stage === 'landing'): ?>
 <div class="gate landing">
-  <h1>doubled.life</h1>
   <form method="post">
     <button type="submit" name="proceed" value="1">proceed</button>
   </form>
@@ -229,7 +228,6 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
 </div>
 <?php elseif ($stage === 'password'): ?>
 <div class="gate">
-  <h1>doubled.life</h1>
   <form method="post">
     <input type="password" name="password" autofocus autocomplete="current-password">
     <button type="submit">enter</button>
@@ -238,7 +236,6 @@ $videos = array_values(array_filter($subjects, fn($s) => ($s['kind'] ?? '') === 
 </div>
 <?php elseif ($stage === 'code'): ?>
 <div class="gate">
-  <h1>doubled.life</h1>
   <form method="post">
     <input type="text" name="code" inputmode="numeric" maxlength="4" placeholder="4-digit code" autofocus autocomplete="one-time-code">
     <button type="submit">confirm</button>

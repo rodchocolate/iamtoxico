@@ -40,7 +40,7 @@ function dl_tabbar() {
 ?>
 <style>
   /* ---- unified controls (same across all four views) ---- */
-  .dlhead { display:flex; align-items:center; justify-content:space-between; max-width:1180px; margin:0 auto; padding:1rem 1rem .2rem; }
+  .dlhead { display:flex; align-items:center; justify-content:flex-end; max-width:1180px; margin:0 auto; padding:1rem 1rem .2rem; }
   .dlwm { font-size:1.4rem; font-weight:600; letter-spacing:.04em; color:var(--text); font-family:'Space Grotesk',sans-serif; }
   .dlhead input { background:var(--panel); border:1px solid var(--line); color:var(--text); font-family:'Space Grotesk',sans-serif; font-size:.9rem; padding:.45em 1em; border-radius:8px; width:14rem; }
   .dltoggle { display:flex; gap:0; padding:.4rem 1rem .2rem; max-width:1180px; margin:0 auto; }
@@ -146,7 +146,7 @@ function dl_tabbar() {
   #view-itunes .statusbar { border-top:1px solid var(--line); padding:5px; text-align:center; font-size:11px; color:var(--porcelain); opacity:.7; background:rgba(255,252,249,.05); }
 </style>
 
-<div class="dlhead"><span class="dlwm">doubled.life</span><input type="search" id="q" placeholder="search"></div>
+<div class="dlhead"><input type="search" id="q" placeholder="search"></div>
 <div class="dltoggle">
   <button class="active" data-view="espn">espn</button>
   <button data-view="napster">napster</button>
