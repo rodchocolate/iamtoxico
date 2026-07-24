@@ -1,8 +1,8 @@
 <?php return [
-  ['name' => 'Great Woods', 'kind' => 'concept', 'lede' => 'tweeter center through 2008 in mansfield ma. up in smoke, ratm, allman brothers, dave matthews', 'url' => '/s/great-woods-20260524-099a1d/'],
-  ['name' => 'Music in film on screen', 'kind' => 'concept', 'lede' => 'Music in film on screen Music theory', 'url' => '/s/music-in-film-on-screen-20260705-6a2e9a/'],
-  ['name' => 'Toyota 4Runner', 'kind' => 'concept', 'lede' => 'I thought you would like this Certified 2024 Toyota 4Runner TRD Off-Road Premium w/ Moonroof Package for $51960 on Autotrader http://atcm.co/S2PVDP/2E9D7A61.', 'url' => '/s/toyota-4runner-20260705-96c59d/'],
-  ['name' => 'research', 'kind' => 'question', 'lede' => '(no body)', 'url' => '/s/research-20260717-d2b81a/'],
+  ['name' => 'Great Woods', 'kind' => 'concept', 'lede' => 'concept researched 2026-05-24.', 'url' => '/s/great-woods-20260524-099a1d/'],
+  ['name' => 'Music in film on screen', 'kind' => 'concept', 'lede' => 'concept researched 2026-07-05.', 'url' => '/s/music-in-film-on-screen-20260705-6a2e9a/'],
+  ['name' => 'Toyota 4Runner', 'kind' => 'concept', 'lede' => 'concept researched 2026-07-05.', 'url' => '/s/toyota-4runner-20260705-96c59d/'],
   ['name' => 'Avalon Norwood', 'kind' => 'venue', 'lede' => 'Avalon Norwood is a residential community in Norwood, Massachusetts, offering one-, two-, and three-bedroom apartments and townhomes for lease. It is managed by AvalonBay Communities.', 'url' => '/s/avalon-norwood-20260720-8c8b8a/'],
-  ['name' => '#german #history', 'kind' => 'video', 'lede' => 'The video discusses the concept of a \'big lie\' regarding history and genealogy, specifically focusing on the history of Black people and whether they are indigenous to the Americas. The speaker argues that Americans are systematically lied to about their true history, and thes el', 'url' => '/s/german-history-20260720-829771/']
+  ['name' => 'German History', 'kind' => 'video', 'lede' => 'The video discusses the concept of a \'big lie\' regarding history and genealogy, specifically focusing on the history of Black people and whether they are indigenous to the Americas. The speaker argues that Americans are systematically lied to about their true history, and thes el', 'url' => '/s/german-history-20260720-829771/'],
+  ['name' => 'MICROSOFT OPEN-SOURCED SELF-EVOLVING AGENT SKILLS SkillOpt…', 'kind' => 'video', 'lede' => 'Microsoft has open-sourced SkillOpt, a framework for self-evolving agent skills. It allows AI agents to improve their own instructions and prompts through an iterative process of execution, evaluation, and optimization, removing the necessity for manual prompt engineering. This i', 'url' => '/s/microsoft-open-sourced-self-evolving-agent-skill-20260724-4381a7/']
 ];
