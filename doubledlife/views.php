@@ -164,6 +164,7 @@ function dl_tabbar() {
           <div class="mod">
             <?php if ($hero): ?>
             <div class="feat" data-t="<?= dl_t($hero) ?>">
+              <?php if(!empty($hero['thumb'])): ?><img src="<?= htmlspecialchars($hero['thumb']) ?>" style="float:right;width:110px;height:110px;object-fit:cover;border-radius:6px;margin:0 0 8px 12px" alt=""><?php endif; ?>
               <h2><?= dl_a($hero) ?></h2><p><?= htmlspecialchars($hero['lede']) ?></p>
               <div class="meta"><?= htmlspecialchars($hero['kind']) ?><?= $hero['date'] ? ' · '.htmlspecialchars($hero['date']) : '' ?></div>
             </div>
@@ -212,7 +213,7 @@ function dl_tabbar() {
     <?php if ($hero): ?>
     <section class="zn"><div class="lead">
       <div class="fluid"><div class="cd-lead" data-t="<?= dl_t($hero) ?>">
-        <div class="media"><?= htmlspecialchars($hero['kind']) ?></div>
+        <div class="media"<?php if(!empty($hero['thumb'])): ?> style="background:url('<?= htmlspecialchars($hero['thumb']) ?>') center/cover"<?php endif; ?>><?= empty($hero['thumb']) ? htmlspecialchars($hero['kind']) : '' ?></div>
         <div class="hl"><?= dl_a($hero) ?></div><div class="dek"><?= htmlspecialchars($hero['lede']) ?></div>
       </div></div>
       <div class="stack"><?php foreach ($rest as $s): ?>

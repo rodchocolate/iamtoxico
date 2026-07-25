@@ -28,6 +28,7 @@
   .infobox { background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
     overflow: hidden; align-self: start; }
   .infobox img { width: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+  .infobox .embed { width: 100%; aspect-ratio: 16/9; display: block; border: 0; }
   .infobox table { width: 100%; border-collapse: collapse; font-size: .82rem; }
   .infobox td { padding: .5em .9em; border-top: 1px solid var(--line); vertical-align: top; }
   .infobox td:first-child { opacity: .55; white-space: nowrap; }
@@ -53,19 +54,47 @@
   </div>
   <div class="stats">
     <div><div class="v">2026-07-24</div><div class="k">researched</div></div>
-    <div><div class="v">1</div><div class="k">sources</div></div>
-    <div><div class="v">122</div><div class="k">words</div></div>
+    <div><div class="v">0</div><div class="k">sources</div></div>
+    <div><div class="v">429</div><div class="k">words</div></div>
   </div>
   <div class="cols">
     <div class="main">
-      <div class="lede">concept researched 2026-07-24.</div>
+      <div class="lede">iamtoxico.com is an AI-driven print-on-demand streetwear brand integrated with Shopify and Printify. The brand utilizes a custom automated pipeline called Hermes to rapidly transition designs from email to live, purchasable products.</div>
       <div class="body">
-
+<p>iamtoxico.com is an AI-driven print-on-demand streetwear brand integrated with Shopify and Printify. The brand utilizes a custom automated pipeline called Hermes to rapidly transition designs from email to live, purchasable products.</p>
+<p>iamtoxico.com is an AI-driven print-on-demand streetwear brand integrated with Shopify and Printify. The brand utilizes a custom automated pipeline called Hermes to rapidly transition designs from email to live, purchasable products.</p>
+<h3>Overview</h3>
+<p>iamtoxico.com is a streetwear brand that operates via a Shopify storefront (`iamtoxico.myshopify.com`) and Printify for fulfillment. The technical infrastructure includes a Flask-based backend for development and a central `catalog.json` file that manages both live Printify products and affiliate items sourced from Amazon. The system maintains both a live production shop and a disconnected staging store for development.</p>
+<h3>Product line</h3>
+<p>The current live product offering consists exclusively of Harem Pants, including the following styles:</p>
+<ul>
+<li>Arctic River</li>
+<li>Cyan Glow</li>
+<li>Frozen Sky</li>
+<li>Hold Cards</li>
+<li>Hot Oil</li>
+<li>Toxico</li>
+</ul>
+<p>Additional products in the staging phase include zip hoodies, cover/pullover hoodies, shorts, blankets, kimono robes, long sleeve tees, boxy tees, women&#x27;s thongs, windbreakers, puffer jackets, comforters, and full-zip hoodies.</p>
+<h3>How it works</h3>
+<p>The brand employs the &quot;Hermes&quot; pipeline for &quot;instant drops.&quot; This process allows a user to email a design image, which is then automatically converted into live products across a curated set of garments (such as apres/harem, hoop, and puffer) without an approval gate.</p>
+<p>Because Printify mockup rendering and Shopify URL (handle) synchronization can be slow, the system uses a placeholder and backfill architecture:</p>
+<p>1. <strong>Instant Drop:</strong> The `instant_drop.py` script saves the emailed design as a placeholder image so storefront tiles are not blank upon creation.</p>
+<p>2. <strong>Parallel Publishing:</strong> Products are published in parallel to reduce the time required for a drop to land.</p>
+<p>3. <strong>Backfill:</strong> A separate worker (`ingest/backfill_drops.py`) runs every 300 seconds to sweep the catalog and replace placeholders with real Printify mockups and live Shopify URLs once they are generated.</p>
+<h3>Evolution</h3>
+<ul>
+<li><strong>2026-05-15:</strong> Establishment of the seed row for drop #1.</li>
+<li><strong>2026-05-24:</strong> Development of `skills/instant_drop.py` and `data/instant_drop.json`; implementation of the &quot;instant live&quot; flow with no approval gate.</li>
+<li><strong>2026-05-25:</strong> Completion of the first end-to-end live drop via the launchd worker (&quot;glown&quot;).</li>
+<li><strong>2026-05-25 (later):</strong> Transition to parallel publishing and the implementation of the placeholder + backfill architecture to resolve slow rendering and empty product URLs.</li>
+<li><strong>2026-06-25:</strong> Development of a drop-repair playbook following a partial failure of the &quot;crispus&quot; drop (June 19), confirming that `drop_tag` is generated via sha256 hash of image bytes.</li>
+</ul>
       </div>
       <div class="refs">
         <h3>references</h3>
         <ol>
-          <li><a href="https://iamtoxico.com" rel="noopener">https://iamtoxico.com</a></li>
+          <li>none captured yet</li>
         </ol>
       </div>
     </div>
@@ -74,7 +103,7 @@
       <table>
         <tr><td>kind</td><td>concept</td></tr>
         <tr><td>researched</td><td>2026-07-24</td></tr>
-        <tr><td>pipeline note</td><td>20260724-032856-concept-iamtoxico-com.md</td></tr>
+        <tr><td>pipeline note</td><td>20260724-235531-concept-iamtoxico-com.md</td></tr>
       </table>
     </div>
   </div>
