@@ -66,7 +66,7 @@ function tileHtml(p) {
     : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
       (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
   if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
-  const buy = p.buy ? '<a class="buy" href="' + p.buy + '" target="_blank" rel="noopener">buy' + (p.y ? ' ' + p.y : '') + '</a>' : '';
+  const buy = '';  // buy links disabled — cart permalinks carry Printify (not Shopify) variant ids
   return '<div class="card' + (empty ? ' empty' : '') + '">' +
            '<div class="img-wrap">' + imgs + '</div>' +
            '<div class="info">' +
@@ -144,7 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
     "y": "$80",
     "f": "https://images.printify.com/mockup/6a64ea1a8da1fde662001f11/88685/51926/me-and-you-shorts-half.jpg?camera_label=front",
     "b": "https://images.printify.com/mockup/6a64ea1a8da1fde662001f11/88685/51928/me-and-you-shorts-half.jpg?camera_label=back",
-    "u": ""
+    "u": "https://1tap6m-et.myshopify.com/products/me-and-you-shorts-half",
+    "buy": "https://1tap6m-et.myshopify.com/cart/88685:1"
   },
   {
     "t": "me and you Puffer Single",
