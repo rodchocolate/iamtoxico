@@ -77,6 +77,7 @@ jobs:
               set ftp:ssl-force no
               set ssl:verify-certificate no
               set ftp:passive-mode yes
+              set net:timeout 20
               set net:max-retries 3
               set net:reconnect-interval-base 5
               mirror --reverse --dry-run --verbose $EXCLUDES ./ $DEPLOY_PATH
@@ -89,6 +90,7 @@ jobs:
               set ftp:ssl-force no
               set ssl:verify-certificate no
               set ftp:passive-mode yes
+              set net:timeout 20
               set net:max-retries 3
               set net:reconnect-interval-base 5
               set mirror:parallel-transfer-count 4
