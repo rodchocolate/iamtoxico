@@ -22,10 +22,13 @@ jobs:
           TARGET: /iamtoxico.com/${{ inputs.remote_file }}
         run: |
           sudo apt-get install -y lftp > /dev/null 2>&1
-          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
+          timeout 120 lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
             set ftp:ssl-allow yes
+            set ftp:ssl-force no
             set ssl:verify-certificate no
+            set ftp:passive-mode yes
             set net:timeout 20
+            set net:max-retries 3
             rm -f $TARGET
             quit
           "
