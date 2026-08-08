@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — 20260808 drop #2</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 0;
+  }
+  header, main, footer { position: relative; z-index: 1; }
+
+  header {
+    padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1280px; margin: 0 auto;
+  }
+  header h1 {
+    font-size: 1.4rem; font-weight: 600;
+    letter-spacing: .06em; text-transform: lowercase;
+  }
+  .badge {
+    background: rgba(255,200,0,.15); color: #ffc800;
+    font-size: .7rem; font-weight: 600; text-transform: uppercase;
+    padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
+  }
+
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  .card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+    position: relative;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,.25);
+  }
+  .card .img-wrap {
+    position: relative;
+    width: 100%; aspect-ratio: 1;
+    overflow: hidden; background: #1a1a1a;
+  }
+  .card .img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity .3s;
+  }
+  .card .img-wrap img.back {
+    position: absolute; inset: 0; opacity: 0;
+  }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back  { opacity: 1; }
+
+  .card.empty .img-wrap {
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem;
+    text-transform: lowercase; letter-spacing: .05em;
+  }
+
+  .card .info { padding: .9rem 1rem; }
+  .card .title {
+    font-size: .85rem; font-weight: 600;
+    margin-bottom: .2rem;
+  }
+  .card .meta {
+    font-size: .7rem; opacity: .65;
+    text-transform: lowercase;
+  }
+
+  footer {
+    text-align: center; padding: 1rem;
+    font-size: .7rem; opacity: .5;
+    max-width: 1280px; margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    #grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+    }
+    .card .info { padding: .6rem .7rem; }
+    .card .title { font-size: .78rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>toxico — 20260808 drop #2</h1>
+  <span class="badge">drop preview</span>
+</header>
+
+<main>
+  <div id="grid"></div>
+</main>
+
+<footer>&copy; 2026 toxico &mdash; drop 20260808 #2 &mdash; not public</footer>
+
+<script>
+const P = [
+  {t:"Basketball Jersey", y:"front/back", f:"https://images-api.printify.com/mockup/6a07957d9f1ed1ddb00ecc13/79389/46754/basketball-jersey-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07957d9f1ed1ddb00ecc13/79389/44761/basketball-jersey-drop-slot.jpg?camera_label=back"},
+  {t:"Basketball Jersey", y:"front/back", f:"https://images-api.printify.com/mockup/6a07957f14136fc0de0e016b/79389/46754/basketball-jersey-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07957f14136fc0de0e016b/79389/44761/basketball-jersey-drop-slot.jpg?camera_label=back"},
+  {t:"Leather Travel Bag", y:"front/back/left_side", f:"https://images-api.printify.com/mockup/6a07958014136fc0de0e016f/164441/120405/leather-travel-bag-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07958014136fc0de0e016f/164441/120379/leather-travel-bag-drop-slot.jpg?camera_label=back"},
+  {t:"Men's Fur and Leather Boots", y:"body_inside_left/body_outside_left/upper_left", f:"https://images-api.printify.com/mockup/6a079583d5a67e96790937f2/148231/119021/mens-fur-and-leather-boots-drop-slot.jpg?camera_label=both-angle", b:"https://images-api.printify.com/mockup/6a079583d5a67e96790937f2/148231/119014/mens-fur-and-leather-boots-drop-slot.jpg?camera_label=right-shoe-inside"},
+  {t:"Sling Bag", y:"front/front_bottom/front_pocket", f:"https://images-api.printify.com/mockup/6a0795860852663cf009cb91/110376/120168/sling-bag-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795860852663cf009cb91/110376/120180/sling-bag-drop-slot.jpg?camera_label=right"},
+  {t:"Laundry Bag", y:"front/back", f:"https://images-api.printify.com/mockup/6a0795885d21d707320f7881/79956/44695/laundry-bag-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795885d21d707320f7881/79956/44700/laundry-bag-drop-slot.jpg?camera_label=back"},
+  {t:"Leather Travel Bag", y:"front/back/left_side", f:"https://images-api.printify.com/mockup/6a07958a1f2208ca9b041c0c/164441/120405/leather-travel-bag-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07958a1f2208ca9b041c0c/164441/120379/leather-travel-bag-drop-slot.jpg?camera_label=back"},
+  {t:"Multifunctional Diaper Backpack", y:"front/back/front_pocket", f:"https://images-api.printify.com/mockup/6a07958c8aacac07a3008be7/80776/55210/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07958c8aacac07a3008be7/80776/53130/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=back"},
+  {t:"Multifunctional Diaper Backpack", y:"back/front_pocket/right_side", f:"https://images-api.printify.com/mockup/6a07958dd5a67e96790937f4/80776/55210/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07958dd5a67e96790937f4/80776/53130/multifunctional-diaper-backpack-drop-slot.jpg?camera_label=back"},
+  {t:"Men's Low-Top Leather Sneakers", y:"left_outside/left_inside/left_back", f:"https://images-api.printify.com/mockup/6a079591e006ab566109c4ab/149606/120820/mens-low-top-leather-sneakers-drop-slot.jpg?camera_label=left-and-right-top", b:"https://images-api.printify.com/mockup/6a079591e006ab566109c4ab/149606/120827/mens-low-top-leather-sneakers-drop-slot.jpg?camera_label=right-shoe-inside"},
+  {t:"Basketball Rib Shorts", y:"left_leg/right_leg", f:"https://images-api.printify.com/mockup/6a079593e006ab566109c4ac/88685/51926/basketball-rib-shorts-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a079593e006ab566109c4ac/88685/51928/basketball-rib-shorts-drop-slot.jpg?camera_label=back"},
+  {t:"Fashion Hoodie", y:"front/back/pocket", f:"https://images-api.printify.com/mockup/6a079595d72c55b34003c4cb/74644/19527/fashion-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a079595d72c55b34003c4cb/74644/21126/fashion-hoodie-drop-slot.jpg?camera_label=back"},
+  {t:"Fashion Hoodie", y:"front/back/pocket", f:"https://images-api.printify.com/mockup/6a0795960852663cf009cb94/74644/19527/fashion-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795960852663cf009cb94/74644/21126/fashion-hoodie-drop-slot.jpg?camera_label=back"},
+  {t:"Basketball Rib Shorts", y:"left_leg/right_leg", f:"https://images-api.printify.com/mockup/6a0795995d21d707320f7886/88685/51926/basketball-rib-shorts-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795995d21d707320f7886/88685/51928/basketball-rib-shorts-drop-slot.jpg?camera_label=back"},
+  {t:"Basketball Jersey", y:"front", f:"https://images-api.printify.com/mockup/6a07959be006ab566109c4af/79389/46754/basketball-jersey-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07959be006ab566109c4af/79389/44761/basketball-jersey-drop-slot.jpg?camera_label=back"},
+  {t:"Cotton Comforter", y:"front", f:"https://images-api.printify.com/mockup/6a07959de006ab566109c4b0/148374/118432/cotton-comforter-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07959de006ab566109c4b0/148374/118436/cotton-comforter-drop-slot.jpg?camera_label=context"},
+  {t:"Fashion Hoodie", y:"pocket", f:"https://images-api.printify.com/mockup/6a07959f44285bcfb5080ab9/74644/19527/fashion-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a07959f44285bcfb5080ab9/74644/21126/fashion-hoodie-drop-slot.jpg?camera_label=back"},
+  {t:"Hold Cards", y:"right_leg/left_leg/pocket", f:"https://images-api.printify.com/mockup/6a0795a15d21d707320f788b/72926/16656/hold-cards-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795a15d21d707320f788b/72926/16657/hold-cards-drop-slot.jpg?camera_label=back"},
+  {t:"Brained Apres", y:"front/back/sleeves", f:"https://images-api.printify.com/mockup/6a0795a31f2208ca9b041c17/74644/19527/brained-apres-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795a31f2208ca9b041c17/74644/21126/brained-apres-drop-slot.jpg?camera_label=back"},
+  {t:"Cyan Glow Apres", y:"front/back/pocket", f:"https://images-api.printify.com/mockup/6a0795a50852663cf009cb99/74644/19527/cyan-glow-apres-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795a50852663cf009cb99/74644/21126/cyan-glow-apres-drop-slot.jpg?camera_label=back"},
+  {t:"Men's Sports Warmup Hoodie", y:"front", f:"https://images-api.printify.com/mockup/6a0795a79f1ed1ddb00ecc29/101916/98551/mens-sports-warmup-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795a79f1ed1ddb00ecc29/101916/99208/mens-sports-warmup-hoodie-drop-slot.jpg?camera_label=back"},
+  {t:"Basketball Rib Shorts", y:"left_leg", f:"https://images-api.printify.com/mockup/6a0795a944285bcfb5080abd/88685/51926/basketball-rib-shorts-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795a944285bcfb5080abd/88685/51928/basketball-rib-shorts-drop-slot.jpg?camera_label=back"},
+  {t:"Men's Puffer Jacket", y:"front/back/front_right_sleeve", f:"https://images-api.printify.com/mockup/6a0795ad14136fc0de0e0178/77830/36536/mens-puffer-jacket-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795ad14136fc0de0e0178/77830/36540/mens-puffer-jacket-drop-slot.jpg?camera_label=back"},
+  {t:"Hooded Sherpa Fleece Blanket", y:"front", f:"https://images-api.printify.com/mockup/6a0795af44285bcfb5080ac3/74535/20231/hooded-sherpa-fleece-blanket-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795af44285bcfb5080ac3/74535/20182/hooded-sherpa-fleece-blanket-drop-slot.jpg?camera_label=lifestyle-woman"},
+  {t:"Unisex Oversized Boxy Tee", y:"front/neck", f:"https://images-api.printify.com/mockup/6a0795b19f1ed1ddb00ecc2b/103548/100285/unisex-oversized-boxy-tee-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795b19f1ed1ddb00ecc2b/103548/100286/unisex-oversized-boxy-tee-drop-slot.jpg?camera_label=back"},
+  {t:"Unisex Hooded Long Sleeve Tee", y:"front/neck", f:"https://images-api.printify.com/mockup/6a0795b3ff25cd2032040457/119590/109926/unisex-hooded-long-sleeve-tee-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795b3ff25cd2032040457/119590/109928/unisex-hooded-long-sleeve-tee-drop-slot.jpg?camera_label=back"},
+  {t:"Long Sleeve Kimono Robe", y:"front_right/front_left/back", f:"https://images-api.printify.com/mockup/6a0795b544285bcfb5080acb/77572/29522/long-sleeve-kimono-robe-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795b544285bcfb5080acb/77572/29856/long-sleeve-kimono-robe-drop-slot.jpg?camera_label=back"},
+  {t:"Toxico", y:"right_leg/left_leg", f:"https://images-api.printify.com/mockup/6a0795b75d21d707320f7893/72926/16656/toxico-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795b75d21d707320f7893/72926/16657/toxico-drop-slot.jpg?camera_label=back"},
+  {t:"Women's Thongs", y:"back", f:"", b:""},
+  {t:"Unisex Pullover Hoodie", y:"back/front/right_hood", f:"https://images-api.printify.com/mockup/6a0795bd44285bcfb5080ace/63244/101818/unisex-pullover-hoodie-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795bd44285bcfb5080ace/63244/4761/unisex-pullover-hoodie-drop-slot.jpg?camera_label=back"},
+  {t:"Women's Thongs", y:"front", f:"", b:""},
+  {t:"Frozen Sky Apres", y:"front/back/pocket", f:"https://images-api.printify.com/mockup/6a0795c35d21d707320f7896/74644/19527/frozen-sky-apres-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795c35d21d707320f7896/74644/21126/frozen-sky-apres-drop-slot.jpg?camera_label=back"},
+  {t:"Frozen Sky Harem Pant", y:"right_leg/left_leg/pocket", f:"https://images-api.printify.com/mockup/6a0795c54e9b4ee36b040d11/72928/16656/frozen-sky-harem-pant-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a0795c54e9b4ee36b040d11/72928/16657/frozen-sky-harem-pant-drop-slot.jpg?camera_label=back"},
+  {t:"Multifunctional Diaper Backpack — drop slot", y:"front/back/front_pocket", f:"https://images-api.printify.com/mockup/6a77b7dbe80c63a2f4074f90/80776/55210/multifunctional-diaper-backpack-drop-slot-drop-slot.jpg?camera_label=front", b:"https://images-api.printify.com/mockup/6a77b7dbe80c63a2f4074f90/80776/53130/multifunctional-diaper-backpack-drop-slot-drop-slot.jpg?camera_label=back"},
+];
+
+const grid = document.getElementById('grid');
+
+P.forEach(p => {
+  const c = document.createElement('div');
+  c.className = 'card' + (p.f ? '' : ' empty');
+  const imgs = p.f
+    ? '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '')
+    : 'mockup pending';
+  c.innerHTML =
+    '<div class="img-wrap">' + imgs + '</div>' +
+    '<div class="info">' +
+      '<div class="title">' + p.t + '</div>' +
+      '<div class="meta">' + p.y + '</div>' +
+    '</div>';
+  grid.appendChild(c);
+});
+</script>
+</body>
+</html>
