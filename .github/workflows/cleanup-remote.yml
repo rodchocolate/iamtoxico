@@ -1,0 +1,32 @@
+# One-off remote cleanup — the deploy mirror never deletes, so removed repo
+# files linger on the host. Dispatch with a path to delete it from the server.
+name: Remote cleanup
+
+on:
+  workflow_dispatch:
+    inputs:
+      remote_file:
+        description: 'File path to delete, relative to DEPLOY_PATH'
+        required: true
+        type: string
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete remote file via lftp
+        env:
+          FTP_HOST: ${{ secrets.GODADDY_SFTP_HOST }}
+          FTP_USER: ${{ secrets.GODADDY_SFTP_USER }}
+          FTP_PASS: ${{ secrets.GODADDY_SFTP_PASSWORD }}
+          TARGET: /iamtoxico.com/${{ inputs.remote_file }}
+        run: |
+          sudo apt-get install -y lftp > /dev/null 2>&1
+          lftp -u "$FTP_USER","$FTP_PASS" "$FTP_HOST" -e "
+            set ftp:ssl-allow yes
+            set ssl:verify-certificate no
+            set net:timeout 20
+            rm -f $TARGET
+            quit
+          "
+          echo "deleted $TARGET"
