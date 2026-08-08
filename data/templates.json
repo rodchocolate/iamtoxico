@@ -811,12 +811,12 @@
   "blueprint_id": 1066,
   "print_provider_id": 14,
   "layout": "front@0.78, back@0.78, front_pocket@0.77, right_side@0.94, left_side@0.94",
-  "display_name": "backpack 01",
+  "display_name": "bookpack 01",
   "members": [
    {
     "shop_id": 22994552,
     "product_id": "6a07958c8aacac07a3008be7",
-    "title": "Multifunctional Diaper Backpack \u2014 drop slot",
+    "title": "Multifunctional Diaper Backpack — drop slot",
     "is_published": false
    }
   ]

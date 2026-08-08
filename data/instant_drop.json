@@ -1,60 +1,60 @@
 {
- "_note": "Drives the hermes instant_drop skill (and scripts/drop_and_publish.py CLI, which mirrors these labels via templates.json product_label). Each emailed design is applied across these 9 templates (subset of data/templates.json, matched by hash) and published as live products. Title = '{design} {label}', e.g. 'Dreamer Hoodie Single'. Treatments confirmed from layout fields 2026-05-24; labels set 2026-05-25.",
+ "_note": "Drives the hermes instant_drop skill (and scripts/drop_and_publish.py CLI, which mirrors these labels via templates.json product_label). Each emailed design is applied across these 9 templates (subset of data/templates.json, matched by hash) and published as live products. Title = '{design} {label}', e.g. 'Dreamer Apres Single'. Treatments confirmed from layout fields 2026-05-24; labels set 2026-05-25.",
  "live_shop_id": 26651009,
  "staging_shop_id": 22994552,
  "products": [
   {
    "name": "apres single",
-   "label": "Hoodie Single",
+   "label": "Apres Single",
    "hash": "f3882e79bb",
    "blueprint_id": 592,
    "price_usd": 120
   },
   {
    "name": "apres mirror",
-   "label": "Hoodie Mirror",
+   "label": "Apres Mirror",
    "hash": "4565deffa9",
    "blueprint_id": 592,
    "price_usd": 120
   },
   {
    "name": "apres tile",
-   "label": "Hoodie Tile",
+   "label": "Apres Tile",
    "hash": "6ef5eda081",
    "blueprint_id": 592,
    "price_usd": 120
   },
   {
    "name": "harem brickup",
-   "label": "Jogger Brickup",
+   "label": "Harem Brickup",
    "hash": "ee33ed7d0d",
    "blueprint_id": 591,
    "price_usd": 120
   },
   {
    "name": "harem tile",
-   "label": "Jogger Tile",
+   "label": "Harem Tile",
    "hash": "71d1f8bdc4",
    "blueprint_id": 591,
    "price_usd": 120
   },
   {
    "name": "harem single",
-   "label": "Jogger Single",
+   "label": "Harem Single",
    "hash": "5defb7a28a",
    "blueprint_id": 591,
    "price_usd": 120
   },
   {
    "name": "hoop full",
-   "label": "Shorts Full",
+   "label": "Hoop Full",
    "hash": "6dc5367c1b",
    "blueprint_id": 1078,
    "price_usd": 80
   },
   {
    "name": "hoop half",
-   "label": "Shorts Half",
+   "label": "Hoop Half",
    "hash": "d87df4b582",
    "blueprint_id": 1078,
    "price_usd": 80
@@ -67,8 +67,8 @@
    "price_usd": 140
   },
   {
-   "name": "backpack 01",
-   "label": "Backpack",
+   "name": "bookpack 01",
+   "label": "Bookpack",
    "hash": "backpack01",
    "blueprint_id": 1066,
    "price_usd": 100,
