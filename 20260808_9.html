@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — 20260808 drop #9</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 0;
+  }
+  header, main, footer { position: relative; z-index: 1; }
+
+  header {
+    padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1280px; margin: 0 auto;
+  }
+  header h1 {
+    font-size: 1.4rem; font-weight: 600;
+    letter-spacing: .06em; text-transform: lowercase;
+  }
+  .badge {
+    background: rgba(255,200,0,.15); color: #ffc800;
+    font-size: .7rem; font-weight: 600; text-transform: uppercase;
+    padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
+  }
+
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  .card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+    position: relative;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,.25);
+  }
+  .card .img-wrap {
+    position: relative;
+    width: 100%; aspect-ratio: 1;
+    overflow: hidden; background: #1a1a1a;
+  }
+  .card .img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity .3s;
+  }
+  .card .img-wrap img.back {
+    position: absolute; inset: 0; opacity: 0;
+  }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back  { opacity: 1; }
+
+  .card.empty .img-wrap {
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem;
+    text-transform: lowercase; letter-spacing: .05em;
+  }
+
+  .card .info { padding: .9rem 1rem; }
+  .card .title {
+    font-size: .85rem; font-weight: 600;
+    margin-bottom: .2rem;
+  }
+  .card .meta {
+    font-size: .7rem; opacity: .65;
+    text-transform: lowercase;
+  }
+
+  footer {
+    text-align: center; padding: 1rem;
+    font-size: .7rem; opacity: .5;
+    max-width: 1280px; margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    #grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+    }
+    .card .info { padding: .6rem .7rem; }
+    .card .title { font-size: .78rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>toxico — 20260808 drop #9</h1>
+  <span class="badge">drop preview</span>
+</header>
+
+<main>
+  <div id="grid"></div>
+</main>
+
+<footer>&copy; 2026 toxico &mdash; drop 20260808 #9 &mdash; not public</footer>
+
+<script>
+const P = [
+  {t:"Basketball Jersey", y:"front/back", f:"20260808_9_assets/b00ecc13_front_01.jpg", b:"20260808_9_assets/b00ecc13_back_00.jpg"},
+  {t:"Basketball Jersey", y:"front/back", f:"20260808_9_assets/de0e016b_front_03.jpg", b:"20260808_9_assets/de0e016b_back_02.jpg"},
+  {t:"Leather Travel Bag", y:"front/back/left_side", f:"20260808_9_assets/de0e016f_front_05.jpg", b:"20260808_9_assets/de0e016f_back_04.jpg"},
+  {t:"Men's Fur and Leather Boots", y:"body_inside_left/body_outside_left/upper_left", f:"20260808_9_assets/790937f2_c7_07.jpg", b:"20260808_9_assets/790937f2_c6_06.jpg"},
+  {t:"Sling Bag", y:"front/front_bottom/front_pocket", f:"20260808_9_assets/f009cb91_front_08.jpg", b:"20260808_9_assets/f009cb91_c9_09.jpg"},
+  {t:"Laundry Bag", y:"front/back", f:"20260808_9_assets/320f7881_front_10.jpg", b:"20260808_9_assets/320f7881_back_11.jpg"},
+  {t:"Leather Travel Bag", y:"front/back/left_side", f:"20260808_9_assets/9b041c0c_front_13.jpg", b:"20260808_9_assets/9b041c0c_back_12.jpg"},
+  {t:"Multifunctional Diaper Backpack", y:"front/back/front_pocket", f:"20260808_9_assets/a3008be7_front_15.jpg", b:"20260808_9_assets/a3008be7_back_14.jpg"},
+  {t:"Multifunctional Diaper Backpack", y:"back/front_pocket/right_side", f:"20260808_9_assets/790937f4_front_17.jpg", b:"20260808_9_assets/790937f4_back_16.jpg"},
+  {t:"Men's Low-Top Leather Sneakers", y:"left_outside/left_inside/left_back", f:"20260808_9_assets/6109c4ab_c18_18.jpg", b:"20260808_9_assets/6109c4ab_c19_19.jpg"},
+  {t:"Basketball Rib Shorts", y:"left_leg/right_leg", f:"20260808_9_assets/6109c4ac_front_20.jpg", b:"20260808_9_assets/6109c4ac_back_21.jpg"},
+  {t:"Fashion Hoodie", y:"front/back/pocket", f:"20260808_9_assets/4003c4cb_front_22.jpg", b:"20260808_9_assets/4003c4cb_back_23.jpg"},
+  {t:"Fashion Hoodie", y:"front/back/pocket", f:"20260808_9_assets/f009cb94_front_24.jpg", b:"20260808_9_assets/f009cb94_back_25.jpg"},
+  {t:"Basketball Rib Shorts", y:"left_leg/right_leg", f:"20260808_9_assets/320f7886_front_26.jpg", b:"20260808_9_assets/320f7886_back_27.jpg"},
+  {t:"Basketball Jersey", y:"front", f:"20260808_9_assets/6109c4af_front_29.jpg", b:"20260808_9_assets/6109c4af_back_28.jpg"},
+  {t:"Cotton Comforter", y:"front", f:"20260808_9_assets/6109c4b0_front_30.jpg", b:"20260808_9_assets/6109c4b0_c31_31.jpg"},
+  {t:"Fashion Hoodie", y:"pocket", f:"20260808_9_assets/b5080ab9_front_32.jpg", b:"20260808_9_assets/b5080ab9_back_33.jpg"},
+  {t:"Hold Cards", y:"right_leg/left_leg/pocket", f:"20260808_9_assets/320f788b_front_34.jpg", b:"20260808_9_assets/320f788b_back_35.jpg"},
+  {t:"Brained Apres", y:"front/back/sleeves", f:"20260808_9_assets/9b041c17_front_36.jpg", b:"20260808_9_assets/9b041c17_back_37.jpg"},
+  {t:"Cyan Glow Apres", y:"front/back/pocket", f:"20260808_9_assets/f009cb99_front_38.jpg", b:"20260808_9_assets/f009cb99_back_39.jpg"},
+  {t:"Men's Sports Warmup Hoodie", y:"front", f:"20260808_9_assets/b00ecc29_front_40.jpg", b:"20260808_9_assets/b00ecc29_back_41.jpg"},
+  {t:"Basketball Rib Shorts", y:"left_leg", f:"20260808_9_assets/b5080abd_front_42.jpg", b:"20260808_9_assets/b5080abd_back_43.jpg"},
+  {t:"Men's Puffer Jacket", y:"front/back/front_right_sleeve", f:"20260808_9_assets/de0e0178_front_44.jpg", b:"20260808_9_assets/de0e0178_back_45.jpg"},
+  {t:"Hooded Sherpa Fleece Blanket", y:"front", f:"20260808_9_assets/b5080ac3_front_47.jpg", b:"20260808_9_assets/b5080ac3_c46_46.jpg"},
+  {t:"Unisex Oversized Boxy Tee", y:"front/neck", f:"20260808_9_assets/b00ecc2b_front_48.jpg", b:"20260808_9_assets/b00ecc2b_back_49.jpg"},
+  {t:"Unisex Hooded Long Sleeve Tee", y:"front/neck", f:"20260808_9_assets/32040457_front_50.jpg", b:"20260808_9_assets/32040457_back_51.jpg"},
+  {t:"Long Sleeve Kimono Robe", y:"front_right/front_left/back", f:"20260808_9_assets/b5080acb_front_52.jpg", b:"20260808_9_assets/b5080acb_back_53.jpg"},
+  {t:"Toxico", y:"right_leg/left_leg", f:"20260808_9_assets/320f7893_front_54.jpg", b:"20260808_9_assets/320f7893_back_55.jpg"},
+  {t:"Women's Thongs", y:"back", f:"", b:""},
+  {t:"Unisex Pullover Hoodie", y:"back/front/right_hood", f:"20260808_9_assets/b5080ace_front_56.jpg", b:"20260808_9_assets/b5080ace_back_57.jpg"},
+  {t:"Women's Thongs", y:"front", f:"", b:""},
+  {t:"Frozen Sky Apres", y:"front/back/pocket", f:"20260808_9_assets/320f7896_front_58.jpg", b:"20260808_9_assets/320f7896_back_59.jpg"},
+  {t:"Frozen Sky Harem Pant", y:"right_leg/left_leg/pocket", f:"20260808_9_assets/6b040d11_front_60.jpg", b:"20260808_9_assets/6b040d11_back_61.jpg"},
+  {t:"Multifunctional Diaper Backpack — drop slot", y:"front/back/front_pocket", f:"20260808_9_assets/f4074f90_front_63.jpg", b:"20260808_9_assets/f4074f90_back_62.jpg"},
+];
+
+const grid = document.getElementById('grid');
+
+P.forEach(p => {
+  const c = document.createElement('div');
+  c.className = 'card' + (p.f ? '' : ' empty');
+  const imgs = p.f
+    ? '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '')
+    : 'mockup pending';
+  c.innerHTML =
+    '<div class="img-wrap">' + imgs + '</div>' +
+    '<div class="info">' +
+      '<div class="title">' + p.t + '</div>' +
+      '<div class="meta">' + p.y + '</div>' +
+    '</div>';
+  grid.appendChild(c);
+});
+</script>
+</body>
+</html>
