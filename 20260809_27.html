@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — 20260809 drop #27</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 0;
+  }
+  header, main, footer { position: relative; z-index: 1; }
+
+  header {
+    padding: 1.5rem 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1280px; margin: 0 auto;
+  }
+  header h1 {
+    font-size: 1.4rem; font-weight: 600;
+    letter-spacing: .06em; text-transform: lowercase;
+  }
+  .badge {
+    background: rgba(255,200,0,.15); color: #ffc800;
+    font-size: .7rem; font-weight: 600; text-transform: uppercase;
+    padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
+  }
+
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+
+  .card {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform .25s, border-color .25s;
+    position: relative;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255,255,255,.25);
+  }
+  .card .img-wrap {
+    position: relative;
+    width: 100%; aspect-ratio: 1;
+    overflow: hidden; background: #1a1a1a;
+  }
+  .card .img-wrap img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: opacity .3s;
+  }
+  .card .img-wrap img.back {
+    position: absolute; inset: 0; opacity: 0;
+  }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back  { opacity: 1; }
+
+  .card.empty .img-wrap {
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem;
+    text-transform: lowercase; letter-spacing: .05em;
+  }
+
+  .card .info { padding: .9rem 1rem; }
+  .card .title {
+    font-size: .85rem; font-weight: 600;
+    margin-bottom: .2rem;
+  }
+  .card .meta {
+    font-size: .7rem; opacity: .65;
+    text-transform: lowercase;
+  }
+
+  footer {
+    text-align: center; padding: 1rem;
+    font-size: .7rem; opacity: .5;
+    max-width: 1280px; margin: 0 auto;
+  }
+
+  @media (max-width: 600px) {
+    #grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+    }
+    .card .info { padding: .6rem .7rem; }
+    .card .title { font-size: .78rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>toxico — 20260809 drop #27</h1>
+  <span class="badge">drop preview</span>
+</header>
+
+<main>
+  <div id="grid"></div>
+</main>
+
+<footer>&copy; 2026 toxico &mdash; drop 20260809 #27 &mdash; not public</footer>
+
+<script>
+const P = [
+  {t:"Fashion Hoodie", y:"front/back/pocket", f:"20260809_27_assets/4003c4cb_front_00.jpg", b:"20260809_27_assets/4003c4cb_back_01.jpg"},
+  {t:"Cyan Glow Apres", y:"front/back/pocket", f:"20260809_27_assets/f009cb99_front_04.jpg", b:"20260809_27_assets/f009cb99_back_05.jpg"},
+  {t:"Toxico", y:"right_leg/left_leg", f:"20260809_27_assets/320f7893_front_06.jpg", b:"20260809_27_assets/320f7893_back_07.jpg"},
+  {t:"Basketball Rib Shorts", y:"left_leg/right_leg", f:"20260809_27_assets/320f7886_front_02.jpg", b:"20260809_27_assets/320f7886_back_03.jpg"},
+  {t:"Multifunctional Diaper Backpack — drop slot", y:"front/back/front_pocket", f:"20260809_27_assets/f4074f90_front_09.jpg", b:"20260809_27_assets/f4074f90_back_08.jpg"},
+];
+
+const grid = document.getElementById('grid');
+
+P.forEach(p => {
+  const c = document.createElement('div');
+  c.className = 'card' + (p.f ? '' : ' empty');
+  const imgs = p.f
+    ? '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '')
+    : 'mockup pending';
+  c.innerHTML =
+    '<div class="img-wrap">' + imgs + '</div>' +
+    '<div class="info">' +
+      '<div class="title">' + p.t + '</div>' +
+      '<div class="meta">' + p.y + '</div>' +
+    '</div>';
+  grid.appendChild(c);
+});
+</script>
+</body>
+</html>

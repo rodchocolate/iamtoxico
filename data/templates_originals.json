@@ -1,0 +1,278 @@
+[
+ {
+  "hash": "f3882e79bb",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front@0.75, back@0.75, pocket@1.70, pocket/single@0.08, sleeves@0.63, sleeves@0.63, sleeves@0.63, hood@1.09",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc1182f6f60e22c60de46b",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc0d023ff9b45b450485fa",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dc0b7b7404a25525045cb8",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe2cc631ca9e1ce04c80e",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   }
+  ],
+  "display_name": "apres single"
+ },
+ {
+  "hash": "4565deffa9",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front@1.26, front@1.26, back@1.26, back@1.26, pocket@0.86, sleeves@1.05, sleeves@1.05, hood@1.26, hood@1.26",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe3a2cca0c3b3780bcea2",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbc664cca0c3b3780bcac5",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbbd402d7b2c15060925f5",
+    "title": "Copy of Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69d708e8882d261b3e051e4d",
+    "title": "Copy of Copy of Copy of Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69cdb9d7d800f24c8b031004",
+    "title": "Copy of Copy of Fashion Hoodie (AOP)",
+    "is_published": false
+   }
+  ],
+  "display_name": "apres mirror"
+ },
+ {
+  "hash": "6dc5367c1b",
+  "blueprint_id": 1078,
+  "print_provider_id": 83,
+  "layout": "left_leg@0.92, left_leg@0.92, right_leg@0.92, right_leg@0.92",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbe06462664c63aa04a490",
+    "title": "Copy of Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "69dbde3368a4785b920e5f38",
+    "title": "Copy of Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1486c09f9f6b83d024e1a",
+    "title": "Basketball Rib Shorts 04",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f14864d0b5e753820fcfa1",
+    "title": "Basketball Rib Shorts 03",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f1485e5dc6b585ce0d3b43",
+    "title": "Basketball Rib Shorts 02",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f148598e4d6627ed0e58f4",
+    "title": "Basketball Rib Shorts 01",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146ca6d872900770d0025",
+    "title": "Basketball Rib Shorts 06",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146ba5dc6b585ce0d3a4a",
+    "title": "Basketball Rib Shorts 05",
+    "is_published": true
+   }
+  ],
+  "display_name": "hoop full"
+ },
+ {
+  "hash": "ee33ed7d0d",
+  "blueprint_id": 591,
+  "print_provider_id": 83,
+  "layout": "right_leg/pattern/single@0.07, left_leg/pattern/single@0.07, pocket/single@0.12",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69b643840855e0c5540e8d53",
+    "title": "Copy of Hold Cards",
+    "is_published": false
+   },
+   {
+    "shop_id": 22994552,
+    "product_id": "6929b6d89b3dbbfde2088c5a",
+    "title": "Copy of Copy of Stylish Athletic Joggers with Unique AOP Design, Trendy Activewear, Comfortable Jogging Pants, Gym Wear, Gift for Fitness Enthusiasts",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4628f94ca9fbf1d020f6e",
+    "title": "Cyan Glow Harem Pant",
+    "is_published": true
+   }
+  ],
+  "display_name": "harem brickup"
+ },
+ {
+  "hash": "6ef5eda081",
+  "blueprint_id": 592,
+  "print_provider_id": 83,
+  "layout": "front/single@0.17, back/single@0.21, pocket/single@0.32, sleeves/single@0.17, hood/single@0.21",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69b57f19ef961127590bc947",
+    "title": "Cyan Glow Apres",
+    "is_published": false
+   }
+  ],
+  "display_name": "apres tile"
+ },
+ {
+  "hash": "d87df4b582",
+  "blueprint_id": 1078,
+  "print_provider_id": 83,
+  "layout": "left_leg@0.95",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "69a8bdf917b1fdfce805ed71",
+    "title": "Copy of Basketball Rib Shorts (AOP)",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69f146e009f9f6b83d024d3e",
+    "title": "Basketball Rib Shorts 07",
+    "is_published": true
+   }
+  ],
+  "display_name": "hoop half"
+ },
+ {
+  "hash": "6c66d70fb3",
+  "blueprint_id": 934,
+  "print_provider_id": 14,
+  "layout": "front@0.76, back@0.76, front_right_sleeve@1.00, back_right_sleeve@1.00, front_left_sleeve@1.00, back_left_sleeve@1.00, Collar/single@0.32",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "699d503045b08ecd4a0586d4",
+    "title": "Men's Puffer Jacket (AOP)",
+    "is_published": false
+   }
+  ],
+  "display_name": "puffer single"
+ },
+ {
+  "hash": "71d1f8bdc4",
+  "blueprint_id": 591,
+  "print_provider_id": 83,
+  "layout": "right_leg/pattern/single@0.19, left_leg/pattern/single@0.19",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "68ea0502cb19b441780d9728",
+    "title": "Toxico",
+    "is_published": false
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4628646730b56700a6ae1",
+    "title": "Toxico Harem Pant",
+    "is_published": true
+   }
+  ],
+  "display_name": "harem tile"
+ },
+ {
+  "hash": "5defb7a28a",
+  "blueprint_id": 591,
+  "print_provider_id": 83,
+  "layout": "right_leg/single@0.43, left_leg/single@0.43, pocket@0.69",
+  "members": [
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4629b7fc2996b8d0abe8e",
+    "title": "Frozen Sky Harem Pant",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a46294eb470f86b105fab3",
+    "title": "Hold Cards Harem Pant",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a4628c9f7e893e8a0e5219",
+    "title": "Hot Oil Harem Pant",
+    "is_published": true
+   },
+   {
+    "shop_id": 26651009,
+    "product_id": "69a462891ec5ca402c037d02",
+    "title": "Arctic River Harem Pant",
+    "is_published": true
+   }
+  ],
+  "display_name": "harem single"
+ },
+ {
+  "hash": "backpack01",
+  "blueprint_id": 1066,
+  "print_provider_id": 14,
+  "layout": "front@0.78, back@0.78, front_pocket@0.77, right_side@0.94, left_side@0.94",
+  "display_name": "bookpack 01",
+  "members": [
+   {
+    "shop_id": 22994552,
+    "product_id": "6a07958c8aacac07a3008be7",
+    "title": "Multifunctional Diaper Backpack — drop slot",
+    "is_published": false
+   }
+  ]
+ }
+]
