@@ -389,3 +389,32 @@ This document is operational guidance, not legal advice. Contracts and outreach 
 - percentage of creator posts with adequate disclosures.
 
 The first objective is not maximum contact volume. It is learning which creator profile, source, offer, and message reliably produce authentic content and profitable relationships for iamtoxico.
+
+---
+
+## Appendix: Pilot Smoke-Test Results (2026-08-09)
+
+First efficacy probe of the research + qualification stages only (no outreach — the approval gate held). Goal: find 3 candidate models within ~100mi of Boston.
+
+**Keyless discovery worked.** Everything below came from public web search + public directory snippets (Modash, Favikon, Social Cat, Collabstr, JoinBrands) and public creator listings. No logins or APIs needed for discovery/qualification; paid platforms (Shopify Collabs, TikTok Shop, Meta Creator Marketplace) only matter at outreach/attribution.
+
+### Pass 1 — mainstream creators
+| Candidate | Evidence | Program |
+|---|---|---|
+| @katekate_kat | Self-described freelance model, Boston; NYFW 2025 content | Model (paid shoot + release) |
+| Arabella LaDessé (@arabella_thegoddess) | Listed model/performer, agency-repped (@westhavenmgmt, @nymmg) | Model (via management) |
+| Shay (@mvtiilati0n) | 22k IG, 10.1% engagement, fashion×music×art niche, published collab email | UGC/affiliate hybrid |
+
+### Pass 2 — lingerie/boudoir services angle (cleanest consent signal)
+Sourced from hire-me marketplaces where the person published a service listing + rates:
+| Candidate | Evidence | Program |
+|---|---|---|
+| Tatiana (Collabstr) | Self-listed "lingerie & swimwear model"; public rates | UGC/Model (booked via platform) |
+| Thea Vaporis (Collabstr) | Boston model + MUA, self-serve booking | UGC creator |
+| Kira S. (@kira-shandalov, JoinBrands) | 5.0 rating, 69 apparel jobs — strongest proven apparel-UGC track record | UGC creator (apparel) |
+
+### Findings for the architecture
+1. **"OF flags" is a qualification check, not a discovery filter.** Discover via mainstream channels, then check whether a candidate self-advertises OnlyFans in their own linktree. Adult directories (OnlyFinder, etc.) block automated access by design — human does that one step.
+2. **FetLife (and similar non-commercial community platforms) are out of scope.** They index people by sexual identity/practice, not collaboration availability — no consent signal, special-category data. Kept out deliberately.
+3. **Marketplace-first is the strongest lane.** Collabstr/JoinBrands candidates publish rates + portfolios to be booked, AND are transactable through the platform — sidesteps the outreach-compliance section entirely for the pilot.
+4. **Directories 403 automated fetches** but return usable data via search snippets. Keyless discovery works at pilot scale; budget a Collabstr/JoinBrands account for depth (exact rates, portfolios, location confirmation) at volume.
