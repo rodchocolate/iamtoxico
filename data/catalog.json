@@ -12323,6 +12323,102 @@
       "source": "printify",
       "status": "active",
       "url": ""
+    },
+    {
+      "id": "printify-6a78ced58c537f54e605a250",
+      "printify_id": "6a78ced58c537f54e605a250",
+      "name": "Toxico Sedona Apres Mirror",
+      "price": 120,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced58c537f54e605a250/74644/19527/toxico-sedona-apres-mirror.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
+    },
+    {
+      "id": "printify-6a78ced58c537f54e605a251",
+      "printify_id": "6a78ced58c537f54e605a251",
+      "name": "Toxico Sedona Apres Tile",
+      "price": 120,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced58c537f54e605a251/74644/19527/toxico-sedona-apres-tile.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
+    },
+    {
+      "id": "printify-6a78ced52cd012abef02f240",
+      "printify_id": "6a78ced52cd012abef02f240",
+      "name": "Toxico Sedona Harem Brickup",
+      "price": 120,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced52cd012abef02f240/72926/16656/toxico-sedona-harem-brickup.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
+    },
+    {
+      "id": "printify-6a78ced531f0e6867a022921",
+      "printify_id": "6a78ced531f0e6867a022921",
+      "name": "Toxico Sedona Harem Single",
+      "price": 120,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced531f0e6867a022921/72928/16656/toxico-sedona-harem-single.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
+    },
+    {
+      "id": "printify-6a78ced5de1b1c70bd062e38",
+      "printify_id": "6a78ced5de1b1c70bd062e38",
+      "name": "Toxico Sedona Hoop Full",
+      "price": 80,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced5de1b1c70bd062e38/88685/51926/toxico-sedona-hoop-full.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
+    },
+    {
+      "id": "printify-6a78ced55009127ca605eb55",
+      "printify_id": "6a78ced55009127ca605eb55",
+      "name": "Toxico Sedona Hoop Half",
+      "price": 80,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced55009127ca605eb55/88685/51926/toxico-sedona-hoop-half.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
+    },
+    {
+      "id": "printify-6a78ced58c537f54e605a252",
+      "printify_id": "6a78ced58c537f54e605a252",
+      "name": "Toxico Sedona Puffer Single",
+      "price": 140,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced58c537f54e605a252/77830/36536/toxico-sedona-puffer-single.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
+    },
+    {
+      "id": "printify-6a78ced5c60695c2e306fe3d",
+      "printify_id": "6a78ced5c60695c2e306fe3d",
+      "name": "Toxico Sedona Bookpack",
+      "price": 100,
+      "category": "instant-drop",
+      "margin_tier": "pod",
+      "image": "https://images.printify.com/mockup/6a78ced5c60695c2e306fe3d/80776/55210/toxico-sedona-bookpack.jpg?camera_label=front",
+      "source": "printify",
+      "status": "active",
+      "url": ""
     }
   ],
   "sites": [
