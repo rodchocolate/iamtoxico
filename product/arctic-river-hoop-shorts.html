@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>toxico — arctic river hoop</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Space Grotesk',sans-serif; color:#fff; background:#0b0b0b url('bg-graffiti-10.jpg') center/cover no-repeat fixed; min-height:100vh; }
+  body::before { content:''; position:fixed; inset:0; background:rgba(0,0,0,.55); z-index:0; }
+  header,main,footer,section { position:relative; z-index:1; }
+  a { color:inherit; }
+  header { padding:1.5rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; max-width:1280px; margin:0 auto; }
+  header h1 { font-size:3rem; font-weight:700; letter-spacing:.04em; text-transform:lowercase; }
+  header h1 a { text-decoration:none; }
+  nav.crosslink { display:flex; flex-wrap:wrap; gap:.25rem 1.1rem; }
+  nav.crosslink a { color:#888; text-decoration:none; font-size:.9rem; }
+  nav.crosslink a:hover { color:#ffc800; }
+  nav.crosslink a.active { color:#ffc800; font-weight:600; }
+  main { padding:1rem 2rem 4rem; max-width:1280px; margin:0 auto; }
+  .row-label { font-size:1.4rem; opacity:.55; text-transform:uppercase; letter-spacing:.12em; margin:1.8rem 0 .6rem; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.4rem; }
+  .card { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); border-radius:12px; overflow:hidden; position:relative; transition:transform .25s,border-color .25s; }
+  .card:hover { transform:translateY(-4px); border-color:rgba(255,255,255,.25); }
+  .card .img-wrap { position:relative; width:100%; aspect-ratio:1; overflow:hidden; background:#1a1a1a; }
+  .card .img-wrap a.img-link { display:block; width:100%; height:100%; }
+  .card .img-wrap img { width:100%; height:100%; object-fit:cover; transition:opacity .3s; }
+  .card .img-wrap img.back { position:absolute; inset:0; opacity:0; }
+  .card.has-back:hover .img-wrap img.front { opacity:0; }
+  .card.has-back:hover .img-wrap img.back { opacity:1; }
+  .card .info { padding:.9rem 1rem; }
+  .card .title { font-size:.85rem; font-weight:600; margin-bottom:.2rem; }
+  .card .meta { font-size:.7rem; opacity:.65; text-transform:lowercase; }
+  a.card { text-decoration:none; }
+  footer { text-align:center; padding:2rem; color:rgba(255,255,255,.3); font-size:.78rem; }
+  @media (max-width:768px){ header h1{font-size:2.2rem;} main{padding:1rem 1rem 3rem;} .grid{grid-template-columns:repeat(2,1fr); gap:.8rem;} }
+
+  .pmain { display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; margin-top:1rem; }
+  .gallery .main { width:100%; aspect-ratio:1; background:#1a1a1a; border-radius:12px; overflow:hidden; border:1px solid rgba(255,255,255,.1); }
+  .gallery .main img { width:100%; height:100%; object-fit:cover; }
+  .thumbs { display:flex; gap:.6rem; margin-top:.7rem; }
+  .thumbs img { width:70px; height:70px; object-fit:cover; border-radius:8px; border:1px solid rgba(255,255,255,.15); cursor:pointer; opacity:.6; transition:opacity .2s; }
+  .thumbs img:hover, .thumbs img.sel { opacity:1; border-color:#ffc800; }
+  .pinfo h2 { font-size:2rem; font-weight:700; text-transform:lowercase; }
+  .pinfo .price { font-size:1.4rem; color:#ffc800; margin:.6rem 0 1.2rem; }
+  .pinfo .design { opacity:.7; margin-bottom:1.6rem; }
+  .pinfo .design a { color:#ffc800; }
+  .buy { display:inline-block; background:#ffc800; color:#0b0b0b; font-weight:700; text-transform:lowercase; letter-spacing:.03em; padding:.9rem 2.2rem; border-radius:10px; text-decoration:none; }
+  .buy:hover { background:#fff; }
+  .pinfo .note { font-size:.8rem; opacity:.5; margin-top:1rem; }
+  @media (max-width:768px){ .pmain{ grid-template-columns:1fr; gap:1.2rem; } }
+</style>
+</head>
+<body>
+<header>
+  <h1><a href="index.html">toxico</a></h1>
+  <nav class="crosslink"><a href="originals.html" class="active">originals</a><a href="foolswise.html">foolswise</a><a href="designs.html">designs</a><a href="avant-apres.html">avant·apres</a><a href="harem.html">harem</a><a href="hoop.html">hoop</a><a href="bookpack.html">bookpack</a></nav>
+</header>
+<main>
+<div class="pmain">
+<div class="gallery"><div class="main"><img id="pm" src="https://images-api.printify.com/mockup/6a4c3acbade55624d4043305/88685/51926/arctic-river-hoop-shorts.jpg?camera_label=front" alt="Arctic River Hoop"></div><div class="thumbs"><img src="bg-graffiti-2.jpg" alt="pattern" data-src="bg-graffiti-2.jpg" class="" onclick="document.getElementById('pm').src=this.dataset.src;document.querySelectorAll('.thumbs img').forEach(t=>t.classList.remove('sel'));this.classList.add('sel')"><img src="https://images-api.printify.com/mockup/6a4c3acbade55624d4043305/88685/51926/arctic-river-hoop-shorts.jpg?camera_label=front" alt="front" data-src="https://images-api.printify.com/mockup/6a4c3acbade55624d4043305/88685/51926/arctic-river-hoop-shorts.jpg?camera_label=front" class="sel" onclick="document.getElementById('pm').src=this.dataset.src;document.querySelectorAll('.thumbs img').forEach(t=>t.classList.remove('sel'));this.classList.add('sel')"><img src="https://images-api.printify.com/mockup/6a4c3acbade55624d4043305/88685/51928/arctic-river-hoop-shorts.jpg?camera_label=back" alt="back" data-src="https://images-api.printify.com/mockup/6a4c3acbade55624d4043305/88685/51928/arctic-river-hoop-shorts.jpg?camera_label=back" class="" onclick="document.getElementById('pm').src=this.dataset.src;document.querySelectorAll('.thumbs img').forEach(t=>t.classList.remove('sel'));this.classList.add('sel')"></div></div>
+<div class="pinfo"><h2>arctic river hoop</h2><div class="price">$80</div><div class="design">design: <a href="originals.html#arctic-river">arctic river</a></div><a class="buy" href="https://1tap6m-et.myshopify.com/products/arctic-river-hoop-shorts" target="_blank" rel="noopener">buy</a><div class="note">secure checkout via shopify · all-over-print, made to order</div></div>
+</div>
+</main>
+<footer>&copy; 2025 toxico — elevated loungewear for the sporting life</footer>
+</body>
+</html>
