@@ -14,7 +14,7 @@
 (function () {
   'use strict';
 
-  var SHOP_BASE = 'https://iamtoxico.myshopify.com';
+  var SHOP_BASE = 'https://shop.iamtoxico.com';
   var DATA_URL = '/data/shopify_variants.json';
   var STORE_KEY = 'toxico_cart_v1';
   var PRODUCT_RE = /(?:myshopify\.com|shop\.iamtoxico\.com)\/products\/([^/?#]+)/;
