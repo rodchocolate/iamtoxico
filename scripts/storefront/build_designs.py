@@ -84,6 +84,6 @@ html = ("<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n
         "<title>toxico &mdash; designs</title>\n" + style + "\n</head>\n<body>\n"
         "<header>\n  <h1>designs</h1>\n  <nav class=\"crosslink\">" + nav + "</nav>\n</header>\n"
         "<main id=\"main\">\n" + body + "\n</main>\n"
-        "<footer>&copy; 2025 toxico &mdash; elevated loungewear for the sporting life</footer>\n</body>\n</html>\n")
+        "<footer>&copy; 2025 toxico &mdash; elevated loungewear for the sporting life</footer>\n<script defer src='/cart.js'></script>\n</body>\n</html>\n")
 (REPO / "designs.html").write_text(html)
 print(f"wrote designs.html: {len(orig)} originals + {len(fwd)} foolswise + {len(scr)} scratch = {len(orig)+len(fwd)+len(scr)} tiles")

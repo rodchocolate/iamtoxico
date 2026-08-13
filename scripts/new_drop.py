@@ -391,6 +391,7 @@ P.forEach(p => {{
   grid.appendChild(c);
 }});
 </script>
+<script defer src='/cart.js'></script>
 </body>
 </html>
 """

@@ -94,7 +94,7 @@ def page(title, active, body, extra_style=""):
             f"<title>iamtoxico — {title}</title>\n<style>{BASE}{extra_style}</style>\n</head>\n<body>\n"
             f"<header>\n  <h1><a href=\"/\">iamtoxico</a></h1>\n  {nav_html(active)}\n</header>\n"
             f"{body}\n"
-            "<footer>&copy; 2025 iamtoxico</footer>\n</body>\n</html>\n")
+            "<footer>&copy; 2025 iamtoxico</footer>\n<script defer src='/cart.js'></script>\n</body>\n</html>\n")
 
 # ---------- product pages ----------
 PROD_DIR = REPO / "product"; PROD_DIR.mkdir(exist_ok=True)
@@ -254,7 +254,7 @@ land = (f"<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\
         "<meta name=\"robots\" content=\"noindex, nofollow\">\n"
         f"<title>iamtoxico</title>\n<style>{BASE}{LAND_STYLE}</style>\n</head>\n<body>\n"
         f"<header>\n  <h1><a href=\"/\">iamtoxico</a></h1>\n  {nav_html('')}\n</header>\n"
-        f"{land_body}\n<footer>&copy; 2025 iamtoxico</footer>\n{ROTATE_JS}\n</body>\n</html>\n")
+        f"{land_body}\n<footer>&copy; 2025 iamtoxico</footer>\n{ROTATE_JS}\n<script defer src='/cart.js'></script>\n</body>\n</html>\n")
 (REPO / "index.html").write_text(land)
 
 print(f"built: index.html (landing, {len(combined)} product rows), originals.html ({len(rows)} designs), {n_prod} product pages")

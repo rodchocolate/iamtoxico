@@ -150,6 +150,7 @@ def page(title: str, sections: list[str]) -> str:
 {body}
 </main>
 <footer>generated {stamp} — mockups refresh on rerun of scripts/build_variant_pages.py</footer>
+<script defer src='/cart.js'></script>
 </body>
 </html>
 """

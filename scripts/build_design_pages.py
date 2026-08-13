@@ -96,6 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {{
 <script type="application/json" id="tiles-data">
 {tiles_json}
 </script>
+<script defer src='/cart.js'></script>
 </body>
 </html>
 """
