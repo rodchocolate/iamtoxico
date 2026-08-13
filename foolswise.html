@@ -5,83 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>toxico &mdash; foolswise</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Space Grotesk', sans-serif; color: #fff;
-    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
-    min-height: 100vh;
-  }
-  body::before { content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }
-  header, main, footer { position: relative; z-index: 1; }
-  header {
-    padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
-    max-width: 1280px; margin: 0 auto;
-  }
-  .crosslink {
-    color: #fff; font-size: 2rem; font-weight: 600;
-    text-transform: lowercase; letter-spacing: .04em;
-    text-decoration: underline; text-underline-offset: 5px;
-  }
-  .crosslink:hover { color: #ffc800; }
-  header h1 {
-    font-size: 3rem; font-weight: 600;
-    letter-spacing: .04em; text-transform: lowercase;
-  }
-  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
-  .row-label { font-size: 1.4rem; opacity: .55; text-transform: uppercase; letter-spacing: .12em; margin: 1.5rem 0 .6rem; }
-  a.collection-link { color: inherit; text-decoration: none; }
-  a.collection-link:hover { color: #ffc800; text-decoration: underline; }
-  .grid {
-    display: grid; grid-auto-flow: column;
-    grid-auto-columns: calc((100% - 2.8rem) / 3);
-    gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory;
-    padding-bottom: 1rem; scrollbar-width: thin;
-  }
-  .card {
-    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
-    border-radius: 12px; overflow: hidden; position: relative;
-    scroll-snap-align: start; transition: transform .25s, border-color .25s;
-  }
-  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
-  .card .img-wrap { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }
-  .card .img-wrap a.img-link { display: block; width: 100%; height: 100%; }
-  .card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
-  .card .img-wrap img.back { position: absolute; inset: 0; opacity: 0; }
-  .card:hover .img-wrap img.front { opacity: 0; }
-  .card:hover .img-wrap img.back  { opacity: 1; }
-  .card .info { padding: .9rem 1rem; }
-  .card .title { font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }
-  .card .meta { font-size: .7rem; opacity: .65; text-transform: lowercase; }
-  footer {
-    text-align: center; padding: 2rem;
-    color: rgba(255,255,255,.25); font-size: .78rem;
-  }
-  @media (max-width: 768px) {
-    main { padding: 1rem 1rem 3rem; }
-    header { padding: 1rem; }
-    .grid { grid-auto-columns: calc((100% - .8rem) / 2); gap: .8rem; }
-    .card .info { padding: .6rem .7rem; }
-    .card .title { font-size: .78rem; }
-  }
-</style>
-
-<style>
-  header { padding:1.5rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; max-width:1280px; margin:0 auto; }
-  header h1 { font-size:3rem; font-weight:700; letter-spacing:.04em; text-transform:lowercase; }
-  header h1 a { text-decoration:none; color:inherit; }
-  nav.crosslink { display:flex; flex-wrap:wrap; gap:.35rem 1.1rem; }
-  nav.crosslink a { color:#888; text-decoration:none; font-size:.9rem; text-transform:lowercase; letter-spacing:0; }
-  nav.crosslink a:hover { color:#ffc800; text-decoration:none; }
-  nav.crosslink a.active { color:#ffc800; font-weight:600; }
-  @media (max-width:768px){ header{padding:1rem;} header h1{font-size:2.2rem;} }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
-  <h1><a href="/">iamtoxico</a></h1>
-  <nav class="crosslink"><a href="/originals.html">originals</a><a href="/foolswise.html" class="active">foolswise</a><a href="/designs.html">designs</a><a href="/scratch/">scratch</a><a href="/avant-apres.html">avant·apres</a><a href="/harem.html">harem</a><a href="/hoop.html">hoop</a><a href="/bookpack.html">bookpack</a></nav>
+  <nav class="global-nav">
+    <div class="nav-brand"><a href="/">iamtoxico</a></div>
+    <div class="nav-links">
+      <div class="nav-group collections">
+        <a href="/originals.html">originals</a> <span class="dot">&middot;</span>
+        <a href="/foolswise.html" class="active">foolswise</a> <span class="dot">&middot;</span>
+        <a href="/designs.html">designs</a> <span class="dot">&middot;</span>
+        <a href="/scratch/">scratch</a>
+      </div>
+      <div class="nav-group families">
+        <a href="/avant-apres.html">avant/apres</a> <span class="dot">&middot;</span>
+        <a href="/harem.html">harem</a> <span class="dot">&middot;</span>
+        <a href="/hoop.html">hoops</a> <span class="dot">&middot;</span>
+        <a href="/bookpack.html">bookpack</a>
+      </div>
+    </div>
+  </nav>
 </header>
 <main id="main">
 <div class="row-label" style="color:#ffc800">blue</div>
