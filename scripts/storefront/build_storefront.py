@@ -189,7 +189,7 @@ ROTATE_JS = ("<script>(function(){var SW=" + json.dumps(CYCLE) + ";"
              "a.style.backgroundImage=\"url('\"+SW[0]+\"')\";a.classList.add('show');"
              "var i=0,cur=a,nxt=b;setInterval(function(){i=(i+1)%SW.length;"
              "nxt.style.backgroundImage=\"url('\"+SW[i]+\"')\";nxt.classList.add('show');"
-             "cur.classList.remove('show');var t=cur;cur=nxt;nxt=t;},4500);})();</script>")
+             "cur.classList.remove('show');var t=cur;cur=nxt;nxt=t;},2250);})();</script>")
 
 # all product rows: originals (in-house links) + foolswise (shopify links), color-ordered like designs.html
 def orig_row(r):
