@@ -94,7 +94,9 @@ jobs:
               set net:max-retries 3
               set net:reconnect-interval-base 5
               set mirror:parallel-transfer-count 4
+              set cmd:fail-exit yes
               mirror --reverse --verbose --only-newer $EXCLUDES ./ $DEPLOY_PATH
+              set cmd:fail-exit no
               rm -f ${DEPLOY_PATH}collection.html
               rm -f ${DEPLOY_PATH}bags.html
               rm -f ${DEPLOY_PATH}20260515_1.html
