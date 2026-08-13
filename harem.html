@@ -78,10 +78,21 @@
   .card:hover .img-wrap img.front { opacity:1; }   /* tiles have no back image */
   @media (max-width:768px){ .grid { grid-template-columns:repeat(2,1fr); gap:.8rem; } }
 </style>
+
+<style>
+  header { padding:1.5rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; max-width:1280px; margin:0 auto; }
+  header h1 { font-size:3rem; font-weight:700; letter-spacing:.04em; text-transform:lowercase; }
+  header h1 a { text-decoration:none; color:inherit; }
+  nav.crosslink { display:flex; flex-wrap:wrap; gap:.35rem 1.1rem; }
+  nav.crosslink a { color:#888; text-decoration:none; font-size:.9rem; text-transform:lowercase; letter-spacing:0; }
+  nav.crosslink a:hover { color:#ffc800; text-decoration:none; }
+  nav.crosslink a.active { color:#ffc800; font-weight:600; }
+  @media (max-width:768px){ header{padding:1rem;} header h1{font-size:2.2rem;} }
+</style>
 </head>
 <body>
 <header>
-  <h1>harem</h1>
+  <h1><a href="/">iamtoxico</a></h1>
   <nav class="crosslink"><a href="/originals.html">originals</a><a href="/foolswise.html">foolswise</a><a href="/designs.html">designs</a><a href="/scratch/">scratch</a><a href="/avant-apres.html">avant·apres</a><a href="/harem.html" class="active">harem</a><a href="/hoop.html">hoop</a><a href="/bookpack.html">bookpack</a></nav>
 </header>
 <main id="main">
