@@ -58,7 +58,7 @@
           gap:1.4rem; overflow:visible; scroll-snap-type:none; padding-bottom:0; }
   .card { scroll-snap-align:none; }
   .card:hover .img-wrap img.front { opacity:1; }   /* tiles have no back image */
-  @media (max-width:768px){ .grid { grid-template-columns:repeat(2,1fr); gap:.8rem; } }
+  @media (max-width:768px){ .grid { grid-template-columns:repeat(2,1fr); gap:.8rem;  grid-auto-flow: row; overflow-x: visible; } }
 </style>
 
 <style>
