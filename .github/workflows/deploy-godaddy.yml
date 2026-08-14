@@ -115,3 +115,27 @@ jobs:
           echo "| **Dry Run** | ${{ inputs.dry_run || false }} |" >> $GITHUB_STEP_SUMMARY
           echo "| **Commit** | \`${{ github.sha }}\` |" >> $GITHUB_STEP_SUMMARY
           echo "| **By** | ${{ github.actor }} |" >> $GITHUB_STEP_SUMMARY
+
+  verify:
+    name: Live buy-flow test
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install test dependencies
+        working-directory: tests
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Run live buy-flow test
+        run: node tests/e2e_live_links.mjs
