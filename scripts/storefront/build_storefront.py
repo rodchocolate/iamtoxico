@@ -125,7 +125,7 @@ def product_page(design, p):
             f'<div class="pinfo"><h2>{H.escape(p["t"].lower())}</h2>'
             f'<div class="price">{p.get("y","")}</div>'
             f'<div class="design">design: <a href="/designs/{design.lower().replace(" ","-")}/">{design.lower()}</a></div>'
-            f'<a class="buy" href="{p["u"]}" target="_blank" rel="noopener">buy</a>'
+            f'<a class="buy" href="{p["u"]}">buy</a>'
             f'</div>\n</div>\n</main>')
     return page(p["t"].lower(), "originals", body, PROD_STYLE)
 
@@ -212,7 +212,7 @@ def color_of(img):
     except Exception:
         return "mono"
 def shop_tile(t):
-    return (f'<a class="card" href="{t["u"]}" target="_blank" rel="noopener"><div class="img-wrap">'
+    return (f'<a class="card" href="{t["u"]}"><div class="img-wrap">'
             f'<img class="front" src="{t["f"]}" alt="{H.escape(t.get("t",""))}" loading="lazy"></div>'
             f'<div class="info"><div class="title">{H.escape(t.get("t",""))}</div>'
             f'<div class="meta">{t.get("y","")}</div></div></a>')

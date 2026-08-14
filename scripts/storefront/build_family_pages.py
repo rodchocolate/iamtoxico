@@ -52,7 +52,7 @@ def tile(design, info):
     href = url if (live and url) else img
     meta = "shop &rarr;" if (live and url) else "preview"
     return (f'<div class="card"><div class="img-wrap">'
-            f'<a class="img-link" href="{href}" target="_blank" rel="noopener">'
+            f'<a class="img-link" href="{href}">'
             f'<img class="front" src="{img}" alt="{design}" loading="lazy"></a></div>'
             f'<div class="info"><div class="title">{design}</div>'
             f'<div class="meta">{meta}</div></div></div>')

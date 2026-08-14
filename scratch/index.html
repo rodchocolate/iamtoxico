@@ -95,7 +95,7 @@ function tileHtml(p) {
     : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
       (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
   // image -> product page (p.u); plain image when no URL yet (staging)
-  if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
+  if (p.u) imgs = '<a class="img-link" href="' + p.u + '">' + imgs + '</a>';
   // buy button -> prefilled checkout (p.buy), separate from the product-page image link
   const buy = '';  // buy links disabled — cart permalinks carry Printify (not Shopify) variant ids
   return '<div class="card' + (empty ? ' empty' : '') + '">' +
@@ -115,7 +115,7 @@ function renderTiles(data) {
       // row header -> collection page (row.href); plain text when no URL yet (staging)
       if (row.href) {
         const a = document.createElement('a');
-        a.href = row.href; a.target = '_blank'; a.rel = 'noopener';
+        a.href = row.href;
         a.className = 'collection-link'; a.textContent = row.label.replace(' — ', ' ') + ' →';
         lbl.appendChild(a);
       } else {

@@ -78,7 +78,7 @@ PAGE = """<!DOCTYPE html>
 function tileHtml(p) {{
   let imgs = '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
              (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
-  if (p.u) imgs = '<a class="img-link" href="' + p.u + '" target="_blank" rel="noopener">' + imgs + '</a>';
+  if (p.u) imgs = '<a class="img-link" href="' + p.u + '">' + imgs + '</a>';
   return '<div class="card">' +
            '<div class="img-wrap">' + imgs + '</div>' +
            '<div class="info">' +

@@ -297,9 +297,9 @@
     loadData().then(function (products) {
       var product = products[handle];
       if (product) openPicker(handle, product);
-      else window.open(a.href, '_blank', 'noopener');
+      else window.location.href = a.href;
     }).catch(function () {
-      window.open(a.href, '_blank', 'noopener');
+      window.location.href = a.href;
     });
   }, true);
 

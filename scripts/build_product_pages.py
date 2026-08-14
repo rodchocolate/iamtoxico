@@ -79,7 +79,7 @@ PAGE = """<!DOCTYPE html>
 <main>
 <div class="pmain">
 <div class="gallery"><div class="main"><img id="pm" src="{front}" alt="{title}"></div><div class="thumbs">{thumbs}</div></div>
-<div class="pinfo"><h2>{title_lc}</h2><div class="price">{price}</div><a class="buy" href="{buy}" target="_blank" rel="noopener">buy</a></div>
+<div class="pinfo"><h2>{title_lc}</h2><div class="price">{price}</div><a class="buy" href="{buy}">buy</a></div>
 </div>
 </main>
 <footer>&copy; 2025 iamtoxico</footer>

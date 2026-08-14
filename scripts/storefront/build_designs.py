@@ -43,7 +43,7 @@ style += """
 
 def tile(name, img):
     return (f'<div class="card"><div class="img-wrap">'
-            f'<a class="img-link" href="{img}" target="_blank" rel="noopener">'
+            f'<a class="img-link" href="{img}">'
             f'<img class="front" src="{img}" alt="{name}" loading="lazy"></a></div>'
             f'<div class="info"><div class="title">{name}</div>'
             f'<div class="meta">source</div></div></div>')
