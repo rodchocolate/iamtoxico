@@ -13,3 +13,4 @@ spotify_tokens.json
 
 # Large reference TIFs (JPG versions kept)
 *.tif
+node_modules
