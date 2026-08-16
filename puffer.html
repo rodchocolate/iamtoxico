@@ -3,9 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>iamtoxico — puffer</title>
-<link rel="stylesheet" href="style.css">
+<title>toxico — puffer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Space Grotesk', sans-serif; color: #fff;
+    background: #0b0b0b url('bg-graffiti-10.jpg') center center / cover no-repeat fixed;
+    min-height: 100vh;
+  }
+  body::before { content: ''; position: fixed; inset: 0; background: rgba(0,0,0,.55); z-index: 0; }
+  header, main, footer { position: relative; z-index: 1; }
+  header { padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between;
+    max-width: 1280px; margin: 0 auto; }
+  header h1 { font-size: 1.4rem; font-weight: 600; letter-spacing: .06em; text-transform: lowercase; }
+  .badge { background: rgba(255,200,0,.15); color: #ffc800; font-size: .7rem; font-weight: 600;
+    text-transform: uppercase; padding: .3em .7em; border-radius: 6px; letter-spacing: .08em; }
+  main { padding: 1rem 2rem 4rem; max-width: 1280px; margin: 0 auto; }
+  .row-label { font-size: 1.4rem; opacity: .55; text-transform: uppercase; letter-spacing: .12em; margin: 1.5rem 0 .6rem; }
+  .grid { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2.8rem) / 3);
+    gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 1rem; scrollbar-width: thin; }
+  .grid.wrap { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); grid-auto-columns: unset;
+    overflow-x: visible; scroll-snap-type: none; }
+  .card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; overflow: hidden; position: relative; scroll-snap-align: start;
+    transition: transform .25s, border-color .25s; }
+  .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.25); }
+  .card .img-wrap { position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }
+  .card .img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }
+  .card .img-wrap img.back { position: absolute; inset: 0; opacity: 0; }
+  .card:hover .img-wrap img.front { opacity: 0; }
+  .card:hover .img-wrap img.back { opacity: 1; }
+  .card.empty .img-wrap { display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em; }
+  .card .info { padding: .9rem 1rem; }
+  .card .title { font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }
+  .card .meta { font-size: .7rem; opacity: .65; text-transform: lowercase; }
+  .card .pid { font-size: .65rem; opacity: .45; font-family: monospace; margin-top: .3rem; user-select: all; }
+  footer { padding: 2rem; text-align: center; font-size: .7rem; opacity: .45; }
+</style>
 </head>
 <body>
 <header><h1>toxico — puffer</h1><span class="badge">internal</span></header>
@@ -13,7 +49,7 @@
 <div class="row-label">originals — harem tile sizing, slightly larger</div>
 <div class="grid wrap">
 <div class="card">
-  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/6a4c40309008060c41036227/77830/36536/arctic-river-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/6a4c40309008060c41036227/77830/36540/arctic-river-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c40309008060c41036227/77830/36536/arctic-river-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c40309008060c41036227/77830/36540/arctic-river-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
   <div class="info">
     <div class="title">Arctic River — Puffer Tile</div>
     <div class="meta">scratch · unpublished</div>
@@ -21,7 +57,7 @@
   </div>
 </div>
 <div class="card">
-  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/6a4c40307462016d8605ba25/77830/36536/cyan-glow-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/6a4c40307462016d8605ba25/77830/36540/cyan-glow-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c40307462016d8605ba25/77830/36536/cyan-glow-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c40307462016d8605ba25/77830/36540/cyan-glow-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
   <div class="info">
     <div class="title">Cyan Glow — Puffer Tile</div>
     <div class="meta">scratch · unpublished</div>
@@ -29,7 +65,7 @@
   </div>
 </div>
 <div class="card">
-  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/6a4c40306fe68b183d0efca0/77830/36536/frozen-sky-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/6a4c40306fe68b183d0efca0/77830/36540/frozen-sky-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c40306fe68b183d0efca0/77830/36536/frozen-sky-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c40306fe68b183d0efca0/77830/36540/frozen-sky-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
   <div class="info">
     <div class="title">Frozen Sky — Puffer Tile</div>
     <div class="meta">scratch · unpublished</div>
@@ -37,7 +73,7 @@
   </div>
 </div>
 <div class="card">
-  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/6a4c4030498c9aed920fb009/77830/36536/hold-cards-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/6a4c4030498c9aed920fb009/77830/36540/hold-cards-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c4030498c9aed920fb009/77830/36536/hold-cards-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c4030498c9aed920fb009/77830/36540/hold-cards-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
   <div class="info">
     <div class="title">Hold Cards — Puffer Tile</div>
     <div class="meta">scratch · unpublished</div>
@@ -45,7 +81,7 @@
   </div>
 </div>
 <div class="card">
-  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/6a4c4030ade55624d404357d/77830/36536/hot-oil-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/6a4c4030ade55624d404357d/77830/36540/hot-oil-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c4030ade55624d404357d/77830/36536/hot-oil-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c4030ade55624d404357d/77830/36540/hot-oil-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
   <div class="info">
     <div class="title">Hot Oil — Puffer Tile</div>
     <div class="meta">scratch · unpublished</div>
@@ -53,7 +89,7 @@
   </div>
 </div>
 <div class="card">
-  <div class="img-wrap"><img class="front" src="https://images.printify.com/mockup/6a4c40309bb831290f09f92b/77830/36536/toxico-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images.printify.com/mockup/6a4c40309bb831290f09f92b/77830/36540/toxico-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
+  <div class="img-wrap"><img class="front" src="https://images-api.printify.com/mockup/6a4c40309bb831290f09f92b/77830/36536/toxico-puffer-tile.jpg?camera_label=front" loading="lazy" alt=""><img class="back" src="https://images-api.printify.com/mockup/6a4c40309bb831290f09f92b/77830/36540/toxico-puffer-tile.jpg?camera_label=back" loading="lazy" alt=""></div>
   <div class="info">
     <div class="title">Toxico — Puffer Tile</div>
     <div class="meta">scratch · unpublished</div>
@@ -62,6 +98,7 @@
 </div>
 </div>
 </main>
-<footer>generated 2026-07-07 00:54 UTC — mockups refresh on rerun of scripts/build_variant_pages.py</footer>
+<footer>generated 2026-08-16 02:56 UTC — mockups refresh on rerun of scripts/build_variant_pages.py</footer>
+<script defer src='/cart.js'></script>
 </body>
 </html>
