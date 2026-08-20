@@ -24,6 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SHOP = "https://shop.iamtoxico.com"
 PRODUCT_URL = re.compile(r'https?://[a-z0-9-]+\.myshopify\.com/products/([a-zA-Z0-9-]+)')
+LOCAL_URL = re.compile(r'/product/([a-zA-Z0-9-]+)\.html')
 
 NAV = '''<nav class="global-nav">
     <div class="nav-brand"><a href="/">iamtoxico</a></div>
@@ -120,12 +121,12 @@ def harvest_images(pages: list[Path]) -> dict[str, dict]:
         for m in obj_re.finditer(t):
             kv = dict(pair_re.findall(m.group(0)))
             u = kv.get("u") or kv.get("buy") or ""
-            hm = PRODUCT_URL.search(u)
+            hm = PRODUCT_URL.search(u) or LOCAL_URL.search(u)
             if hm:
                 feed(hm.group(1), kv.get("f"), kv.get("b"))
         # inline HTML cards
         for href, front, back in card_re.findall(t):
-            hm = PRODUCT_URL.search(href)
+            hm = PRODUCT_URL.search(href) or LOCAL_URL.search(href)
             if hm:
                 feed(hm.group(1), front, back)
     return out
@@ -153,7 +154,9 @@ def main() -> None:
 
     handles = set()
     for p in site_pages:
-        handles.update(PRODUCT_URL.findall(p.read_text(errors="replace")))
+        t = p.read_text(errors="replace")
+        handles.update(PRODUCT_URL.findall(t))
+        handles.update(LOCAL_URL.findall(t))
 
     existing = {p.stem for p in (ROOT / "product").glob("*.html")}
     todo = sorted(h for h in handles if h not in existing and h in variants)
@@ -177,7 +180,7 @@ def main() -> None:
             title=H.escape(v["t"]), title_lc=H.escape(v["t"].lower()),
             style=STYLE, nav=NAV, front=H.escape(front), thumbs=thumbs,
             price=money([x["p"] for x in v["v"]]),
-            buy=f"{SHOP}/products/{h}",
+            buy=f"/product/{h}.html",
         ), encoding="utf-8")
         built.append(h)
 

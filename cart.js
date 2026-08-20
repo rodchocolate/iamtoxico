@@ -18,6 +18,7 @@
   var DATA_URL = '/data/shopify_variants.json';
   var STORE_KEY = 'toxico_cart_v1';
   var PRODUCT_RE = /(?:myshopify\.com|shop\.iamtoxico\.com)\/products\/([^/?#]+)/;
+  var LOCAL_BUY_RE = /\/product\/([^/?#]+)\.html$/;
 
   var dataPromise = null;
   function loadData() {
@@ -291,6 +292,7 @@
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var m = PRODUCT_RE.exec(a.href);
+    if (!m && a.classList.contains('buy')) m = LOCAL_BUY_RE.exec(a.pathname || a.href);
     if (!m) return;
     var handle = m[1];
     e.preventDefault();
