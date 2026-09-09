@@ -54,6 +54,43 @@ for (const row of rows) {
 const short = Object.entries(wanted).filter(([, n]) => n > 0);
 if (short.length) failures.push(`could not find enough rows: ${JSON.stringify(Object.fromEntries(short))}`);
 
+// every foolswise family page linked from the homepage must be live —
+// identity check (slug names), not just a count
+const EXPECTED_FOOLSWISE_FAMILIES = [
+  'aspen', 'base', 'birthday', 'botanical', 'candlelight', 'casino',
+  'champagne', 'extra', 'fall', 'hollywood', 'ibiza', 'kauai', 'miami',
+  'nightclub', 'oaxaca', 'oregon', 'racetrack', 'robben-island', 'sedona',
+  'ski', 'snowbird', 'snowboard', 'spring', 'srt8', 'stripclub', 'summer',
+  'vermentino', 'whistler', 'winter',
+];
+const familyHrefs = await page.$$eval('a.collection-link[href^="/foolswise/"]', as =>
+  as.map(a => a.getAttribute('href')));
+const familySlugs = [...new Set(familyHrefs
+  .map(h => (h.match(/^\/foolswise\/([a-z0-9-]+)\/$/) || [])[1])
+  .filter(Boolean))].sort();
+const expectedSorted = [...EXPECTED_FOOLSWISE_FAMILIES].sort();
+if (JSON.stringify(familySlugs) !== JSON.stringify(expectedSorted)) {
+  const missing = expectedSorted.filter(s => !familySlugs.includes(s));
+  const extra = familySlugs.filter(s => !expectedSorted.includes(s));
+  failures.push(`homepage foolswise families mismatch: missing=[${missing}] extra=[${extra}]`);
+} else {
+  passes.push(`homepage links all ${expectedSorted.length} foolswise families`);
+}
+for (const slug of familySlugs) {
+  try {
+    const p = await browser.newPage();
+    const resp = await p.goto(`${SITE}/foolswise/${slug}/`, { waitUntil: 'domcontentloaded' });
+    if (!resp.ok()) throw new Error(`HTTP ${resp.status()}`);
+    if (!new URL(p.url()).hostname.endsWith('iamtoxico.com')) throw new Error(`left the site: ${p.url()}`);
+    const cards = await p.$$('a.img-link, a.card');
+    if (!cards.length) throw new Error('family page rendered no product cards');
+    passes.push(`foolswise/${slug}/: live, ${cards.length} cards`);
+    await p.close();
+  } catch (e) {
+    failures.push(`foolswise/${slug}/: ${e.message}`);
+  }
+}
+
 // landing must have zero external product links at all
 const external = await page.$$eval('a[href]', as =>
   as.map(a => a.href).filter(h => /myshopify\.com/.test(h)));
