@@ -76,6 +76,20 @@ if (JSON.stringify(familySlugs) !== JSON.stringify(expectedSorted)) {
 } else {
   passes.push(`homepage links all ${expectedSorted.length} foolswise families`);
 }
+// A family page must render as *that* family, not just any page with cards:
+// its <title> / heading names the slug (tolerating numeric prefixes such as
+// "toxico — 15 — aspen"), and one of its own /product/toxico-<slug>-*.html
+// links must resolve to a rendering product page with a buy control.
+function assertFamilyIdentity(slug, title, heading) {
+  // slug hyphens may render as spaces ("robben-island" → "robben island");
+  // require the slug as a whole token so "aspen" does not match "aspenite",
+  // but allow numeric prefixes like "15 — aspen".
+  const body = slug.split('-').map(part => part.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')).join('[\\s-]+');
+  const token = new RegExp(`(^|[^a-z0-9])${body}([^a-z0-9]|$)`, 'i');
+  if (!token.test(title || '') && !token.test(heading || '')) {
+    throw new Error(`page identity mismatch: slug "${slug}" not in title "${title}" or heading "${heading}"`);
+  }
+}
 for (const slug of familySlugs) {
   try {
     const p = await browser.newPage();
@@ -84,7 +98,26 @@ for (const slug of familySlugs) {
     if (!new URL(p.url()).hostname.endsWith('iamtoxico.com')) throw new Error(`left the site: ${p.url()}`);
     const cards = await p.$$('a.img-link, a.card');
     if (!cards.length) throw new Error('family page rendered no product cards');
-    passes.push(`foolswise/${slug}/: live, ${cards.length} cards`);
+
+    // (a) rendered family identity, not just "some page with cards"
+    const title = await p.title();
+    const heading = await p.$eval('h1, main h2, .row-label', el => el.textContent.trim()).catch(() => '');
+    assertFamilyIdentity(slug, title, heading);
+
+    // (b) follow one representative product link for this family
+    const productRe = new RegExp(`^/product/toxico-${slug}-[^/]+\\.html$`);
+    const hrefs = await p.$$eval('a[href^="/product/"]', as => as.map(a => a.getAttribute('href')));
+    const productHref = hrefs.find(h => productRe.test(h));
+    if (!productHref) throw new Error(`no /product/toxico-${slug}-*.html link on family page`);
+    const pp = await browser.newPage();
+    const presp = await pp.goto(`${SITE}${productHref}`, { waitUntil: 'domcontentloaded' });
+    if (!presp.ok()) throw new Error(`${productHref}: HTTP ${presp.status()}`);
+    await pp.waitForSelector('.pinfo h2', { timeout: 10000 });
+    const buy = await pp.$('a.buy');
+    if (!buy) throw new Error(`${productHref}: product page has no buy control`);
+    await pp.close();
+
+    passes.push(`foolswise/${slug}/: identity OK ("${title}"), ${cards.length} cards, product ${productHref} renders with buy`);
     await p.close();
   } catch (e) {
     failures.push(`foolswise/${slug}/: ${e.message}`);
