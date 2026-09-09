@@ -43,7 +43,7 @@
     gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory;
     padding-bottom: 1rem; scrollbar-width: thin;
   }
-  /* Drop pages (20260808_*/20260809_*) + preview.html build cards into #grid — wrapping 3-col grid */
+  /* Dated drop pages and preview.html use a wrapping grid. */
   #grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
