@@ -19,6 +19,8 @@ from pathlib import Path
 
 SCRATCH = Path(__file__).resolve().parent.parent / "scratch"
 INDEX = SCRATCH / "index.html"
+VARIANTS = Path(__file__).resolve().parent.parent / "data" / "shopify_variants.json"
+PRODUCT_DIR = Path(__file__).resolve().parent.parent / "product"
 
 
 def slugify(s: str) -> str:
@@ -26,6 +28,25 @@ def slugify(s: str) -> str:
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode()
     s = re.sub(r"[^a-zA-Z0-9]+", "-", s).strip("-").lower()
     return s or "drop"
+
+
+def backfill_tile_links(tiles, variants) -> int:
+    """Fill missing tile links ("u") from canonical Shopify handles.
+
+    A tile whose title slugifies to a handle present in
+    data/shopify_variants.json gets u=/product/<handle>.html. Existing links
+    are never overwritten, and unknown products are left alone — so a rerun
+    can only add links, never erase them. Returns the number filled.
+    """
+    filled = 0
+    for tile in tiles:
+        if tile.get("u"):
+            continue
+        handle = slugify(tile.get("t", ""))
+        if handle in variants:
+            tile["u"] = f"/product/{handle}.html"
+            filled += 1
+    return filled
 
 
 PAGE = """<!DOCTYPE html>
@@ -127,13 +148,17 @@ def main() -> None:
         raise SystemExit("tiles-data block not found")
     data = json.loads(m.group(2))
 
+    variants = json.loads(VARIANTS.read_text(encoding="utf-8")).get("products", {}) if VARIANTS.is_file() else {}
+
     built = 0
+    filled = 0
     for row in data.get("rows", []):
         label = row.get("label", "")
         if not label:
             continue
         slug = slugify(label)
         row["href"] = f"{slug}/"
+        filled += backfill_tile_links(row.get("tiles", []), variants)
         page = PAGE.format(label=label.replace(' — ', ' '), tiles_json=json.dumps(row.get("tiles", []), indent=2))
         out = SCRATCH / slug / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
@@ -147,7 +172,7 @@ def main() -> None:
     new_block = m.group(1) + "\n" + json.dumps(data, indent=2) + "\n" + m.group(3)
     html = html[:m.start()] + new_block + html[m.end():]
     INDEX.write_text(html, encoding="utf-8")
-    print(f"built {built} per-drop pages; index updated (hrefs + 1.4rem labels)")
+    print(f"built {built} per-drop pages; index updated (hrefs + 1.4rem labels); backfilled {filled} product links")
 
 
 if __name__ == "__main__":
