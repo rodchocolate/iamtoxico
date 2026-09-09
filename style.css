@@ -43,6 +43,50 @@
     gap: 1.4rem; overflow-x: auto; scroll-snap-type: x mandatory;
     padding-bottom: 1rem; scrollbar-width: thin;
   }
+  /* Drop pages (20260808_*/20260809_*) + preview.html build cards into #grid — wrapping 3-col grid */
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.4rem;
+  }
+  .badge {
+    background: rgba(255,200,0,.15); color: #ffc800;
+    font-size: .7rem; font-weight: 600; text-transform: uppercase;
+    padding: .3em .7em; border-radius: 6px; letter-spacing: .08em;
+  }
+  .card.empty .img-wrap {
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem;
+    text-transform: lowercase; letter-spacing: .05em;
+  }
+  /* preview.html: filters, card-link, price, pid, shop-badge */
+  .filters {
+    max-width: 1280px; margin: 0 auto;
+    padding: 0 2rem .8rem;
+    display: flex; gap: .5rem; flex-wrap: wrap;
+  }
+  .filters button {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
+    color: #fff; font-family: inherit; font-size: .8rem;
+    padding: .4em 1em; border-radius: 20px; cursor: pointer;
+    transition: background .2s, border-color .2s;
+  }
+  .filters button:hover,
+  .filters button.active {
+    background: rgba(255,255,255,.18);
+    border-color: rgba(255,255,255,.3);
+  }
+  .card a.card-link { display: block; text-decoration: none; color: inherit; }
+  .card .price { font-size: .8rem; color: rgba(255,255,255,.55); margin-top: .15rem; }
+  .card .pid { font-size: .65rem; opacity: .45; font-family: monospace; margin-top: .3rem; user-select: all; }
+  .shop-badge {
+    position: absolute; top: 8px; right: 8px;
+    font-size: .6rem; font-weight: 700; text-transform: uppercase;
+    padding: .2rem .5rem; border-radius: 4px; letter-spacing: .06em;
+  }
+  .shop-badge.staging { background: #ff4d4d; color: #fff; }
+  .shop-badge.live    { background: #00c864; color: #000; }
   .card {
     background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
     border-radius: 12px; overflow: hidden; position: relative;
@@ -72,6 +116,8 @@
     .global-nav { flex-direction: column; align-items: flex-start; gap: 0.6rem; }
     .nav-links { flex-direction: column; gap: 0.4rem; }
     .grid { grid-auto-columns: calc((100% - .8rem) / 2); gap: .8rem; }
+    #grid { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+    .filters { padding: 0 1rem .6rem; }
     .card .info { padding: .6rem .7rem; }
     .card .title { font-size: .78rem; }
   }
