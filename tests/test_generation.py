@@ -113,3 +113,30 @@ def test_legacy_storefront_script_is_retired_not_run(tmp_path):
     assert "retired" in (result.stdout + result.stderr).lower()
     assert "build_product_pages.py" in (result.stdout + result.stderr)
     assert not any(tmp_path.iterdir())
+
+
+def test_canonical_shop_domain_tiles_are_built_and_repointed(tmp_path):
+    """A tile whose only destination is the canonical shop.iamtoxico.com URL
+    must be harvested (page built) and repointed to the local page; the built
+    page's BUY stays canonical; unrelated hosts are left alone; second run is
+    byte-identical."""
+    module = load("build_product_pages")
+    (tmp_path / "data").mkdir()
+    (tmp_path / "data/shopify_variants.json").write_text(json.dumps({"products": {
+        "canon-shirt": {"t": "Canon Shirt", "v": [{"p": "70"}]},
+    }}))
+    (tmp_path / "index.html").write_text('<script>' + json.dumps([
+        {"u": "https://shop.iamtoxico.com/products/canon-shirt", "f": "/canon.jpg"},
+        {"u": "https://example.com/products/other", "f": "/x.jpg"},
+    ]) + '</script>')
+    module.main(root=tmp_path)
+    page = tmp_path / "product/canon-shirt.html"
+    assert page.is_file()
+    assert 'class="buy" href="https://shop.iamtoxico.com/products/canon-shirt"' in page.read_text()
+    tile = (tmp_path / "index.html").read_text()
+    assert '"/product/canon-shirt.html"' in tile
+    assert "shop.iamtoxico.com/products/canon-shirt" not in tile
+    assert "https://example.com/products/other" in tile
+    snap = {p: p.read_bytes() for p in tmp_path.rglob('*') if p.is_file()}
+    module.main(root=tmp_path)
+    assert snap == {p: p.read_bytes() for p in tmp_path.rglob('*') if p.is_file()}

@@ -27,7 +27,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 SHOP = "https://shop.iamtoxico.com"
-PRODUCT_URL = re.compile(r'https?://[a-z0-9-]+\.myshopify\.com/products/([a-zA-Z0-9-]+)')
+PRODUCT_URL = re.compile(
+    r'https?://(?:[a-z0-9-]+\.myshopify\.com|shop\.iamtoxico\.com)/products/([a-zA-Z0-9-]+)')
 LOCAL_URL = re.compile(r'/product/([a-zA-Z0-9-]+)\.html')
 
 NAV = '''<nav class="global-nav">
