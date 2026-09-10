@@ -6,8 +6,8 @@
  * out via a single cart permalink straight to Shopify's payment page.
  *
  * Variant data comes from /data/shopify_variants.json (built by
- * scripts/sync_shopify_variants.py). If the data or a handle is missing the
- * click falls through to normal navigation, so buying never breaks.
+ * scripts/sync_shopify_variants.py). A failed lookup shows a retry action and
+ * a canonical Shopify product link; it never reloads a local product page.
  *
  * SHOP_BASE flips to https://shop.iamtoxico.com once that domain is primary.
  */
@@ -20,15 +20,46 @@
   var PRODUCT_RE = /(?:myshopify\.com|shop\.iamtoxico\.com)\/products\/([^/?#]+)/;
   var LOCAL_BUY_RE = /\/product\/([^/?#]+)\.html$/;
 
+  var DATA_TIMEOUT_MS = 8000;
   var dataPromise = null;
   function loadData() {
     if (!dataPromise) {
-      dataPromise = fetch(DATA_URL).then(function (r) {
+      var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      var timer;
+      var timeout = new Promise(function (_, reject) {
+        timer = setTimeout(function () {
+          reject(new Error('Variant lookup timed out'));
+          if (controller) controller.abort();
+        }, DATA_TIMEOUT_MS);
+      });
+      var request = fetch(DATA_URL, controller ? { signal: controller.signal } : {}).then(function (r) {
         if (!r.ok) throw new Error(String(r.status));
         return r.json();
-      }).then(function (d) { return d.products || {}; });
+      }).then(function (d) {
+        if (!d || !d.products || typeof d.products !== 'object' || Array.isArray(d.products)) {
+          throw new Error('Invalid variant data');
+        }
+        return d.products;
+      });
+      dataPromise = Promise.race([request, timeout]).then(function (products) {
+        clearTimeout(timer);
+        return products;
+      }, function (error) {
+        clearTimeout(timer);
+        dataPromise = null; // a transient failure must never poison later clicks
+        throw error;
+      });
     }
     return dataPromise;
+  }
+
+  function validProduct(product) {
+    return product && typeof product.t === 'string' && product.t.trim() &&
+      Array.isArray(product.v) && product.v.length && product.v.every(function (v) {
+        return v && /^\d+$/.test(String(v.id)) && typeof v.a === 'boolean' &&
+          (typeof v.p === 'number' || typeof v.p === 'string') &&
+          String(v.p).trim() && isFinite(Number(v.p)) && Number(v.p) > 0;
+      });
   }
 
   /* ---------- cart state ---------- */
@@ -287,22 +318,46 @@
 
   /* ---------- link interception ---------- */
 
+  function chooseProduct(handle) {
+    var panel = openOverlay('txc-picker');
+    panel.setAttribute('role', 'status');
+    panel.textContent = 'loading sizes…';
+    loadData().then(function (products) {
+      if (!validProduct(products[handle])) throw new Error('Product sizes unavailable');
+      if (panel.isConnected) openPicker(handle, products[handle]);
+    }).catch(function () {
+      dataPromise = null; // missing handles/invalid entries may be fixed by a fresh sync
+      if (!panel.isConnected) return;
+      panel.textContent = '';
+      var message = document.createElement('p');
+      message.className = 'txc-error';
+      message.setAttribute('role', 'alert');
+      message.textContent = 'Unable to load sizes. Retry, or continue on Shopify to check availability.';
+      var retry = document.createElement('button');
+      retry.type = 'button';
+      retry.textContent = 'retry';
+      retry.addEventListener('click', function () { chooseProduct(handle); });
+      var fallback = document.createElement('a');
+      fallback.className = 'txc-fallback';
+      fallback.href = SHOP_BASE + '/products/' + encodeURIComponent(handle);
+      fallback.textContent = 'continue on Shopify';
+      fallback.style.cssText = 'display:block;color:inherit;margin-top:16px';
+      panel.appendChild(message);
+      panel.appendChild(retry);
+      panel.appendChild(fallback);
+    });
+  }
+
   document.addEventListener('click', function (e) {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
-    if (!a) return;
+    if (!a || a.classList.contains('txc-fallback')) return;
     var m = PRODUCT_RE.exec(a.href);
     if (!m && a.classList.contains('buy')) m = LOCAL_BUY_RE.exec(a.pathname || a.href);
     if (!m) return;
     var handle = m[1];
     e.preventDefault();
-    loadData().then(function (products) {
-      var product = products[handle];
-      if (product) openPicker(handle, product);
-      else window.location.href = a.href;
-    }).catch(function () {
-      window.location.href = a.href;
-    });
+    chooseProduct(handle);
   }, true);
 
   if (document.readyState === 'loading') {
