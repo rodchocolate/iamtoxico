@@ -7,11 +7,39 @@ import sys
 SCRIPT = Path(__file__).resolve().parents[1] / 'scripts/audit_site.py'
 
 
-def run_audit(root):
+def run_audit(root, *extra_args):
     assert SCRIPT.is_file(), 'artifact audit CLI is missing'
-    result = subprocess.run([sys.executable, str(SCRIPT), '--root', str(root)],
+    result = subprocess.run([sys.executable, str(SCRIPT), '--root', str(root), *extra_args],
                             capture_output=True, text=True)
     return result.returncode, json.loads(result.stdout)
+
+
+def test_missing_catalog_file_reports_catalog_missing(tmp_path):
+    code, report = run_audit(tmp_path)
+    assert code == 1
+    assert report['catalog']['present'] is False
+    assert {'code': 'catalog_missing', 'severity': 'error',
+            'source': 'data/catalog.json'} in report['findings']
+
+
+def test_malformed_catalog_json_reports_catalog_invalid_without_crashing(tmp_path):
+    (tmp_path / 'data').mkdir()
+    (tmp_path / 'data/catalog.json').write_text('{not valid json')
+    code, report = run_audit(tmp_path)
+    assert code == 1
+    findings = [f for f in report['findings'] if f['code'] == 'catalog_invalid']
+    assert len(findings) == 1
+    assert findings[0]['source'] == 'data/catalog.json'
+    assert findings[0]['severity'] == 'error'
+    assert 'reason' in findings[0] and findings[0]['reason']
+
+
+def test_links_only_flag_skips_catalog_without_error(tmp_path):
+    code, report = run_audit(tmp_path, '--links-only')
+    assert code == 0
+    assert report['catalog']['present'] is False
+    assert report['catalog']['skipped'] is True
+    assert not any(f['code'].startswith('catalog_') for f in report['findings'])
 
 
 def test_artifact_links_include_tiles_css_and_ignore_tooling(tmp_path):
@@ -25,6 +53,8 @@ def test_artifact_links_include_tiles_css_and_ignore_tooling(tmp_path):
     (tmp_path / 'style.css').write_text('.x{background:url("/css.png")}')
     (tmp_path / 'tests').mkdir()
     (tmp_path / 'tests/private.html').write_text('<a href="/not-public">')
+    (tmp_path / 'data').mkdir()
+    (tmp_path / 'data/catalog.json').write_text(json.dumps({'products': []}))
     code, report = run_audit(tmp_path)
     assert code == 1
     assert {f['url'] for f in report['findings']} == {

@@ -129,12 +129,28 @@ def availability(product):
     return 'active' if signals[0] else 'inactive'
 
 
-def audit_catalog(root, findings):
+def audit_catalog(root, findings, links_only=False):
     path = root / 'data/catalog.json'
+    if links_only:
+        return {'present': False, 'products': [], 'duplicates': [], 'skipped': True}
     if not path.is_file():
+        findings.append({'code': 'catalog_missing', 'severity': 'error',
+                          'source': 'data/catalog.json'})
         return {'present': False, 'products': [], 'duplicates': []}
-    data = json.loads(path.read_text(encoding='utf-8'))
-    products = data['products']
+    try:
+        data = json.loads(path.read_text(encoding='utf-8'))
+        if not isinstance(data, dict) or 'products' not in data:
+            raise ValueError("missing 'products' key")
+        products = data['products']
+        if not isinstance(products, list):
+            raise ValueError("'products' is not a list")
+        for item in products:
+            if not isinstance(item, dict):
+                raise ValueError('product row is not an object')
+    except (ValueError, TypeError) as exc:
+        findings.append({'code': 'catalog_invalid', 'severity': 'error',
+                          'source': 'data/catalog.json', 'reason': str(exc)})
+        return {'present': False, 'products': [], 'duplicates': []}
     rows, ids = [], defaultdict(list)
     for index, product in enumerate(products):
         identifier = product.get('id')
@@ -197,7 +213,7 @@ def audit_catalog(root, findings):
             'availability_states': dict(sorted(Counter(r['availability'] for r in rows).items()))}
 
 
-def audit(root):
+def audit(root, links_only=False):
     root = Path(root).resolve()
     findings = []
     sources = []
@@ -228,7 +244,7 @@ def audit(root):
                                  'source': source.as_posix(), 'kind': kind, 'url': url,
                                  'target': target.relative_to(root).as_posix()
                                  if target.is_relative_to(root) else '<outside-root>'})
-    catalog = audit_catalog(root, findings)
+    catalog = audit_catalog(root, findings, links_only=links_only)
     findings.sort(key=lambda f: json.dumps(f, sort_keys=True))
     return {'schema_version': 1, 'summary': {'sources': len(sources),
             'internal_references': checked, 'errors': len(findings)}, 'findings': findings,
@@ -239,10 +255,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root', type=Path, required=True)
     parser.add_argument('--evidence', type=Path, help='also write the JSON report here')
+    parser.add_argument('--links-only', action='store_true',
+                        help='skip catalog audit; only check HTML/CSS link targets')
     args = parser.parse_args()
     if not args.root.is_dir():
         parser.error('--root must be an existing artifact directory')
-    report = audit(args.root)
+    report = audit(args.root, links_only=args.links_only)
     text = json.dumps(report, indent=2, sort_keys=True) + '\n'
     if args.evidence:
         args.evidence.parent.mkdir(parents=True, exist_ok=True)
