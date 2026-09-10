@@ -154,7 +154,8 @@ def shopify_images() -> dict[str, str]:
 def main(root: Path = ROOT) -> None:
     root = Path(root).resolve()
     variants = json.loads((root / "data" / "shopify_variants.json").read_text())["products"]
-    pages = sorted(p for p in root.rglob("*.html") if "_assets" not in str(p))
+    pages = sorted(p for p in root.rglob("*.html")
+                   if "_assets" not in p.relative_to(root).parts)
     site_pages = [p for p in pages if p.parent.name != "product"]
 
     handles = set()

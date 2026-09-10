@@ -60,6 +60,47 @@ def test_buy_href_is_canonical_shopify_while_tiles_stay_local(tmp_path):
     assert "myshopify.com/products/new-shirt" not in tile
 
 
+def test_assets_exclusion_is_root_relative_not_substring(tmp_path):
+    """The '_assets' exclusion must match a path *component* relative to
+    --root, not a substring of the absolute path. A tmp_path containing the
+    literal text '_assets' anywhere in its ancestry (e.g. a fixture dir named
+    'site_assets_fixture') must not have its real site pages skipped; but a
+    genuine <root>/_assets/x.html must still be excluded."""
+    module = load("build_product_pages")
+
+    tricky_root = tmp_path / "site_assets_fixture" / "site"
+    tricky_root.mkdir(parents=True)
+    product_fixture(tricky_root)
+    (tricky_root / "_assets").mkdir()
+    (tricky_root / "_assets" / "x.html").write_text(
+        '<script>' + json.dumps([
+            {"u": "https://iamtoxico.myshopify.com/products/new-shirt"}]) + '</script>')
+    module.main(root=tricky_root)
+
+    plain_root = tmp_path / "plain" / "site"
+    plain_root.mkdir(parents=True)
+    product_fixture(plain_root)
+    (plain_root / "_assets").mkdir()
+    (plain_root / "_assets" / "x.html").write_text(
+        '<script>' + json.dumps([
+            {"u": "https://iamtoxico.myshopify.com/products/new-shirt"}]) + '</script>')
+    module.main(root=plain_root)
+
+    def snapshot(root):
+        return {str(p.relative_to(root)): p.read_bytes()
+                for p in root.rglob('*') if p.is_file()}
+
+    assert snapshot(tricky_root) == snapshot(plain_root)
+    assert (plain_root / "product" / "new-shirt.html").is_file()
+    assert (tricky_root / "product" / "new-shirt.html").is_file()
+    # the real _assets folder is still excluded as a scan source: its handle
+    # link must not have triggered a product page build from it alone (the
+    # site index.html already references new-shirt so it will exist; verify
+    # the _assets file itself was left untouched/unrepointed)
+    assets_text = (plain_root / "_assets" / "x.html").read_text()
+    assert "myshopify.com/products/new-shirt" in assets_text
+
+
 def test_legacy_storefront_script_is_retired_not_run(tmp_path):
     """build_storefront.py's inputs (/tmp/*.json, a scratchpad sys.path hack)
     and hardcoded runtime REPO are long gone; it must refuse to run instead of
