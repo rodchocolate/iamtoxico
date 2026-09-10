@@ -8,13 +8,17 @@ the site, then repoint those tile links to the local pages.
   scripts/sync_shopify_variants.py first); front/back mockups come from the
   tile that linked the product, falling back to the Shopify product image.
 - Pages use the originals product-page layout (gallery + info + buy); the buy
-  button keeps the Shopify URL so cart.js opens the on-site size picker.
+  button hrefs the canonical Shopify product URL so cart.js can progressively
+  enhance it into the on-site size picker, with real checkout as the fallback
+  if variant data or JS is unavailable. Site tiles/nav linking to the product
+  are repointed to the local /product/<handle>.html page instead.
 - Existing product/<handle>.html files are never overwritten.
 
-    python3 scripts/build_product_pages.py
+    python3 scripts/build_product_pages.py --root /path/to/site
 """
 from __future__ import annotations
 
+import argparse
 import html as H
 import json
 import re
@@ -147,9 +151,10 @@ def shopify_images() -> dict[str, str]:
         page += 1
 
 
-def main() -> None:
-    variants = json.loads((ROOT / "data" / "shopify_variants.json").read_text())["products"]
-    pages = [p for p in ROOT.rglob("*.html") if "_assets" not in str(p)]
+def main(root: Path = ROOT) -> None:
+    root = Path(root).resolve()
+    variants = json.loads((root / "data" / "shopify_variants.json").read_text())["products"]
+    pages = sorted(p for p in root.rglob("*.html") if "_assets" not in str(p))
     site_pages = [p for p in pages if p.parent.name != "product"]
 
     handles = set()
@@ -158,13 +163,15 @@ def main() -> None:
         handles.update(PRODUCT_URL.findall(t))
         handles.update(LOCAL_URL.findall(t))
 
-    existing = {p.stem for p in (ROOT / "product").glob("*.html")}
+    existing = {p.stem for p in (root / "product").glob("*.html")}
     todo = sorted(h for h in handles if h not in existing and h in variants)
     dead = sorted(h for h in handles if h not in variants)
 
     imgs = harvest_images(site_pages)
     missing_imgs = [h for h in todo if h not in imgs]
-    fallback = shopify_images() if missing_imgs else {}
+    # Offline by design: absent mockups are reported, never fetched implicitly.
+    fallback = {}
+    (root / "product").mkdir(exist_ok=True)
 
     built = []
     for h in todo:
@@ -176,11 +183,11 @@ def main() -> None:
         thumbs = THUMB.format(src=H.escape(front), alt="front", cls="sel")
         if back:
             thumbs += THUMB.format(src=H.escape(back), alt="back", cls="")
-        (ROOT / "product" / f"{h}.html").write_text(PAGE.format(
+        (root / "product" / f"{h}.html").write_text(PAGE.format(
             title=H.escape(v["t"]), title_lc=H.escape(v["t"].lower()),
             style=STYLE, nav=NAV, front=H.escape(front), thumbs=thumbs,
             price=money([x["p"] for x in v["v"]]),
-            buy=f"/product/{h}.html",
+            buy=f"{SHOP}/products/{h}",
         ), encoding="utf-8")
         built.append(h)
 
@@ -198,9 +205,13 @@ def main() -> None:
     print(f"site handles: {len(handles)} | built: {len(built)} | "
           f"already had pages: {len(handles & existing)} | not live (left alone): {len(dead)}")
     print(f"repointed links on {repointed} pages")
+    if missing_imgs:
+        print("missing local images (not built):", ", ".join(missing_imgs))
     if dead:
         print("not live:", dead[:10], "..." if len(dead) > 10 else "")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", type=Path, required=True, help="local site tree to update in place")
+    main(root=parser.parse_args().root)
