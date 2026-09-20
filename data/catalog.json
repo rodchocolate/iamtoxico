@@ -6095,12 +6095,12 @@
       "url": "https://1tap6m-et.myshopify.com/products/frozen-sky"
     },
     {
-      "id": "aff-zimmerli-soft-lounge",
+      "id": "aff-zimmerli-soft-lounge-cloud",
       "sku": "AFF-ZM-232",
       "name": "Soft Lounge",
       "subtitle": "zimmerli \u00b7 swiss made",
       "category": "loungewear",
-      "price": 0,
+      "price": 382,
       "currency": "USD",
       "url": "https://www.zimmerli.com/en-us/products/soft-lounge-pullover-cloud-801043604-031",
       "image": "http://www.zimmerli.com/cdn/shop/files/Zimmerli_SS25_801043604-031_model_front_5b60a6e5-4790-471a-a2f5-38db7aa00f03_600x.jpg?v=1737725237",
@@ -6123,12 +6123,12 @@
       "active": true
     },
     {
-      "id": "aff-zimmerli-soft-lounge",
+      "id": "aff-zimmerli-soft-lounge-blue-melange",
       "sku": "AFF-ZM-233",
       "name": "Soft Lounge",
       "subtitle": "zimmerli \u00b7 swiss made",
       "category": "loungewear",
-      "price": 0,
+      "price": 382,
       "currency": "USD",
       "url": "https://www.zimmerli.com/en-us/products/soft-lounge-pullover-blue-melange-801043604-547",
       "image": "http://www.zimmerli.com/cdn/shop/files/Zimmerli_AW25_801043604-547_model_front_600x.jpg?v=1752671276",
@@ -6156,7 +6156,7 @@
       "name": "Sea Island",
       "subtitle": "zimmerli \u00b7 swiss made",
       "category": "underwear",
-      "price": 0,
+      "price": 216,
       "currency": "USD",
       "url": "https://www.zimmerli.com/en-us/products/sea-island-boxer-dark-grey-2861446-078",
       "image": "http://www.zimmerli.com/cdn/shop/files/Zimmerli_AW24_2861446-078_model_front_08b6c713-daf3-45c2-87ae-165db9a92084_600x.jpg?v=1724450275",
@@ -7643,7 +7643,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e6eaafd24226901fc90/80776/55210/eddy-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/eddy-backpack"
     },
     {
       "id": "printify-6a4c3e6e9008060c41036062",
@@ -7654,7 +7655,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e6e9008060c41036062/80776/55210/green-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/green-backpack"
     },
     {
       "id": "printify-6a4c3e6dade55624d404349d",
@@ -7665,7 +7667,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e6dade55624d404349d/80776/55210/woodworking-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/woodworking-backpack"
     },
     {
       "id": "printify-6a4c3e6d7462016d8605b86f",
@@ -7676,7 +7679,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e6d7462016d8605b86f/80776/55210/faeded-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/faeded-backpack"
     },
     {
       "id": "printify-6a4c3e6d5d162348220e1cf6",
@@ -7687,7 +7691,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e6d5d162348220e1cf6/80776/55210/glown-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/glown-backpack"
     },
     {
       "id": "printify-6a4c3e699008060c4103605b",
@@ -7698,7 +7703,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e699008060c4103605b/80776/55210/windwards-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/windwards-backpack"
     },
     {
       "id": "printify-6a4c3e699008060c4103605a",
@@ -7709,7 +7715,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e699008060c4103605a/80776/55210/cat-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/cat-backpack"
     },
     {
       "id": "printify-6a4c3e68ade55624d4043499",
@@ -7720,7 +7727,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e68ade55624d4043499/80776/55210/crispus-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/crispus-backpack"
     },
     {
       "id": "printify-6a4c3e68ade55624d4043498",
@@ -7731,7 +7739,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e68ade55624d4043498/80776/55210/toxico-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/toxico-backpack"
     },
     {
       "id": "printify-6a4c3e689bb831290f09f831",
@@ -7742,7 +7751,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e689bb831290f09f831/80776/55210/art-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/art-backpack"
     },
     {
       "id": "printify-6a4c3e689008060c41036059",
@@ -7753,7 +7763,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e689008060c41036059/80776/55210/fwrx-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/fwrx-backpack"
     },
     {
       "id": "printify-6a4c3e685ee05d0dbe094927",
@@ -7764,7 +7775,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e685ee05d0dbe094927/80776/55210/jackpot-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/jackpot-backpack"
     },
     {
       "id": "printify-6a4c3e68498c9aed920fae36",
@@ -7775,7 +7787,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e68498c9aed920fae36/80776/55210/fenway-reigns-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/fenway-reigns-backpack"
     },
     {
       "id": "printify-6a4c3e67498c9aed920fae35",
@@ -7786,7 +7799,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e67498c9aed920fae35/88685/51926/toxico-hoop-shorts.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hoop-shorts"
     },
     {
       "id": "printify-6a4c3e64aafd24226901fc8d",
@@ -7797,7 +7811,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e64aafd24226901fc8d/88685/51926/arctic-river-hoop-shorts.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/arctic-river-hoop-shorts"
     },
     {
       "id": "printify-6a4c3e649008060c41036053",
@@ -7808,7 +7823,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e649008060c41036053/88685/51926/hold-cards-hoop-shorts.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/hold-cards-hoop-shorts"
     },
     {
       "id": "printify-6a4c3e647462016d8605b86b",
@@ -7819,7 +7835,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e647462016d8605b86b/80776/55210/frozen-sky-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/frozen-sky-backpack"
     },
     {
       "id": "printify-6a4c3e645ee05d0dbe094926",
@@ -7830,7 +7847,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e645ee05d0dbe094926/88685/51926/hot-oil-hoop-shorts.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/hot-oil-hoop-shorts"
     },
     {
       "id": "printify-6a4c3e64498c9aed920fae34",
@@ -7841,7 +7859,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e64498c9aed920fae34/88685/51926/cyan-glow-hoop-shorts.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/cyan-glow-hoop-shorts"
     },
     {
       "id": "printify-6a4c3e64498c9aed920fae33",
@@ -7852,7 +7871,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e64498c9aed920fae33/88685/51926/frozen-sky-hoop-shorts.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/frozen-sky-hoop-shorts"
     },
     {
       "id": "printify-6a4c3e63ade55624d4043497",
@@ -7863,7 +7883,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e63ade55624d4043497/80776/55210/cyan-glow-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/cyan-glow-backpack"
     },
     {
       "id": "printify-6a4c3e63ade55624d4043496",
@@ -7874,7 +7895,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e63ade55624d4043496/80776/55210/hot-oil-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/hot-oil-backpack"
     },
     {
       "id": "printify-6a4c3e639cae4f88b1076a66",
@@ -7885,7 +7907,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e639cae4f88b1076a66/80776/55210/arctic-river-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/arctic-river-backpack"
     },
     {
       "id": "printify-6a4c3e63529ad989ae0fae42",
@@ -7896,7 +7919,8 @@
       "margin_tier": "pod",
       "image": "https://images.printify.com/mockup/6a4c3e63529ad989ae0fae42/80776/55210/hold-cards-backpack.jpg?camera_label=front",
       "source": "printify",
-      "status": "active"
+      "status": "active",
+      "url": "https://iamtoxico.myshopify.com/products/hold-cards-backpack"
     },
     {
       "id": "printify-6a504da63f9be4caf408da3f",
@@ -9432,7 +9456,7 @@
       "image": "https://images.printify.com/mockup/6a78bb9b3c56e5e89607e222/88685/51926/toxico-base-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-base-hoop-half"
     },
     {
       "id": "printify-6a78bb9b3c56e5e89607e223",
@@ -9444,7 +9468,7 @@
       "image": "https://images.printify.com/mockup/6a78bb9b3c56e5e89607e223/77830/36536/toxico-base-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-base-puffer-single"
     },
     {
       "id": "printify-6a78bb9b1aa67197c60190e5",
@@ -9468,7 +9492,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2f5009127ca605da49/74644/19527/toxico-summer-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-apres-single"
     },
     {
       "id": "printify-6a78bc2f2cd012abef02e089",
@@ -9480,7 +9504,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2f2cd012abef02e089/74644/19527/toxico-summer-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-apres-mirror"
     },
     {
       "id": "printify-6a78bc2ec2cb8addb00158da",
@@ -9492,7 +9516,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2ec2cb8addb00158da/74644/19527/toxico-summer-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-apres-tile"
     },
     {
       "id": "printify-6a78bc2ed44d9d495601ede7",
@@ -9504,7 +9528,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2ed44d9d495601ede7/72926/16656/toxico-summer-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-harem-brickup"
     },
     {
       "id": "printify-6a78bc2e5009127ca605da47",
@@ -9516,7 +9540,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2e5009127ca605da47/72926/16656/toxico-summer-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-harem-tile"
     },
     {
       "id": "printify-6a78bc2f5009127ca605da4a",
@@ -9528,7 +9552,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2f5009127ca605da4a/72928/16656/toxico-summer-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-harem-single"
     },
     {
       "id": "printify-6a78bc2e3c56e5e89607e2ee",
@@ -9540,7 +9564,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2e3c56e5e89607e2ee/88685/51926/toxico-summer-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-hoop-full"
     },
     {
       "id": "printify-6a78bc2fd44d9d495601ede8",
@@ -9552,7 +9576,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2fd44d9d495601ede8/88685/51926/toxico-summer-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-hoop-half"
     },
     {
       "id": "printify-6a78bc2fc9979c47a00bc4ed",
@@ -9564,7 +9588,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2fc9979c47a00bc4ed/77830/36536/toxico-summer-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-puffer-single"
     },
     {
       "id": "printify-6a78bc2f5009127ca605da48",
@@ -9576,7 +9600,7 @@
       "image": "https://images.printify.com/mockup/6a78bc2f5009127ca605da48/80776/55210/toxico-summer-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-summer-bookpack"
     },
     {
       "id": "printify-6a78bcb93c56e5e89607e35f",
@@ -9672,7 +9696,7 @@
       "image": "https://images.printify.com/mockup/6a78bcb93c56e5e89607e35e/88685/51926/toxico-winter-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-winter-hoop-half"
     },
     {
       "id": "printify-6a78bcb9a72d21bb79018605",
@@ -9708,7 +9732,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3d1aa67197c6019220/74644/19527/toxico-spring-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-apres-single"
     },
     {
       "id": "printify-6a78bd3d1aa67197c601921f",
@@ -9720,7 +9744,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3d1aa67197c601921f/74644/19527/toxico-spring-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-apres-mirror"
     },
     {
       "id": "printify-6a78bd3da72d21bb7901864c",
@@ -9732,7 +9756,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3da72d21bb7901864c/74644/19527/toxico-spring-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-apres-tile"
     },
     {
       "id": "printify-6a78bd3d31f0e6867a021862",
@@ -9744,7 +9768,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3d31f0e6867a021862/72926/16656/toxico-spring-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-harem-brickup"
     },
     {
       "id": "printify-6a78bd3da72d21bb7901864b",
@@ -9756,7 +9780,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3da72d21bb7901864b/72926/16656/toxico-spring-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-harem-tile"
     },
     {
       "id": "printify-6a78bd3da72d21bb7901864a",
@@ -9768,7 +9792,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3da72d21bb7901864a/72928/16656/toxico-spring-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-harem-single"
     },
     {
       "id": "printify-6a78bd3dc9979c47a00bc5b6",
@@ -9780,7 +9804,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3dc9979c47a00bc5b6/88685/51926/toxico-spring-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-hoop-full"
     },
     {
       "id": "printify-6a78bd3dd44d9d495601eeca",
@@ -9792,7 +9816,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3dd44d9d495601eeca/88685/51926/toxico-spring-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-hoop-half"
     },
     {
       "id": "printify-6a78bd3da72d21bb7901864d",
@@ -9804,7 +9828,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3da72d21bb7901864d/77830/36536/toxico-spring-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-puffer-single"
     },
     {
       "id": "printify-6a78bd3d2cd012abef02e137",
@@ -9816,7 +9840,7 @@
       "image": "https://images.printify.com/mockup/6a78bd3d2cd012abef02e137/80776/55210/toxico-spring-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-spring-bookpack"
     },
     {
       "id": "printify-6a78bdc72cd012abef02e184",
@@ -9924,7 +9948,7 @@
       "image": "https://images.printify.com/mockup/6a78bdc7a72d21bb790186b8/77830/36536/toxico-fall-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-fall-puffer-single"
     },
     {
       "id": "printify-6a78bdc7c9979c47a00bc61c",
@@ -9948,7 +9972,7 @@
       "image": "https://images.printify.com/mockup/6a78be50c9979c47a00bc703/74644/19527/toxico-birthday-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-apres-single"
     },
     {
       "id": "printify-6a78be51a72d21bb79018780",
@@ -9960,7 +9984,7 @@
       "image": "https://images.printify.com/mockup/6a78be51a72d21bb79018780/74644/19527/toxico-birthday-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-apres-mirror"
     },
     {
       "id": "printify-6a78be511aa67197c6019364",
@@ -9972,7 +9996,7 @@
       "image": "https://images.printify.com/mockup/6a78be511aa67197c6019364/74644/19527/toxico-birthday-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-apres-tile"
     },
     {
       "id": "printify-6a78be503c56e5e89607e4d8",
@@ -9984,7 +10008,7 @@
       "image": "https://images.printify.com/mockup/6a78be503c56e5e89607e4d8/72926/16656/toxico-birthday-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-harem-brickup"
     },
     {
       "id": "printify-6a78be51a72d21bb7901877e",
@@ -9996,7 +10020,7 @@
       "image": "https://images.printify.com/mockup/6a78be51a72d21bb7901877e/72926/16656/toxico-birthday-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-harem-tile"
     },
     {
       "id": "printify-6a78be503c56e5e89607e4d9",
@@ -10008,7 +10032,7 @@
       "image": "https://images.printify.com/mockup/6a78be503c56e5e89607e4d9/72928/16656/toxico-birthday-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-harem-single"
     },
     {
       "id": "printify-6a78be51d44d9d495601f012",
@@ -10020,7 +10044,7 @@
       "image": "https://images.printify.com/mockup/6a78be51d44d9d495601f012/88685/51926/toxico-birthday-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-hoop-full"
     },
     {
       "id": "printify-6a78be50d44d9d495601f010",
@@ -10032,7 +10056,7 @@
       "image": "https://images.printify.com/mockup/6a78be50d44d9d495601f010/88685/51926/toxico-birthday-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-hoop-half"
     },
     {
       "id": "printify-6a78be51c9979c47a00bc704",
@@ -10044,7 +10068,7 @@
       "image": "https://images.printify.com/mockup/6a78be51c9979c47a00bc704/77830/36536/toxico-birthday-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-puffer-single"
     },
     {
       "id": "printify-6a78be50d44d9d495601f011",
@@ -10056,7 +10080,7 @@
       "image": "https://images.printify.com/mockup/6a78be50d44d9d495601f011/80776/55210/toxico-birthday-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-birthday-bookpack"
     },
     {
       "id": "printify-6a78bed91aa67197c60193c6",
@@ -10068,7 +10092,7 @@
       "image": "https://images.printify.com/mockup/6a78bed91aa67197c60193c6/74644/19527/toxico-nightclub-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-nightclub-apres-single"
     },
     {
       "id": "printify-6a78bed9d44d9d495601f066",
@@ -10080,7 +10104,7 @@
       "image": "https://images.printify.com/mockup/6a78bed9d44d9d495601f066/74644/19527/toxico-nightclub-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-nightclub-apres-mirror"
     },
     {
       "id": "printify-6a78bed9a72d21bb790187f0",
@@ -10128,7 +10152,7 @@
       "image": "https://images.printify.com/mockup/6a78bed92cd012abef02e29f/72928/16656/toxico-nightclub-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-nightclub-harem-single"
     },
     {
       "id": "printify-6a78bed95009127ca605dcb1",
@@ -10140,7 +10164,7 @@
       "image": "https://images.printify.com/mockup/6a78bed95009127ca605dcb1/88685/51926/toxico-nightclub-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-nightclub-hoop-full"
     },
     {
       "id": "printify-6a78bed9c9979c47a00bc75d",
@@ -10152,7 +10176,7 @@
       "image": "https://images.printify.com/mockup/6a78bed9c9979c47a00bc75d/88685/51926/toxico-nightclub-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-nightclub-hoop-half"
     },
     {
       "id": "printify-6a78bed95009127ca605dcb0",
@@ -10164,7 +10188,7 @@
       "image": "https://images.printify.com/mockup/6a78bed95009127ca605dcb0/77830/36536/toxico-nightclub-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-nightclub-puffer-single"
     },
     {
       "id": "printify-6a78bed93c56e5e89607e545",
@@ -10200,7 +10224,7 @@
       "image": "https://images.printify.com/mockup/6a78bf5f3c56e5e89607e58f/74644/19527/toxico-extra-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-extra-apres-mirror"
     },
     {
       "id": "printify-6a78bf5f2cd012abef02e2ec",
@@ -10224,7 +10248,7 @@
       "image": "https://images.printify.com/mockup/6a78bf5f31f0e6867a021a58/72926/16656/toxico-extra-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-extra-harem-brickup"
     },
     {
       "id": "printify-6a78bf5f31f0e6867a021a57",
@@ -10236,7 +10260,7 @@
       "image": "https://images.printify.com/mockup/6a78bf5f31f0e6867a021a57/72926/16656/toxico-extra-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-extra-harem-tile"
     },
     {
       "id": "printify-6a78bf5f1aa67197c6019409",
@@ -10248,7 +10272,7 @@
       "image": "https://images.printify.com/mockup/6a78bf5f1aa67197c6019409/72928/16656/toxico-extra-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-extra-harem-single"
     },
     {
       "id": "printify-6a78bf5fa72d21bb79018848",
@@ -10260,7 +10284,7 @@
       "image": "https://images.printify.com/mockup/6a78bf5fa72d21bb79018848/88685/51926/toxico-extra-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-extra-hoop-full"
     },
     {
       "id": "printify-6a78bf5fc9979c47a00bc79b",
@@ -10272,7 +10296,7 @@
       "image": "https://images.printify.com/mockup/6a78bf5fc9979c47a00bc79b/88685/51926/toxico-extra-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-extra-hoop-half"
     },
     {
       "id": "printify-6a78bf5fd44d9d495601f0ac",
@@ -10284,7 +10308,7 @@
       "image": "https://images.printify.com/mockup/6a78bf5fd44d9d495601f0ac/77830/36536/toxico-extra-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-extra-puffer-single"
     },
     {
       "id": "printify-6a78bf5f5009127ca605dceb",
@@ -10308,7 +10332,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe82cd012abef02e354/74644/19527/toxico-stripclub-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-apres-single"
     },
     {
       "id": "printify-6a78bfe8d44d9d495601f0f5",
@@ -10320,7 +10344,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe8d44d9d495601f0f5/74644/19527/toxico-stripclub-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-apres-mirror"
     },
     {
       "id": "printify-6a78bfe85009127ca605dd48",
@@ -10332,7 +10356,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe85009127ca605dd48/74644/19527/toxico-stripclub-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-apres-tile"
     },
     {
       "id": "printify-6a78bfe8a72d21bb790188b5",
@@ -10344,7 +10368,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe8a72d21bb790188b5/72926/16656/toxico-stripclub-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-harem-brickup"
     },
     {
       "id": "printify-6a78bfe83c56e5e89607e5e5",
@@ -10356,7 +10380,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe83c56e5e89607e5e5/72926/16656/toxico-stripclub-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-harem-tile"
     },
     {
       "id": "printify-6a78bfe8a72d21bb790188b6",
@@ -10368,7 +10392,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe8a72d21bb790188b6/72928/16656/toxico-stripclub-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-harem-single"
     },
     {
       "id": "printify-6a78bfe85009127ca605dd49",
@@ -10380,7 +10404,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe85009127ca605dd49/88685/51926/toxico-stripclub-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-hoop-full"
     },
     {
       "id": "printify-6a78bfe82cd012abef02e353",
@@ -10392,7 +10416,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe82cd012abef02e353/88685/51926/toxico-stripclub-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-hoop-half"
     },
     {
       "id": "printify-6a78bfe831f0e6867a021ad4",
@@ -10404,7 +10428,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe831f0e6867a021ad4/77830/36536/toxico-stripclub-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-puffer-single"
     },
     {
       "id": "printify-6a78bfe8c9979c47a00bc7df",
@@ -10416,7 +10440,7 @@
       "image": "https://images.printify.com/mockup/6a78bfe8c9979c47a00bc7df/80776/55210/toxico-stripclub-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-stripclub-bookpack"
     },
     {
       "id": "printify-6a78c06e5009127ca605ddec",
@@ -10452,7 +10476,7 @@
       "image": "https://images.printify.com/mockup/6a78c06ea72d21bb79018972/74644/19527/toxico-casino-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-casino-apres-tile"
     },
     {
       "id": "printify-6a78c06ea72d21bb79018971",
@@ -10476,7 +10500,7 @@
       "image": "https://images.printify.com/mockup/6a78c06e5009127ca605ddea/72926/16656/toxico-casino-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-casino-harem-tile"
     },
     {
       "id": "printify-6a78c06e3c56e5e89607e673",
@@ -10488,7 +10512,7 @@
       "image": "https://images.printify.com/mockup/6a78c06e3c56e5e89607e673/72928/16656/toxico-casino-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-casino-harem-single"
     },
     {
       "id": "printify-6a78c06e5009127ca605dded",
@@ -10500,7 +10524,7 @@
       "image": "https://images.printify.com/mockup/6a78c06e5009127ca605dded/88685/51926/toxico-casino-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-casino-hoop-full"
     },
     {
       "id": "printify-6a78c06e5009127ca605ddeb",
@@ -10524,7 +10548,7 @@
       "image": "https://images.printify.com/mockup/6a78c06ec9979c47a00bc89d/77830/36536/toxico-casino-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-casino-puffer-single"
     },
     {
       "id": "printify-6a78c06ec9979c47a00bc89e",
@@ -10536,7 +10560,7 @@
       "image": "https://images.printify.com/mockup/6a78c06ec9979c47a00bc89e/80776/55210/toxico-casino-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-casino-bookpack"
     },
     {
       "id": "printify-6a78c0f8c9979c47a00bc926",
@@ -10548,7 +10572,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f8c9979c47a00bc926/74644/19527/toxico-racetrack-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-apres-single"
     },
     {
       "id": "printify-6a78c0f9c9979c47a00bc92a",
@@ -10560,7 +10584,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f9c9979c47a00bc92a/74644/19527/toxico-racetrack-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-apres-mirror"
     },
     {
       "id": "printify-6a78c0f82cd012abef02e4de",
@@ -10572,7 +10596,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f82cd012abef02e4de/74644/19527/toxico-racetrack-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-apres-tile"
     },
     {
       "id": "printify-6a78c0f8a72d21bb790189f5",
@@ -10596,7 +10620,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f8c9979c47a00bc929/72926/16656/toxico-racetrack-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-harem-tile"
     },
     {
       "id": "printify-6a78c0f8c9979c47a00bc928",
@@ -10608,7 +10632,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f8c9979c47a00bc928/72928/16656/toxico-racetrack-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-harem-single"
     },
     {
       "id": "printify-6a78c0f8a72d21bb790189f6",
@@ -10620,7 +10644,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f8a72d21bb790189f6/88685/51926/toxico-racetrack-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-hoop-full"
     },
     {
       "id": "printify-6a78c0f831f0e6867a021c1e",
@@ -10632,7 +10656,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f831f0e6867a021c1e/88685/51926/toxico-racetrack-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-hoop-half"
     },
     {
       "id": "printify-6a78c0f9c9979c47a00bc92c",
@@ -10644,7 +10668,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f9c9979c47a00bc92c/77830/36536/toxico-racetrack-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-puffer-single"
     },
     {
       "id": "printify-6a78c0f8a72d21bb790189f7",
@@ -10656,7 +10680,7 @@
       "image": "https://images.printify.com/mockup/6a78c0f8a72d21bb790189f7/80776/55210/toxico-racetrack-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-racetrack-bookpack"
     },
     {
       "id": "printify-6a78c186d44d9d495601f253",
@@ -10680,7 +10704,7 @@
       "image": "https://images.printify.com/mockup/6a78c186af3a56948f0296bd/74644/19527/toxico-srt8-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-apres-mirror"
     },
     {
       "id": "printify-6a78c18731f0e6867a021ca2",
@@ -10692,7 +10716,7 @@
       "image": "https://images.printify.com/mockup/6a78c18731f0e6867a021ca2/74644/19527/toxico-srt8-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-apres-tile"
     },
     {
       "id": "printify-6a78c1865233c6ccf00bd10c",
@@ -10704,7 +10728,7 @@
       "image": "https://images.printify.com/mockup/6a78c1865233c6ccf00bd10c/72926/16656/toxico-srt8-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-harem-brickup"
     },
     {
       "id": "printify-6a78c1865009127ca605deeb",
@@ -10716,7 +10740,7 @@
       "image": "https://images.printify.com/mockup/6a78c1865009127ca605deeb/72926/16656/toxico-srt8-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-harem-tile"
     },
     {
       "id": "printify-6a78c1865009127ca605deea",
@@ -10728,7 +10752,7 @@
       "image": "https://images.printify.com/mockup/6a78c1865009127ca605deea/72928/16656/toxico-srt8-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-harem-single"
     },
     {
       "id": "printify-6a78c186d44d9d495601f254",
@@ -10740,7 +10764,7 @@
       "image": "https://images.printify.com/mockup/6a78c186d44d9d495601f254/88685/51926/toxico-srt8-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-hoop-full"
     },
     {
       "id": "printify-6a78c187af3a56948f0296be",
@@ -10752,7 +10776,7 @@
       "image": "https://images.printify.com/mockup/6a78c187af3a56948f0296be/88685/51926/toxico-srt8-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-hoop-half"
     },
     {
       "id": "printify-6a78c1862cd012abef02e556",
@@ -10764,7 +10788,7 @@
       "image": "https://images.printify.com/mockup/6a78c1862cd012abef02e556/77830/36536/toxico-srt8-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-puffer-single"
     },
     {
       "id": "printify-6a78c186b65f13af320f1f62",
@@ -10776,7 +10800,7 @@
       "image": "https://images.printify.com/mockup/6a78c186b65f13af320f1f62/80776/55210/toxico-srt8-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-srt8-bookpack"
     },
     {
       "id": "printify-6a78c21231f0e6867a021d20",
@@ -10788,7 +10812,7 @@
       "image": "https://images.printify.com/mockup/6a78c21231f0e6867a021d20/74644/19527/toxico-ski-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-apres-single"
     },
     {
       "id": "printify-6a78c212d44d9d495601f2b1",
@@ -10800,7 +10824,7 @@
       "image": "https://images.printify.com/mockup/6a78c212d44d9d495601f2b1/74644/19527/toxico-ski-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-apres-mirror"
     },
     {
       "id": "printify-6a78c2115009127ca605df33",
@@ -10812,7 +10836,7 @@
       "image": "https://images.printify.com/mockup/6a78c2115009127ca605df33/74644/19527/toxico-ski-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-apres-tile"
     },
     {
       "id": "printify-6a78c211af3a56948f029749",
@@ -10824,7 +10848,7 @@
       "image": "https://images.printify.com/mockup/6a78c211af3a56948f029749/72926/16656/toxico-ski-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-harem-brickup"
     },
     {
       "id": "printify-6a78c211241f9ac19c0c94b6",
@@ -10836,7 +10860,7 @@
       "image": "https://images.printify.com/mockup/6a78c211241f9ac19c0c94b6/72926/16656/toxico-ski-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-harem-tile"
     },
     {
       "id": "printify-6a78c211af3a56948f029748",
@@ -10848,7 +10872,7 @@
       "image": "https://images.printify.com/mockup/6a78c211af3a56948f029748/72928/16656/toxico-ski-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-harem-single"
     },
     {
       "id": "printify-6a78c2125233c6ccf00bd15c",
@@ -10860,7 +10884,7 @@
       "image": "https://images.printify.com/mockup/6a78c2125233c6ccf00bd15c/88685/51926/toxico-ski-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-hoop-full"
     },
     {
       "id": "printify-6a78c212a72d21bb79018acf",
@@ -10872,7 +10896,7 @@
       "image": "https://images.printify.com/mockup/6a78c212a72d21bb79018acf/88685/51926/toxico-ski-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-hoop-half"
     },
     {
       "id": "printify-6a78c2122cd012abef02e5cf",
@@ -10884,7 +10908,7 @@
       "image": "https://images.printify.com/mockup/6a78c2122cd012abef02e5cf/77830/36536/toxico-ski-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-puffer-single"
     },
     {
       "id": "printify-6a78c211241f9ac19c0c94b5",
@@ -10896,7 +10920,7 @@
       "image": "https://images.printify.com/mockup/6a78c211241f9ac19c0c94b5/80776/55210/toxico-ski-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ski-bookpack"
     },
     {
       "id": "printify-6a78c2a05009127ca605dfcb",
@@ -10908,7 +10932,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a05009127ca605dfcb/74644/19527/toxico-snowboard-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-apres-single"
     },
     {
       "id": "printify-6a78c2a131f0e6867a021da5",
@@ -10920,7 +10944,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a131f0e6867a021da5/74644/19527/toxico-snowboard-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-apres-mirror"
     },
     {
       "id": "printify-6a78c2a05009127ca605dfca",
@@ -10932,7 +10956,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a05009127ca605dfca/74644/19527/toxico-snowboard-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-apres-tile"
     },
     {
       "id": "printify-6a78c2a0241f9ac19c0c9539",
@@ -10944,7 +10968,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a0241f9ac19c0c9539/72926/16656/toxico-snowboard-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-harem-brickup"
     },
     {
       "id": "printify-6a78c2a15233c6ccf00bd1f5",
@@ -10956,7 +10980,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a15233c6ccf00bd1f5/72926/16656/toxico-snowboard-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-harem-tile"
     },
     {
       "id": "printify-6a78c2a131f0e6867a021da6",
@@ -10968,7 +10992,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a131f0e6867a021da6/72928/16656/toxico-snowboard-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-harem-single"
     },
     {
       "id": "printify-6a78c2a02cd012abef02e670",
@@ -10980,7 +11004,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a02cd012abef02e670/88685/51926/toxico-snowboard-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-hoop-full"
     },
     {
       "id": "printify-6a78c2a1a72d21bb79018b4f",
@@ -10992,7 +11016,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a1a72d21bb79018b4f/88685/51926/toxico-snowboard-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-hoop-half"
     },
     {
       "id": "printify-6a78c2a12cd012abef02e671",
@@ -11004,7 +11028,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a12cd012abef02e671/77830/36536/toxico-snowboard-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-puffer-single"
     },
     {
       "id": "printify-6a78c2a1a72d21bb79018b50",
@@ -11016,7 +11040,7 @@
       "image": "https://images.printify.com/mockup/6a78c2a1a72d21bb79018b50/80776/55210/toxico-snowboard-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowboard-bookpack"
     },
     {
       "id": "printify-6a78c330d44d9d495601f3de",
@@ -11028,7 +11052,7 @@
       "image": "https://images.printify.com/mockup/6a78c330d44d9d495601f3de/74644/19527/toxico-aspen-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-apres-single"
     },
     {
       "id": "printify-6a78c33031f0e6867a021e1b",
@@ -11040,7 +11064,7 @@
       "image": "https://images.printify.com/mockup/6a78c33031f0e6867a021e1b/74644/19527/toxico-aspen-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-apres-mirror"
     },
     {
       "id": "printify-6a78c33031f0e6867a021e1a",
@@ -11052,7 +11076,7 @@
       "image": "https://images.printify.com/mockup/6a78c33031f0e6867a021e1a/74644/19527/toxico-aspen-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-apres-tile"
     },
     {
       "id": "printify-6a78c3302cd012abef02e6e8",
@@ -11064,7 +11088,7 @@
       "image": "https://images.printify.com/mockup/6a78c3302cd012abef02e6e8/72926/16656/toxico-aspen-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-harem-brickup"
     },
     {
       "id": "printify-6a78c3302cd012abef02e6eb",
@@ -11076,7 +11100,7 @@
       "image": "https://images.printify.com/mockup/6a78c3302cd012abef02e6eb/72926/16656/toxico-aspen-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-harem-tile"
     },
     {
       "id": "printify-6a78c3302cd012abef02e6e7",
@@ -11088,7 +11112,7 @@
       "image": "https://images.printify.com/mockup/6a78c3302cd012abef02e6e7/72928/16656/toxico-aspen-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-harem-single"
     },
     {
       "id": "printify-6a78c330af3a56948f029893",
@@ -11100,7 +11124,7 @@
       "image": "https://images.printify.com/mockup/6a78c330af3a56948f029893/88685/51926/toxico-aspen-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-hoop-full"
     },
     {
       "id": "printify-6a78c3302cd012abef02e6e9",
@@ -11112,7 +11136,7 @@
       "image": "https://images.printify.com/mockup/6a78c3302cd012abef02e6e9/88685/51926/toxico-aspen-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-hoop-half"
     },
     {
       "id": "printify-6a78c3302cd012abef02e6ea",
@@ -11124,7 +11148,7 @@
       "image": "https://images.printify.com/mockup/6a78c3302cd012abef02e6ea/77830/36536/toxico-aspen-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-puffer-single"
     },
     {
       "id": "printify-6a78c330d44d9d495601f3dd",
@@ -11136,7 +11160,7 @@
       "image": "https://images.printify.com/mockup/6a78c330d44d9d495601f3dd/80776/55210/toxico-aspen-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-aspen-bookpack"
     },
     {
       "id": "printify-6a78c3bf5009127ca605e088",
@@ -11148,7 +11172,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf5009127ca605e088/74644/19527/toxico-whistler-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-apres-single"
     },
     {
       "id": "printify-6a78c3bf3c56e5e89607e91e",
@@ -11160,7 +11184,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf3c56e5e89607e91e/74644/19527/toxico-whistler-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-apres-mirror"
     },
     {
       "id": "printify-6a78c3bf5233c6ccf00bd2fc",
@@ -11172,7 +11196,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf5233c6ccf00bd2fc/74644/19527/toxico-whistler-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-apres-tile"
     },
     {
       "id": "printify-6a78c3bf3c56e5e89607e91f",
@@ -11184,7 +11208,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf3c56e5e89607e91f/72926/16656/toxico-whistler-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-harem-brickup"
     },
     {
       "id": "printify-6a78c3bfd44d9d495601f445",
@@ -11196,7 +11220,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bfd44d9d495601f445/72926/16656/toxico-whistler-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-harem-tile"
     },
     {
       "id": "printify-6a78c3c0a72d21bb79018c2b",
@@ -11208,7 +11232,7 @@
       "image": "https://images.printify.com/mockup/6a78c3c0a72d21bb79018c2b/72928/16656/toxico-whistler-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-harem-single"
     },
     {
       "id": "printify-6a78c3bf5009127ca605e089",
@@ -11220,7 +11244,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf5009127ca605e089/88685/51926/toxico-whistler-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-hoop-full"
     },
     {
       "id": "printify-6a78c3bf31f0e6867a021e7c",
@@ -11232,7 +11256,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf31f0e6867a021e7c/88685/51926/toxico-whistler-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-hoop-half"
     },
     {
       "id": "printify-6a78c3bf3c56e5e89607e920",
@@ -11244,7 +11268,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf3c56e5e89607e920/77830/36536/toxico-whistler-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-puffer-single"
     },
     {
       "id": "printify-6a78c3bf5233c6ccf00bd2fa",
@@ -11256,7 +11280,7 @@
       "image": "https://images.printify.com/mockup/6a78c3bf5233c6ccf00bd2fa/80776/55210/toxico-whistler-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-whistler-bookpack"
     },
     {
       "id": "printify-6a78c44f31f0e6867a021f1e",
@@ -11268,7 +11292,7 @@
       "image": "https://images.printify.com/mockup/6a78c44f31f0e6867a021f1e/74644/19527/toxico-ibiza-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-apres-single"
     },
     {
       "id": "printify-6a78c44f3c56e5e89607e9c4",
@@ -11280,7 +11304,7 @@
       "image": "https://images.printify.com/mockup/6a78c44f3c56e5e89607e9c4/74644/19527/toxico-ibiza-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-apres-mirror"
     },
     {
       "id": "printify-6a78c44f3c56e5e89607e9c3",
@@ -11292,7 +11316,7 @@
       "image": "https://images.printify.com/mockup/6a78c44f3c56e5e89607e9c3/74644/19527/toxico-ibiza-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-apres-tile"
     },
     {
       "id": "printify-6a78c44f31f0e6867a021f1d",
@@ -11304,7 +11328,7 @@
       "image": "https://images.printify.com/mockup/6a78c44f31f0e6867a021f1d/72926/16656/toxico-ibiza-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-harem-brickup"
     },
     {
       "id": "printify-6a78c44fa72d21bb79018cd4",
@@ -11316,7 +11340,7 @@
       "image": "https://images.printify.com/mockup/6a78c44fa72d21bb79018cd4/72926/16656/toxico-ibiza-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-harem-tile"
     },
     {
       "id": "printify-6a78c44f3c56e5e89607e9c2",
@@ -11328,7 +11352,7 @@
       "image": "https://images.printify.com/mockup/6a78c44f3c56e5e89607e9c2/72928/16656/toxico-ibiza-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-harem-single"
     },
     {
       "id": "printify-6a78c44f2cd012abef02e7e6",
@@ -11340,7 +11364,7 @@
       "image": "https://images.printify.com/mockup/6a78c44f2cd012abef02e7e6/88685/51926/toxico-ibiza-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-hoop-full"
     },
     {
       "id": "printify-6a78c44f3c56e5e89607e9c5",
@@ -11352,7 +11376,7 @@
       "image": "https://images.printify.com/mockup/6a78c44f3c56e5e89607e9c5/88685/51926/toxico-ibiza-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-hoop-half"
     },
     {
       "id": "printify-6a78c44faf3a56948f02996e",
@@ -11364,7 +11388,7 @@
       "image": "https://images.printify.com/mockup/6a78c44faf3a56948f02996e/77830/36536/toxico-ibiza-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-puffer-single"
     },
     {
       "id": "printify-6a78c44fb65f13af320f21d4",
@@ -11376,7 +11400,7 @@
       "image": "https://images.printify.com/mockup/6a78c44fb65f13af320f21d4/80776/55210/toxico-ibiza-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-ibiza-bookpack"
     },
     {
       "id": "printify-6a78c4e1b65f13af320f227b",
@@ -11388,7 +11412,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1b65f13af320f227b/74644/19527/toxico-miami-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-apres-single"
     },
     {
       "id": "printify-6a78c4e1c60695c2e306f48f",
@@ -11400,7 +11424,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1c60695c2e306f48f/74644/19527/toxico-miami-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-apres-mirror"
     },
     {
       "id": "printify-6a78c4e1b65f13af320f2277",
@@ -11412,7 +11436,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1b65f13af320f2277/74644/19527/toxico-miami-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-apres-tile"
     },
     {
       "id": "printify-6a78c4e1b65f13af320f227d",
@@ -11424,7 +11448,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1b65f13af320f227d/72926/16656/toxico-miami-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-harem-brickup"
     },
     {
       "id": "printify-6a78c4e131f0e6867a021fa1",
@@ -11436,7 +11460,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e131f0e6867a021fa1/72926/16656/toxico-miami-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-harem-tile"
     },
     {
       "id": "printify-6a78c4e1b65f13af320f2278",
@@ -11448,7 +11472,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1b65f13af320f2278/72928/16656/toxico-miami-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-harem-single"
     },
     {
       "id": "printify-6a78c4e1a72d21bb79018d33",
@@ -11460,7 +11484,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1a72d21bb79018d33/88685/51926/toxico-miami-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-hoop-full"
     },
     {
       "id": "printify-6a78c4e1b65f13af320f2279",
@@ -11472,7 +11496,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1b65f13af320f2279/88685/51926/toxico-miami-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-hoop-half"
     },
     {
       "id": "printify-6a78c4e1b65f13af320f227a",
@@ -11484,7 +11508,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e1b65f13af320f227a/77830/36536/toxico-miami-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-puffer-single"
     },
     {
       "id": "printify-6a78c4e131f0e6867a021fa0",
@@ -11496,7 +11520,7 @@
       "image": "https://images.printify.com/mockup/6a78c4e131f0e6867a021fa0/80776/55210/toxico-miami-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-miami-bookpack"
     },
     {
       "id": "printify-6a78c58331f0e6867a022068",
@@ -11544,7 +11568,7 @@
       "image": "https://images.printify.com/mockup/6a78c583d44d9d495601f604/72926/16656/toxico-snowbird-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowbird-harem-brickup"
     },
     {
       "id": "printify-6a78c5832cd012abef02e92f",
@@ -11568,7 +11592,7 @@
       "image": "https://images.printify.com/mockup/6a78c583af3a56948f029ad8/72928/16656/toxico-snowbird-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowbird-harem-single"
     },
     {
       "id": "printify-6a78c5832cd012abef02e92e",
@@ -11580,7 +11604,7 @@
       "image": "https://images.printify.com/mockup/6a78c5832cd012abef02e92e/88685/51926/toxico-snowbird-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowbird-hoop-full"
     },
     {
       "id": "printify-6a78c58331f0e6867a022069",
@@ -11592,7 +11616,7 @@
       "image": "https://images.printify.com/mockup/6a78c58331f0e6867a022069/88685/51926/toxico-snowbird-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowbird-hoop-half"
     },
     {
       "id": "printify-6a78c583b65f13af320f236f",
@@ -11604,7 +11628,7 @@
       "image": "https://images.printify.com/mockup/6a78c583b65f13af320f236f/77830/36536/toxico-snowbird-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-snowbird-puffer-single"
     },
     {
       "id": "printify-6a78c583af3a56948f029ad7",
@@ -11628,7 +11652,7 @@
       "image": "https://images.printify.com/mockup/6a78c6165009127ca605e2b9/74644/19527/toxico-hollywood-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-apres-single"
     },
     {
       "id": "printify-6a78c6172cd012abef02e994",
@@ -11640,7 +11664,7 @@
       "image": "https://images.printify.com/mockup/6a78c6172cd012abef02e994/74644/19527/toxico-hollywood-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-apres-mirror"
     },
     {
       "id": "printify-6a78c6172cd012abef02e993",
@@ -11652,7 +11676,7 @@
       "image": "https://images.printify.com/mockup/6a78c6172cd012abef02e993/74644/19527/toxico-hollywood-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-apres-tile"
     },
     {
       "id": "printify-6a78c616a72d21bb79018e70",
@@ -11664,7 +11688,7 @@
       "image": "https://images.printify.com/mockup/6a78c616a72d21bb79018e70/72926/16656/toxico-hollywood-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-harem-brickup"
     },
     {
       "id": "printify-6a78c6175009127ca605e2ba",
@@ -11676,7 +11700,7 @@
       "image": "https://images.printify.com/mockup/6a78c6175009127ca605e2ba/72926/16656/toxico-hollywood-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-harem-tile"
     },
     {
       "id": "printify-6a78c616af3a56948f029b29",
@@ -11688,7 +11712,7 @@
       "image": "https://images.printify.com/mockup/6a78c616af3a56948f029b29/72928/16656/toxico-hollywood-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-harem-single"
     },
     {
       "id": "printify-6a78c616c60695c2e306f5d0",
@@ -11700,7 +11724,7 @@
       "image": "https://images.printify.com/mockup/6a78c616c60695c2e306f5d0/88685/51926/toxico-hollywood-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-hoop-full"
     },
     {
       "id": "printify-6a78c61631f0e6867a0220b4",
@@ -11712,7 +11736,7 @@
       "image": "https://images.printify.com/mockup/6a78c61631f0e6867a0220b4/88685/51926/toxico-hollywood-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-hoop-half"
     },
     {
       "id": "printify-6a78c617d44d9d495601f661",
@@ -11724,7 +11748,7 @@
       "image": "https://images.printify.com/mockup/6a78c617d44d9d495601f661/77830/36536/toxico-hollywood-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-puffer-single"
     },
     {
       "id": "printify-6a78c616c60695c2e306f5d1",
@@ -11736,7 +11760,7 @@
       "image": "https://images.printify.com/mockup/6a78c616c60695c2e306f5d1/80776/55210/toxico-hollywood-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-hollywood-bookpack"
     },
     {
       "id": "printify-6a78c6a62cd012abef02ea49",
@@ -11760,7 +11784,7 @@
       "image": "https://images.printify.com/mockup/6a78c6a6b65f13af320f245f/74644/19527/toxico-kauai-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-kauai-apres-mirror"
     },
     {
       "id": "printify-6a78c6a6a72d21bb79018f2c",
@@ -11772,7 +11796,7 @@
       "image": "https://images.printify.com/mockup/6a78c6a6a72d21bb79018f2c/74644/19527/toxico-kauai-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-kauai-apres-tile"
     },
     {
       "id": "printify-6a78c6a6b65f13af320f245e",
@@ -11832,7 +11856,7 @@
       "image": "https://images.printify.com/mockup/6a78c6a631f0e6867a02215e/88685/51926/toxico-kauai-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-kauai-hoop-half"
     },
     {
       "id": "printify-6a78c6a7af3a56948f029bde",
@@ -11880,7 +11904,7 @@
       "image": "https://images.printify.com/mockup/6a78c73ac60695c2e306f74b/74644/19527/toxico-robben-island-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-apres-mirror"
     },
     {
       "id": "printify-6a78c7392cd012abef02eb00",
@@ -11892,7 +11916,7 @@
       "image": "https://images.printify.com/mockup/6a78c7392cd012abef02eb00/74644/19527/toxico-robben-island-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-apres-tile"
     },
     {
       "id": "printify-6a78c73ab65f13af320f2526",
@@ -11904,7 +11928,7 @@
       "image": "https://images.printify.com/mockup/6a78c73ab65f13af320f2526/72926/16656/toxico-robben-island-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-harem-brickup"
     },
     {
       "id": "printify-6a78c73ad44d9d495601f7bc",
@@ -11916,7 +11940,7 @@
       "image": "https://images.printify.com/mockup/6a78c73ad44d9d495601f7bc/72926/16656/toxico-robben-island-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-harem-tile"
     },
     {
       "id": "printify-6a78c73aaf3a56948f029c8d",
@@ -11928,7 +11952,7 @@
       "image": "https://images.printify.com/mockup/6a78c73aaf3a56948f029c8d/72928/16656/toxico-robben-island-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-harem-single"
     },
     {
       "id": "printify-6a78c73aa72d21bb79018fca",
@@ -11940,7 +11964,7 @@
       "image": "https://images.printify.com/mockup/6a78c73aa72d21bb79018fca/88685/51926/toxico-robben-island-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-hoop-full"
     },
     {
       "id": "printify-6a78c73a5009127ca605e3f3",
@@ -11952,7 +11976,7 @@
       "image": "https://images.printify.com/mockup/6a78c73a5009127ca605e3f3/88685/51926/toxico-robben-island-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-hoop-half"
     },
     {
       "id": "printify-6a78c73931f0e6867a022204",
@@ -11964,7 +11988,7 @@
       "image": "https://images.printify.com/mockup/6a78c73931f0e6867a022204/77830/36536/toxico-robben-island-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-puffer-single"
     },
     {
       "id": "printify-6a78c73a2cd012abef02eb02",
@@ -11976,7 +12000,7 @@
       "image": "https://images.printify.com/mockup/6a78c73a2cd012abef02eb02/80776/55210/toxico-robben-island-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-robben-island-bookpack"
     },
     {
       "id": "printify-6a78c7ccaf3a56948f029d07",
@@ -11988,7 +12012,7 @@
       "image": "https://images.printify.com/mockup/6a78c7ccaf3a56948f029d07/74644/19527/toxico-oaxaca-apres-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-apres-single"
     },
     {
       "id": "printify-6a78c7cc2cd012abef02eb84",
@@ -12000,7 +12024,7 @@
       "image": "https://images.printify.com/mockup/6a78c7cc2cd012abef02eb84/74644/19527/toxico-oaxaca-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-apres-mirror"
     },
     {
       "id": "printify-6a78c7ccc60695c2e306f7bf",
@@ -12012,7 +12036,7 @@
       "image": "https://images.printify.com/mockup/6a78c7ccc60695c2e306f7bf/74644/19527/toxico-oaxaca-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-apres-tile"
     },
     {
       "id": "printify-6a78c7cc31f0e6867a022291",
@@ -12024,7 +12048,7 @@
       "image": "https://images.printify.com/mockup/6a78c7cc31f0e6867a022291/72926/16656/toxico-oaxaca-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-harem-brickup"
     },
     {
       "id": "printify-6a78c7ccd44d9d495601f83b",
@@ -12036,7 +12060,7 @@
       "image": "https://images.printify.com/mockup/6a78c7ccd44d9d495601f83b/72926/16656/toxico-oaxaca-harem-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-harem-tile"
     },
     {
       "id": "printify-6a78c7ccb65f13af320f258f",
@@ -12048,7 +12072,7 @@
       "image": "https://images.printify.com/mockup/6a78c7ccb65f13af320f258f/72928/16656/toxico-oaxaca-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-harem-single"
     },
     {
       "id": "printify-6a78c7cc5009127ca605e463",
@@ -12060,7 +12084,7 @@
       "image": "https://images.printify.com/mockup/6a78c7cc5009127ca605e463/88685/51926/toxico-oaxaca-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-hoop-full"
     },
     {
       "id": "printify-6a78c7cc31f0e6867a022290",
@@ -12072,7 +12096,7 @@
       "image": "https://images.printify.com/mockup/6a78c7cc31f0e6867a022290/77830/36536/toxico-oaxaca-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-puffer-single"
     },
     {
       "id": "printify-6a78c7ccaf3a56948f029d08",
@@ -12084,7 +12108,7 @@
       "image": "https://images.printify.com/mockup/6a78c7ccaf3a56948f029d08/80776/55210/toxico-oaxaca-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-oaxaca-bookpack"
     },
     {
       "id": "printify-6a78ced58c537f54e605a250",
@@ -12096,7 +12120,7 @@
       "image": "https://images.printify.com/mockup/6a78ced58c537f54e605a250/74644/19527/toxico-sedona-apres-mirror.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-apres-mirror"
     },
     {
       "id": "printify-6a78ced58c537f54e605a251",
@@ -12108,7 +12132,7 @@
       "image": "https://images.printify.com/mockup/6a78ced58c537f54e605a251/74644/19527/toxico-sedona-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-apres-tile"
     },
     {
       "id": "printify-6a78ced52cd012abef02f240",
@@ -12120,7 +12144,7 @@
       "image": "https://images.printify.com/mockup/6a78ced52cd012abef02f240/72926/16656/toxico-sedona-harem-brickup.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-harem-brickup"
     },
     {
       "id": "printify-6a78ced531f0e6867a022921",
@@ -12132,7 +12156,7 @@
       "image": "https://images.printify.com/mockup/6a78ced531f0e6867a022921/72928/16656/toxico-sedona-harem-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-harem-single"
     },
     {
       "id": "printify-6a78ced5de1b1c70bd062e38",
@@ -12144,7 +12168,7 @@
       "image": "https://images.printify.com/mockup/6a78ced5de1b1c70bd062e38/88685/51926/toxico-sedona-hoop-full.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-hoop-full"
     },
     {
       "id": "printify-6a78ced55009127ca605eb55",
@@ -12156,7 +12180,7 @@
       "image": "https://images.printify.com/mockup/6a78ced55009127ca605eb55/88685/51926/toxico-sedona-hoop-half.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-hoop-half"
     },
     {
       "id": "printify-6a78ced58c537f54e605a252",
@@ -12168,7 +12192,7 @@
       "image": "https://images.printify.com/mockup/6a78ced58c537f54e605a252/77830/36536/toxico-sedona-puffer-single.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-puffer-single"
     },
     {
       "id": "printify-6a78ced5c60695c2e306fe3d",
@@ -12180,7 +12204,7 @@
       "image": "https://images.printify.com/mockup/6a78ced5c60695c2e306fe3d/80776/55210/toxico-sedona-bookpack.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-sedona-bookpack"
     },
     {
       "id": "printify-6a78d5d72cd012abef02f817",
@@ -12336,7 +12360,7 @@
       "image": "https://images.printify.com/mockup/6a78dc8de2315589c60c873d/74644/19527/toxico-vermentino-apres-tile.jpg?camera_label=front",
       "source": "printify",
       "status": "active",
-      "url": ""
+      "url": "https://iamtoxico.myshopify.com/products/toxico-vermentino-apres-tile"
     },
     {
       "id": "printify-6a78dc8c31f0e6867a023581",
