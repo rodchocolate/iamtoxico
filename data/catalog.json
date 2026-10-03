@@ -402,7 +402,7 @@
       "category": "underwear",
       "price": 28,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/august-thong",
+      "url": null,
       "image": null,
       "activities": [
         "nightclub",
@@ -416,7 +416,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-lime",
@@ -426,7 +428,7 @@
       "category": "underwear",
       "price": 32,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/boxer-shorts",
+      "url": null,
       "image": null,
       "activities": [
         "gym",
@@ -439,7 +441,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-seaisland-black",
@@ -449,7 +453,7 @@
       "category": "underwear",
       "price": 85,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/sea-island-boxer-black",
+      "url": null,
       "image": null,
       "activities": [
         "golf",
@@ -465,7 +469,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "Sea Island cotton \u2014 world's finest. Implicit value positioning.",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-seaisland-white",
@@ -475,7 +481,7 @@
       "category": "underwear",
       "price": 85,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/sea-island-boxer-white",
+      "url": null,
       "image": null,
       "activities": [
         "golf",
@@ -491,7 +497,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "Sea Island cotton \u2014 the gentleman's choice",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-silk-charcoal",
@@ -501,7 +509,7 @@
       "category": "underwear",
       "price": 95,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/silk-boxer-charcoal",
+      "url": null,
       "image": null,
       "activities": [
         "romantic",
@@ -517,7 +525,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "22 momme mulberry silk \u2014 ultimate luxury hand feel",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-silk-navy",
@@ -527,7 +537,7 @@
       "category": "underwear",
       "price": 95,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/silk-boxer-navy",
+      "url": null,
       "image": null,
       "activities": [
         "romantic",
@@ -541,7 +551,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-pima-green",
@@ -551,7 +563,7 @@
       "category": "underwear",
       "price": 68,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/pima-boxer-green",
+      "url": null,
       "image": null,
       "activities": [
         "golf",
@@ -567,7 +579,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "Peruvian Pima cotton \u2014 signature toxic green",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-pima-stripe",
@@ -577,7 +591,7 @@
       "category": "underwear",
       "price": 68,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/pima-boxer-stripe",
+      "url": null,
       "image": null,
       "activities": [
         "golf",
@@ -593,7 +607,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "Classic country club aesthetic",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "boxer-cellular-white",
@@ -603,7 +619,7 @@
       "category": "underwear",
       "price": 72,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/cellular-boxer-white",
+      "url": null,
       "image": null,
       "activities": [
         "tennis",
@@ -619,7 +635,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "Cellular weave \u2014 maximum breathability, old-money aesthetic",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "aff-zimmerli-seaisland",
@@ -771,7 +789,7 @@
       "category": "underwear",
       "price": 26,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/toxic-brief",
+      "url": null,
       "image": null,
       "activities": [
         "nightclub"
@@ -783,7 +801,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "thong-electric",
@@ -793,7 +813,7 @@
       "category": "underwear",
       "price": 28,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/electric-thong",
+      "url": null,
       "image": null,
       "activities": [
         "beach",
@@ -807,7 +827,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "hooded-robe-charcoal",
@@ -817,7 +839,7 @@
       "category": "robes",
       "price": 145,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/hooded-robe",
+      "url": null,
       "image": null,
       "activities": [
         "hot-tub",
@@ -834,7 +856,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "Heavy hooded bath robe \u2014 the 'liberates laughing' essential",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "hooded-robe-white",
@@ -844,7 +868,7 @@
       "category": "robes",
       "price": 145,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/hooded-robe-white",
+      "url": null,
       "image": null,
       "activities": [
         "hot-tub",
@@ -859,7 +883,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "silk-robe-emerald",
@@ -869,7 +895,7 @@
       "category": "robes",
       "price": 120,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/silk-robe",
+      "url": null,
       "image": null,
       "activities": [
         "spa",
@@ -882,7 +908,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "lounge-set-grey",
@@ -892,7 +920,7 @@
       "category": "loungewear",
       "price": 68,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/lounge-set",
+      "url": null,
       "image": null,
       "activities": [
         "brunch",
@@ -905,7 +933,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "sleep-shorts-bamboo",
@@ -915,7 +945,7 @@
       "category": "loungewear",
       "price": 38,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/sleep-shorts",
+      "url": null,
       "image": null,
       "activities": [],
       "vibes": [
@@ -925,7 +955,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "mesh-tank-black",
@@ -935,7 +967,7 @@
       "category": "loungewear",
       "price": 42,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/mesh-tank",
+      "url": null,
       "image": null,
       "activities": [
         "nightclub",
@@ -949,7 +981,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "toxic-band-black",
@@ -959,7 +993,7 @@
       "category": "accessories",
       "price": 12,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/toxic-band",
+      "url": null,
       "image": null,
       "activities": [
         "nightclub",
@@ -974,7 +1008,9 @@
       "source": "internal",
       "affiliate": null,
       "notes": "The bracelet play \ud83d\udc8d\u2192\u2b55",
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "toxic-band-green",
@@ -984,7 +1020,7 @@
       "category": "accessories",
       "price": 12,
       "currency": "USD",
-      "url": "https://iamtoxico.com/products/toxic-band-green",
+      "url": null,
       "image": null,
       "activities": [
         "nightclub",
@@ -996,7 +1032,9 @@
       ],
       "source": "internal",
       "affiliate": null,
-      "active": true
+      "active": true,
+      "sale_ready": false,
+      "note": "2026-10-02 capsule concept: no image, no Shopify product; parked (t_07c8e538)"
     },
     {
       "id": "uberlube-travel",
