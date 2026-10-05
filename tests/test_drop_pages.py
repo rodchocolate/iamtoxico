@@ -107,3 +107,51 @@ def test_generator_backfills_canonical_links(tmp_path, variants):
     assert not tiles[2].get('u'), 'must not invent links for unknown products'
     assert tiles[3]['u'] == '/product/bows-throne-apres-single.html', \
         'must never overwrite an existing link'
+
+
+def test_swatch_page_kind_builds_hero_at_top_with_item_rows(tmp_path, monkeypatch):
+    """page_kind='swatch' rows build under designs/<slug>/ with the swatch
+    image full-bleed at the top and the same card/row component as a plain
+    drop page below — not a carousel, no new builder."""
+    import build_drop_pages as bdp
+
+    root = tmp_path
+    scratch = root / 'scratch'
+    scratch.mkdir()
+    designs = root / 'designs'
+
+    tiles = [
+        {'t': 'test-swatch Apres Single', 'y': '$120', 'f': '/uploads/design.png', 'u': ''},
+        {'t': 'test-swatch Hoop Full', 'y': '$80', 'f': '/uploads/design.png', 'u': ''},
+    ]
+    data = {'rows': [{'label': 'test-swatch — drop 20261004', 'page_kind': 'swatch',
+                       'tiles': tiles}]}
+    index_html = (
+        '<html><body>\n'
+        '<script type="application/json" id="tiles-data">\n'
+        + json.dumps(data) +
+        '\n</script>\n</body></html>'
+    )
+    (scratch / 'index.html').write_text(index_html, encoding='utf-8')
+
+    monkeypatch.setattr(bdp, 'ROOT', root)
+    monkeypatch.setattr(bdp, 'SCRATCH', scratch)
+    monkeypatch.setattr(bdp, 'INDEX', scratch / 'index.html')
+    monkeypatch.setattr(bdp, 'VARIANTS', root / 'data' / 'shopify_variants.json')
+    monkeypatch.setattr(bdp, 'PRODUCT_DIR', root / 'product')
+    monkeypatch.setattr(bdp, 'DESIGNS', designs)
+
+    bdp.main()
+
+    out = designs / 'test-swatch-drop-20261004' / 'index.html'
+    assert out.is_file(), 'swatch page must build under designs/<slug>/, not scratch/<slug>/'
+    html = out.read_text(encoding='utf-8')
+    assert '<section class="hero">' in html, 'hero must be full-bleed at the top like the landing hero'
+    assert 'view items' in html and 'href="#items"' in html, 'single click/scroll affordance down to items'
+    assert '/uploads/design.png' in html, 'swatch (design image) must be the hero image'
+    rendered_tiles = json.loads(
+        re.search(r'<script type="application/json" id="tiles-data">(.*?)</script>', html, re.S)
+        .group(1)
+    )
+    assert len(rendered_tiles) == 2, 'rows carry every item, same tile data as a drop page'
+    assert 'carousel' not in html.lower()

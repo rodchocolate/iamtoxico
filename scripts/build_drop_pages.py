@@ -17,10 +17,12 @@ import re
 import unicodedata
 from pathlib import Path
 
-SCRATCH = Path(__file__).resolve().parent.parent / "scratch"
+ROOT = Path(__file__).resolve().parent.parent
+SCRATCH = ROOT / "scratch"
 INDEX = SCRATCH / "index.html"
-VARIANTS = Path(__file__).resolve().parent.parent / "data" / "shopify_variants.json"
-PRODUCT_DIR = Path(__file__).resolve().parent.parent / "product"
+VARIANTS = ROOT / "data" / "shopify_variants.json"
+PRODUCT_DIR = ROOT / "product"
+DESIGNS = ROOT / "designs"
 
 
 def slugify(s: str) -> str:
@@ -140,6 +142,120 @@ document.addEventListener('DOMContentLoaded', () => {{
 </html>
 """
 
+# page_kind="swatch": the emailed design image full-bleed at the top like the
+# landing hero, a single click/scroll affordance down to the item rows below
+# (same row/card component as the plain drop page — NOT a carousel).
+SWATCH_PAGE = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toxico — {label}</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+  * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+  body {{
+    font-family: 'Space Grotesk', sans-serif; color: #fff;
+    background: #0b0b0b; min-height: 100vh;
+  }}
+  .hero {{
+    position: relative; width: 100%; height: 100vh; min-height: 480px;
+    overflow: hidden; display: flex; align-items: flex-end; justify-content: center;
+  }}
+  .hero img {{
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  }}
+  .hero::after {{
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,.15), rgba(0,0,0,.75) 90%);
+  }}
+  .hero-inner {{ position: relative; z-index: 1; text-align: center; padding-bottom: 3rem; }}
+  .hero h1 {{ font-size: 2.2rem; font-weight: 600; letter-spacing: .04em; text-transform: lowercase; }}
+  .scrolldown {{
+    display: inline-block; margin-top: 1.2rem; font-size: .85rem; letter-spacing: .08em;
+    text-transform: lowercase; color: #ffc800; text-decoration: none; border: 1px solid rgba(255,200,0,.5);
+    padding: .5em 1.2em; border-radius: 999px; animation: bob 1.6s ease-in-out infinite;
+  }}
+  .scrolldown:hover {{ background: rgba(255,200,0,.12); }}
+  @keyframes bob {{ 0%,100% {{ transform: translateY(0); }} 50% {{ transform: translateY(6px); }} }}
+  main {{ padding: 2rem 2rem 4rem; max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }}
+  .grid {{
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1.4rem;
+  }}
+  .card {{
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px; overflow: hidden; position: relative; transition: transform .25s, border-color .25s;
+  }}
+  .card:hover {{ transform: translateY(-4px); border-color: rgba(255,255,255,.25); }}
+  .card .img-wrap {{ position: relative; width: 100%; aspect-ratio: 1; overflow: hidden; background: #1a1a1a; }}
+  .card .img-wrap a.img-link {{ display: block; width: 100%; height: 100%; }}
+  .card .img-wrap img {{ width: 100%; height: 100%; object-fit: cover; transition: opacity .3s; }}
+  .card .img-wrap img.back {{ position: absolute; inset: 0; opacity: 0; }}
+  .card:hover .img-wrap img.front {{ opacity: 0; }}
+  .card:hover .img-wrap img.back  {{ opacity: 1; }}
+  .card.empty .img-wrap {{
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,.4); font-size: .75rem; text-transform: lowercase; letter-spacing: .05em;
+  }}
+  .card .info {{ padding: .9rem 1rem; }}
+  .card .title {{ font-size: .85rem; font-weight: 600; margin-bottom: .2rem; }}
+  .card .meta {{ font-size: .7rem; opacity: .65; text-transform: lowercase; }}
+  footer {{ text-align: center; padding: 1rem; font-size: .7rem; opacity: .5; max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }}
+</style>
+</head>
+<body>
+<section class="hero">
+  <img src="{swatch_image}" alt="{label}">
+  <div class="hero-inner">
+    <h1>{label}</h1>
+    <a class="scrolldown" href="#items">view items &darr;</a>
+  </div>
+</section>
+<main id="items">
+  <div id="main"></div>
+</main>
+<footer>&copy; 2026 toxico</footer>
+<script>
+function tileHtml(p) {{
+  const empty = !p.f;
+  let imgs = empty
+    ? 'mockup pending'
+    : '<img class="front" src="' + p.f + '" alt="' + p.t + '" loading="lazy">' +
+      (p.b ? '<img class="back" src="' + p.b + '" alt="' + p.t + ' back" loading="lazy">' : '');
+  if (p.u) imgs = '<a class="img-link" href="' + p.u + '">' + imgs + '</a>';
+  return '<div class="card' + (empty ? ' empty' : '') + '">' +
+           '<div class="img-wrap">' + imgs + '</div>' +
+           '<div class="info">' +
+             '<div class="title">' + (p.t || '') + '</div>' +
+             '<div class="meta">' + (p.y || '') + '</div>' +
+           '</div>' +
+         '</div>';
+}}
+document.addEventListener('DOMContentLoaded', () => {{
+  const tiles = JSON.parse(document.getElementById('tiles-data').textContent);
+  document.getElementById('main').innerHTML =
+    '<div class="grid">' + tiles.map(tileHtml).join('') + '</div>';
+}});
+</script>
+<script type="application/json" id="tiles-data">
+{tiles_json}
+</script>
+<script defer src='/cart.js'></script>
+</body>
+</html>
+"""
+
+
+def _swatch_image(row: dict) -> str:
+    """Best-effort swatch hero image: the design image itself (first real tile
+    mockup, else the local placeholder upload used before mockups render)."""
+    for t in row.get("tiles", []):
+        f = t.get("f")
+        if f:
+            return f
+    return ""
+
 
 def main() -> None:
     html = INDEX.read_text(encoding="utf-8")
@@ -157,10 +273,24 @@ def main() -> None:
         if not label:
             continue
         slug = slugify(label)
-        row["href"] = f"{slug}/"
+        page_kind = row.get("page_kind", "drop")
         filled += backfill_tile_links(row.get("tiles", []), variants)
-        page = PAGE.format(label=label.replace(' — ', ' '), tiles_json=json.dumps(row.get("tiles", []), indent=2))
-        out = SCRATCH / slug / "index.html"
+
+        if page_kind == "swatch":
+            # swatch pages live under designs/<slug>/ (not scratch/<slug>/),
+            # same row/card component as the drop page, hero-at-top layout.
+            row["href"] = f"/designs/{slug}/"
+            page = SWATCH_PAGE.format(
+                label=label.replace(' — ', ' '),
+                swatch_image=_swatch_image(row),
+                tiles_json=json.dumps(row.get("tiles", []), indent=2),
+            )
+            out = DESIGNS / slug / "index.html"
+        else:
+            row["href"] = f"{slug}/"
+            page = PAGE.format(label=label.replace(' — ', ' '), tiles_json=json.dumps(row.get("tiles", []), indent=2))
+            out = SCRATCH / slug / "index.html"
+
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page, encoding="utf-8")
         built += 1
